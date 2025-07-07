@@ -410,11 +410,3 @@ go-to: decrees_menu
 The formation of the Central Executive Committee and the election of a Chariman of the Committee has allowed for the changing of legislative law and the passage of decrees necessary to stabilise the <span style="color: #BF0000">**Soviet Republic**</span> in its short term.
 
 @decrees_menu
-
-- @decree_menu: Sign the Decree on Suppression of Hostile Newspapers.
-- @decree_menu: Sign the Decree to Liberalise Abortion Laws.
-- @decree_menu: Sign the Decree on Women's Suffrage.
-- @decree_menu: Sign the Decree on Abolishing the Death Penalty.
-- @decree_menu: Sign the Decree on the Expropriation of Wealth.
-- @decree_menu: Sign the Decree on the Outlaw of Child Labour.
-- @decisions: We have done enough.
