@@ -173,7 +173,7 @@ if (window && d3) {
 !}
 go-to: decisions
 
-= First Congress of Soviets
+= First <span style="color: #BF0000">**Congress of Soviets**</span>
 
 {!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -202,7 +202,7 @@ go-to: decisions
 
 {!</table>!}
 
-The First Italian Congress of Soviets is elected, consisting of members of the [+ psi_full_name +] and Independents aligned with our vision. With its formation, both the state and the party can begin in its duties to govern and stabilise the nation.
+The First <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Congress of Soviets**</span> is elected, consisting of members of the [+ psi_full_name +] and Independents aligned with our vision. With its formation, both the state and the party can begin in its duties to govern and stabilise the nation.
 
 @decisions
 on-arrival: {!
@@ -238,7 +238,7 @@ Q.public_works_minister = "Vella";
 @cc
 max-visits: 1
 
-In conjunction with the first elections to the Italian Congress of Soviets, the [+ psi_name +] has been held, electing the party's new Secretary-General. The position remains largely administrative, with powers granted to control the party's organ in tandem with the state to further its goals.
+In conjunction with the first elections to the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Congress of Soviets**</span>, the [+ psi_name +] has been held, electing the party's new Secretary-General. The position remains largely administrative, with powers granted to control the party's organ in tandem with the state to further its goals.
 
 - @lazzari: Costantino Lazzari is chosen as Secretary-General of the [+ psi_full_name +].
 
@@ -256,7 +256,7 @@ Q.reformist_support = Q.turatian_seating_disp + Q.gradualist_seating_disp + (Q.l
 !}
 max-visits: 1
 
-The responsibility falls on the First Italian Congress of Soviets to elect the First Central Executive Committee of the Italian Soviet Republic who, more importantly, will elect the Chairman of the Committee. The election of the Chairman will allow the state to begin issuing decrees, resolutions and begin the cogs that turn the Italian Soviet Republic.
+The responsibility falls on the First <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Congress of Soviets**</span> to elect the First Central Executive Committee of the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> who, more importantly, will elect the Chairman of the Committee. The election of the Chairman will allow the state to begin issuing decrees, resolutions and begin the cogs that turn the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span>.
 
 - @left_elected: Amadeo Bordiga is elected Chairman of the Committee.
 - @maximalist_elected: Giacomo Menotti Serrati is elected Chairman of the Committee.
@@ -292,31 +292,31 @@ Turati's ascension to power represents a significant ideological shift towards t
 @constitution
 max-visits: 1
 
-The *Statuto Albertino*, the constitution of the Kingdom of Italy has been abolished. In it's place, naturally, suggestions for a new Constitution has been rampant. Though the current governmental structure derives from the Soviet Constitution, some on the left and right wings of the party suggest the drafting of a new constitution, arguing the conditions of revolution in Italy are significantly different as compared to Russia.
+The *Statuto Albertino*, the constitution of the <span style="color: #009246">**Kingdom of Italy**</span> has been abolished. In it's place, naturally, suggestions for a new Constitution has been rampant. Though the current governmental structure derives from the Soviet Constitution, some on the left and right wings of the party suggest the drafting of a new constitution, arguing the conditions of revolution in <span style="color: #009246">**Italy**</span> are significantly different as compared to <span style="color: #bf0000">**Russia**</span>.
 
-On the other hand, the Maximalists argue that merely slight iterations to a Russian-inspired Constitution is necessary for a functional Constitution, and that the drafting of a new constituion would be pointless and only slow down efforts to stabilise the nation.
+On the other hand, the Maximalists argue that merely slight iterations to a <span style="color: #bf0000">**Russian**</span>-inspired Constitution is necessary for a functional Constitution, and that the drafting of a new constituion would be pointless and only slow down efforts to stabilise the nation.
 
 What should we do?
 
-- @copy_russia: Emulate the 1918 Constitution of the Russian SFSR.
-- @copy_ussr: Emulate the 1924 Constitution of the Soviet Union.
+- @copy_russia: Emulate the 1918 Constitution of the <span style="color: #bf0000">**Russian SFSR**</span>.
+- @copy_ussr: Emulate the 1924 Constitution of the <span style="color: #bf0000">**Soviet Union**</span>.
 - @copy_none: Draft a new Constitution from sratch.
 
 @copy_russia
 view-if: year < 1924
-on-arrival: constituion = 1; stability += 1;
+on-arrival: constitution = 1; stability += 1;
 go-to: decisions
 
-With inspiration from the 1918 Russian Constitution, the [+ year +] Italian Constitution is drafted, outlining **the abolition of private property, the transfer of the means to production to the workers and the nationalisation of industry**. It establishes, as agreed upon, the **dictatorship of the proletariat and the establishment of the current system of Congress of Soviets and the Central Executive Committee**. It further grants **freedom of religion, movement, speech and the press**.
+With inspiration from the 1918 <span style="color: #bf0000">**Russian**</span> Constitution, the [+ year +] <span style="color: #009246">**Italian**</span> Constitution is drafted, outlining **the abolition of private property, the transfer of the means to production to the workers and the nationalisation of industry**. It establishes, as agreed upon, the **dictatorship of the proletariat and the establishment of the current system of <span style="color: #BF0000">**Congress of Soviets**</span> and the Central Executive Committee**. It further grants **freedom of religion, movement, speech and the press**.
 
 The Constitution is ratified 535-0.
 
 @copy_ussr 
 view-if: year >= 1924
-on-arrival: constituion = 1; stability += 1;
+on-arrival: constitution = 1; stability += 1;
 go-to: decisions
 
-With inspiration from the 1924 Soviet Constitution, the [+ year +] Italian Constitution is drafted, outlining **the abolition of private property, the transfer of the means to production to the workers and the nationalisation of industry**. It establishes, as agreed upon, the **dictatorship of the proletariat and the establishment of the current system of Congress of Soviets and the Central Executive Committee**. It further grants **freedom of religion, movement, speech and the press**.
+With inspiration from the 1924 <span style="color: #bf0000">**Soviet**</span> Constitution, the [+ year +] <span style="color: #009246">**Italian**</span> Constitution is drafted, outlining **the abolition of private property, the transfer of the means to production to the workers and the nationalisation of industry**. It establishes, as agreed upon, the **dictatorship of the proletariat and the establishment of the current system of <span style="color: #BF0000">**Congress of Soviets**</span> and the Central Executive Committee**. It further grants **freedom of religion, movement, speech and the press**.
 
 The Constitution is ratified 535-0.
 
@@ -327,7 +327,7 @@ choose-if: ((bordigist_seating_disp + gradualist_seating_disp + turatian_seating
 unavailable-subtitle: There is not enough support for this.
 go-to: decisions
 
-Through a slim majority, the Congress of Soviets votes to instead draft up a new constitution rather than emulating the Soviet Constitution. Though the draft will likely take a fair bit of time, proponents assure that a Constitution tailored to Italy will bring about more stability.
+Through a slim majority, the <span style="color: #BF0000">**Congress of Soviets**</span> votes to instead draft up a new constitution rather than emulating the <span style="color: #bf0000">**Russian**</span> Constitution. Though the draft will likely take a fair bit of time, proponents assure that a Constitution tailored to <span style="color: #009246">**Italy**</span> will bring about more stability.
 
 @rg_dissolve
 on-arrival: army_formed = 1; army_conduct = 50; army_experience = 20; army_morale = 70; army_strength = 0;
@@ -337,30 +337,30 @@ Following the end of the Civil War, the Red Guards, now fielding [+ rg_strength 
 
 On the other hand, members on the Right have voiced their opposition to this idea, citing the Red Guards as far too unorganised and disorderly to be trained into effective military forces responsibile for National Defence, instead opting to incorporate prominent paramilitary leaders into Army structure.
 
-- @convert_to_army: Reorganise the paramilitary to form the Italian Red Army.
+- @convert_to_army: Reorganise the paramilitary to form the <span style="color:#d42f2f">Italian Red Army</span>
 - @dissolve: Disband the Red Guards, forming a new, independent entity.
 
 @convert_to_army
-on-arrival: army_strength = rg_strength * 0.7; army_conduct -= 10; army_experience += 20;
+on-arrival: army_strength = rg_strength * 0.7; army_conduct -= 10; army_experience += 20; rg_reorg = 1;
 go-to: decisions
 
-The Congress of Soviets passes a resolution, establishing a military structure within the Red Guards and officially establishing the Red Army as a successor entity to the Red Guards. The majority of the paramilitary forces are converted to military personnel, and a standing army will be able to more aptly defend Italy from threats, both internal and external, though some have expressed concern about the rowdiness of paramilitary forces.
+The <span style="color: #BF0000">**Congress of Soviets**</span> passes a resolution, establishing a military structure within the Red Guards and officially establishing the <span style="color:#d42f2f">Red Army</span> as a successor entity to the Red Guards. The majority of the paramilitary forces are converted to military personnel, and a standing army will be able to more aptly defend <span style="color: #009246">**Italy**</span> from threats, both internal and external, though some have expressed concern about the rowdiness of paramilitary forces.
 
 @dissolve
 on-arrival: army_strength = rg_strength * 0.3; army_experience += 10; army_conduct += 10;
 
-With the support of the right, the Congress of Soviets votes to disband the Red Guards, establishing the Red Army as an independent entity responsibile for National Defense. Though some paramilitary leaders are incorporated into the new Army, the lack of experience might be detrimental to its capabilities.
+With the support of the right, the <span style="color: #BF0000">**Congress of Soviets**</span> votes to disband the Red Guards, establishing the <span style="color:#d42f2f">Red Army</span> as an independent entity responsibile for National Defense. Though some paramilitary leaders are incorporated into the new Army, the lack of experience might be detrimental to its capabilities.
 
 @foreign
 max-visits: 1
 
 Foreign recognition of the Soviet Republic has been scarce, with recognition only coming from our socialist allies with the East. However, the establishemt of the Ministry of Foreign Affairs will allow us to expand our international reach further and gain legitimacy as a nation around the world.
 
-[? if not reformists_expelled : Though our explusion from the Communist International was only a couple years ago, we have received yet another invitation to rejoin the International, having been able to overthrow its bourgeois oppressors. Although it will certainly take time and effort from the Foreign Ministry, the mending of ties between Italy and Russia would mean a step closer towards internationalism and perhaps mutual aid between the two nations. ?]
+[? if not reformists_expelled : Though our explusion from the <span style="color: #800000">**Communist International**</span> was only a couple years ago, we have received yet another invitation to rejoin the International, having been able to overthrow its bourgeois oppressors. Although it will certainly take time and effort from the Foreign Ministry, the mending of ties between <span style="color: #009246">**Italy**</span> and <span style="color: #bf0000">**Russia**</span> would mean a step closer towards internationalism and perhaps mutual aid between the two nations. ?]
 
-[? if reformists_expelled : With the firm recognition and support of our Communist allies to the East, some within the party have suggested diplomatic overtures to the United Kingdom and France, our former allies, in an effort to open trade relations and diplomatic recognition. ?]
+[? if reformists_expelled : With the firm recognition and support of our Communist allies to the East, some within the party have suggested diplomatic overtures to the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> and <span style="color: #39AAAA">**France**</span>, our former allies, in an effort to open trade relations and diplomatic recognition. ?]
 
-- @join_comintern: Join the Communist International.
+- @join_comintern: Join the <span style="color: #800000">**Communist International**</span>.
 - @mend_ties: Mend ties and reassure our former allies in the West.
 
 @join_comintern
@@ -368,21 +368,21 @@ view-if: not reformists_expelled
 on-arrival: reformists_expelled = 1; soviet_relation += 1;
 go-to: decisions
 
-Through negotiations and diplomacy, we have rejoined the Comintern! This has further cultivated relations with the Soviet Union and allowed us to stand alongside them in the world.
+Through negotiations and diplomacy, we have rejoined the <span style="color: #800000">**Comintern**</span>! This has further cultivated relations with the <span style="color: #bf0000">**Soviet Union**</span> and allowed us to stand alongside them in the world.
 
 @mend_ties
 view-if: reformists_expelled
 on-arrival: entente_relation += 1;
 go-to: decisions
 
-Though distrust is rampant, we are able to cultivate at least some goodwill between Italy and our former allies, though it remains to be seen if this will continue.
+Though distrust is rampant, we are able to cultivate at least some goodwill between <span style="color: #009246">**Italy**</span> and our former allies, though it remains to be seen if this will continue.
 
 @debts
 max-visits: 1
 
-Similar to the Tsars of Russia, Vittorio Emanuele III, in his fruitless and useless entry into the First World War has accumulated momumental debt, owed primarily to British, French and American debtors. [? if uk_debts_over or us_debts_over : Significant debt negotiations and repayments have already been conducted by the previous state under our direction, nevertheless. ?]
+Similar to the Tsars of <span style="color: #bf0000">**Russia**</span>, Vittorio Emanuele III, in his fruitless and useless entry into the First World War has accumulated momumental debt, owed primarily to <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span>, <span style="color: #39AAAA">**French**</span> and <span style="color: #3C3B6E">**Amer**</span><span style="color: #B22234">**ican**</span> debtors. [? if uk_debts_over or us_debts_over : Significant debt negotiations and repayments have already been conducted by the previous state under our direction, nevertheless. ?]
 
-Though unfortunate, the financial stituation of the state is concerning, to say the least. As such, a motion to repudiate all debts owed from the Kingdom has been brought fourth, in an effort to the state remains fiscally stable in its infancy. Regardless, many on the right oppose the bill, calling it a 'death-blow' to Italo-Entente relations and the closing of trade or diplomatic opportunities with them.
+Though unfortunate, the financial stituation of the state is concerning, to say the least. As such, a motion to repudiate all debts owed from the Kingdom has been brought fourth, in an effort to the state remains fiscally stable in its infancy. Regardless, many on the right oppose the bill, calling it a 'death-blow' to <span style="color: #009246">**Italo**</span>-<span style="color: #046276">**Entente**</span> relations and the closing of trade or diplomatic opportunities with them.
 
 What should we do?
 
@@ -393,20 +393,28 @@ What should we do?
 on-arrival: debt = 4; entente_relation += 1;
 go-to: decisions
 
-In an effort to continue cordial relations with the British and Americans, we assume responsibility of the debts left behind by the italian Kingdom, placing us in a relatively unstable financial position.
+In an effort to continue cordial relations with the <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and <span style="color: #3C3B6E">**Amer**</span><span style="color: #B22234">**icans**</span>, we assume responsibility of the debts left behind by the <span style="color: #009246">**Italian Kingdom**</span>, placing us in a relatively unstable financial position.
 
 @debts_no
 on-arrival: entente_relation -= 3;
 go-to: decisions
 
-Like the Russians, we repudiate all bonds issued by the Italian Kingdom, cancelling all previously issued debt and ceasing payment of foreign debt, declaring them to be void. Foreign assets within the nation have been expropriated.
+Like the <span style="color: #bf0000">**Russians**</span>, we repudiate all bonds issued by the <span style="color: #009246">**Italian Kingdom**</span>, cancelling all previously issued debt and ceasing payment of foreign debt, declaring them to be void. Foreign assets within the nation have been expropriated.
 
-Expectedly, we have seen condemnations from the Entente, alongside a significant detrioriations of relations as diplomatic overtures have reaches a sreeching halt.
+Expectedly, we have seen condemnations from the <span style="color: #046276">**Entente**</span>, alongside a significant detrioriations of relations as diplomatic overtures have reaches a sreeching halt.
 
 @decrees 
 max-visits: 1
 go-to: decrees_menu
 
-The formation of the Central Executive Committee and the election of a Chariman of the Committee has allowed for the changing of legislative law and the passage of decrees necessary to stabilise the Soviet Republic in its short term.
+The formation of the Central Executive Committee and the election of a Chariman of the Committee has allowed for the changing of legislative law and the passage of decrees necessary to stabilise the <span style="color: #BF0000">**Soviet Republic**</span> in its short term.
 
 @decrees_menu
+
+- @decree_menu: Sign the Decree on Suppression of Hostile Newspapers.
+- @decree_menu: Sign the Decree to Liberalise Abortion Laws.
+- @decree_menu: Sign the Decree on Women's Suffrage.
+- @decree_menu: Sign the Decree on Abolishing the Death Penalty.
+- @decree_menu: Sign the Decree on the Expropriation of Wealth.
+- @decree_menu: Sign the Decree on the Outlaw of Child Labour.
+- @decisions: We have done enough.

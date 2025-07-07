@@ -23,6 +23,22 @@ is-special: true
 
 <span style="text-align: center">The [+ psi_full_name +] is currently [+ party_unity : unity +].</span>
 
+<span style="text-align: center">The Bordigists are [+ bordigist_dissent : factional_dissent +].</span>
+
+<span style="text-align: center">The Ordinovists are [+ ordinovist_dissent : factional_dissent +].</span>
+
+<span style="text-align: center">The Maximalists are [+ maximalist_dissent : factional_dissent +].</span>
+
+<span style="text-align: center">The Social Patriots are [+ socpat_dissent : factional_dissent +].</span>
+
+[? if syndicalist_active : <span style="text-align: center">The Syndicalists are [+ syndicalist_dissent : factional_dissent +].</span> ?]
+
+<span style="text-align: center">The Labour Reformists are [+ labour_dissent : factional_dissent +].</span>
+
+<span style="text-align: center">The Turatians are [+ turatian_dissent : factional_dissent +].</span>
+
+<span style="text-align: center">The Gradualists are [+ gradualist_dissent : factional_dissent +].</span>
+
 {!<hr>!}
 
 = State of the Economy
@@ -39,15 +55,15 @@ is-special: true
 
 [? if not army_formed : <span style="text-align: center">We have <span style="color:#d42f2f">no standing army</span>.</span> ?]
 
-[? if army_formed and rg_reorg : <span style="text-align: center">The<span style="color:#d42f2f">Italian Red Army</span> is formed from the Red Guards.</span> ?]
+[? if army_formed and rg_reorg : <span style="text-align: center">The <span style="color:#d42f2f">Italian Red Army</span> is formed from the Red Guards.</span> ?]
 
-[? if army_formed and not rg_reorg : <span style="text-align: center">The<span style="color:#d42f2f">Italian Red Army</span>exists as an independent entity.</span> ?]
+[? if army_formed and not rg_reorg : <span style="text-align: center">The <span style="color:#d42f2f">Italian Red Army</span> exists as an independent entity.</span> ?]
 
-[? if army_formed : <span style="text-align: center">Morale within the Italian Red Army is [+ army_morale : low_high +]</span> ?]
+[? if army_formed : <span style="text-align: center">Morale within the Italian Red Army is [+ army_morale : low_high +].</span> ?]
 
-[? if army_formed : <span style="text-align: center">Experience within the Italian Red Army is [+ army_experience : low_high +]</span> ?]
+[? if army_formed : <span style="text-align: center">Experience within the Italian Red Army is [+ army_experience : low_high +].</span> ?]
 
-[? if army_formed : <span style="text-align: center">Conduct within the Italian Red Army is [+ army_conduct : conduct +]</span> ?]
+[? if army_formed : <span style="text-align: center">Conduct within the Italian Red Army is [+ army_conduct : conduct +].</span> ?]
 
 {!<hr>!}
 
@@ -55,12 +71,12 @@ is-special: true
 
 <span style="text-align: center">Decolonisation has not begun.</span>
 
-[? if not reformists_expelled : <span style="text-align: center">We are currently a full member of the <span style="color:#DB261D">Communist International</span>.</span> ?]
+[? if not reformists_expelled : <span style="text-align: center">We are currently a full member of the <span style="color: #800000">**Communist International**</span>.</span> ?]
 
-[? if reformists_expelled : <span style="text-align: center">We have been expelled from the<span style="color:#DB261D">Communist International</span>.</span> ?]
+[? if reformists_expelled : <span style="text-align: center">We have been expelled from the <span style="color: #800000">**Communist International**</span>.</span> ?]
 
-<span style="text-align: center">Our relations with the United Kingdom is [+ entente_relation : low_high +].</span>
+<span style="text-align: center">Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> is [+ entente_relation : low_high +].</span>
 
-<span style="text-align: center">Our relations with the French Republic is [+ entente_relation : low_high +].</span>
+<span style="text-align: center">Our relations with the <span style="color: #39AAAA">**French Republic**</span> is [+ entente_relation : low_high +].</span>
 
-<span style="text-align: center">Our relations with the Union of Soviet Socialist Republics is [+ soviet_relation : low_high +].</span>
+<span style="text-align: center">Our relations with the <span style="color: #bf0000">**Soviet Union**</span> is [+ soviet_relation : low_high +].</span>

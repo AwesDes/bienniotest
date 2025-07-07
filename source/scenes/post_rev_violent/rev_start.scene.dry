@@ -60,6 +60,15 @@ document.getElementsByTagName("body")[0].style.setProperty('--link-color', '#900
 
 Q.stability = 0;
 Q.party_unity = 100;
+
+Q.bordigist_dissent = 0;
+Q.labour_dissent = 0;
+Q.socpat_dissent = 0;
+Q.turatian_dissent = 0;
+Q.gradualist_dissent = 0;
+Q.maximalist_dissent = 0;
+Q.ordinovist_dissent = 0;
+Q.syndicalist_dissent = 0;
 !}
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events, especially past this point, will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.

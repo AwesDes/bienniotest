@@ -5,12 +5,12 @@ go-to: menu
 
 = The Library
 
-Herein contains relevant information about the government and politics of the Italian Soviet Republic.
+Herein contains relevant information about the government and politics of the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span>.
 
 @menu
 
 - @government: Italy's system of government
-- @italy_timeline: Timeline of the Italian Soviet Republic before [+ rev_year +]
+- @italy_timeline: Timeline of the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> before [+ rev_year +]
 - @curr_gov: Current government details
 - @demographics: Demographics
 - @paramilitaries: Paramilitary groups
