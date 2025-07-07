@@ -11,33 +11,33 @@ is-special: true
 
 = State of the Union
 
-<span style="text-align: center">The Italian Soviet Republic is currently [+ stability : stability +].</span>
+<span style="text-align: center">The Italian Soviet Republic is currently **[+ stability : stability +]**.</span>
 
-[? if constitution = 0 : <span style="text-align: center">The Constitution of the Italian Soviet Republic <span style="color:#d42f2f">does not exist</span>.</span> ?]
+[? if constitution = 0 : <span style="text-align: center">The Constitution of the Italian Soviet Republic <span style="color:#d42f2f">**does not exist**</span>.</span> ?]
 
-[? if constitution = 1 : <span style="text-align: center">The Constitution of the Italian Soviet Republic <span style="color:#FFB74D">emulates the Soviet Constitution</span>.</span> ?]
+[? if constitution = 1 : <span style="text-align: center">The Constitution of the Italian Soviet Republic <span style="color:#FFB74D">**emulates the Soviet Constitution**</span>.</span> ?]
 
 {!<hr>!}
 
 = State of the Party
 
-<span style="text-align: center">The [+ psi_full_name +] is currently [+ party_unity : unity +].</span>
+<span style="text-align: center">The [+ psi_full_name +] is currently **[+ party_unity : unity +]**.</span>
 
-<span style="text-align: center">The Bordigists are [+ bordigist_dissent : factional_dissent +].</span>
+<span style="text-align: center">The Bordigists are **[+ bordigist_dissent : factional_dissent +]**.</span>
 
-<span style="text-align: center">The Ordinovists are [+ ordinovist_dissent : factional_dissent +].</span>
+<span style="text-align: center">The Ordinovists are **[+ ordinovist_dissent : factional_dissent +]**.</span>
 
-<span style="text-align: center">The Maximalists are [+ maximalist_dissent : factional_dissent +].</span>
+<span style="text-align: center">The Maximalists are **[+ maximalist_dissent : factional_dissent +]**.</span>
 
-<span style="text-align: center">The Social Patriots are [+ socpat_dissent : factional_dissent +].</span>
+<span style="text-align: center">The Social Patriots are **[+ socpat_dissent : factional_dissent +]**.</span>
 
-[? if syndicalist_active : <span style="text-align: center">The Syndicalists are [+ syndicalist_dissent : factional_dissent +].</span> ?]
+[? if syndicalist_active : <span style="text-align: center">The Syndicalists are **[+ syndicalist_dissent : factional_dissent +]**.</span> ?]
 
-<span style="text-align: center">The Labour Reformists are [+ labour_dissent : factional_dissent +].</span>
+<span style="text-align: center">The Labour Reformists are **[+ labour_dissent : factional_dissent +]**.</span>
 
-<span style="text-align: center">The Turatians are [+ turatian_dissent : factional_dissent +].</span>
+<span style="text-align: center">The Turatians are **[+ turatian_dissent : factional_dissent +]**.</span>
 
-<span style="text-align: center">The Gradualists are [+ gradualist_dissent : factional_dissent +].</span>
+<span style="text-align: center">The Gradualists are **[+ gradualist_dissent : factional_dissent +]**.</span>
 
 {!<hr>!}
 
@@ -53,17 +53,17 @@ is-special: true
 
 = State of the Military 
 
-[? if not army_formed : <span style="text-align: center">We have <span style="color:#d42f2f">no standing army</span>.</span> ?]
+[? if not army_formed : <span style="text-align: center">We have <span style="color:#d42f2f">no standing army</span>.</span> ?]**
 
-[? if army_formed and rg_reorg : <span style="text-align: center">The <span style="color:#d42f2f">Italian Red Army</span> is formed from the Red Guards.</span> ?]
+[? if army_formed and rg_reorg : <span style="text-align: center">The <span style="color:#d42f2f">Italian Red Army</span> is formed from the Red Guards.</span> ?]**
 
-[? if army_formed and not rg_reorg : <span style="text-align: center">The <span style="color:#d42f2f">Italian Red Army</span> exists as an independent entity.</span> ?]
+[? if army_formed and not rg_reorg : <span style="text-align: center">The <span style="color:#d42f2f">Italian Red Army</span> exists as an independent entity.</span> ?]**
 
-[? if army_formed : <span style="text-align: center">Morale within the Italian Red Army is [+ army_morale : low_high +].</span> ?]
+[? if army_formed : <span style="text-align: center">Morale within the Italian Red Army is **[+ army_morale : low_high +]**.</span> ?]
 
-[? if army_formed : <span style="text-align: center">Experience within the Italian Red Army is [+ army_experience : low_high +].</span> ?]
+[? if army_formed : <span style="text-align: center">Experience within the Italian Red Army is **[+ army_experience : low_high +]**.</span> ?]
 
-[? if army_formed : <span style="text-align: center">Conduct within the Italian Red Army is [+ army_conduct : conduct +].</span> ?]
+[? if army_formed : <span style="text-align: center">Conduct within the Italian Red Army is **[+ army_conduct : conduct +]**.</span> ?]
 
 {!<hr>!}
 
@@ -75,8 +75,8 @@ is-special: true
 
 [? if reformists_expelled : <span style="text-align: center">We have been expelled from the <span style="color: #800000">**Communist International**</span>.</span> ?]
 
-<span style="text-align: center">Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> is [+ entente_relation : low_high +].</span>
+<span style="text-align: center">Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> is **[+ entente_relation : low_high +]**.</span>
 
-<span style="text-align: center">Our relations with the <span style="color: #39AAAA">**French Republic**</span> is [+ entente_relation : low_high +].</span>
+<span style="text-align: center">Our relations with the <span style="color: #39AAAA">**French Republic**</span> is **[+ entente_relation : low_high +]**.</span>
 
-<span style="text-align: center">Our relations with the <span style="color: #bf0000">**Soviet Union**</span> is [+ soviet_relation : low_high +].</span>
+<span style="text-align: center">Our relations with the <span style="color: #bf0000">**Soviet Union**</span> is **[+ soviet_relation : low_high +]**.</span>
