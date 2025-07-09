@@ -1,6 +1,6 @@
 title: German October
 subtitle: The dust settles on a new Germany.
-view-if: year = 1923 and month = 10 and week = 3 and not pcdi_formed and violent_revolution and soviet_polish_victory = 1
+view-if: year = 1923 and month = 10 and week = 3 and not pcdi_formed and violent_revolution and soviet_polish_victory = 1 and comintern_seen
 on-arrival: soviet_germany = 1; socialist_sentiment += 7; communist_strength += 10;
 max-visits: 1
 tags: event

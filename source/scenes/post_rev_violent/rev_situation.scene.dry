@@ -23,7 +23,7 @@ is-special: true
 
 = State of the Party
 
-<span style="text-align: center">The [+ psi_full_name +] is currently **[+ party_unity : unity +]**.</span>
+<span style="text-align: center">The Cohesion of the [+ psi_full_name +] is currently **[+ party_unity : unity +]**.</span>
 
 <span style="text-align: center">The Bordigists are **[+ bordigist_dissent : factional_dissent +]**.</span>
 
