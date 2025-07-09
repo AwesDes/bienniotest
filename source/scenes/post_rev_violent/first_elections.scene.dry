@@ -263,7 +263,7 @@ The responsibility falls on the First <span style="color: #009246">**Italian**</
 - @reformist_elected: Filippo Turati is elected Chairman of the Committee.
 
 @left_elected
-on-arrival: premier = "Bordiga"; premier_party = "Bordigist";
+on-arrival: premier = "Bordiga"; premier_party = "Bordigist"; turatian_dissent += 7; gradualist_dissent += 9;
 view-if: left_support > maximalist_support and left_support > reformist_support
 go-to: decisions
 
@@ -281,7 +281,7 @@ With a plurality of votes, Giacomo Menotti Serrati is elected Chairman of the Co
 Serrati's ascension to power represents the continuation of the ideological balance between two opposing ends of the left-wing spectrum, excaberated by the success of the revolution. It is unclear whether Serrati will be able to keep the party in tact, or keep the Maximalists in charge to restore order.
 
 @reformist_elected
-on-arrival: premier = "Turati"; premier_party = "Turatian";
+on-arrival: premier = "Turati"; premier_party = "Turatian"; bordigist_dissent += 7; ordinovist_dissent += 7
 view-if: left_support < reformist_support and maximalist_support < reformist_support
 go-to: decisions
 
@@ -322,7 +322,7 @@ The Constitution is ratified 535-0.
 
 @copy_none
 subtitle: A nation without a Constitution for a prolonged period is bound to suffer.
-on-arrival: constitution_event_trigger = time + 4; soviet_relation -= 1
+on-arrival: constitution_event_trigger = time + 4; soviet_relation -= 1; maximalist_dissent += 9
 choose-if: ((bordigist_seating_disp + gradualist_seating_disp + turatian_seating_disp) >= 50) or ((bordigist_seating_disp + gradualist_seating_disp + turatian_seating_disp + ordinovist_seating_disp) >= 50 and premier = "Bordiga")
 unavailable-subtitle: There is not enough support for this.
 go-to: decisions
@@ -341,7 +341,7 @@ On the other hand, members on the Right have voiced their opposition to this ide
 - @dissolve: Disband the Red Guards, forming a new, independent entity.
 
 @convert_to_army
-on-arrival: army_strength = rg_strength * 0.7; army_conduct -= 10; army_experience += 20; rg_reorg = 1;
+on-arrival: army_strength = rg_strength * 0.7; army_conduct -= 10; army_experience += 20; rg_reorg = 1; gradualist_dissent += 5; turatian_dissent += 3
 go-to: decisions
 
 The <span style="color: #BF0000">**Congress of Soviets**</span> passes a resolution, establishing a military structure within the Red Guards and officially establishing the <span style="color:#d42f2f">Red Army</span> as a successor entity to the Red Guards. The majority of the paramilitary forces are converted to military personnel, and a standing army will be able to more aptly defend <span style="color: #009246">**Italy**</span> from threats, both internal and external, though some have expressed concern about the rowdiness of paramilitary forces.
@@ -390,7 +390,7 @@ What should we do?
 - @debts_no: Repudiate all sovereign debts owed and financial obligations!
 
 @debts_yes
-on-arrival: debt = 4; entente_relation += 1;
+on-arrival: debt = 4; entente_relation += 1; maximalist_dissent += 10; labour_dissent += 10; bordigist_dissent += 10; ordinovist_dissent += 10
 go-to: decisions
 
 In an effort to continue cordial relations with the <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and <span style="color: #3C3B6E">**Amer**</span><span style="color: #B22234">**icans**</span>, we assume responsibility of the debts left behind by the <span style="color: #009246">**Italian Kingdom**</span>, placing us in a relatively unstable financial position.
@@ -410,3 +410,37 @@ go-to: decrees_menu
 The formation of the Central Executive Committee and the election of a Chariman of the Committee has allowed for the changing of legislative law and the passage of decrees necessary to stabilise the <span style="color: #BF0000">**Soviet Republic**</span> in its short term.
 
 @decrees_menu
+
+- @sign_media: Sign the Decree on Suppression of Hostile Newspapers.
+- @sign_abortion: Sign the Decree to Liberalise Abortion Laws.
+- @sign_suffrage: Sign the Decree on Women's Suffrage.
+- @sign_labour: Sign the Decree on the Outlaw of Child Labour.
+- @decisions: We have done enough.
+
+@sign_media
+subtitle: This will outlaw all newspapers opposed to the state.
+on-arrival: state_freedom -= 1; stability += 0.5; gradualist_dissent += 3; bordigist_dissent -= 3; state_freedom -= 0.5 if premier_party = "Bordigist"; turatian_dissent += 5 if premier_party = "Bordigist"; state_freedom += 0.5 if premier_party = "Turatian"; bordigist_dissent += 5 if premier_party = "Turatian";
+go-to: decrees_menu
+
+In an effort to prevent subterfuge by the bourgeois elements remaining in the nation, Chairman [+ premier +] signs the 'Decree on the Suppression of Hostile Newspapers', outlawing the production and sale of newspapers calling for open resistance and disobedience towards the Soviet government. Reassurances are given that the bill is meant to be temporary, repealed following the restoration of stability.
+
+[? if premier_party = "Bordigist" : The new decree, under influence of [+ premier +], has significantly broadened the definition of a 'hostile newspaper', as we have seen even some left-wing newspapers shut down, fuelled by accussations of factionalism and political disunity. ?]
+
+[? if premier_party = "Turatian" : The new decree is seemingly less effective than expected, under influence of Chairman [+ premier +], the definition of a 'hostile newspaper' has been tightened significantly, as only fringe far-right and conservative newspapers are the main targets to be prosecuted. ?]
+
+@sign_abortion
+subtitle: This will liberalise abortion laws within the nation.
+on-arrival: abortion_rights += 1; womens_rights += 1; socialist_sentiment += 5; republican_sentiment += 3;
+view-if: abortion_rights != 1
+go-to: decrees_menu
+
+Religious principles have constrained the liberties of the opposite sex for too long, and though we cannot truly repay for the transgressions of our forebears, we will do as much as we can to burn away the stigmas of the past. No longer will women be trapped by the hands of the abuser or of the violator, as all deserve the protections to their own lives against those who would seek to harm them. Without resistance, the decree is signed, affirmed by the Congress of Soviets. Universally agreed upon within the party, we cannot let fear deprive our women from the tools to protect them from unwanted pregnancies.
+
+@sign_suffrage
+subtitle: This will grant women the right to vote, bringing universal suffrage for the first time.
+on-arrival: womens_suffrage = 1; women += 27; womens_rights += 1; socialist_sentiment += 3;
+view-if: womens_suffrage != 1
+go-to: decrees_menu
+
+Every citizen that lives within this new Italy must be granted true equality, not the twisted ideals that the Liberals and Popularists have built! They have toiled and yearned for freedom in the same manner as their male counterparts, and they too must be rewarded for their efforts. Finally, the right to vote has been grasped by the ladies of the revolution, as the decree is signed. Though our society might not be entirely ready, as misogyny still lives in the shadows, we must push towards the socialist dream of a truly free and fair society.
+

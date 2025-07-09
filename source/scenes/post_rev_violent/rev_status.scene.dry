@@ -23,21 +23,21 @@ Resources: [+ resources +]
 
 = Government
 
-Premier of the Italian Soviet Republic: [+ premier +] ([+ premier_party +])
+Chairman of the Italian Soviet Republic: [+ premier +] ([+ premier_party +])
 
 General-Secretary of the [+ psi_full_name +]: [+ psi_leader +] ([+ psi_leader_faction +])
 
 Congress of Soviets composition:
 
-[+ psi_name +] - Bordigists: [+ bordigist_seating_disp +]% |
-[+ psi_name +] - Ordinovists: [+ ordinovist_seating_disp +]% |
-[+ psi_name +] - Maximalists: [+ maximalist_seating_disp +]% |
-[+ psi_name +] - Social-Patriots: [+ socpat_seating_disp +]% |
-[+ psi_name +] - Syndicalists: [+ syndicalist_seating_disp +]% |
-[+ psi_name +] - Labour: [+ labour_seating_disp +]% |
-[+ psi_name +] - Turatians: [+ turatian_seating_disp +]% |
-[+ psi_name +] - Gradualists: [+ gradualist_seating_disp +]% |
-Independents: [+ other_seating_disp +]% 
+Bordigists: [+ bordigist_seating_disp +]% 
+Ordinovists: [+ ordinovist_seating_disp +]%
+Maximalists: [+ maximalist_seating_disp +]%
+Social-Patriots: [+ socpat_seating_disp +]%
+Syndicalists: [+ syndicalist_seating_disp +]%
+Labour: [+ labour_seating_disp +]%
+Turatians: [+ turatian_seating_disp +]%
+Gradualists: [+ gradualist_seating_disp +]%
+Independents: [+ other_seating_disp +]%
 
 Next Election: [+ next_election_month : month +] [+ next_election_year +]
 

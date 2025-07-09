@@ -1,0 +1,6 @@
+
+(..-3)   <span style="color: #d42f2f;">Oppressive</span>  
+(-3..-1)  <span style="color: #FFB74D;">Restrictive</span>  
+(-1..1)  <span style="color: #FFD54F;">Permissive</span>  
+(1..3)  <span style="color: #81C784;">Liberal</span>  
+(3..)    <span style="color: #66BB6A;">Free</span>

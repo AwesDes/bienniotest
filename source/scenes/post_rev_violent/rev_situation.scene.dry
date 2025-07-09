@@ -17,6 +17,8 @@ is-special: true
 
 [? if constitution = 1 : <span style="text-align: center">The Constitution of the Italian Soviet Republic <span style="color:#FFB74D">**emulates the Soviet Constitution**</span>.</span> ?]
 
+<span style="text-align: center">The State is currently viewed as **[+ state_freedom : freedom +]**.</span>
+
 {!<hr>!}
 
 = State of the Party
