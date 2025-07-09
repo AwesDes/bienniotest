@@ -1,7 +1,7 @@
 title: [+ year +] World Congress of the Communist International
 subtitle: Our delegates arrive in Moscow.
 new-page: true
-view-if: month = 6 and week = 3
+view-if: month = 6 and week = 3 and violent_revolution
 max-visits: 1
 tags: event
 

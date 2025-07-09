@@ -444,3 +444,16 @@ go-to: decrees_menu
 
 Every citizen that lives within this new Italy must be granted true equality, not the twisted ideals that the Liberals and Popularists have built! They have toiled and yearned for freedom in the same manner as their male counterparts, and they too must be rewarded for their efforts. Finally, the right to vote has been grasped by the ladies of the revolution, as the decree is signed. Though our society might not be entirely ready, as misogyny still lives in the shadows, we must push towards the socialist dream of a truly free and fair society.
 
+@sign_labour
+subtitle: This will outlaw labour for children below the age of 16.
+on-arrival: {!
+Q.child_labour_laws = 1;
+Q.socialist_sentiment += 4; 
+Q.unemployment -= 0.6;
+Q.economic_growth -= 1.2;
+Q.inflation -= 0.1;
+!}
+view-if: child_labour_laws != 1
+go-to: decrees_menu
+
+Why should a child be subjected to a life without education, toiling away for the sake of another human so they don’t have to work? This injustice must be remedied, and with our revolutionary state at the helm, it shall. Children will now be allowed to learn freely, unchained of the cycle that child labour perpetuates. No one votes against the eradication of this unsightly blemish on our society, and though the more business-minded individuals that remain may bawk at us, we will let the lack of their humanity be shown to the common man.

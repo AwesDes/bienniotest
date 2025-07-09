@@ -58,6 +58,8 @@ window.changeTab('rev_status', 'rev_main_tab')
 
 document.getElementsByTagName("body")[0].style.setProperty('--link-color', '#900');
 
+Q.violent_revolution = 1;
+
 Q.stability = 0;
 Q.party_unity = 100;
 Q.state_freedom = 0;
