@@ -13,10 +13,10 @@ The World Congress of the <span style="color: #800000">**Communist International
 
 There are many issues on the agenda, and it is likely we will be able to hear the delegates of the <span style="color: #bf0000">**Russian**</span> and <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> delegates primarily, alongside our own.
 
-- @begin_congress_russia_nep: The Congress opens. The <span style="color: #bf0000">**Russian**</span> delegates take the floor.
-- @begin_congress_russia_: The Congress opens. The <span style="color: #bf0000">**Russian**</span> delegates take the floor.
+- @begin_congress_russia: The Congress opens. The <span style="color: #bf0000">**Russian**</span> delegates take the floor.
+- @begin_congress_russia_2: The Congress opens. The <span style="color: #bf0000">**Russian**</span> delegates take the floor.
 
-@begin_congress_russia_1921
+@begin_congress_russia
 subtitle: The issue of Russia's *New Economic Policy* is likely to be heard.
 view-if: year <= 1922
 
@@ -35,7 +35,7 @@ go-to: germany_menu
 on-arrival: left_eco_support += 1;
 go-to: germany_menu
 
-@begin_congress_russia_1921
+@begin_congress_russia_2
 subtitle: The issue of Russia's *New Economic Policy* is likely to be heard.
 view-if: year > 1922
 
