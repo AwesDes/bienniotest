@@ -17,10 +17,10 @@ There are many issues on the agenda, and it is likely we will be able to hear th
 - @begin_congress_russia_2: The Congress opens. The <span style="color: #bf0000">**Russian**</span> delegates take the floor.
 
 @begin_congress_russia
-subtitle: The issue of Russia's *New Economic Policy* is likely to be heard.
+subtitle: The *New Economic Policy* is likely the topic of the day.
 view-if: year <= 1922
 
-Vladimir Lenin takes the floor. Speaking as leader of the Russian SFSR and Chairman of the Union of Soviet Socialist Republics, Lenin begins his speech with a congratulatory statement to the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> and its successful revolution. The first of its kind in the Mediterranean. Hopefully, the first of many more. The Republic is unstable, and in its fight, enlisted the aid of a broad united front against the forces of reaction, from Bordiga to Bissolati, all occupying a place within the new party, albeit with the potential to change. Nevertheless, the success of the <span style="color: #009246">**Italian**</span> revolution heartens and reinvigorates efforts across the world, the revolutionary upsurge sweeping Europe stronger than ever.
+Vladimir Lenin takes the floor. Speaking as leader of the <span style="color: #bf0000">**Russian SFSR**</span> and Chairman of the <span style="color: #bf0000">**Union of Soviet Socialist Republics**</span>, Lenin begins his speech with a congratulatory statement to the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> and its successful revolution. The first of its kind in the Mediterranean. Hopefully, the first of many more. The Republic is unstable, and in its fight, enlisted the aid of a broad united front against the forces of reaction, from Bordiga to Bissolati, all occupying a place within the new party, albeit with the potential to change. Nevertheless, the success of the <span style="color: #009246">**Italian**</span> revolution heartens and reinvigorates efforts across the world, the revolutionary upsurge sweeping Europe stronger than ever.
 
 The core of the his speech, however, lies in the new policy introduced by the Russian Communist Party. The *New Economic Policy*. Sanctioning the existence of both public and private sectors, foreign investments and some degree of free trade, the policy represents a step backwards towards our economic goals, agreed upon by Lenin as well. Moreover, with the backdrop of {!<span class="tooltip-text" title="The 1921 Rebellion, in which Soviet sailors, populists and anarchists, demanded economic freedom and other rights in opposition to the Bolsheviks.">Krondstadt</span>!} and {!<span class="tooltip-text" title="The Volga famine due to the impacts of drought, conflict and economic failure.">Povolzhye</span>!}, Lenin has also argued the policy is necessary for economic recovery, calling the measure as 'taking one step backward to take two steps forward later on'.
 
@@ -36,12 +36,12 @@ on-arrival: left_eco_support += 1;
 go-to: germany_menu
 
 @begin_congress_russia_2
-subtitle: The issue of Russia's *New Economic Policy* is likely to be heard.
+subtitle: The *New Economic Policy* is likely the topic of the day.
 view-if: year > 1922
 
 Nikolai Bukharin takes the floor.
 
 @germany_menu
 
-Nevertheless, Vladimir Lenin concludes his speech amidst thunderous applause from the other delegates. With the conclusion of Lenin's speech, the <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> delegates, more specifically Willi Münzenberg, takes the floor.
+Nevertheless, Vladimir Lenin concludes his speech amidst thunderous applause from the other delegates. The <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> delegates, more specifically Willi Münzenberg, takes the floor afterwards.
 
