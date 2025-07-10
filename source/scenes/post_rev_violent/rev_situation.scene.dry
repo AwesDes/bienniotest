@@ -61,11 +61,11 @@ is-special: true
 
 [? if army_formed and not rg_reorg : <span style="text-align: center">The <span style="color:#d42f2f">**Italian Red Army**</span> exists as an independent entity.</span> ?]
 
-[? if army_formed : <span style="text-align: center">Morale within the Italian Red Army is **[+ army_morale : low_high +]**.</span> ?]
+[? if army_formed : <span style="text-align: center">Morale within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_morale : low_high +]**.</span> ?]
 
-[? if army_formed : <span style="text-align: center">Experience within the Italian Red Army is **[+ army_experience : low_high +]**.</span> ?]
+[? if army_formed : <span style="text-align: center">Experience within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_experience : low_high +]**.</span> ?]
 
-[? if army_formed : <span style="text-align: center">Conduct within the Italian Red Army is **[+ army_conduct : conduct +]**.</span> ?]
+[? if army_formed : <span style="text-align: center">Conduct within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_conduct : conduct +]**.</span> ?]
 
 {!<hr>!}
 

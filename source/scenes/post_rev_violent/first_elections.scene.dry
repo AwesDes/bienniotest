@@ -337,19 +337,19 @@ Following the end of the Civil War, the Red Guards, now fielding [+ rg_strength 
 
 On the other hand, members on the Right have voiced their opposition to this idea, citing the Red Guards as far too unorganised and disorderly to be trained into effective military forces responsibile for National Defence, instead opting to incorporate prominent paramilitary leaders into Army structure.
 
-- @convert_to_army: Reorganise the paramilitary to form the <span style="color:#d42f2f">Italian Red Army</span>
+- @convert_to_army: Reorganise the paramilitary to form the <span style="color:#d42f2f">**Italian Red Army**</span>.
 - @dissolve: Disband the Red Guards, forming a new, independent entity.
 
 @convert_to_army
 on-arrival: army_strength = rg_strength * 0.7; army_conduct -= 10; army_experience += 20; rg_reorg = 1; gradualist_dissent += 5; turatian_dissent += 3
 go-to: decisions
 
-The <span style="color: #BF0000">**Congress of Soviets**</span> passes a resolution, establishing a military structure within the Red Guards and officially establishing the <span style="color:#d42f2f">Red Army</span> as a successor entity to the Red Guards. The majority of the paramilitary forces are converted to military personnel, and a standing army will be able to more aptly defend <span style="color: #009246">**Italy**</span> from threats, both internal and external, though some have expressed concern about the rowdiness of paramilitary forces.
+The <span style="color: #BF0000">**Congress of Soviets**</span> passes a resolution, establishing a military structure within the Red Guards and officially establishing the <span style="color:#d42f2f">**Red Army**</span> as a successor entity to the Red Guards. The majority of the paramilitary forces are converted to military personnel, and a standing army will be able to more aptly defend <span style="color: #009246">**Italy**</span> from threats, both internal and external, though some have expressed concern about the rowdiness of paramilitary forces.
 
 @dissolve
 on-arrival: army_strength = rg_strength * 0.3; army_experience += 10; army_conduct += 10;
 
-With the support of the right, the <span style="color: #BF0000">**Congress of Soviets**</span> votes to disband the Red Guards, establishing the <span style="color:#d42f2f">Red Army</span> as an independent entity responsibile for National Defense. Though some paramilitary leaders are incorporated into the new Army, the lack of experience might be detrimental to its capabilities.
+With the support of the right, the <span style="color: #BF0000">**Congress of Soviets**</span> votes to disband the Red Guards, establishing the <span style="color:#d42f2f">**Red Army**</span> as an independent entity responsibile for National Defense. Though some paramilitary leaders are incorporated into the new Army, the lack of experience might be detrimental to its capabilities.
 
 @foreign
 max-visits: 1
