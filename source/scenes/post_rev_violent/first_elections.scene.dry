@@ -75,7 +75,7 @@ for (var faction of Q.rev_factions) {
 
     Q[faction+'_seating'] = (Q[faction+'_r_disp'] / 100) * Q.total_available_seats;
     Q[faction+'_seating'] = Math.round(Q[faction+'_seating']);
-    Q[faction+'_seating_disp'] = Q[faction+'_seating'] / Q.total_available_seats * 100;
+    Q[faction+'_seating_disp'] = (Q[faction+'_seating'] / Q.total_available_seats) * 100;
     Q[faction+'_seating_disp'] = parseFloat(Q[faction+'_seating']).toFixed(1);
 }
 

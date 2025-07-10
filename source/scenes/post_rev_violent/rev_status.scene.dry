@@ -33,7 +33,7 @@ Bordigists: [+ bordigist_seating_disp +]%
 Ordinovists: [+ ordinovist_seating_disp +]%
 Maximalists: [+ maximalist_seating_disp +]%
 Social-Patriots: [+ socpat_seating_disp +]%
-Syndicalists: [+ syndicalist_seating_disp +]%
+[? if syndicalist_active : Syndicalists: [+ syndicalist_seating_disp +]% ?]
 Labour: [+ labour_seating_disp +]%
 Turatians: [+ turatian_seating_disp +]%
 Gradualists: [+ gradualist_seating_disp +]%

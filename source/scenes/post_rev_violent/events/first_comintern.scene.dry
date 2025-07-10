@@ -39,9 +39,19 @@ go-to: germany_menu
 subtitle: The *New Economic Policy* is likely the topic of the day.
 view-if: year > 1922
 
-Nikolai Bukharin takes the floor.
+Nikolai Bukharin takes the floor. Speaking as a member of the <span style="color: #800000">**Communist International's**</span> Executive Committee, Bukharin begins his speech with a statement to the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> and its successful revolution. The first of its kind in the Mediterranean. Hopefully, the first of many more. The Republic is unstable, and in its fight, enlisted the aid of a broad united front against the forces of reaction, from Bordiga to Bissolati, all occupying a place within the new party, and the success of the <span style="color: #009246">**Italian**</span> revolution heartens and reinvigorates efforts across the world, the revolutionary upsurge sweeping Europe stronger than ever.
+
+The core of the his speech, however, lies in the current economic policies and their impact. The *New Economic Policy*. Sanctioning the existence of both public and private sectors, foreign investments and some degree of free trade, the policy represents a step backwards towards our economic goals. Bukharin, throughout its existence, has defended the *New Economic Policy*, showcasing its impacts to the Congress. The majority of the industries still remain in the hands of the state, he explains, and while there were private entrepreneurs, the impacts are obvious to many. Agricultural growth has increased significantly, alongside economic growth and recovery that has projected to allow the state to recover past the scars and devestation of both its Civil War and the Great War.
+
+- @agree_nep: The successful results are hard to dispute.
+- @nope_nep: Yet no mention of the opportunistic 'NEPmen'...
 
 @germany_menu
 
-Nevertheless, Vladimir Lenin concludes his speech amidst thunderous applause from the other delegates. The <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> delegates, more specifically Willi Münzenberg, takes the floor afterwards.
+Nevertheless, Vladimir Lenin concludes his speech amidst thunderous applause from the other delegates. The <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> delegates, more specifically Heinrich Brandler, takes the floor afterwards.
 
+The situation within <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span> has developed further. Though the failure of the Spartacist Uprising has dampened the fervour of revolution, the formation of the <span style="color: #D40000">**Communist Party of Germany**</span> and organisation of the left has strengthened the resolve of the Left in its fight against reaction, not to mention the success of the <span style="color: #009246">**Italians**</span>.
+
+Moreover, the strength of the [? if year <= 1923 : <span style="color:rgb(110, 0, 0)">**Proletarische Hundertschaften</span> ?][? if year > 1923 : <span style="color:rgb(110, 0, 0)">**Roter Frontkämpferbund**</span> ?], the paramilitary wing of the <span style="color: #D40000">**KPD**</span> has only bolstered, quickly becoming one of the largest paramilitary forces within <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>. It seems likely that the tide of revolutionary fervour will continue, and it is the hope that our revolution will inspire other across the Europe.
+
+As Brandler ends his speech to the Congress, the Italian delegation takes the floor. 
