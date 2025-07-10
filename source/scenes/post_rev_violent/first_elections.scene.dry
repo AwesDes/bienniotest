@@ -335,7 +335,7 @@ max-visits: 1
 
 Following the end of the Civil War, the Red Guards, now fielding [+ rg_strength +] thousand men alongside forces within the Regio Esercito loyal to our side have succeeded in their goal. The question now lies on what to do with primarily, the Red Guards. Some on the Left argue for the reorganisation of the Red Guards into a strict military to be utilised for National Defence, arguing for its experience and loyalty to the party.
 
-On the other hand, members on the Right have voiced their opposition to this idea, citing the Red Guards as far too unorganised and disorderly to be trained into effective military forces responsibile for National Defence, instead opting to incorporate prominent paramilitary leaders into Army structure.
+On the other hand, members on the Right have voiced their opposition to this idea, citing the Red Guards as far too unorganised and disorderly to be trained into effective military forces responsibile for National Defence, instead opting to merely incorporate prominent paramilitary leaders into Army structure.
 
 - @convert_to_army: Reorganise the paramilitary to form the <span style="color:#d42f2f">**Italian Red Army**</span>.
 - @dissolve: Disband the Red Guards, forming a new, independent entity.

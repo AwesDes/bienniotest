@@ -56,3 +56,33 @@ Moreover, the strength of the [? if year <= 1923 : Proletarische Hundertschaften
 
 As Brandler ends his speech to the Congress, the Italian delegation takes the floor upon the background of uproarious applause.
 
+We, naturally, extend our thanks to our <span style="color: #bf0000">**Russian**</span> and <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> comrades, and as instructed, our delegates focus on...
+
+- @delegate_internationalism: ...the Republic's commitment to Internationalism.
+- @delegate_factionalism: ...the emphasis of Party Unity.
+- @delegate_army: ...the militarisation of the state for defense.
+
+@delegate_internationalism
+on-arrival: soviet_relation += 1; german_relation += 1; hungarian_relation += 1;
+
+Placeholder :p
+
+@delegate_factionalism
+on-arrival: {!
+Q.bordigist_dissent -= 10;
+Q.labour_dissent -= 10;
+Q.socpat_dissent -= 10;
+Q.turatian_dissent -= 10;
+Q.gradualist_dissent -= 10;
+Q.maximalist_dissent -= 10;
+Q.ordinovist_dissent -= 10;
+Q.syndicalist_dissent -= 10;
+Q.other_seating_disp -= 10;
+!}
+
+Placeholder :p
+
+@delegate_army 
+on-arrival: army_conduct += 3; army_morale += 5;
+
+Placeholder :p
