@@ -3,6 +3,8 @@ new-page: true
 max-visits: 1
 on-arrival: {!
 
+Q.first_congress_formed = 1;
+Q.comintern_time = Q.time + 2;
 Q.total_available_seats = 535;
 
 Q.rev_factions = ['bordigist', 'ordinovist', 'maximalist', 'socpat', 'syndicalist', 'labour', 'turatian', 'gradualist', 'other'];
@@ -348,6 +350,7 @@ The <span style="color: #BF0000">**Congress of Soviets**</span> passes a resolut
 
 @dissolve
 on-arrival: army_strength = rg_strength * 0.3; army_experience += 10; army_conduct += 10;
+go-to: decisions
 
 With the support of the right, the <span style="color: #BF0000">**Congress of Soviets**</span> votes to disband the Red Guards, establishing the <span style="color:#d42f2f">**Red Army**</span> as an independent entity responsibile for National Defense. Though some paramilitary leaders are incorporated into the new Army, the lack of experience might be detrimental to its capabilities.
 

@@ -1,7 +1,7 @@
 title: [+ year +] World Congress of the <span style="color: #800000">**Communist International**</span>
 subtitle: Our delegates arrive in Moscow.
 new-page: true
-view-if: month = 6 and week = 3 and violent_revolution
+view-if: time >= comintern_time and first_congress_formed
 max-visits: 1
 tags: event
 face-image: img/CominternImage.jpg
@@ -22,7 +22,7 @@ view-if: year <= 1922
 
 Vladimir Lenin takes the floor. Speaking as leader of the <span style="color: #bf0000">**Russian SFSR**</span> and Chairman of the <span style="color: #bf0000">**Union of Soviet Socialist Republics**</span>, Lenin begins his speech with a congratulatory statement to the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> and its successful revolution. The first of its kind in the Mediterranean. Hopefully, the first of many more. The Republic is unstable, and in its fight, enlisted the aid of a broad united front against the forces of reaction, from Bordiga to Bissolati, all occupying a place within the new party, albeit with the potential to change. Nevertheless, the success of the <span style="color: #009246">**Italian**</span> revolution heartens and reinvigorates efforts across the world, the revolutionary upsurge sweeping Europe stronger than ever.
 
-The core of the his speech, however, lies in the new policy introduced by the Russian Communist Party. The *New Economic Policy*. Sanctioning the existence of both public and private sectors, foreign investments and some degree of free trade, the policy represents a step backwards towards our economic goals, agreed upon by Lenin as well. Moreover, with the backdrop of {!<span class="tooltip-text" title="The 1921 Rebellion, in which Soviet sailors, populists and anarchists, demanded economic freedom and other rights in opposition to the Bolsheviks.">Krondstadt</span>!} and {!<span class="tooltip-text" title="The Volga famine due to the impacts of drought, conflict and economic failure.">Povolzhye</span>!}, Lenin has also argued the policy is necessary for economic recovery, calling the measure as 'taking one step backward to take two steps forward later on'.
+The core of the his speech, however, lies in the new policy introduced by the Russian Communist Party. The *New Economic Policy*. Sanctioning the existence of both public and private sectors, foreign investments and some degree of free trade, the policy represents a step backwards towards our economic goals, agreed upon by Lenin as well. However, with the backdrop of {!<span class="tooltip-text" title="The 1921 Rebellion, in which Soviet sailors, populists and anarchists, demanded economic freedom and other rights in opposition to the Bolsheviks.">Krondstadt</span>!} and {!<span class="tooltip-text" title="The Volga famine due to the impacts of drought, conflict and economic failure.">Povolzhye</span>!}, Lenin has also argued the policy is necessary for economic recovery, calling the measure as 'taking one step backward to take two steps forward later on'.
 
 - @agree_nep: Perhaps Lenin is right.
 - @nope_nep: We cannot afford to compromise our ideals for temporary benefit.
@@ -52,9 +52,9 @@ Nevertheless, the <span style="color: #bf0000">**Russian**</span> delegate concl
 
 The situation within <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span> has developed further. Though the failure of the Spartacist Uprising has dampened the fervour of revolution, the formation of the <span style="color: #D40000">**Communist Party of Germany**</span> and organisation of the left has strengthened the resolve of the Left in its fight against reaction, not to mention the success of the <span style="color: #009246">**Italians**</span>.
 
-Moreover, the strength of the [? if year <= 1923 : Proletarische Hundertschaften ?][? if year > 1923 : Roter Frontkampferbund ?], the paramilitary wing of the <span style="color: #D40000">**KPD**</span> has only bolstered, quickly becoming one of the largest paramilitary forces within <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>. It seems likely that the tide of revolutionary fervour will continue, and it is the hope that our revolution will inspire other across the Europe.
+Moreover, the strength of the [? if year <= 1923 : Proletarische Hundertschaften, ?][? if year > 1923 : Roter Frontkampferbund, ?]the paramilitary wing of the <span style="color: #D40000">**KPD**</span> has bolstered, quickly becoming one of the largest paramilitary forces within <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>. It seems likely that the tide of revolutionary fervour will continue, and it is the hope that our revolution will inspire others across Europe.
 
-As Brandler ends his speech to the Congress, the Italian delegation takes the floor upon the background of uproarious applause.
+As Brandler ends his speech to the Congress, the <span style="color: #009246">**Italian**</span> delegation takes the floor upon the background of uproarious applause.
 
 We, naturally, extend our thanks to our <span style="color: #bf0000">**Russian**</span> and <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> comrades, and as instructed, our delegates focus on...
 
@@ -65,7 +65,7 @@ We, naturally, extend our thanks to our <span style="color: #bf0000">**Russian**
 @delegate_internationalism
 on-arrival: soviet_relation += 1; german_relation += 1; hungarian_relation += 1;
 
-Placeholder :p
+Our revolution is merely the first step towards *World Revolution*. Germany holds itself on the brink of success. The <span style="color: #964B00">**Hungarian**</span> <span style="color: #BF0000">**Soviet Republic**</span> has shown itself as merely the first domino in revolutions, only brought to its knees by outside intervention. Nevertheless, our delegates reaffirm the goal of the Republc, reasurring the Congress of its commitment to aid revolutions abroad, as well as our Soviet comrades in economic recovery, and vice versa.
 
 @delegate_factionalism
 on-arrival: {!
