@@ -4,8 +4,8 @@ max-visits: 1
 on-arrival: {!
 
 Q.first_congress_formed = 1;
+Q.internal_time = Q.time + 1;
 Q.comintern_time = Q.time + 2;
-Q.total_available_seats = 535;
 
 Q.rev_factions = ['bordigist', 'ordinovist', 'maximalist', 'socpat', 'syndicalist', 'labour', 'turatian', 'gradualist', 'other'];
 
@@ -14,7 +14,7 @@ for (var faction of Q.rev_factions) {
 }
 
 Q.psi_r_disp = 100.0;
-Q.psi_seating = Q.total_available_seats;
+Q.psi_seating = 535;
 Q.psi_seating_disp = 100.0;
 
 Q.total_percentage = parseFloat(Q.psi_votes) + parseFloat(Q.psri_votes) + parseFloat(Q.other_votes) + parseFloat(Q.pnf_votes);
@@ -75,9 +75,9 @@ for (var faction of Q.rev_factions) {
     Q['change_' + faction + '_r'] = Math.abs(Q['change_' + faction + '_r']);
     Q['str_change_' + faction] = sign + parseFloat(Q['change_' + faction + '_r']).toFixed(1);
 
-    Q[faction+'_seating'] = (Q[faction+'_r_disp'] / 100) * Q.total_available_seats;
+    Q[faction+'_seating'] = (Q[faction+'_r_disp'] / 100) * 535;
     Q[faction+'_seating'] = Math.round(Q[faction+'_seating']);
-    Q[faction+'_seating_disp'] = (Q[faction+'_seating'] / Q.total_available_seats) * 100;
+    Q[faction+'_seating_disp'] = (Q[faction+'_seating'] / 535) * 100;
     Q[faction+'_seating_disp'] = parseFloat(Q[faction+'_seating_disp']).toFixed(1);
 }
 
