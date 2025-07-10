@@ -22,18 +22,21 @@ max-cards: 4
 
 @internal
 title: Internal Affairs
+card-image: img/CoalitionAffairs.jpg
 is-deck: true
 
 - #internal_affairs
 
 @economic
 title: Economic Affairs
+card-image: img/UnemploymentGov.jpg
 is-deck: true
 
 - #economic_affairs
 
 @military
 title: Military Affairs
+card-image: img/MilitaryInfluence.jpg
 is-deck: true
 
 - #military_affairs
