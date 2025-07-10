@@ -3,5 +3,6 @@ is-pinned-card: true
 tags: foreign_pol
 card-image: img/Comintern.jpg
 new-page: true
+view-if: comintern_seen
 
 = The <span style="color: #800000">**Communist International**</span>
