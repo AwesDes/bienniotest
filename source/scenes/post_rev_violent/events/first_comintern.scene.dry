@@ -48,10 +48,11 @@ The core of the his speech, however, lies in the current economic policies and t
 
 @germany_menu
 
-Nevertheless, Vladimir Lenin concludes his speech amidst thunderous applause from the other delegates. The <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> delegates, more specifically Heinrich Brandler, takes the floor afterwards.
+Nevertheless, the <span style="color: #bf0000">**Russian**</span> delegate concludes his speech amidst thunderous applause from the other delegates. The <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> delegates, more specifically Heinrich Brandler, takes the floor afterwards.
 
 The situation within <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span> has developed further. Though the failure of the Spartacist Uprising has dampened the fervour of revolution, the formation of the <span style="color: #D40000">**Communist Party of Germany**</span> and organisation of the left has strengthened the resolve of the Left in its fight against reaction, not to mention the success of the <span style="color: #009246">**Italians**</span>.
 
-Moreover, the strength of the [? if year <= 1923 : <span style="color:rgb(110, 0, 0)">**Proletarische Hundertschaften</span> ?][? if year > 1923 : <span style="color:rgb(110, 0, 0)">**Roter Frontkämpferbund**</span> ?], the paramilitary wing of the <span style="color: #D40000">**KPD**</span> has only bolstered, quickly becoming one of the largest paramilitary forces within <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>. It seems likely that the tide of revolutionary fervour will continue, and it is the hope that our revolution will inspire other across the Europe.
+Moreover, the strength of the [? if year <= 1923 : <span style="color:rgb(110, 0, 0)">**Proletarische Hundertschaften</span> ?][? if year > 1923 : <span style="color:rgb(110, 0, 0)">**Roter Frontkampferbund**</span> ?], the paramilitary wing of the <span style="color: #D40000">**KPD**</span> has only bolstered, quickly becoming one of the largest paramilitary forces within <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>. It seems likely that the tide of revolutionary fervour will continue, and it is the hope that our revolution will inspire other across the Europe.
 
-As Brandler ends his speech to the Congress, the Italian delegation takes the floor. 
+As Brandler ends his speech to the Congress, the Italian delegation takes the floor upon the background of uproarious applause.
+
