@@ -4,6 +4,9 @@ max-cards: 3
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
+- @internal
+- @economic
+- @military
 - #foreign_pol
 
 @main_easy
@@ -12,4 +15,25 @@ max-cards: 4
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
+- @internal
+- @economic
+- @military
 - #foreign_pol
+
+@internal
+title: Internal Affairs
+is-deck: true
+
+- #internal_affairs
+
+@economic
+title: Economic Affairs
+is-deck: true
+
+- #economic_affairs
+
+@military
+title: Military Affairs
+is-deck: true
+
+- #military_affairs
