@@ -74,6 +74,10 @@ Q.ordinovist_dissent = 0;
 Q.syndicalist_dissent = 0;
 Q.other_seating_disp = 0;
 
+if (Q.reformists_expelled == 1) {
+    Q.comintern_member = 1;
+}
+
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
 !}
 

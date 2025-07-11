@@ -73,9 +73,9 @@ is-special: true
 
 <span style="text-align: center">Decolonisation has not begun.</span>
 
-[? if reformists_expelled : <span style="text-align: center">We are currently a full member of the <span style="color: #800000">**Communist International**</span>.</span> ?]
+[? if comintern_member and first_congress_formed : <span style="text-align: center">We are currently a full member of the <span style="color: #800000">**Communist International**</span>.</span> ?]
 
-[? if not reformists_expelled : <span style="text-align: center">We have been expelled from the <span style="color: #800000">**Communist International**</span>.</span> ?]
+[? if not comintern_member and first_congress_formed : <span style="text-align: center">We have been expelled from the <span style="color: #800000">**Communist International**</span>.</span> ?]
 
 <span style="text-align: center">Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> is **[+ entente_relation : low_high +]**.</span>
 

@@ -367,7 +367,7 @@ Foreign recognition of the Soviet Republic has been scarce, with recognition onl
 
 @join_comintern
 view-if: not reformists_expelled
-on-arrival: reformists_expelled = 1; soviet_relation += 1;
+on-arrival: comintern_member = 1; soviet_relation += 1;
 go-to: decisions
 
 Through negotiations and diplomacy, we have rejoined the <span style="color: #800000">**Comintern**</span>! This has further cultivated relations with the <span style="color: #bf0000">**Soviet Union**</span> and allowed us to stand alongside them in the world.

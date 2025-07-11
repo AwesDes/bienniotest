@@ -7,17 +7,31 @@ tags: event
 
 = Report on <span style="color: #009246">**Italian**</span> Internal Situation
 
-The direness of the current situation within the <span style="color: #009246">**Italian**</span> sphere cannot be stressed enough. 
+The direness of the current situation within the <span style="color: #009246">**Italian**</span> sphere cannot be stressed enough. Two wars in the span of barely two decades has rooted itself deep into every facet of society, the horrors of war unknown to few. Nevertheless, the duty falls on us to end the cycle of war, brought fourth by bourgeois interests, to bring fourth economic recovery, prosperity and peace to a nation scarred and fraught with war.
 
 There are 5 sub-reports attached.
 
+@situation_menu
+
 - @situation_party: The Party.
 - @situation_paramilitary: The Paramilitaries.
-- @situation_economic: The Extent of Devestation.
+- @situation_economic: The Extent of Devastation.
 - @situation_reactionary: The Reactionaries.
 - @situation_recommendation: Policy Recommendations.
 
 @situation_party
+max-visits: 1
+go-to: situation_menu
+
+The beginning of the Civil War saw a broad United Front form against King Vittorio Emanuele III, the fascists, conservatives, and liberals. [? if pcdi_formed or psu_formed : Parties on the left, even our former ideological allies, ?][? if not pcdi_formed and not psu_formed : The [+ psi_name +] and PSRI ?]placed aside their individual goals in our struggle against the bourgeois, and following our victory, all have been granted a place within the party.
+
+Though the party is divided into significantly smaller factions, three main tendencies have emerged.
+
+<span style="color: #740000ff">**The Left.**</span> Representing a mixture of ideologues on the left of the party, the Left has encouraged a rather 'hardliner' stance, stressing the importance of the state's militarisation and necessity to defend itself. Regularly coming into conflict with <span style="color: #db0000ff">**the Right**</span>, the vast majority of conflict and factionalism within the party has come from the disdain both tendencies have held for one another, the most prominent of members being Amadeo Bordiga and Antonio Gramsci, leading the Bordigists and Ordinovists respectively.
+
+<span style="color: #a00000ff">**The Centre.**</span> Representing the political centre of the party and the successor to the Maximalists before the revolution, the Centre best represents the 'mainstream' of Orthodox Marxism based on the Erfurt Program. Giacomo Mennoti Serrati, Constantino Lazzari belong to the Center, alongside men such as Nicola Bombacci, whose ideals we have seen warily drift into the realm of Fascism. 
+
+<span style="color: #db0000ff">**The Right.**</span> Representing primarily the right of the party, and the remnants of the socialist minority from the PSRI allowed entry into the party, the Right have been in favour of reform since the beginning. Opposing <span style="color: #740000ff">**the Left**</span>, the Right have advocated for a slower transition, expressing support for Lenin's *New Economic Policy*, primarily led by Filippo Turati, who has seemingly coalesced the Right into a united faction.
 
 @situation_paramilitary
 
