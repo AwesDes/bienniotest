@@ -4,6 +4,7 @@ new-page: true
 view-if: first_congress_formed
 max-visits: 1
 tags: event
+go-to: situation_menu
 
 = Report on <span style="color: #009246">**Italian**</span> Internal Situation
 
