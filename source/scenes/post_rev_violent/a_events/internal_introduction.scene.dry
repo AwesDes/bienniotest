@@ -1,11 +1,29 @@
 title: Report on the Internal Situation and Stability
 subtitle: The first of our work begins.
 new-page: true
-view-if: time >= internal_time and first_congress_formed
+view-if: first_congress_formed
 max-visits: 1
 tags: event
-face-image: img/CominternImage.jpg
-on-arrival: comintern_seen = 1
 
-= Report on Italian Internal Situation
+= Report on <span style="color: #009246">**Italian**</span> Internal Situation
+
+The direness of the current situation within the <span style="color: #009246">**Italian**</span> sphere cannot be stressed enough. 
+
+There are 5 sub-reports attached.
+
+- @situation_party: The Party.
+- @situation_paramilitary: The Paramilitaries.
+- @situation_economic: The Extent of Devestation.
+- @situation_reactionary: The Reactionaries.
+- @situation_recommendation: Policy Recommendations.
+
+@situation_party
+
+@situation_paramilitary
+
+@situation_economic
+
+@situation_reactionary
+
+@situation_recommendation
 

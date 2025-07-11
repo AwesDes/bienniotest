@@ -4,7 +4,6 @@ max-visits: 1
 on-arrival: {!
 
 Q.first_congress_formed = 1;
-Q.internal_time = Q.time + 1;
 Q.comintern_time = Q.time + 2;
 
 Q.rev_factions = ['bordigist', 'ordinovist', 'maximalist', 'socpat', 'syndicalist', 'labour', 'turatian', 'gradualist', 'other'];
