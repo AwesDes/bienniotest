@@ -51,7 +51,9 @@ The <span style="color: #00247D">**Action**</span> <span style="color: #000000">
 
 The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> represent the so-called 'moderates', comprising of the liberal, social democratic and occasional Catholic resistance within the state. The organisation operates as a single entity, coordinating their actions through a single body rather than independent groups. The Alliance operates primarily within the Northern regions, utilising the industralised north to its advantages along with the worst vestiges of capital.
 
-The groups operate separately. Though united in their goals, both parties regularly come into conflict with one another, as well as operate in separate regions of Italy.
+Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as the Mafia in general still exist within Sicily and the general South, albeit having lowered their presence. They are, naturally, not enthusiastic about our policies and it is likely we can expect significant difficulty in the suppression of criminal activity within the South, worsened by their seemingly uneasy alliance with the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>
+
+Though united in their goals, both the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> and the <span style="color: #87CEFA">**Alliance**</span> regularly come into conflict with one another, as well as operate in separate regions of Italy, limiting interactions in general.
 
 @situation_economic
 on-arrival: reports_check -= 1
