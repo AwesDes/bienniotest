@@ -2,6 +2,7 @@ title: Report on the Internal Situation and Stability
 subtitle: The first of our work begins.
 new-page: true
 view-if: first_congress_formed
+on-arrival: reports_check = 5;
 max-visits: 1
 tags: event
 go-to: situation_menu
@@ -10,7 +11,7 @@ go-to: situation_menu
 
 The direness of the current situation within the <span style="color: #009246">**Italian**</span> sphere cannot be stressed enough. Two wars in the span of barely two decades has rooted itself deep into every facet of society, the horrors of war unknown to few. Nevertheless, the duty falls on us to end the cycle of war, brought fourth by bourgeois interests, to bring fourth economic recovery, prosperity and peace to a nation scarred and fraught with war.
 
-There are 5 sub-reports attached.
+There are [+ reports_check +][? if reports_check < 5 : remaining?] sub-reports attached.
 
 @situation_menu
 
@@ -21,6 +22,7 @@ There are 5 sub-reports attached.
 - @situation_recommendation: Policy Recommendations.
 
 @situation_party
+on-arrival: reports_check -= 1;
 max-visits: 1
 go-to: situation_menu
 
@@ -28,17 +30,45 @@ The beginning of the Civil War saw a broad United Front form against King Vittor
 
 Though the party is divided into significantly smaller factions, three main tendencies have emerged.
 
-<span style="color: #740000ff">**The Left.**</span> Representing a mixture of ideologues on the left of the party, the Left has encouraged a rather 'hardliner' stance, stressing the importance of the state's militarisation and necessity to defend itself. Regularly coming into conflict with <span style="color: #db0000ff">**the Right**</span>, the vast majority of conflict and factionalism within the party has come from the disdain both tendencies have held for one another, the most prominent of members being Amadeo Bordiga and Antonio Gramsci, leading the Bordigists and Ordinovists respectively.
+<span style="color: #740000ff">**The Left.**</span> Representing a mixture of ideologues towards the party's left, it has encouraged a rather 'hardliner' stance, stressing the importance of the state's militarisation and necessity to defend itself. Regularly coming into conflict with <span style="color: #db0000ff">**the Right**</span>, the vast majority of conflict and factionalism within the party has come from the disdain both tendencies have held for one another, the most prominent of members being Amadeo Bordiga and Antonio Gramsci, leading the Bordigists and Ordinovists respectively.
 
 <span style="color: #a00000ff">**The Centre.**</span> Representing the political centre of the party and the successor to the Maximalists before the revolution, the Centre best represents the 'mainstream' of Orthodox Marxism based on the Erfurt Program. Giacomo Mennoti Serrati, Constantino Lazzari belong to the Center, alongside men such as Nicola Bombacci, whose ideals we have seen warily drift into the realm of Fascism. 
 
-<span style="color: #db0000ff">**The Right.**</span> Representing primarily the right of the party, and the remnants of the socialist minority from the PSRI allowed entry into the party, the Right have been in favour of reform since the beginning. Opposing <span style="color: #740000ff">**the Left**</span>, the Right have advocated for a slower transition, expressing support for Lenin's *New Economic Policy*, primarily led by Filippo Turati, who has seemingly coalesced the Right into a united faction.
+<span style="color: #db0000ff">**The Right.**</span> Representing primarily the right of the party, the vast majority of the General Confederation of Labour and the remnants of the socialist minority from the PSRI allowed entry into the party, the Right have been in favour of reform since the beginning. Opposing <span style="color: #740000ff">**the Left**</span>, the Right have advocated for a slower transition, expressing support for Lenin's *New Economic Policy*, primarily led by Filippo Turati, who has seemingly coalesced the Right into a united faction.
+
+In conclusion, the party's instability is a major liability to the state, and it is recommended factionalism be reigned in as soon as possible.
 
 @situation_paramilitary
+on-arrival: reports_check -= 1
+max-visits: 1
+go-to: situation_menu
+
+Operationally, any organised resistance within the state has been reduced significantly, though we do expect a resurgence in activity should the party not act in time to prevent so. Prominent forces loyal to the King, such as army leaders have already either fled the nation or have been captured and arrested, and unless our ability to control the situation significantly deteriorates, the chances of a reactionary coup are slim to none.
+
+Nevertheless, the remnants of the paramilitaries before the revolution have organised themselves into two prominent forces.
+
+The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> represent the radicals of the reactionaries. Under the guise of 'restoration', the fascists have rallied together conservative opposition in an effort to bring down the revolution. Enjoying support from the Monarchy-in-exile and operating primarily within the Mezzogiorno, the organisation acts through numerous independent covert groups rather than a single organised entity.
+
+The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> represent the so-called 'moderates', comprising of the liberal, social democratic and occasional Catholic resistance within the state. The organisation operates as a single entity, coordinating their actions through a single body rather than independent groups. The Alliance operates primarily within the Northern regions, utilising the industralised north to its advantages along with the worst vestiges of capital.
+
+Nevertheless, the groups operate separately. Though united in their goals, both parties regularly come into conflict with one another, as well as operate in separate regions of Italy.
 
 @situation_economic
+on-arrival: reports_check -= 1
+max-visits: 1
+go-to: situation_menu
+
+
 
 @situation_reactionary
+on-arrival: reports_check -= 1
+max-visits: 1
+go-to: situation_menu
+
+
 
 @situation_recommendation
+on-arrival: reports_check -= 1
+max-visits: 1
+go-to: situation_menu
 
