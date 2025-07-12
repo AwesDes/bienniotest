@@ -51,7 +51,7 @@ The <span style="color: #00247D">**Action**</span> <span style="color: #000000">
 
 The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> represent the so-called 'moderates', comprising of the liberal, social democratic and occasional Catholic resistance within the state. The organisation operates as a single entity, coordinating their actions through a single body rather than independent groups. The Alliance operates primarily within the Northern regions, utilising the industralised north to its advantages along with the worst vestiges of capital.
 
-Nevertheless, the groups operate separately. Though united in their goals, both parties regularly come into conflict with one another, as well as operate in separate regions of Italy.
+The groups operate separately. Though united in their goals, both parties regularly come into conflict with one another, as well as operate in separate regions of Italy.
 
 @situation_economic
 on-arrival: reports_check -= 1
