@@ -11,9 +11,9 @@ go-to: situation_menu
 
 The direness of the current situation within the <span style="color: #009246">**Italian**</span> sphere cannot be stressed enough. Two wars in the span of barely two decades has rooted itself deep into every facet of society, the horrors of war unknown to few. Nevertheless, the duty falls on us to end the cycle of war, brought fourth by bourgeois interests, to bring fourth economic recovery, prosperity and peace to a nation scarred and fraught with war.
 
-There are [+ reports_check +][? if reports_check < 5 : remaining?] sub-reports attached.
-
 @situation_menu
+
+There are [+ reports_check +][? if reports_check < 5 : remaining?] sub-reports attached.
 
 - @situation_party: The Party.
 - @situation_paramilitary: The Paramilitaries.
@@ -38,6 +38,8 @@ Though the party is divided into significantly smaller factions, three main tend
 
 In conclusion, the party's instability is a major liability to the state, and it is recommended factionalism be reigned in as soon as possible.
 
+ - Constantino Lazzari, Secretary-General of the [+ psi_full_name +]
+
 @situation_paramilitary
 on-arrival: reports_check -= 1
 max-visits: 1
@@ -47,13 +49,15 @@ Operationally, any organised resistance within the state has been reduced signif
 
 Nevertheless, the remnants of the paramilitaries before the revolution have organised themselves into two prominent forces.
 
-The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> represent the radicals of the reactionaries. Under the guise of 'restoration', the fascists have rallied together conservative opposition in an effort to bring down the revolution. Enjoying support from the Monarchy-in-exile and operating primarily within the Mezzogiorno, the organisation acts through numerous independent covert groups rather than a single organised entity.
-
 The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> represent the so-called 'moderates', comprising of the liberal, social democratic and occasional Catholic resistance within the state. The organisation operates as a single entity, coordinating their actions through a single body rather than independent groups. The Alliance operates primarily within the Northern regions, utilising the industralised north to its advantages along with the worst vestiges of capital.
 
-Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as the Mafia in general still exist within Sicily and the general South, albeit having lowered their presence. They are, naturally, not enthusiastic about our policies and it is likely we can expect significant difficulty in the suppression of criminal activity within the South, worsened by their seemingly uneasy alliance with the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>
+The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> represent the radicals of the reactionaries. Under the guise of 'restoration', the fascists have rallied together conservative opposition in an effort to bring down the revolution. Enjoying support from the Monarchy-in-exile and operating primarily within the Mezzogiorno, the organisation acts through numerous independent covert groups rather than a single organised entity.
+
+Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as the Mafia in general still exist within Sicily and the general South, albeit having lowered their presence. They are, naturally, not enthusiastic about our policies and it is likely we can expect significant difficulty in the suppression of criminal activity within the South, worsened by their seemingly uneasy alliance with the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>.
 
 Though united in their goals, both the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> and the <span style="color: #87CEFA">**Alliance**</span> regularly come into conflict with one another, as well as operate in separate regions of Italy, limiting interactions in general.
+
+ - Giovanni Bacci, Minister of the Interior
 
 @situation_economic
 on-arrival: reports_check -= 1
