@@ -13,11 +13,11 @@ The direness of the current situation within the <span style="color: #009246">**
 
 @situation_menu
 
-There are [+ reports_check +][? if reports_check < 5 : remaining?] sub-reports attached.
+There are [+ reports_check +] [? if reports_check < 5 : remaining?] sub-reports attached.
 
 - @situation_party: The Party.
 - @situation_paramilitary: The Paramilitaries.
-- @situation_economic: The Extent of Devastation.
+- @situation_economic: The Economy.
 - @situation_reactionary: The Reactionaries.
 - @situation_recommendation: Policy Recommendations.
 
@@ -38,8 +38,6 @@ Though the party is divided into significantly smaller factions, three main tend
 
 In conclusion, the party's instability is a major liability to the state, and it is recommended factionalism be reigned in as soon as possible.
 
- - Constantino Lazzari, Secretary-General of the [+ psi_full_name +]
-
 @situation_paramilitary
 on-arrival: reports_check -= 1
 max-visits: 1
@@ -57,14 +55,20 @@ Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as
 
 Though united in their goals, both the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> and the <span style="color: #87CEFA">**Alliance**</span> regularly come into conflict with one another, as well as operate in separate regions of Italy, limiting interactions in general.
 
- - Giovanni Bacci, Minister of the Interior
-
 @situation_economic
-on-arrival: reports_check -= 1
+on-arrival: reports_check -= 1; agri_health = 5; agri_health += 5 if south_resolved; infra_health = 5; infra_health += public_works_funded
 max-visits: 1
 go-to: situation_menu
 
+The economic devastation In <span style="color: #009246">**Italy**</span> cannot be overstated. The First World War brought unemployment to peaks alongside economic collapse, while the Civil War, particularly the policies of scorched-earth has only exacerbated a wound not yet fulled closed.
 
+Agricultural Production within the South is [? if not south_resolved : <span style="color: #d42f2f;">**collapsing**</span> ?][? if south_resolved : <span style="color: #a16944ff;">**languishing**</span> ?]. Both wars have brought young men, primarily from the South, to arms, leaving fields neglected while manpower was necessary in the North to field the industrial war machine. Furthermore, numerous fields across Italy have been burnt to the ground, its lands unsuitable for agricultural growth for the foreseeable future. [? if south_resolved : Thankfully, our efforts before the revolution has stemmed the worst of the bleeding, though the situation remains critical. ?]
+
+Industrial Production within the North is <span style="color: #b39c3aff;">**depressed**</span>. The Northern industrial regions have, for the most part, remained fairly in tact. The vast majority of workers support us, and with limited damage to the factories, there is optimism that industrial output will recovery at a quick pace. Nevertheless, without raw material or resources from the collapsing South or Foreign Trade, production will likely remain at a low for some time.
+
+Infrastructural Transportation is <span style="color: #d42f2f;">**damaged**</span>. The railways, roads and ports, though impacted significantly, will most likely be the easiest to recovery, as well as the most important facet of economic recovery for both regions. Though more susceptible to sabotage via subterfuge, the restoration and expansion of transportation will allow for further economic development.
+
+The road to economic recovery will be a long, gruelling effort, and it is recommended a economic plan be formed, presented to the Congress of Soviets and approved as soon as possible for recovery to begin.
 
 @situation_reactionary
 on-arrival: reports_check -= 1

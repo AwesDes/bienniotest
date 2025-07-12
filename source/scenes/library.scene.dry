@@ -26,13 +26,9 @@ go-to: menu
 
 [? if not national_congress_seen : The Kingdom of Italy, also known as Italy, is a Constitutional Monarchy under a King and a Bicameral Parliament, composing the appointed Senate and the elective Chamber of Deputies. The Chamber is responsible for governing, while the King has a largely ceremonial role as well as a few important responsibilities.  ?]
 
-[? if violent_revolution : The Soviet Republic of italy, also known as Italy, is a Soviet Republic under a Prime Minister and the Supreme Soviet, the legislative body of the Soviet Republic. ?]
-
 [? if peaceful_revolution : The Republic of Italy, also known as Italy, is a Parliamentary Republic under a Prime Minister and a Bicameral Parliament, composing both the elected Senate and elected Chamber of Deputies. The Chamber is responsible for governing, while the Prime Minister is elected via the governing coalition. ?]
 
-[? if not violent_revolution : The Chamber of Deputies is elected based on a proportional representation voting system, apportioning 508-535 seats based on the D'Hondt method, added alongside newly introduced universal male suffrage. The King then appoints the Prime Minister and Cabinet, usually under the request of the Chamber of Deputies. A majority vote-of-no-confidence can remove the current government, though a new coalition is typically formed utilising the same composition of the Chamber of Deputies. ?]
-
-[? if violent_revolution : The Supreme Soviet is elected based on a proportional representation voting system, typically with voters choosing a candidate from the [+ psi_full_name +], appointing a total of 508-535 seats. Newly added universal male suffrage has expanded voting blocs exponentially. ?]
+The Chamber of Deputies is elected based on a proportional representation voting system, apportioning 508-535 seats based on the D'Hondt method, added alongside newly introduced universal male suffrage. The King then appoints the Prime Minister and Cabinet, usually under the request of the Chamber of Deputies. A majority vote-of-no-confidence can remove the current government, though a new coalition is typically formed utilising the same composition of the Chamber of Deputies.
 
 Italy is divided into a number of states, each of which have their own governments with some responsibilities, albeit insignificant.
 

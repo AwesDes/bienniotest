@@ -15,7 +15,6 @@ card-image: img/portraits/FilippoTurati.jpg
 - @loyalty_interior: Improve the loyalty of the Carabinieri.
 - @investigate_corruption: Investigate corruption by big businesses.
 - @crackdown_far_right: Crack down on paramilitary organisations among the far right.
-- @crackdown_republican: Crack down on paramilitary organisations among the republicans.
 - @crackdown_far_left: Crack down on paramilitary organisations among the far left.
 - @domestic_enemies: Investigate or ban our domestic enemies.
 - @root: Take no action for now.
@@ -52,19 +51,6 @@ on-arrival: crackdown_far_right += 1 if liberal_crackdown_accepted; fascist_bomb
 A number of coordinated raids and arrests have slightly paralysed the far-right paramilitaries.
 
 @crackdown_far_right_failure
-
-Unfortunately, our raids have turned up empty, our arrest warrants stalled. Rumors are that the targets of our investigation were tipped off by infiltrators within the Carabinieri.
-
-@crackdown_republican
-view-if: violent_revolution and republican_terror
-go-to: crackdown_republican_success if interior_police_loyalty >= 0.5; crackdown_republican_failure if interior_police_loyalty < 0.5 and interior_minister_party = psi_name
-
-@crackdown_republican_success
-on-arrival: republican_bomb_timer += 6 if fascist_terror; 
-
-A number of coordinated raids and arrests have slightly paralysed the republican paramilitaries.
-
-@crackdown_republican_failure
 
 Unfortunately, our raids have turned up empty, our arrest warrants stalled. Rumors are that the targets of our investigation were tipped off by infiltrators within the Carabinieri.
 
