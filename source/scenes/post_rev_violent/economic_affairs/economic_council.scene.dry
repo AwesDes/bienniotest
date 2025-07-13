@@ -17,6 +17,7 @@ Though there are naturally other arguments for economic policy, such as a mix of
 
 - @support_gosplan: Support the Orthodox Marxists.
 - @support_nep: Support the Pragmatists.
+- @force_vote: Force a vote on the two policies.
 
 @support_gosplan
 on-arrival: left_eco_support += 1; bordigist_dissent += 4; ordinovist_dissent += 7;
@@ -27,3 +28,8 @@ We throw our weight behind the Orthodox Marxists, agreeing that only a centrally
 on-arrival: right_eco_support += 1;
 
 We throw our weight behind the Pragmatists, agreeing that relaxing the total nationalisation of industry is necessary, at least temporary, in order to foster economic growth and production. Nevertheless, opponents argue that the plan represents a step back towards capitalism, calling it a betrayal of the revolution and communism.
+
+@force_vote
+view-if: left_eco_support >= 2 or right_eco_support >= 2
+
+Placeholder

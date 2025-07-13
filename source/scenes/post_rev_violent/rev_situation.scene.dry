@@ -19,6 +19,12 @@ is-special: true
 
 <span style="text-align: center">The State is currently viewed as **[+ state_freedom : freedom +]**.</span>
 
+[? if para_seen = 1 and not as_active : The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> is currently inactive. ?]
+
+[? if para_seen = 1 and not nda_active : The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> is currently inactive. ?]
+
+[? if para_seen = 1 and not mafia_active : The <span style="color: #465053ff">**Mafia**</span> is currently in retreat. ?]
+
 {!<hr>!}
 
 = State of the Party
