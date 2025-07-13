@@ -45,11 +45,13 @@ is-special: true
 
 = State of the Economy
 
-<span style="text-align: center">There is currently no Economic Plan.</span>
+[? if not eco_plan : <span style="text-align: center">There is currently no Economic Plan.</span> ?]
 
-<span style="text-align: center">Our Economic Direction leans neither way.</span>
+[? if eco_seen : <span style="text-align: center">Agricultural Output is [+ agri_health : health +].</span> ?]
 
-<span style="text-align: center">The Trade Unions view us amicably.</span>
+[? if eco_seen :  <span style="text-align: center">Industrial Output is [+ ind_health : health +].</span> ?]
+
+[? if eco_seen : <span style="text-align: center">Infrastructural Transportation is [+ infra_health : health +].</span> ?]
 
 {!<hr>!}
 

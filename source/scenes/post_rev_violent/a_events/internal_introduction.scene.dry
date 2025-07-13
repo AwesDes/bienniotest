@@ -40,7 +40,7 @@ Though the party is divided into significantly smaller factions, three main tend
 In conclusion, the party's instability is a major liability to the state, and it is recommended factionalism be reigned in as soon as possible.
 
 @situation_paramilitary
-on-arrival: reports_check -= 1
+on-arrival: reports_check -= 1; para_seen = 1;
 max-visits: 1
 go-to: situation_menu
 
@@ -57,7 +57,7 @@ Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as
 Though united in their goals, both the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> and the <span style="color: #87CEFA">**Alliance**</span> regularly come into conflict with one another, as well as operate in separate regions of Italy, limiting interactions in general.
 
 @situation_economic
-on-arrival: reports_check -= 1; agri_health = 5; agri_health += 5 if south_resolved; infra_health = 5; infra_health += public_works_funded
+on-arrival: reports_check -= 1; agri_health = 5; agri_health += 5 if south_resolved; infra_health = 9; infra_health += public_works_funded; ind_health = 21; eco_seen = 1
 max-visits: 1
 go-to: situation_menu
 
@@ -75,7 +75,6 @@ The road to economic recovery will be a long, gruelling effort, and it is recomm
 on-arrival: reports_check -= 1
 view-if: reports_check = 1
 max-visits: 1
-go-to: situation_menu
 
 Resolution on Party Unity passed in the 10th Party Congress of the <span style="color: #bf0000">**Soviet Union**</span> could be of importance within the party context; the party cannot be divided in this time, and a ban on factionalism would aid in party unity and resolve conflict.
 
