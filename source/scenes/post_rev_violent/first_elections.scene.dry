@@ -293,15 +293,12 @@ Turati's ascension to power represents a significant ideological shift towards t
 @constitution
 max-visits: 1
 
-The *Statuto Albertino*, the constitution of the <span style="color: #009246">**Kingdom of Italy**</span> has been abolished. In it's place, naturally, suggestions for a new Constitution has been rampant. Though the current governmental structure derives from the Soviet Constitution, some on the left and right wings of the party suggest the drafting of a new constitution, arguing the conditions of revolution in <span style="color: #009246">**Italy**</span> are significantly different as compared to <span style="color: #bf0000">**Russia**</span>.
+The *Statuto Albertino*, the constitution of the <span style="color: #009246">**Kingdom of Italy**</span> has been abolished. In it's place, naturally, suggestions for a new Constitution has been rampant. Support for a So<span style="color: #bf0000">**Soviet**</span>-based Constitution is widespread, and as many argue, necessary for the time being.
 
-On the other hand, the Maximalists argue that merely slight iterations to a <span style="color: #bf0000">**Russian**</span>-inspired Constitution is necessary for a functional Constitution, and that the drafting of a new constituion would be pointless and only slow down efforts to stabilise the nation.
-
-What should we do?
+There are many things most wings of the parties disagree upon, yet this is not one of them. 
 
 - @copy_russia: Emulate the 1918 Constitution of the <span style="color: #bf0000">**Russian SFSR**</span>.
 - @copy_ussr: Emulate the 1924 Constitution of the <span style="color: #bf0000">**Soviet Union**</span>.
-- @copy_none: Draft a new Constitution from sratch.
 
 @copy_russia
 view-if: year < 1924
@@ -320,15 +317,6 @@ go-to: decisions
 With inspiration from the 1924 <span style="color: #bf0000">**Soviet**</span> Constitution, the [+ year +] <span style="color: #009246">**Italian**</span> Constitution is drafted, outlining **the abolition of private property, the transfer of the means to production to the workers and the nationalisation of industry**. It establishes, as agreed upon, the **dictatorship of the proletariat and the establishment of the current system of <span style="color: #BF0000">**Congress of Soviets**</span> and the Central Executive Committee**. It further grants **freedom of religion, movement, speech and the press**.
 
 The Constitution is ratified 535-0.
-
-@copy_none
-subtitle: A nation without a Constitution for a prolonged period is bound to suffer.
-on-arrival: constitution_event_trigger = time + 4; soviet_relation -= 1; maximalist_dissent += 9
-choose-if: ((bordigist_seating_disp + gradualist_seating_disp + turatian_seating_disp) >= 50) or ((bordigist_seating_disp + gradualist_seating_disp + turatian_seating_disp + ordinovist_seating_disp) >= 50 and premier = "Bordiga")
-unavailable-subtitle: There is not enough support for this.
-go-to: decisions
-
-Through a slim majority, the <span style="color: #BF0000">**Congress of Soviets**</span> votes to instead draft up a new constitution rather than emulating the <span style="color: #bf0000">**Russian**</span> Constitution. Though the draft will likely take a fair bit of time, proponents assure that a Constitution tailored to <span style="color: #009246">**Italy**</span> will bring about more stability.
 
 @rg_dissolve
 on-arrival: army_formed = 1; army_conduct = 50; army_experience = 20; army_morale = 70; army_strength = 0;

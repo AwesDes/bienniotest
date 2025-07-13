@@ -1,0 +1,9 @@
+title: Gendarmerie
+new-page: true
+is-card: true
+tags: internal_affairs
+on-arrival: cheka_timer = 3
+view-if: cheka_timer <= 0 and gendarmerie
+card-image: img/portraits/FilippoTurati.jpg
+
+= Internal Security

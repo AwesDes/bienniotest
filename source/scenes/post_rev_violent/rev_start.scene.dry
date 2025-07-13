@@ -64,6 +64,8 @@ Q.stability = 0;
 Q.party_unity = 100;
 Q.state_freedom = 0;
 
+Q.economic_plan = 0;
+
 Q.bordigist_dissent = 0;
 Q.labour_dissent = 0;
 Q.socpat_dissent = 0;
@@ -77,6 +79,8 @@ Q.other_seating_disp = 0;
 if (Q.reformists_expelled == 1) {
     Q.comintern_member = 1;
 }
+
+Q.timers.push('eco_plan');
 
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
 !}

@@ -2,7 +2,7 @@ title: Report on the Internal Situation and Stability
 subtitle: The first of our work begins.
 new-page: true
 view-if: first_congress_formed
-on-arrival: reports_check = 5;
+on-arrival: reports_check = 4;
 max-visits: 1
 tags: event
 go-to: situation_menu
@@ -13,12 +13,13 @@ The direness of the current situation within the <span style="color: #009246">**
 
 @situation_menu
 
-There are [+ reports_check +] [? if reports_check < 5 : remaining?] sub-reports attached.
+[? if reports_check != 0 : There [? if reports_check > 1 : are?][? if reports_check = 1: is?] [+ reports_check +] [? if reports_check < 5 : remaining?] sub-[? if reports_check > 1 :reports?][? if reports_check = 1:report?] attached. ?]
+
+[? if reports_check = 0 : The reports conclude. ?]
 
 - @situation_party: The Party.
 - @situation_paramilitary: The Paramilitaries.
 - @situation_economic: The Economy.
-- @situation_reactionary: The Reactionaries.
 - @situation_recommendation: Policy Recommendations.
 
 @situation_party
@@ -68,17 +69,37 @@ Industrial Production within the North is <span style="color: #b39c3aff;">**depr
 
 Infrastructural Transportation is <span style="color: #d42f2f;">**damaged**</span>. The railways, roads and ports, though impacted significantly, will most likely be the easiest to recover, as well as the most important facet of economic recovery for both regions. Though more susceptible to sabotage via subterfuge, the restoration and expansion of transportation will allow for further economic development.
 
-The road to economic recovery will be a long, gruelling effort, and it is recommended a economic plan be formed, presented to the Congress of Soviets and approved as soon as possible for recovery to begin.
-
-@situation_reactionary
-on-arrival: reports_check -= 1
-max-visits: 1
-go-to: situation_menu
-
-
+The road to economic recovery will be a long, gruelling effort, and it is recommended a economic plan be formed, presented to the <span style="color: #BF0000">**Congress of Soviets**</span> and approved as soon as possible for recovery to begin.
 
 @situation_recommendation
 on-arrival: reports_check -= 1
+view-if: reports_check = 1
 max-visits: 1
 go-to: situation_menu
 
+Resolution on Party Unity passed in the 10th Party Congress of the <span style="color: #bf0000">**Soviet Union**</span> could be of importance within the party context; the party cannot be divided in this time, and a ban on factionalism would aid in party unity and resolve conflict.
+
+As suggested in the sub-report, it is imperative that a new economic outlook be decided upon and implemented as soon as possible for economic recovery to begin. Numerous options have been drafted, and will be debated and approved upon accordingly.
+
+Nevertheless, there are actions able to be taken immediately: The issue of Security. Internal Security within the nation is currently under the jurisdiction of the Ministry of the Interior, alongside judicial aid from the Ministry of Justice. However, the Interior Ministry sits currently overburdened, overworked and underfunded. Regularly requesting aid from whatever remnants of the Carabinieri and <span style="color:#d42f2f">Italian Red Army</span>, it is imperative something must change in order to alleviate the burden on the Ministry.
+
+Two proposals have been placed forward. The first is a mere increase to the funding of the Ministry of the Interior, alongside the reorganisation of a new gendarmerie that would reassume the responsibilities of the previous Carabinieri. [? if not rg_reorg : Our decision to disband the Red Guards could aid us as well, employing men with experience in suppressing dissent. ?] The second proposal goes further. Referencing the <span style="color: #bf0000">**All-Russian**</span> Extraordinary Commission, also known as the *Cheka*, some within the party have floated the idea of the formation of an <span style="color: #009246">**Italian**</span> equivalent, namely one *Internal Affairs Commission*, necessary to ensure the revolution, like in <span style="color: #bf0000">**Russia**</span>, survives.
+
+What are we to do?
+
+- @form_committee: Form the Internal Affairs Committee.
+- @form_para: Increase funding of the Interior and reorganise the Gendarmerie.
+
+@form_committee
+subtitle: -1 Budget
+on-arrival: state_freedom -= 1; stability += 0.7; cheka_formed = 1; turatian_dissent += 3; gradualist_dissent += 5; budget -= 1;
+go-to: situation_menu
+
+The Internal Affairs Committee is formed, taking over the responsibilities of the Interior Ministry, alongside others. Though officially reporting to the <span style="color: #BF0000">**Congress of Soviets**</span>, naturally some matters, including party affairs, will report directly to the Chairman of the Central Committee. 
+
+@form_para
+subtitle: -1 Budget
+on-arrival: stability += 0.2; gendarmerie_formed = 1; stability += 0.1 if not rg_reorg; budget -= 1;
+go-to: situation_menu
+
+Funding towards the Interior Ministry is redoubled, and a new Gendarmerie is formed to ensure the <span style="color:#d42f2f">Italian Red Army</span> does not neglect its responsibilities of national defense. Nevertheless, the Gendarmerie reports to the Ministry of the Interior, rather than the State or Party.
