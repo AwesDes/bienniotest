@@ -53,11 +53,11 @@ is-special: true
 
 [? if not eco_plan : <span style="text-align: center">There is currently no Economic Plan.</span> ?]
 
-[? if eco_seen : <span style="text-align: center">Agricultural Output is [+ agri_health : health +].</span> ?]
+[? if eco_seen : <span style="text-align: center">Agricultural Output is **[+ agri_health : health +]**.</span> ?]
 
-[? if eco_seen :  <span style="text-align: center">Industrial Output is [+ ind_health : health +].</span> ?]
+[? if eco_seen :  <span style="text-align: center">Industrial Output is **[+ ind_health : health +]**.</span> ?]
 
-[? if eco_seen : <span style="text-align: center">Infrastructural Transportation is [+ infra_health : health +].</span> ?]
+[? if eco_seen : <span style="text-align: center">Infrastructural Transportation is **[+ infra_health : health +]**.</span> ?]
 
 {!<hr>!}
 

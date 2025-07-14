@@ -1,5 +1,5 @@
 
-(0..2) <span style="color: #d42f2f;">Chaotic</span>
+(..2) <span style="color: #d42f2f;">Chaotic</span>
 (2..4) <span style="color: #FFB74D;">Unstable</span>
 (4..6) <span style="color: #FFD54F;">Volatile</span>
 (6..8) <span style="color: #81C784;">Stabilising</span>
