@@ -163,7 +163,7 @@ max-cards: 3
 
 [? if year = 1927 and month = 5 and week = 3 : Due to revelations of espionage and underground agitation, the United Kingdom cuts diplomatic ties with the Union of Soviet Socialist Republics. ?]
 
-[? if year = 1927 and month = 6 and week = 1 : The Kingdom of Serbs, Croats and Slovenes cuts diploatic ties with the Kingdom of Albania. ?]
+[? if year = 1927 and month = 6 and week = 1 : The Kingdom of Serbs, Croats and Slovenes cuts diplomatic ties with the Kingdom of Albania. ?]
 
 - @party
 - @paramilitary
@@ -338,7 +338,7 @@ max-cards: 4
 
 [? if year = 1927 and month = 5 and week = 3 : Due to revelations of espionage and underground agitation, the United Kingdom cuts diplomatic ties with the Union of Soviet Socialist Republics. ?]
 
-[? if year = 1927 and month = 6 and week = 1 : The Kingdom of Serbs, Croats and Slovenes cuts diploatic ties with the Kingdom of Albania. ?]
+[? if year = 1927 and month = 6 and week = 1 : The Kingdom of Serbs, Croats and Slovenes cuts diplomatic ties with the Kingdom of Albania. ?]
 
 - @party
 - @paramilitary

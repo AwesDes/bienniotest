@@ -36,7 +36,7 @@ Attacking the PCd'I is supported by all but the most left-wing socialists, and w
 @pnf
 on-arrival: enemies = pnf_name; fasci_urgency += 1; workers_pnf -= 4; nationalist_sentiment -= 3*(1-dissent); workers_pnf += 4 if pnf_votes < 2; veterans_pnf += 8 if pnf_votes < 2
 
-[? if fasci_urgency == 0 or pnf_seating_disp < 10 : The [+ pnf_name +] is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if (fasci_urgency > 0 and pnf_seating_disp >= 10) or prime_minister_party == pnf_name : The fascists are the most urgent problem for us to deal with. ?][? if pnf_votes < 2 and not pnf_in_government : Worse, giving them attention while they're such a small party only attracts attention to them. ?]
+[? if (fasci_urgency == 0 or pnf_seating_disp < 10) and prime_minister_party != pnf_name : The [+ pnf_name +] is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if (fasci_urgency > 0 and pnf_seating_disp >= 10) or prime_minister_party == pnf_name : The fascists are the most urgent problem for us to deal with. ?][? if pnf_votes < 2 and not pnf_in_government : Worse, giving them attention while they're such a small party only attracts attention to them. ?]
 
 @religious
 on-arrival: enemies = "religious parties"; communist_strength += 5; reformist_dissent += 8; communist_dissent -= 5; ppi_relation -= 15; workers_ppi -= 4; republican_sentiment -= 4; coalition_dissent += 1 if socialist_catholic_coalition

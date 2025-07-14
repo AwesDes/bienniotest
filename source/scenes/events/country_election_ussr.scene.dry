@@ -23,6 +23,7 @@ if (Q.soviet_relation >= 6 && Q.reformist_strength > Q.maximalist_strength) {
 
 if (Q.soviet_relation >= 6 && Q.reformist_strength > Q.communist_strength) {
     Q.duumvirate_influence += 1;
+    Q.bukharin_influence += 1;
 }
 
 if (Q.radicalisation < 3) {

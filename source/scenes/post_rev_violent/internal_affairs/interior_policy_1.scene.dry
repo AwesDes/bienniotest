@@ -6,3 +6,11 @@ on-arrival: cheka_timer = 3; week_actions += 1;
 view-if: cheka_timer <= 0 and cheka_formed
 
 = Internal Affairs Committee
+
+The Internal Affairs Committee, like the Cheka, represents a necessary evil in the state appparatus. Unlike the Cheka, however, the Committee operates within restraint, though its main goals remain the same; the security of the state and the capture of political criminals and counterrevolutionaries to the cause.
+
+- @self_investigate: Root out factionalism within the Committee.
+
+@self_investigate
+
+Placeholder
