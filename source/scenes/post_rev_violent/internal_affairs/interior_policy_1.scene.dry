@@ -2,7 +2,7 @@ title: Internal Affairs Committee
 new-page: true
 is-card: true
 tags: internal_affairs
-on-arrival: cheka_timer = 3
+on-arrival: cheka_timer = 3; week_actions += 1;
 view-if: cheka_timer <= 0 and cheka_formed
 
 = Internal Affairs Committee

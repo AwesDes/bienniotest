@@ -20,12 +20,14 @@ Though there are naturally other arguments for economic policy, such as a mix of
 - @force_vote: Force a vote on the two policies.
 
 @support_gosplan
-on-arrival: left_eco_support += 1; bordigist_dissent += 4; ordinovist_dissent += 7;
+subtitle: This will invoke the ire of the right.
+on-arrival: left_eco_support += 1; turatian_dissent += 4; gradualist_dissent += 7;
 
 We throw our weight behind the Orthodox Marxists, agreeing that only a centrally planned economy will allow us to recover, much to the chagrin of the Pragmatists. They argue that such a policies will only inflict suffering and replicate the failures of *War Communism* in <span style="color: #bf0000">**Russia**</span> once more.
 
 @support_nep
-on-arrival: right_eco_support += 1;
+subtitle: This will invoke the ire of the left.
+on-arrival: right_eco_support += 1; bordigist_dissent += 4; ordinovist_dissent += 7;
 
 We throw our weight behind the Pragmatists, agreeing that relaxing the total nationalisation of industry is necessary, at least temporary, in order to foster economic growth and production. Nevertheless, opponents argue that the plan represents a step back towards capitalism, calling it a betrayal of the revolution and communism.
 
