@@ -16,9 +16,7 @@ The Internal Affairs Committee, like the Cheka, represents a necessary evil in t
 - @corruption_investigate
 - @as_investigate
 - @nda_investigate
-- @mafia_investigate: Investigate the <span style="color: #465053ff">**Mafia**</span>.
-- @clandestine_internal_menu: Delve into more clandestine internal policy.
-- @clandestine_foreign_menu: Delve into more clandestine foreign policy.
+- @mafia_investigate
 - @root: Do nothing, for now.
 
 @internal_menu
@@ -32,7 +30,6 @@ The Interior Ministry, alongside the Gendarmerie, assume responsibility of the i
 - @as_investigate
 - @nda_investigate
 - @mafia_investigate
-- @gendarmerie_menu: Delve into the Gendarmerie.
 - @root: Do nothing, for now.
 
 @self_investigate
