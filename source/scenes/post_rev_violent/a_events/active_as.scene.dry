@@ -1,0 +1,7 @@
+title: Placeholder
+subtitle: Placeholder
+new-page: true
+view-if: as_trigger_prog >= 100
+on-arrival: as_active = 1
+max-visits: 1
+tags: event

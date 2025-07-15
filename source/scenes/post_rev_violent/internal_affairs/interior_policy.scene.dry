@@ -47,3 +47,7 @@ on-arrival: state_corruption -= 3;
 
 Corruption exists in all forms, especially in the government. From bribes to extortion to nepotism, the renmants of capital have seeped their way into the state, and it is imperative we root them out. Arrests, public trials and surveillance will reduce already existing corruption and deter our bureaucrats from such actions.
 
+@as_investigate
+on-arrival: as_trigger_prog -= 5 if not as_active
+
+Placeholder

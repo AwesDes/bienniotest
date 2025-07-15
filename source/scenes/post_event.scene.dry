@@ -1443,7 +1443,29 @@ if (Q.week_actions >= 1) {
     }
 
     if (Q.violent_revolution) {
+        if (Q.nda_active != 1) {
+            Q.nda_trigger_prog += 100/24;
 
+            if (Q.french_relation < 4) {
+                Q.as_trigger_prog += 4;
+            }
+        }
+
+        if (Q.as_active != 1) {
+            Q.as_trigger_prog += 100/16;
+
+            if (Q.french_relation < 4) {
+                Q.as_trigger_prog += 2;
+            }
+
+            if (Q.british_relation < 4) {
+                Q.as_trigger_prog += 3;
+            }
+        }
+
+        if (Q.mafia_active != 1) {
+            Q.mafia_trigger_prog += 100/8;
+        }
     }
 }
 Q.has_event = 0;
