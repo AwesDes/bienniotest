@@ -179,7 +179,7 @@ if (window && d3) {
 
 - @adopt_central: The Proposal on Central Economic Planning passes!
 - @adopt_nep: The Proposal on the New Economic Policy passes!
-- @none: Neither of the policies are approved!
+- @adopt_none: Neither of the policies are approved!
 
 @adopt_central
 choose-if: left_eco_yes >= 50
@@ -189,5 +189,5 @@ unavailable-subtitle: The proposal did not receive enough votes.
 choose-if: right_eco_yes >= 50
 unavailable-subtitle: The proposal did not receive enough votes.
 
-@adopt_nep
+@adopt_none
 view-if: right_eco_yes < 50 and left_eco_yes < 50
