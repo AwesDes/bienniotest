@@ -39,10 +39,11 @@ The Interior Ministry, alongside the Gendarmerie, assume responsibility of the i
 view-if: interior_factionalism > 0
 on-arrival: interior_factionalism -= 2;
 
-Even within the Interior Ministry, party politics and factionalism has seeped into the cracks brought about conflict and inefficiency within the state apparatus. There are measures we can take to reduce factionalism, naturally, such as reassigning members, replacing overly-partisan employees or improving training and recruitment procedures.
+Even within the Interior Ministry, party politics and factionalism have brought about conflict and inefficiency within the state apparatus. There are measures we can take to reduce factionalism, naturally, such as reassigning members, replacing overly-partisan employees or improving training and recruitment procedures.
 
 @corruption_investigate
 view-if: state_corruption > 0
 on-arrival: state_corruption -= 3;
 
-Placeholder
+Corruption exists in all forms, especially in the government. From bribes to extortion to nepotism, the renmants of capital have seeped their way into the state, and it is imperative we root them out. Arrests, public trials and surveillance will reduce already existing corruption and deter our bureaucrats from such actions.
+
