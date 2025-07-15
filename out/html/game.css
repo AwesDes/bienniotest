@@ -640,6 +640,14 @@ table {
   fill: #FF9999;
 }
 
+.seat.aye {
+  fill: green;
+}
+
+.seat.nay {
+  fill: red;
+}
+
 .tooltip-text {
     text-decoration: underline;
     text-decoration-style: dotted;

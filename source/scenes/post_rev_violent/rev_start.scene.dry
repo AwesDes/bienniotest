@@ -86,6 +86,9 @@ if (Q.reformists_expelled == 1) {
 Q.timers.push('eco_plan', 'cheka');
 
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
+
+Q.left_eco_support = 0;
+Q.right_eco_support = 0;
 !}
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events, especially past this point, will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.

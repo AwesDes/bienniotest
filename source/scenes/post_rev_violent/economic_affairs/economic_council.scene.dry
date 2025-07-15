@@ -34,4 +34,144 @@ We throw our weight behind the Pragmatists, agreeing that relaxing the total nat
 @force_vote
 view-if: left_eco_support >= 2 or right_eco_support >= 2
 
-Placeholder
+We force a vote on the two policies in the <span style="color: #BF0000">**Congress of Soviets**</span>, as both a proposal for a Centrally Planned Economy, as well as a *New Economic Policy*-esque proposal are introduced.
+
+- @vote_display: The delegates vote...
+
+@vote_display
+on-arrival: {!
+if (Q.soviet_relation < 4) {
+    Q.left_eco_support += 1;
+} else if (Q.soviet_relation > 6) {
+    Q.right_eco_support += 1;
+}
+
+if (Q.workers >= Q.rural) {
+    Q.left_eco_support += 1;
+} else {
+    Q.right_eco_support += 1;
+}
+
+var total_eco_support = Q.right_eco_support + Q.left_eco_support;
+
+Q.left_eco_yes = Q.bordigist_seating_disp + Q.ordinovist_seating_disp;
+
+Q.right_eco_yes = Q.gradualist_seating_disp + Q.turatian_seating_disp;
+
+var swayed_eco = Q.labour_seating_disp;
+
+if (Q.syndicalist_active) {
+    swayed_eco += Q.syndicalist_seating_disp;
+}
+
+var right_swayed = (Q.right_eco_support / total_eco_support) * swayed_eco;
+Q.right_eco_yes += right_swayed;
+
+var neutral_eco = Q.socpat_seating_disp + Q.maximalist_seating_disp;
+
+var left_swayed = ((Q.left_eco_support / 2) / total_eco_support) * neutral_eco;
+Q.left_eco_yes += left_swayed
+
+right_swayed = ((Q.right_eco_support / 2) / total_eco_support) * neutral_eco;
+Q.right_eco_yes += right_swayed;
+
+Q.left_eco_no = 100 - Q.left_eco_yes;
+Q.right_eco_no = 100 - Q.right_eco_yes;
+!}
+on-display: {!
+data = []
+
+data.push({
+    "id": "aye",
+    "legend": "Aye",
+    "name": "Aye",
+    "seats": Math.round(Q.left_eco_yes),
+});
+
+data.push({
+    "id": "nay",
+    "legend": "Nay",
+    "name": "Nay",
+    "seats": Math.round(Q.left_eco_no),
+});
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("chamber1").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#chamber1").datum(data).call(parliament);
+}
+!}
+go-to: second_vote
+
+= Resolution on the Adoption of the "Central Economic Plan" Proposal
+
+{!<svg id="chamber1" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!}
+
+{!<tr><td>!} **Aye** {!</td><td>!} **Nay & Abstain** {!</td></tr>!}
+
+{!<tr><td>!} [+ left_eco_yes +]% {!</td><td>!} [+ left_eco_no +]%  {!</td></tr>!}
+
+{!</table>!}
+
+@second_vote
+on-display: {!
+data = []
+
+data.push({
+    "id": "aye",
+    "legend": "Aye",
+    "name": "Aye",
+    "seats": Math.round(Q.right_eco_yes),
+});
+
+data.push({
+    "id": "nay",
+    "legend": "Nay",
+    "name": "Nay",
+    "seats": Math.round(Q.right_eco_no),
+});
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("chamber2").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#chamber2").datum(data).call(parliament);
+}
+!}
+
+= Resolution on the Adoption of the "New Economic Policy" Proposal
+
+{!<svg id="chamber2" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!}
+
+{!<tr><td>!} **Aye** {!</td><td>!} **Nay & Abstain** {!</td></tr>!}
+
+{!<tr><td>!} [+ right_eco_yes +]% {!</td><td>!} [+ right_eco_no +]%  {!</td></tr>!}
+
+{!</table>!}
+
+
