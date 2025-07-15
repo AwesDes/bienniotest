@@ -121,11 +121,11 @@ go-to: second_vote
 
 {!<svg id="chamber1" style="width: 500px; height: 250px;"> </svg>!}
 
-{!<table>!}
+{!<table style="margin-left: auto; margin-right: auto">!}
 
-{!<tr><td>!} **Aye** {!</td><td>!} **Nay & Abstain** {!</td></tr>!}
+{!<tr><td>!} **Aye** {!</td><td>!} **Nay/Abstain** {!</td></tr>!}
 
-{!<tr><td>!} [+ left_eco_yes +]% {!</td><td>!} [+ left_eco_no +]%  {!</td></tr>!}
+{!<tr><td style="text-align: center">!} [+ left_eco_yes +]% {!</td><td style="text-align: center">!} [+ left_eco_no +]%  {!</td></tr>!}
 
 {!</table>!}
 
@@ -169,11 +169,11 @@ if (window && d3) {
 
 {!<svg id="chamber2" style="width: 500px; height: 250px;"> </svg>!}
 
-{!<table>!}
+{!<table style="margin-left: auto; margin-right: auto">!}
 
-{!<tr><td>!} **Aye** {!</td><td>!} **Nay & Abstain** {!</td></tr>!}
+{!<tr><td>!} **Aye** {!</td><td>!} **Nay/Abstain** {!</td></tr>!}
 
-{!<tr><td>!} [+ right_eco_yes +]% {!</td><td>!} [+ right_eco_no +]%  {!</td></tr>!}
+{!<tr><td style="text-align: center">!} [+ right_eco_yes +]% {!</td><td style="text-align: center">!} [+ right_eco_no +]%  {!</td></tr>!}
 
 {!</table>!}
 
