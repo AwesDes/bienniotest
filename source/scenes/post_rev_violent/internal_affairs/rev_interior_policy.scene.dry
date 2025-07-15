@@ -74,7 +74,9 @@ on-arrival: mafia_trigger_prog -= 3 if not mafia_active;
 
 @clandestine_internal_menu
 
-The Committee, naturally, is tasked with all avenues to root out dissent and ensure order, even from within. Obviously, this does not include the <span style="color: #BF0000">**Congress of Soviets**</span>, for it has its own responsibilities and means to resolve issues. At least that's what is says on paper.
+The Committee, naturally, is tasked with all avenues to root out dissent and ensure order, even from within. Obviously, this does not include the <span style="color: #BF0000">**Congress of Soviets**</span>, for it has its own responsibilities and means to resolve issues. 
+
+At least that's what it says on paper.
 
 - @investigate_left: Investigate <span style="color: #740000ff">**the Left**</span>.
 - @investigate_centre: Investigate <span style="color: #a00000ff">**the Centre**</span>.
@@ -87,7 +89,8 @@ Foreign operations, albeit minimal, still exist. Clandestine forces within our c
 
 - @improve_entente: Cultivate pro-<span style="color: #009246">**Italian**</span> sentiment within the <span style="color: #046276">**Western Powers**</span>.
 - @intelligence_entente: Improve our intelligence capabilities within the <span style="color: #046276">**Western Powers**</span>.
-- @intelligence_yugoslavia: Improve our intelligence capabilities within the <span style="color: #9e00c5ff">**Yugoslavia**</span>.
+- @intelligence_yugoslavia: Improve our intelligence capabilities within <span style="color: #9e00c5ff">**Yugoslavia**</span>.
+- @cheka_menu: Return back to regular policy.
 
 @gendarmerie_menu
 
@@ -99,21 +102,21 @@ The Gendarmerie operate as a national paramilitary under the jurisdiction of the
 
 @investigate_left
 choose-if: premier_party != "Left"
-unavailable-subtitle: Chairman [+ chairman +] refuses to launch an investigation into his own faction.
+unavailable-subtitle: Chairman [+ premier +] refuses to launch an investigation into his own faction.
 on-arrival: investigated_left += 1;
 
 Placeholder
 
 @investigate_centre
 choose-if: premier_party != "Centre"
-unavailable-subtitle: Chairman [+ chairman +] refuses to launch an investigation into his own faction.
+unavailable-subtitle: Chairman [+ premier +] refuses to launch an investigation into his own faction.
 on-arrival: investigated_centre += 1;
 
 Placeholder
 
 @investigate_right
 choose-if: premier_party != "Right"
-unavailable-subtitle: Chairman [+ chairman +] refuses to launch an investigation into his own faction.
+unavailable-subtitle: Chairman [+ premier +] refuses to launch an investigation into his own faction.
 on-arrival: investigated_right += 1;
 
 Placeholder

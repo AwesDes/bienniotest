@@ -41,6 +41,20 @@ Independents: [+ other_seating_disp +]%
 
 Next Election: [+ next_election_month : month +] [+ next_election_year +]
 
+= Economics
+
+Budget: [+ budget +]
+
+Inflation: [+ inflation_2 +]%
+
+Economic Growth: [+ economic_growth_2 +]%
+
+Unemployment: [+ unemployment_2 +]%
+
+British Debts: [? if uk_debts > 0 and not in_default : Significant ?] [? if uk_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
+
+American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? if us_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
+
 @politics
 
 = State of the Party
@@ -69,11 +83,7 @@ The Gradualists are **[+ gradualist_dissent : factional_dissent +]**.
 
 [? if not army_formed : We have <span style="color:#d42f2f">**no standing army**</span>. ?]
 
-[? if army_formed and rg_reorg : The <span style="color:#d42f2f">**Italian Red Army**</span> is formed from the Red Guards. ?]
-
-[? if army_formed and not rg_reorg : The <span style="color:#d42f2f">**Italian Red Army**</span> exists as an independent entity. ?]
-
-[? if army_formed : Armata Rossa Italiana: [+ army_strength +],000 Strength ?]
+[? if army_formed : <span style="color:#d42f2f">**Armata Rossa Italiana**</span>: [+ army_strength +],000 Strength ?]
 
 [? if army_formed : Morale within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_morale : low_high +]**. ?]
 
@@ -81,18 +91,3 @@ The Gradualists are **[+ gradualist_dissent : factional_dissent +]**.
 
 [? if army_formed : Conduct within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_conduct : conduct +]**. ?]
 
-@economics
-
-= Economics
-
-Budget: [+ budget +]
-
-Inflation: [+ inflation_2 +]%
-
-Economic Growth: [+ economic_growth_2 +]%
-
-Unemployment: [+ unemployment_2 +]%
-
-British Debts: [? if uk_debts > 0 and not in_default : Significant ?] [? if uk_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
-
-American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? if us_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]

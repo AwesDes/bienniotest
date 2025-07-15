@@ -19,19 +19,19 @@ Public Opinion is currently **[+ public_opinion : opinion +]**.
 
 Corruption within the state is **[+ state_corruption : corruption +]**.
 
-[? if para_seen = 1 and not as_active : The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> are currently <span style="color: #00CC00;">inactive</span>. ?]
+[? if para_seen = 1 and not as_active : The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> are currently <span style="color: #00CC00;">**inactive**</span>. ?]
 
-[? if para_seen = 1 and not nda_active : The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> is currently <span style="color: #00CC00;">inactive</span>. ?]
+[? if para_seen = 1 and not nda_active : The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> is currently <span style="color: #00CC00;">**inactive**</span>. ?]
 
-[? if para_seen = 1 and not mafia_active : The <span style="color: #465053ff">**Mafia**</span> are currently <span style="color: #00CC00;">in retreat</span>. ?]
+[? if para_seen = 1 and not mafia_active : The <span style="color: #465053ff">**Mafia**</span> are currently <span style="color: #00CC00;">**in retreat**</span>. ?]
 
 {!<hr>!}
 
 = State of the Organisations
 
-[? if not cheka_formed : Factionalism within the Ministry of the Interior is **[+ interior_factionalism : low_high +]**. ?]
+[? if not cheka_formed : Factionalism within the Ministry of the Interior is **[+ interior_factionalism : factional_dissent +]**. ?]
 
-[? if cheka_formed : Factionalism within the Internal Affairs Committee is **[+ interior_factionalism : low_high +]**. ?]
+[? if cheka_formed : Factionalism within the Internal Affairs Committee is **[+ interior_factionalism : factional_dissent +]**. ?]
 
 {!<hr>!}
 
