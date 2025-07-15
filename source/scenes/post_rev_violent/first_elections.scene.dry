@@ -251,9 +251,9 @@ Constantino Lazzari is elected Secretary-General of the [+ psi_name +] by a wide
 
 @cec
 on-arrival: {!
-Q.left_support = Q.bordigist_seating_disp + Q.ordinovist_seating_disp;
-Q.maximalist_support = Q.maximalist_seating_disp + (Q.labour_seating_disp / 2) + Q.socpat_seating_disp;
-Q.reformist_support = Q.turatian_seating_disp + Q.gradualist_seating_disp + (Q.labour_seating_disp / 2);
+Q.left_support = parseFloat(Q.bordigist_seating_disp) + parseFloat(Q.ordinovist_seating_disp);
+Q.maximalist_support = parseFloat(Q.maximalist_seating_disp) + (parseFloat(Q.labour_seating_disp) / 2) + parseFloat(Q.socpat_seating_disp);
+Q.reformist_support = parseFloat(Q.turatian_seating_disp) + parseFloat(Q.gradualist_seating_disp) + (parseFloat(Q.labour_seating_disp) / 2);
 !}
 max-visits: 1
 

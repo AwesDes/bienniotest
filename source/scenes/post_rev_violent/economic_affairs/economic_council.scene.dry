@@ -52,31 +52,31 @@ if (Q.workers >= Q.rural) {
     Q.right_eco_support += 1;
 }
 
-var total_eco_support = Q.right_eco_support + Q.left_eco_support;
+var total_eco_support = parseFloat(Q.right_eco_support) + parseFloat(Q.left_eco_support);
 
-Q.left_eco_yes = Q.bordigist_seating_disp + Q.ordinovist_seating_disp;
+Q.left_eco_yes = parseFloat(Q.bordigist_seating_disp) + parseFloat(Q.ordinovist_seating_disp);
 
-Q.right_eco_yes = Q.gradualist_seating_disp + Q.turatian_seating_disp;
+Q.right_eco_yes = parseFloat(Q.gradualist_seating_disp) + parseFloat(Q.turatian_seating_disp);
 
-var swayed_eco = Q.labour_seating_disp;
+var swayed_eco = parseFloat(Q.labour_seating_disp);
 
 if (Q.syndicalist_active) {
-    swayed_eco += Q.syndicalist_seating_disp;
+    swayed_eco += parseFloat(Q.syndicalist_seating_disp);
 }
 
-var right_swayed = (Q.right_eco_support / total_eco_support) * swayed_eco;
+var right_swayed = (parseFloat(Q.right_eco_support) / total_eco_support) * swayed_eco;
 Q.right_eco_yes += right_swayed;
 
-var neutral_eco = Q.socpat_seating_disp + Q.maximalist_seating_disp;
+var neutral_eco = parseFloat(Q.socpat_seating_disp) + parseFloat(Q.maximalist_seating_disp);
 
-var left_swayed = ((Q.left_eco_support / 2) / total_eco_support) * neutral_eco;
+var left_swayed = ((parseFloat(Q.left_eco_support) / 2) / total_eco_support) * neutral_eco;
 Q.left_eco_yes += left_swayed
 
-right_swayed = ((Q.right_eco_support / 2) / total_eco_support) * neutral_eco;
+right_swayed = ((parseFloat(Q.right_eco_support) / 2) / total_eco_support) * neutral_eco;
 Q.right_eco_yes += right_swayed;
 
-Q.left_eco_no = 100 - Q.left_eco_yes;
-Q.right_eco_no = 100 - Q.right_eco_yes;
+Q.left_eco_no = 100 - parseFloat(Q.left_eco_yes);
+Q.right_eco_no = 100 - parseFloat(Q.right_eco_yes);
 !}
 on-display: {!
 data = []

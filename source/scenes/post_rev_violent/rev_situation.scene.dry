@@ -53,9 +53,9 @@ The Gradualists are **[+ gradualist_dissent : factional_dissent +]**.
 
 = State of the Organisations
 
-[? if not cheka_formed : Factionalism within the Ministry of the Interior is [+ interior_factionalism : low_high +] ?]
+[? if not cheka_formed : Factionalism within the Ministry of the Interior is **[+ interior_factionalism : low_high +]**. ?]
 
-[? if cheka_formed : Factionalism within the Internal Affairs Committee is [+ interior_factionalism : low_high +] ?]
+[? if cheka_formed : Factionalism within the Internal Affairs Committee is **[+ interior_factionalism : low_high +]**. ?]
 
 {!<hr>!}
 
@@ -95,8 +95,8 @@ Decolonisation has not begun.
 
 [? if not comintern_member and first_congress_formed : We have been expelled from the <span style="color: #800000">**Communist International**</span>. ?]
 
-Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> is **[+ british_relation : low_high_small +]**.
+Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> are **[+ british_relation : low_high_small +]**.
 
-Our relations with the <span style="color: #39AAAA">**French Republic**</span> is **[+ french_relation : low_high_small +]**.
+Our relations with the <span style="color: #39AAAA">**French Republic**</span> are **[+ french_relation : low_high_small +]**.
 
-Our relations with the <span style="color: #bf0000">**Soviet Union**</span> is **[+ soviet_relation : low_high_small +]**.
+Our relations with the <span style="color: #bf0000">**Soviet Union**</span> are **[+ soviet_relation : low_high_small +]**.
