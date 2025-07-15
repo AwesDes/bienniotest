@@ -265,16 +265,18 @@ The responsibility falls on the First <span style="color: #009246">**Italian**</
 
 @left_elected
 on-arrival: premier = "Bordiga"; premier_party = "Bordigist"; turatian_dissent += 7; gradualist_dissent += 9;
-view-if: left_support > maximalist_support and left_support > reformist_support
+choose-if: left_support > maximalist_support and left_support > reformist_support
+unavailable-subtitle: There is not enough support for Bordiga.
 go-to: decisions
 
 With a plurality of votes, Amadeo Bordiga is elected Chairman of the Committee, having garnered the votes of Bordigists and reluctant Ordinovists. The factional difference between the Secretary-General and Chairman is concerning.
 
-Bordiga's ascension to power represents a significant ideological shift leftwards for the party, as well as harsher crackdowns on reactionaries and non-communists within the nation. Bordiga's divisive rhetoric against the Filippo Turati and his supporters do nothing to aid factional unity within the party, as well.
+Bordiga's ascension to power represents a significant ideological shift leftwards for the party, as well as harsher crackdowns on reactionaries and non-communists within the nation. Bordiga's divisive rhetoric against Filippo Turati and his supporters do nothing to aid factional unity within the party, as well.
 
 @maximalist_elected
 on-arrival: premier = "Serrati"; premier_party = "Maximalist";
-view-if: left_support <= maximalist_support and maximalist_support >= reformist_support
+choose-if: left_support <= maximalist_support and maximalist_support >= reformist_support
+unavailable-subtitle: There is not enough support for Serrati.
 go-to: decisions
 
 With a plurality of votes, Giacomo Menotti Serrati is elected Chairman of the Committee, having garnered the votes of Maximalists, Social Patriots and some of the more radical Unionists.
@@ -283,7 +285,8 @@ Serrati's ascension to power represents the continuation of the ideological bala
 
 @reformist_elected
 on-arrival: premier = "Turati"; premier_party = "Turatian"; bordigist_dissent += 7; ordinovist_dissent += 7
-view-if: left_support < reformist_support and maximalist_support < reformist_support
+choose-if: left_support < reformist_support and maximalist_support < reformist_support
+unavailable-subtitle: There is not enough support for Turati.
 go-to: decisions
 
 With a plurality of votes, Filippo Turati is elected Chairman of the Committee, having garnered the votes of Turatians, Gradualists and the moderate Unionists. The factional difference between the Secretary-General and Chairman is concerning.
@@ -293,7 +296,7 @@ Turati's ascension to power represents a significant ideological shift towards t
 @constitution
 max-visits: 1
 
-The *Statuto Albertino*, the constitution of the <span style="color: #009246">**Kingdom of Italy**</span> has been abolished. In it's place, naturally, suggestions for a new Constitution has been rampant. Support for a So<span style="color: #bf0000">**Soviet**</span>-based Constitution is widespread, and as many argue, necessary for the time being.
+The *Statuto Albertino*, the constitution of the <span style="color: #009246">**Kingdom of Italy**</span> has been abolished. In it's place, naturally, suggestions for a new Constitution has been rampant. Support for a <span style="color: #bf0000">**Soviet**</span>-based Constitution is widespread, and as many argue, necessary for the time being.
 
 There are many things most wings of the parties disagree upon, yet this is not one of them. 
 
@@ -362,10 +365,10 @@ Through negotiations and diplomacy, we have rejoined the <span style="color: #80
 
 @mend_ties
 view-if: reformists_expelled
-on-arrival: entente_relation += 1;
+on-arrival: french_relation += 1; british_relation += 1
 go-to: decisions
 
-Though distrust is rampant, we are able to cultivate at least some goodwill between <span style="color: #009246">**Italy**</span> and our former allies, though it remains to be seen if this will continue.
+Though distrust is rampant, we are able to cultivate at least some goodwill between <span style="color: #009246">**Italy**</span> and our <span style="color: #046276">**former allies**</span>, though it remains to be seen if this will continue.
 
 @debts
 max-visits: 1
@@ -380,13 +383,13 @@ What should we do?
 - @debts_no: Repudiate all sovereign debts owed and financial obligations!
 
 @debts_yes
-on-arrival: debt = 4; entente_relation += 1; maximalist_dissent += 10; labour_dissent += 10; bordigist_dissent += 10; ordinovist_dissent += 10
+on-arrival: debt = 4; british_relation += 1; maximalist_dissent += 10; labour_dissent += 10; bordigist_dissent += 10; ordinovist_dissent += 10
 go-to: decisions
 
 In an effort to continue cordial relations with the <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and <span style="color: #3C3B6E">**Amer**</span><span style="color: #B22234">**icans**</span>, we assume responsibility of the debts left behind by the <span style="color: #009246">**Italian Kingdom**</span>, placing us in a relatively unstable financial position.
 
 @debts_no
-on-arrival: entente_relation -= 3;
+on-arrival: french_relation -= 1; british_relation -= 3;
 go-to: decisions
 
 Like the <span style="color: #bf0000">**Russians**</span>, we repudiate all bonds issued by the <span style="color: #009246">**Italian Kingdom**</span>, cancelling all previously issued debt and ceasing payment of foreign debt, declaring them to be void. Foreign assets within the nation have been expropriated.

@@ -284,6 +284,21 @@ if (Q.dissent < 0) {
     Q.dissent = 0.95;
 }
 
+// post-rev calculations
+
+var faction_dissent = Q.bordigist_dissent + Q.labour_dissent + Q.socpat_dissent + Q.turatian_dissent + Q.gradualist_dissent + Q.maximalist_dissent + Q.ordinovist_dissent;
+
+var factions = 7
+
+if (Q.syndicalist_active) {
+    faction_dissent += Q.syndicalist_dissent;
+    factions += 1;
+}
+
+var factions_calc = factions * 100;
+
+Q.party_unity = (faction_dissent / factions_calc)*100;
+
 // 1. update dates
 if (Q.week_actions >= 1) {
     Q.time += 1;
@@ -333,7 +348,7 @@ if (Q.week_actions >= 1) {
     // change economic stats...
     // budget deficits lead to some inflation
     // make all the effects be monthly still :3
-    if (Q.week == 1) {
+    if (Q.week == 1 && Q.violent_revolution != 1) {
 
         // recalculate violence
 
@@ -1425,6 +1440,10 @@ if (Q.week_actions >= 1) {
             Q.veterans_pnf -= 4/12;
             Q.women_pnf -= 3/12;
         }
+    }
+
+    if (Q.violent_revolution) {
+
     }
 }
 Q.has_event = 0;

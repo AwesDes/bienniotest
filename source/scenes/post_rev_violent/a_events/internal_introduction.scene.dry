@@ -72,7 +72,7 @@ Infrastructural Transportation is **[+ infra_health : health +]**. The railways,
 The road to economic recovery will be a long, gruelling effort, and it is recommended a economic plan be formed, presented to the <span style="color: #BF0000">**Congress of Soviets**</span> and approved as soon as possible for recovery to begin.
 
 @situation_recommendation
-on-arrival: reports_check -= 1
+on-arrival: reports_check -= 1; interior_factionalism = 25
 view-if: reports_check = 1
 max-visits: 1
 
@@ -91,14 +91,14 @@ What are we to do?
 
 @form_committee
 subtitle: -1 Budget
-on-arrival: state_freedom -= 1; stability += 0.7; cheka_formed = 1; turatian_dissent += 3; gradualist_dissent += 5; budget -= 1;
+on-arrival: state_freedom -= 1; stability += 0.7; cheka_formed = 1; turatian_dissent += 3; gradualist_dissent += 5; budget -= 1; interior_factionalism -= 10
 go-to: situation_menu
 
 The Internal Affairs Committee is formed, taking over the responsibilities of the Interior Ministry, alongside others. Though officially reporting to the <span style="color: #BF0000">**Congress of Soviets**</span>, naturally some matters, including party affairs, will report directly to the Chairman of the Central Committee. 
 
 @form_para
 subtitle: -1 Budget
-on-arrival: stability += 0.2; gendarmerie_formed = 1; stability += 0.1 if not rg_reorg; budget -= 1;
+on-arrival: stability += 0.2; gendarmerie_formed = 1; stability += 0.1 if not rg_reorg; budget -= 1; interior_factionalism -= 5 if not rg_reorg
 go-to: situation_menu
 
 Funding towards the Interior Ministry is redoubled, and a new Gendarmerie is formed to ensure the <span style="color:#d42f2f">Italian Red Army</span> does not neglect its responsibilities of national defense. Nevertheless, the Gendarmerie reports to the Ministry of the Interior, rather than the State or Party.

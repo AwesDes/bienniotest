@@ -1,0 +1,48 @@
+title: Internal Affairs Committee
+new-page: true
+is-card: true
+tags: internal_affairs
+on-arrival: cheka_timer = 3; week_actions += 1;
+view-if: cheka_timer <= 0
+go-to: cheka_menu if cheka_formed; internal_menu if not cheka_formed
+
+@cheka_menu
+
+= Internal Affairs Committee
+
+The Internal Affairs Committee, like the Cheka, represents a necessary evil in the state apparatus. Unlike the Cheka, however, the Committee operates within restraint, though its main goals remain the same; the security of the state and the capture of political criminals and counterrevolutionaries to the revolution.
+
+- @self_investigate: Root out factionalism within the Committee.
+- @corruption_investigate: Investigate corruption and inefficiency within the bureaucracy.
+- @as_investigate: Investigate the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>.
+- @nda_investigate: Investigate the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>.
+- @mafia_investigate: Investigate the <span style="color: #465053ff">**Mafia**</span>.
+- @clandestine_internal_menu: Delve into more clandestine internal policy.
+- @clandestine_foreign_menu: Delve into more clandestine foreign policy.
+- @root: Do nothing, for now.
+
+@internal_menu
+
+= Internal Policy
+
+The Interior Ministry, alongside the Gendarmerie, assume responsibility of the internal situation within Italy, and we can direct the Ministry to act accordingly to root out corruption, factionalism or the paramilitaries.
+
+- @self_investigate: Root out factionalism within the Committee.
+- @corruption_investigate: Investigate corruption and inefficiency within the bureaucracy.
+- @as_investigate: Investigate the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>.
+- @nda_investigate: Investigate the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>.
+- @mafia_investigate: Investigate the <span style="color: #465053ff">**Mafia**</span>.
+- @gendarmerie_menu: Delve into the Gendarmerie.
+- @root: Do nothing, for now.
+
+@self_investigate
+view-if: interior_factionalism > 0
+on-arrival: interior_factionalism -= 2;
+
+Even within the Interior Ministry, party politics and factionalism has seeped into the cracks brought about conflict and inefficiency within the state apparatus. There are measures we can take to reduce factionalism, naturally, such as reassigning members, replacing overly-partisan employees or improving training and recruitment procedures.
+
+@corruption_investigate
+view-if: state_corruption > 0
+on-arrival: state_corruption -= 3;
+
+Placeholder

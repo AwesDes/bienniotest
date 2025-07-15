@@ -107,7 +107,7 @@ if (Q.ldr_leader == "Orlando" && Q.ldr_relation > 75) {
 go-to: acerbo_menu
 max-visits: 1
 
-[? if not ldr_convinced = 1: Unfortunately, and perhaps unsurprisingly, the [+ ldr_full_name +] and [+ ldr_leader +] refuse to support us, seeing the Acerbo Law as a stability measure than the power grab that it is..  ?]
+[? if not ldr_convinced = 1: Unfortunately, and perhaps unsurprisingly, the [+ ldr_full_name +] and [+ ldr_leader +] refuse to support us, seeing the Acerbo Law as a stability measure than the power grab that it is.  ?]
 
 [? if ldr_convinced = 1: Thankfully, and moreso surprisingly, the [+ ldr_full_name +] and [+ ldr_leader +] have agreed to support us, refusing to vote in favour of the Acerbo Law due to our good relations, combined with an at the very least ambivalent leadership. ?]
 
