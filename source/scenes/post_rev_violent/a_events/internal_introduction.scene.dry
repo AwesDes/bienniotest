@@ -23,7 +23,7 @@ The direness of the current situation within the <span style="color: #009246">**
 - @situation_recommendation: Policy Recommendations.
 
 @situation_party
-on-arrival: reports_check -= 1;
+on-arrival: reports_check -= 1; psi_leader_faction = "Centre"; premier_party = "Left" if premier_party = "Bordigist"; premier_party = "Centre" if premier_party = "Maximalist"; premier_party = "Right" if premier_party = "Turatian";
 max-visits: 1
 go-to: situation_menu
 
@@ -94,7 +94,7 @@ subtitle: -1 Budget
 on-arrival: state_freedom -= 1; stability += 0.7; cheka_formed = 1; turatian_dissent += 3; gradualist_dissent += 5; budget -= 1; interior_factionalism -= 10
 go-to: situation_menu
 
-The Internal Affairs Committee is formed, taking over the responsibilities of the Interior Ministry, alongside others. Though officially reporting to the <span style="color: #BF0000">**Congress of Soviets**</span>, naturally some matters, including party affairs, will report directly to the Chairman of the Central Committee. 
+The Internal Affairs Committee is formed, taking over the responsibilities of the Interior Ministry, alongside others. Though officially reporting to the <span style="color: #BF0000">**Congress of Soviets**</span>, naturally some matters, including party affairs, will report directly to the Chairman of the Central Executive Committee. 
 
 @form_para
 subtitle: -1 Budget

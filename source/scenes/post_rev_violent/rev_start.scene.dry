@@ -68,6 +68,7 @@ Q.economic_plan = 0;
 Q.british_relation = Q.entente_relation;
 Q.french_relation = Q.entente_relation;
 Q.corruption = 50;
+Q.public_opinion = 50
 
 Q.bordigist_dissent = 0;
 Q.labour_dissent = 0;

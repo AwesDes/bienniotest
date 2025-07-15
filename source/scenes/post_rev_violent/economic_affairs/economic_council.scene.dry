@@ -75,11 +75,14 @@ Q.left_eco_yes += left_swayed
 right_swayed = ((parseFloat(Q.right_eco_support) / 2) / total_eco_support) * neutral_eco;
 Q.right_eco_yes += right_swayed;
 
+Q.left_eco_no = 100 - parseFloat(Q.left_eco_yes);
+Q.right_eco_no = 100 - parseFloat(Q.right_eco_yes);
+
 Q.left_eco_yes = parseFloat(Q.left_eco_yes).toFixed(1);
 Q.right_eco_yes = parseFloat(Q.right_eco_yes).toFixed(1);
 
-Q.left_eco_no = 100 - parseFloat(Q.left_eco_yes);
-Q.right_eco_no = 100 - parseFloat(Q.right_eco_yes);
+Q.left_eco_no = parseFloat(Q.left_eco_no).toFixed(1);
+Q.right_eco_no = parseFloat(Q.right_eco_no).toFixed(1);
 !}
 on-display: {!
 data = []
@@ -117,7 +120,7 @@ if (window && d3) {
 !}
 go-to: second_vote
 
-= Resolution on the Adoption of the "Central Economic Plan" Proposal
+= Resolution on the Adoption of the "Central Economic Plan"
 
 {!<svg id="chamber1" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -165,7 +168,7 @@ if (window && d3) {
 }
 !}
 
-= Resolution on the Adoption of the "New Economic Policy" Proposal
+= Resolution on the Adoption of the "New Economic Policy"
 
 {!<svg id="chamber2" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -177,17 +180,58 @@ if (window && d3) {
 
 {!</table>!}
 
-- @adopt_central: The Proposal on Central Economic Planning passes!
+- @adopt_central: The Proposal on the Central Economic Plan passes!
 - @adopt_nep: The Proposal on the New Economic Policy passes!
 - @adopt_none: Neither of the policies are approved!
 
 @adopt_central
 choose-if: left_eco_yes >= 50
-unavailable-subtitle: The proposal did not receive enough votes.
+unavailable-subtitle: The proposal fails to receive the necessary votes to pass.
+on-arrival: left_eco_adopted = 1; economic_plan = 1
+
+With a simple majority in the <span style="color: #BF0000">**Congress of Soviets**</span>, the Proposal on the Central Economic Plan passes! Murmurs of grumbling does come from the Pragmatists, but a majority is hard to dispute.
+
+Nevertheless, there is much work to be done.
 
 @adopt_nep
 choose-if: right_eco_yes >= 50
-unavailable-subtitle: The proposal did not receive enough votes.
+unavailable-subtitle: The proposal fails to receive the necessary votes to pass.
+on-arrival: right_eco_adopted = 1; economic_plan = 1
+
+With a simple majority in the <span style="color: #BF0000">**Congress of Soviets**</span>, the Proposal on the New Economic Policy passes! Murmurs of grumbling does come from the Orthodox Marxists, but a majority is hard to dispute.
+
+Nevertheless, there is much work to be done.
 
 @adopt_none
 view-if: right_eco_yes < 50 and left_eco_yes < 50
+
+Neither proposals are able to achieve a majority in the <span style="color: #BF0000">**Congress of Soviets**</span>. Thus, the responsibility falls to the Chairman of the Central Executive Committee, though the failure of both proposals means the supporters of the policy not chosen will be upset at our choice.
+
+[? if left_eco_yes + right_eco_yes < 50 : However, the failures of both proposals to reach even a combined vote of 50% has prompted the emergence of a new faction, proposing the merger of the two policies for each region. The new proposal would implement the policies of a Centrally Planned Economy within the Northern, more industrialised regions, while allowing for a more relaxed NEP-esque policy within the Southern Agricultural regions. ?]
+
+[? if left_eco_yes + right_eco_yes < 50 : To call the proposal a bureaucratic nightmare would be an understatement. The proposal would essential mean the existence of two economies right beside one another, with the responsibilities of trade, pricing and complains assumed by the state, alongside the management of the two economies themselves. Nevertheless, it would provide the best of both worlds, and encourage a boom if managed successfully. ?]
+
+- @choose_central: Adopt the Central Economic Plan.
+- @choose_nep: Adopt the New Economic Policy.
+- @choose_both: Adopt the 'Regional Dualism' system.
+
+@choose_central
+on-arrival: left_eco_adopted = 1; economic_plan = 1; turatian_dissent += 7; gradualist_dissent += 10; labour_dissent += 4; syndicalist_dissent += 5 if syndicalist_active; communist_strength += 8
+choose-if: premier_party != "Turatian";
+unavailable-subtitle: Chairman [+ premier +] would never choose this.
+
+Placeholder
+
+@choose_nep
+on-arrival: right_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 10; ordinovist_dissent += 7; reformist_strength += 7
+choose-if: premier_party != "Bordigist";
+unavailable-subtitle: Chairman [+ premier +] would never choose this.
+
+Placeholder
+
+@choose_both
+subtitle: This will be significantly harder to manage compared to the other proposals.
+view-if: left_eco_yes + right_eco_yes < 50
+on-arrival: both_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 4; ordinovist_dissent += 4; gradualist_dissent += 4; turatian_dissent += 4; 
+
+Placeholder

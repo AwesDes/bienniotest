@@ -1,4 +1,4 @@
-title: Internal Affairs Committee
+title: [? if cheka_formed : Internal Affairs Committee ?][? if not cheka_formed : Interior Affairs ?]
 new-page: true
 is-card: true
 tags: internal_affairs
@@ -46,7 +46,7 @@ title: Investigate corruption and inefficiency within the bureaucracy.
 view-if: state_corruption > 0
 on-arrival: state_corruption -= 3;
 
-Corruption exists in all forms, especially in the government. From bribes to extortion to nepotism, the renmants of capital have seeped their way into the state, and it is imperative we root them out. Arrests, public trials and surveillance will reduce already existing corruption and deter our bureaucrats from such actions.
+Corruption exists in all forms, especially in the government. From bribes to extortion to nepotism, the remnants of capital have seeped their way into the state, and it is imperative we root them out. Arrests, public trials and surveillance will reduce already existing corruption and deter our bureaucrats from such actions.
 
 @as_investigate
 title: Investigate the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>.
@@ -74,6 +74,71 @@ on-arrival: mafia_trigger_prog -= 3 if not mafia_active;
 
 @clandestine_internal_menu
 
+The Committee, naturally, is tasked with all avenues to root out dissent and ensure order, even from within. Obviously, this does not include the <span style="color: #BF0000">**Congress of Soviets**</span>, for it has its own responsibilities and means to resolve issues. At least that's what is says on paper.
+
+- @investigate_left: Investigate <span style="color: #740000ff">**the Left**</span>.
+- @investigate_centre: Investigate <span style="color: #a00000ff">**the Centre**</span>.
+- @investigate_right: Investigate <span style="color: #db0000ff">**the Right**</span>.
+- @cheka_menu: Return back to regular policy.
+
 @clandestine_foreign_menu
 
+Foreign operations, albeit minimal, still exist. Clandestine forces within our closest neighbours, allies and enemies all exist, and we could consider expanding operations should we feel the need to.
+
+- @improve_entente: Cultivate pro-<span style="color: #009246">**Italian**</span> sentiment within the <span style="color: #046276">**Western Powers**</span>.
+- @intelligence_entente: Improve our intelligence capabilities within the <span style="color: #046276">**Western Powers**</span>.
+- @intelligence_yugoslavia: Improve our intelligence capabilities within the <span style="color: #9e00c5ff">**Yugoslavia**</span>.
+
 @gendarmerie_menu
+
+The Gendarmerie operate as a national paramilitary under the jurisdiction of the Interior Ministry, and as such are tasked with more 'on-the-ground' roles.
+
+- @increase_defence_north: Improve defensive capabilities in the Northern regions.
+- @increase_defence_south: Improve defensive capabilities in the Southern regions.
+- @internal_menu: Return back to regular policy.
+
+@investigate_left
+choose-if: premier_party != "Left"
+unavailable-subtitle: Chairman [+ chairman +] refuses to launch an investigation into his own faction.
+on-arrival: investigated_left += 1;
+
+Placeholder
+
+@investigate_centre
+choose-if: premier_party != "Centre"
+unavailable-subtitle: Chairman [+ chairman +] refuses to launch an investigation into his own faction.
+on-arrival: investigated_centre += 1;
+
+Placeholder
+
+@investigate_right
+choose-if: premier_party != "Right"
+unavailable-subtitle: Chairman [+ chairman +] refuses to launch an investigation into his own faction.
+on-arrival: investigated_right += 1;
+
+Placeholder
+
+@improve_entente
+on-arrival: british_relation += 1; french_relation += 1;
+
+Placeholder
+
+@intelligence_entente
+on-arrival: investigated_entente += 1;
+
+Placeholder
+
+@intelligence_yugoslavia
+on-arrival: investigated_yugoslavia += 1;
+
+Placeholder
+
+@increase_defence_north
+on-arrival: increased_north += 1;
+
+Placeholder
+
+@increase_defence_south
+on-arrival: increased_south += 1;
+
+Placeholder
