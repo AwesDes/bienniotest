@@ -217,14 +217,14 @@ Neither proposals are able to achieve a majority in the <span style="color: #BF0
 
 @choose_central
 on-arrival: left_eco_adopted = 1; economic_plan = 1; turatian_dissent += 7; gradualist_dissent += 10; labour_dissent += 4; syndicalist_dissent += 5 if syndicalist_active; communist_strength += 8
-choose-if: premier_party != "Turatian";
+choose-if: premier_party != "Turatian"
 unavailable-subtitle: Chairman [+ premier +] would never choose this.
 
 Placeholder
 
 @choose_nep
 on-arrival: right_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 10; ordinovist_dissent += 7; reformist_strength += 7
-choose-if: premier_party != "Bordigist";
+choose-if: premier_party != "Bordigist"
 unavailable-subtitle: Chairman [+ premier +] would never choose this.
 
 Placeholder
