@@ -75,6 +75,9 @@ Q.left_eco_yes += left_swayed
 right_swayed = ((parseFloat(Q.right_eco_support) / 2) / total_eco_support) * neutral_eco;
 Q.right_eco_yes += right_swayed;
 
+Q.left_eco_yes = parseFloat(Q.left_eco_yes).toFixed(1);
+Q.right_eco_yes = parseFloat(Q.right_eco_yes).toFixed(1);
+
 Q.left_eco_no = 100 - parseFloat(Q.left_eco_yes);
 Q.right_eco_no = 100 - parseFloat(Q.right_eco_yes);
 !}
@@ -85,14 +88,14 @@ data.push({
     "id": "aye",
     "legend": "Aye",
     "name": "Aye",
-    "seats": Math.round(Q.left_eco_yes),
+    "seats": Math.round((parseFloat(Q.left_eco_yes) / 100) * 535),
 });
 
 data.push({
     "id": "nay",
     "legend": "Nay",
     "name": "Nay",
-    "seats": Math.round(Q.left_eco_no),
+    "seats": Math.round((parseFloat(Q.left_eco_no) / 100) * 535),
 });
 
 if (window && d3) {
@@ -134,14 +137,14 @@ data.push({
     "id": "aye",
     "legend": "Aye",
     "name": "Aye",
-    "seats": Math.round(Q.right_eco_yes),
+    "seats": Math.round((parseFloat(Q.right_eco_yes) / 100) * 535),
 });
 
 data.push({
     "id": "nay",
     "legend": "Nay",
     "name": "Nay",
-    "seats": Math.round(Q.right_eco_no),
+    "seats": Math.round((parseFloat(Q.left_eco_no) / 100) * 535),
 });
 
 if (window && d3) {
@@ -174,4 +177,17 @@ if (window && d3) {
 
 {!</table>!}
 
+- @adopt_central: The Proposal on Central Economic Planning passes!
+- @adopt_nep: The Proposal on the New Economic Policy passes!
+- @none: Neither of the policies are approved!
 
+@adopt_central
+choose-if: left_eco_yes >= 50
+unavailable-subtitle: The proposal did not receive enough votes.
+
+@adopt_nep
+choose-if: right_eco_yes >= 50
+unavailable-subtitle: The proposal did not receive enough votes.
+
+@adopt_nep
+view-if: right_eco_yes < 50 and left_eco_yes < 50

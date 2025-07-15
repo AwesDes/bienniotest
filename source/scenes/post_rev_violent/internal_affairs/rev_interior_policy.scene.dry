@@ -17,6 +17,8 @@ The Internal Affairs Committee, like the Cheka, represents a necessary evil in t
 - @as_investigate
 - @nda_investigate
 - @mafia_investigate
+- @clandestine_internal_menu: Delve into more clandestine internal policy.
+- @clandestine_foreign_menu: Delve into more clandestine foreign policy.
 - @root: Do nothing, for now.
 
 @internal_menu
@@ -30,6 +32,7 @@ The Interior Ministry, alongside the Gendarmerie, assume responsibility of the i
 - @as_investigate
 - @nda_investigate
 - @mafia_investigate
+- @gendarmerie_menu: Delve into the Gendarmerie.
 - @root: Do nothing, for now.
 
 @self_investigate
@@ -68,3 +71,9 @@ on-arrival: mafia_trigger_prog -= 3 if not mafia_active;
 [? if not mafia_active : <span style="color: #465053ff">**Cosa Nostra**</span> has been a scourge upon Sicily and her neighbours since its inception, partially due to the negligence and failures of our precedessors and the Kingdom. It is our duty, now, to reassert control and put down the forces plaguing the South. ?]
 
 [? if not mafia_active : With the <span style="color: #465053ff">**Mafia**</span> in hiding, there is not much to do, however, we reinforce our positions within the South, rooting out corruption and officials willing to bend to their whims, preparing for their emergence from the shadows once more. ?]
+
+@clandestine_internal_menu
+
+@clandestine_foreign_menu
+
+@gendarmerie_menu
