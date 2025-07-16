@@ -137,7 +137,7 @@ on-arrival: investigated_right += 1;
 Our investigations fail to turn up anything fruitful, as reports suggest excessive factionalism and disruptions led to failure.
 
 @improve_entente
-go-to: investigate_entente_success if interior_factionalism >= 50; improve_entente_failure if interior_factionalism < 50
+go-to: improve_entente_success if interior_factionalism >= 50; improve_entente_failure if interior_factionalism < 50
 
 @improve_entente_success
 on-arrival: british_relation += 1; french_relation += 1;
