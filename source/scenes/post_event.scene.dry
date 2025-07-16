@@ -557,8 +557,8 @@ if (Q.week_actions >= 1) {
         if (Q.unemployment > 30 && Q.socialist_sentiment > 20 && Q.psi_in_government == 1) {
             Q.socialist_sentiment -= 1;
             Q.nationalist_sentiment += 1;
-            Q.workers_psi -= 6/12*Q.revolutionary_exhaustion;
-            Q.workers_pnf += 10/12;
+            Q.workers_psi -= 3/12*Q.revolutionary_exhaustion;
+            Q.workers_pnf += 6/12;
             if (Q.pcdi_formed == 1) {
                 Q.workers_pcdi += 10/12
             }
@@ -571,8 +571,8 @@ if (Q.week_actions >= 1) {
         if (Q.inflation >= 12 && Q.socialist_sentiment > 40 && Q.psi_in_government == 1) {
             Q.socialist_sentiment -= 1;
             Q.nationalist_sentiment += 1;
-            Q.workers_psi -= 4/12*Q.revolutionary_exhaustion;
-            Q.workers_pnf += 4/12;
+            Q.workers_psi -= 3/12*Q.revolutionary_exhaustion;
+            Q.workers_pnf += 3/12;
             if (Q.pcdi_formed == 1) {
                 Q.workers_pcdi += 6/12
             }
@@ -630,9 +630,9 @@ if (Q.week_actions >= 1) {
         ////////////////////////// annual support changes
 
         if (Q.year == 1919) {
-            Q.workers_psi -= 12/12;
-            Q.rural_psi -= 9/12;
-            Q.middle_class_psi -= 9/12;
+            Q.workers_psi -= 9/12;
+            Q.rural_psi -= 7/12;
+            Q.middle_class_psi -= 4/12;
         }
 
         // initial boost for pnf for workers, before industrialists
@@ -657,9 +657,9 @@ if (Q.week_actions >= 1) {
             Q.rural_pnf += 2/12;
             Q.workers_pnf += 3/12;
 
-            Q.rural_psi -= 7/12;
-            Q.middle_class_psi -= 8/12;
-            Q.workers_psi -= 7/12;
+            Q.rural_psi -= 3/12;
+            Q.middle_class_psi -= 4/12;
+            Q.workers_psi -= 4/12;
 
             Q.socialist_sentiment -= 4/12;
             Q.nationalist_sentiment += 10/12;
@@ -704,9 +704,9 @@ if (Q.week_actions >= 1) {
             Q.ard_militancy += 0.04/12;
             Q.abl_militancy += 0.02/12;
 
-            Q.rural_psi -= 9/12;
-            Q.middle_class_psi -= 10/12;
-            Q.workers_psi -= 12/12;
+            Q.rural_psi -= 4/12;
+            Q.middle_class_psi -= 7/12;
+            Q.workers_psi -= 5/12;
 
             Q.socialist_sentiment -= 6/12;
             Q.nationalist_sentiment += 12/12;
@@ -778,9 +778,9 @@ if (Q.week_actions >= 1) {
                 Q.industrialists_pnf += 1/12;
             }
 
-            Q.rural_psi -= 7/12;
-            Q.workers_psi -= 9/12;
-            Q.middle_class_psi -= 12/12;
+            Q.rural_psi -= 3/12;
+            Q.workers_psi -= 4/12;
+            Q.middle_class_psi -= 6/12;
 
             Q.fdc_strength += 47/12;
             Q.ard_strength += 12/12;
@@ -951,9 +951,9 @@ if (Q.week_actions >= 1) {
                 }
 
                 if (Q.return_to_normalcy == 1) {
-                    Q.workers_psi -= (4/6*Q.psi_inc_strife*Q.violent_prevalence)/2;
-                    Q.middle_class_psi -= (6/6*Q.psi_inc_strife*Q.violent_prevalence)/2;
-                    Q.rural_psi -= (5/6*Q.psi_inc_strife*Q.violent_prevalence)/2;
+                    Q.workers_psi -= (3/24*Q.psi_inc_strife*Q.violent_prevalence)/2;
+                    Q.middle_class_psi -= (2/24*Q.psi_inc_strife*Q.violent_prevalence)/2;
+                    Q.rural_psi -= (3/24*Q.psi_inc_strife*Q.violent_prevalence)/2;
                 }
 
                 if (Q.inflation > 5) {
@@ -973,23 +973,23 @@ if (Q.week_actions >= 1) {
                 }
 
                 if (Q.national_economic_recovery == 0) {
-                    Q.workers_psi -= ((Q.economic_downturn)/4)*Q.psi_inc_economic;
-                    Q.middle_class_psi -= ((Q.economic_downturn * 0.8)/4)*Q.psi_inc_economic;
-                    Q.rural_psi -= ((Q.economic_downturn * 0.7)/4)*Q.psi_inc_economic;
-                    Q.veterans_psi -= ((Q.economic_downturn * 1.2)/4)*Q.psi_inc_economic;
-                    Q.industrialists_psi -= ((Q.economic_downturn * 0.3)/4)*Q.psi_inc_economic;
-                    Q.women_psi -= ((Q.economic_downturn * 0.8)/4)*Q.psi_inc_economic;
-                    Q.catholic_psi -= ((Q.economic_downturn * 0.6)/4)*Q.psi_inc_economic;
+                    Q.workers_psi -= ((Q.economic_downturn)/8)*Q.psi_inc_economic;
+                    Q.middle_class_psi -= ((Q.economic_downturn * 0.8)/8)*Q.psi_inc_economic;
+                    Q.rural_psi -= ((Q.economic_downturn * 0.7)/8)*Q.psi_inc_economic;
+                    Q.veterans_psi -= ((Q.economic_downturn * 1.2)/8)*Q.psi_inc_economic;
+                    Q.industrialists_psi -= ((Q.economic_downturn * 0.3)/8)*Q.psi_inc_economic;
+                    Q.women_psi -= ((Q.economic_downturn * 0.8)/8)*Q.psi_inc_economic;
+                    Q.catholic_psi -= ((Q.economic_downturn * 0.6)/8)*Q.psi_inc_economic;
                 }
 
                 if (Q.national_economic_recovery == 1) {
-                    Q.workers_psi -= (((Q.economic_downturn)/4)*Q.psi_inc_economic)/2;
-                    Q.middle_class_psi -= (((Q.economic_downturn * 0.8)/4)*Q.psi_inc_economic)/2;
-                    Q.rural_psi -= (((Q.economic_downturn * 0.7)/4)*Q.psi_inc_economic)/2;
-                    Q.veterans_psi -= (((Q.economic_downturn * 1.2)/4)*Q.psi_inc_economic)/2;
-                    Q.industrialists_psi -= (((Q.economic_downturn * 0.3)/4)*Q.psi_inc_economic)/2;
-                    Q.women_psi -= (((Q.economic_downturn * 0.8)/4)*Q.psi_inc_economic)/2;
-                    Q.catholic_psi -= (((Q.economic_downturn * 0.6)/4)*Q.psi_inc_economic)/2;
+                    Q.workers_psi -= (((Q.economic_downturn)/8)*Q.psi_inc_economic)/2;
+                    Q.middle_class_psi -= (((Q.economic_downturn * 0.8)/8)*Q.psi_inc_economic)/2;
+                    Q.rural_psi -= (((Q.economic_downturn * 0.7)/8)*Q.psi_inc_economic)/2;
+                    Q.veterans_psi -= (((Q.economic_downturn * 1.2)/8)*Q.psi_inc_economic)/2;
+                    Q.industrialists_psi -= (((Q.economic_downturn * 0.3)/8)*Q.psi_inc_economic)/2;
+                    Q.women_psi -= (((Q.economic_downturn * 0.8)/8)*Q.psi_inc_economic)/2;
+                    Q.catholic_psi -= (((Q.economic_downturn * 0.6)/8)*Q.psi_inc_economic)/2;
                 }
             }
         }

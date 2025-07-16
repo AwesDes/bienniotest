@@ -1,0 +1,74 @@
+title: Media
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: media_timer <= 0
+on-arrival: week_actions += 1; media_timer = 3;
+card-image: img/Media.jpg
+
+= Media
+
+*Avanti!* is the cornerstone of the party's media
+
+- @propaganda
+- @ideological
+- @radio
+- @radio_2
+- @radio_3
+- @radio_4
+- @return: We should not do anything with media at the moment.
+- @easy_discard
+
+@commercial
+title: Broaden our audience range to use the newspaper as propaganda for the party.
+subtitle: This might upset some ideological purists, but will help boost public opinion overall.
+on-arrival: bordigist_dissent += 4; labour_dissent += 7; socialist_sentiment += 2; public_opinion += 5; public_opinion += 2 if media_restricted
+
+Our newspapers are able to bolster goodwill towards the party. However, the Labour and Bordigist factions express their displeasure.
+
+[? if media_restricted : Our efforts are furthered by the decree suppressing hostile newspapers signed previously. ?]
+
+@ideological
+title: We will have vibrant ideological debate within our newspapers.
+subtitle: There will be space for all factions to air their views.
+on-arrival: gradualist_dissent -= 4; turatian_dissent -= 4; socpat_dissent -= 4; labour_dissent -= 4; syndicalist_dissent -= 4 if syndicalist_active; maximalist_dissent -= 4; ordinovist_dissent -= 4; bordigist_dissent -= 4;
+
+This has been our media course historically, and it has successfully paved over the many tensions in our party.
+
+@radio
+title: Why not fund a radio station?
+subtitle: -3 resources
+choose-if: resources >= 3
+unavailable-subtitle: Not enough resources. (Need 3)
+view-if: radio = 0
+on-arrival: radio += 1; resources -= 3; middle_class_psi += 3*(1 - dissent); industrialists_psi += 5*(1 - dissent); workers_psi += 1*(1 - dissent); labour_dissent += 5; socialist_sentiment += 2*(1 - dissent); nationalist_sentiment -= 3*(1 - dissent) if pacifism > 1; republican_sentiment += 3*(1-dissent) if democratisation > 1; middle_class_psi -= 1*(1-dissent) if nationalisation_adopted; industrialists_psi -= 2*(1-dissent) if nationalisation_adopted; pcdi_gramsci += 1;
+
+A radio station would be one of the first of its kind in Italy, and the first socialist station in the nation. Funding is expensive, and radio's in it of itself seem only affordable to the richest of the middle class, alongside industrialists and landowners, who will be the main consumers of our content, it seems.
+
+@radio_2
+title: We must keep on building up our radio network.
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources. (Need 1)
+view-if: radio > 0 and radio <= 3
+on-arrival: radio += 1; resources -= 1; industrialists_psi += 4*(1 - dissent); middle_class_psi += 3*(1 - dissent); workers_psi += 1*(1 - dissent); socialist_sentiment += 1*(1 - dissent); nationalist_sentiment -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; republican_sentiment += 3*(1-dissent)*(democratisation-2) if democratisation > 2; middle_class_psi -= 2*(1-dissent) if nationalisation_adopted; industrialists_psi -= 2*(1-dissent) if nationalisation_adopted; pcdi_gramsci += 1;
+
+Our new radio network has a mix of popular and political programming, and is proving a success.
+
+@radio_3
+title: We must keep on building up our radio network.
+subtitle: It is now financially self-sufficient, and does not require any more resources.
+view-if: radio > 3 and radio <= 5 and year <= 1921
+on-arrival: radio += 1; industrialists_psi += 5*(1 - dissent); middle_class_psi += 3*(1 - dissent); workers_psi += 4*(1 - dissent); rural_psi += 3*(1 - dissent); veterans_psi += 2*(1-dissent); socialist_sentiment += 2*(1 - dissent); nationalist_sentiment -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; republican_sentiment += 3*(1-dissent)*(democratisation-2) if democratisation > 2; middle_class_psi -= 2*(1-dissent) if nationalisation_adopted; industrialists_psi -= 1*(1-dissent) if nationalisation_adopted; pcdi_gramsci += 1;
+
+Our radio network has become a successful tool for spreading our message.
+
+@radio_4
+title: We should keep on supporting our radio network.
+subtitle: As radio becomes more common, the novelty is beginning to wear off, and radio is becoming saturated in society. -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources. (Need 3)
+view-if: radio > 3 and (radio >= 6 or year >= 1922) and radio <= 9
+on-arrival: radio += 1; resources -= 1; middle_class_psi += 2*(1 - dissent); industrialists_psi += 2*(1 - dissent); workers_psi += 3*(1 - dissent); rural_psi += 2*(1 - dissent); veterans_psi += 2*(1-dissent); socialist_sentiment += 1*(1 - dissent); nationalist_sentiment -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; republican_sentiment += 2*(1-dissent)*(democratisation-2) if democratisation > 2; middle_class_psi -= 1*(1-dissent) if nationalisation_adopted; industrialists_psi -= 1*(1-dissent) if nationalisation_adopted; pcdi_gramsci += 1;
+
+We are continuing to invest in our radio stations. Both commercial and political radio are becoming more prevalent, primarily due to us, and competition is becoming fierce, it seems.

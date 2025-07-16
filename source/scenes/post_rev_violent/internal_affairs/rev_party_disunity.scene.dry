@@ -12,12 +12,11 @@ tags: internal_affairs
 
 The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies.
 
-[? if ordinovist_dissent > 20 or bordigist_dissent > 20 : <span style="color: #740000ff">**The Left.**</span> criticise our deviation and for our seeming betrayal of the revolution. ?]
+[? if ordinovist_dissent > 20 or bordigist_dissent > 20 : <span style="color: #740000ff">**The Left**</span> criticise our deviation and for our seeming betrayal of the revolution. ?]
 
-[? if socpat_dissent > 20 or maximalist_dissent > 20 or syndicalist_dissent > 20 : <span style="color: #a00000ff">**The Centre.**</span> criticise our incompetence and inability to stabilise <span style="color: #009246">**Italy**</span>. ?]
+[? if socpat_dissent > 20 or maximalist_dissent > 20 or syndicalist_dissent > 20 : <span style="color: #a00000ff">**The Centre**</span> criticise our incompetence and inability to stabilise <span style="color: #009246">**Italy**</span>. ?]
 
-[? if gradualist_dissent > 20 or turatian_dissent > 20 or labour_dissent > 20 : <span style="color: #db0000ff">**The Right.**</span> criticise our authoritarian and repressive measures.  ?]
-
+[? if gradualist_dissent > 20 or turatian_dissent > 20 or labour_dissent > 20 : <span style="color: #db0000ff">**The Right**</span> criticise our authoritarian and repressive measures.  ?]
 
 Something must be done to reinforce party unity.
 
@@ -27,28 +26,28 @@ Something must be done to reinforce party unity.
 - @do_nothing
 
 @concessions_left
-title: 
+title: Give concessions to <span style="color: #740000ff">**the Left**</span>.
 view-if: ordinovist_dissent > 20 or bordigist_dissent > 20
-on-arrival: 
+on-arrival: ordinovist_dissent -= 3; bordigist_dissent -= 5; turatian_dissent += 3; gradualist_dissent += 3
 
-Placeholder
+We agree to heed future policy suggestions from <span style="color: #740000ff">**the Left**</span>, much to the dissatisfaction of <span style="color: #db0000ff">**the Right**</span>.
 
 @concessions_center
-title:
+title: Give concessions to <span style="color: #a00000ff">**the Centre**</span>.
 view-if: socpat_dissent > 20 or maximalist_dissent > 20 or syndicalist_dissent > 20
-on-arrival:
+on-arrival: maximalist_dissent -= 5; socpat_dissent -= 3; syndicalist_dissent -= 2 if syndicalist_active; bordigist_dissent += 3; gradualist_dissent += 3;
 
-Placeholder
+We agree to heed the concerns of <span style="color: #a00000ff">**the Centre**</span>, much to the annoyance of both the radicals within <span style="color: #740000ff">**the Left**</span> and <span style="color: #db0000ff">**the Right**</span>.
 
 @concessions_right
-title:
+title: Give concessions to <span style="color: #db0000ff">**the Right**</span>.
 view-if: gradualist_dissent > 20 or turatian_dissent > 20 or labour_dissent > 20
-on-arrival:
+on-arrival: turatian_dissent -= 3; gradualist_dissent -= 5; ordinovist_dissent += 3; bordigist_dissent += 3
 
-Placeholder
+We agree to adopt a posture more friendly to <span style="color: #db0000ff">**the Right**</span>, much to the chagrin of <span style="color: #740000ff">**the Left**</span>.
 
 @do_nothing
 title: Let the factions argue with themselves.
-on-arrival: gradualist_dissent -= 1; turatian_dissent -= 1; socpat_dissent -= 1; labour_dissent -= 1; syndicalist_dissent -= 1 if syndicalist_active; maximalist_dissent -= 1; ordinovist_dissent -= 1; bordigist_dissent -= 1;
+on-arrival: gradualist_dissent += 1; turatian_dissent += 1; socpat_dissent += 1; labour_dissent += 1; syndicalist_dissent += 1 if syndicalist_active; maximalist_dissent += 1; ordinovist_dissent += 1; bordigist_dissent += 1;
 
 Let the factions bicker; perhaps dissent is healthy for the party.
