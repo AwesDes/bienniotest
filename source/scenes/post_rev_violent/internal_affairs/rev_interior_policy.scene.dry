@@ -101,47 +101,89 @@ The Gendarmerie operate as a national paramilitary under the jurisdiction of the
 - @internal_menu: Return back to regular policy.
 
 @investigate_left
-choose-if: premier_party != "Left"
-unavailable-subtitle: Chairman [+ premier +] refuses to launch an investigation into his own faction.
-on-arrival: investigated_left += 1;
-
-Placeholder
+go-to: investigate_left_success if interior_factionalism >= 50; investigate_failure if interior_factionalism < 50
 
 @investigate_centre
+go-to: investigate_centre_success if interior_factionalism >= 50; investigate_failure if interior_factionalism < 50
+
+@investigate_right
+go-to: investigate_right_success if interior_factionalism >= 50; investigate_failure if interior_factionalism < 50
+
+@investigate_left_success
+choose-if: premier_party != "Left"
+unavailable-subtitle: Chairman [+ premier +] refuses to launch an investigation into his own faction.
+on-arrival: investigated_left += 1; bordigist_dissent -= 5; ordinovist_dissent -= 5;
+
+<span style="color: #740000ff">**The Left**</span> is split into two main factions, the Bordigists, under Amadeo Bordiga, as well as the Ordinovists, led by Antonio Gramsci. While in the grand scheme of factional politics, these two men are aligned, to call their political ideals aligned would be inaccurate at best. 
+
+Regardless, we are able to spy on prominent members, collecting information as well as promoting internal feud to reduce dissent from the two factions.
+
+@investigate_centre_success
 choose-if: premier_party != "Centre"
 unavailable-subtitle: Chairman [+ premier +] refuses to launch an investigation into his own faction.
 on-arrival: investigated_centre += 1;
 
-Placeholder
+To infiltrate <span style="color: #a00000ff">**the Centre**</span>, we spy on prominent leaders and members, collecting information and investigating any activity to ensure party stability. 
 
-@investigate_right
+@investigate_right_success
 choose-if: premier_party != "Right"
 unavailable-subtitle: Chairman [+ premier +] refuses to launch an investigation into his own faction.
 on-arrival: investigated_right += 1;
 
-Placeholder
+<span style="color: #db0000ff">**The Right**</span> comprise of the more reformist elements of the revolution, and we are able to collect information and investigate the faction and ensure the faction is not attempting anything.
+
+@investigate_failure
+
+Our investigations fail to turn up anything fruitful, as reports suggest excessive factionalism and disruptions led to failure.
 
 @improve_entente
+go-to: investigate_entente_success if interior_factionalism >= 50; improve_entente_failure if interior_factionalism < 50
+
+@improve_entente_success
 on-arrival: british_relation += 1; french_relation += 1;
 
-Placeholder
+Through our operatives embedded in <span style="color: #39AAAA">**France**</span> and the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span>, we are able to stir up <span style="color: #009246">**Italian**</span> sentiment amongst the populace, reassuring and repudiating socialist fearmongering.
+
+@improve_entente_failure
+
+Our operatives fail to alter public perception of <span style="color: #009246">**Italy**</span>, as attempts to coordinate are riddled with factionalism which makes our clandestine campaign look like incomprehensible.
 
 @intelligence_entente
-on-arrival: investigated_entente += 1;
-
-Placeholder
+go-to: intelligence_entente_success if interior_factionalism >= 50; intelligence_failure if interior_factionalism < 50
 
 @intelligence_yugoslavia
+go-to: intelligence_yugoslavia_success if interior_factionalism >= 50; intelligence_failure if interior_factionalism < 50
+
+@intelligence_entente_success
+on-arrival: investigated_entente += 1;
+
+Through our operatives embedded in the <span style="color: #046276">**Western Powers**</span>, we are able to gather intelligence and information that might come in handy for the future.
+
+@intelligence_yugoslavia_success
 on-arrival: investigated_yugoslavia += 1;
 
-Placeholder
+Through our operatives in <span style="color: #9e00c5ff">**Yugoslavia**</span>, we are able to gather intelligence and information that might come in handy for the future.
+
+@intelligence_failure
+
+Our operatives fail to turn up anything fruitful, as reports suggest excessive factionalism and disruptions led to failure.
 
 @increase_defence_north
-on-arrival: increased_north += 1;
-
-Placeholder
+go-to: increase_defence_north_success if interior_factionalism >= 50; increase_defence_failure if interior_factionalism < 50
 
 @increase_defence_south
+go-to: increase_defence_south_success if interior_factionalism >= 50; increase_defence_failure if interior_factionalism < 50
+
+@increase_defence_north_success
+on-arrival: increased_north += 1;
+
+Additional training and hiring is given to the Northern industrial regions, hopefully protecting them from any potential attacks or acts of terror.
+
+@increase_defence_south_success
 on-arrival: increased_south += 1;
 
-Placeholder
+Additional training and hiring is given to the Southern agricultural regions, hopefully protecting them from any potential attacks or acts of terror.
+
+@increase_defence_failure
+
+Though plans are made, excessive bureaucratic wait times, alongside miscommunications attributed to increasing factionalism results in plans being called off eventually.

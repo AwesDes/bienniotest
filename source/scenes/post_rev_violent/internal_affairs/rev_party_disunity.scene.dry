@@ -1,0 +1,54 @@
+title: Party Disunity
+new-page: true
+is-card: true
+view-if: party_disunity_timer = 0 and (party_unity >= 30 or (gradualist_dissent > 20 or turatian_dissent > 20 or socpat_dissent > 20 or labour_dissent > 20 or syndicalist_dissent > 20 or maximalist_dissent > 20 or ordinovist_dissent > 20 or bordigist_dissent > 20))
+on-arrival: week_actions += 1; party_disunity_timer = 2
+card-image: img/PartyDisunity.jpg
+tags: internal_affairs
+
+# TODO: party dissent events for every faction, have a good image for this... 
+
+= Party Disunity
+
+The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies.
+
+[? if ordinovist_dissent > 20 or bordigist_dissent > 20 : <span style="color: #740000ff">**The Left.**</span> criticise our deviation and for our seeming betrayal of the revolution. ?]
+
+[? if socpat_dissent > 20 or maximalist_dissent > 20 or syndicalist_dissent > 20 : <span style="color: #a00000ff">**The Centre.**</span> criticise our incompetence and inability to stabilise <span style="color: #009246">**Italy**</span>. ?]
+
+[? if gradualist_dissent > 20 or turatian_dissent > 20 or labour_dissent > 20 : <span style="color: #db0000ff">**The Right.**</span> criticise our authoritarian and repressive measures.  ?]
+
+
+Something must be done to reinforce party unity.
+
+- @concessions_left
+- @concessions_center
+- @concessions_right
+- @do_nothing
+
+@concessions_left
+title: 
+view-if: ordinovist_dissent > 20 or bordigist_dissent > 20
+on-arrival: 
+
+Placeholder
+
+@concessions_center
+title:
+view-if: socpat_dissent > 20 or maximalist_dissent > 20 or syndicalist_dissent > 20
+on-arrival:
+
+Placeholder
+
+@concessions_right
+title:
+view-if: gradualist_dissent > 20 or turatian_dissent > 20 or labour_dissent > 20
+on-arrival:
+
+Placeholder
+
+@do_nothing
+title: Let the factions argue with themselves.
+on-arrival: gradualist_dissent -= 1; turatian_dissent -= 1; socpat_dissent -= 1; labour_dissent -= 1; syndicalist_dissent -= 1 if syndicalist_active; maximalist_dissent -= 1; ordinovist_dissent -= 1; bordigist_dissent -= 1;
+
+Let the factions bicker; perhaps dissent is healthy for the party.

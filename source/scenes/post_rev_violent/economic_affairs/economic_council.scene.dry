@@ -220,18 +220,24 @@ on-arrival: left_eco_adopted = 1; economic_plan = 1; turatian_dissent += 7; grad
 choose-if: premier_party != "Turatian"
 unavailable-subtitle: Chairman [+ premier +] would never choose this.
 
-Placeholder
+Eventually, the Central Economic Plan is adopted by order of Chairman [+ premier +]. Reactions of outrage from the Pragmatists naturally occur, who demand a revote instead. 
+
+Nevertheless, amongst some protests, we must act. There is much work to be done.
 
 @choose_nep
 on-arrival: right_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 10; ordinovist_dissent += 7; reformist_strength += 7
 choose-if: premier_party != "Bordigist"
 unavailable-subtitle: Chairman [+ premier +] would never choose this.
 
-Placeholder
+Eventually, the New Economic Policy is adopted by order of Chairman [+ premier +]. Reactions of outrage from the Orthodox Marxists naturally occur, who demand a revote instead. 
+
+Nevertheless, amongst some protests, we must act. There is much work to be done.
 
 @choose_both
 subtitle: This will be significantly harder to manage compared to the other proposals.
 view-if: left_eco_yes + right_eco_yes < 50
 on-arrival: both_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 4; ordinovist_dissent += 4; gradualist_dissent += 4; turatian_dissent += 4; 
 
-Placeholder
+Rather than the two proposals, the new proposed system of 'Regional Dualism' is selected instead, with specifics to be drafted up in the future. Though attempting to appease both sides, murmurs of grumbling have been heard from both sides, albeit more muted than if we had solely chosen a side.
+
+There is significant work to be done, staffers informed, plans drafted and people to be hired. It is imperative the success of the plan is shown swiftly, yet implemented fully to quell dissenting voices.

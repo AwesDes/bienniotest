@@ -3,8 +3,11 @@ new-page: true
 max-visits: 1
 on-arrival: {!
 
+Q.signed_decrees = 0;
+
 Q.first_congress_formed = 1;
-Q.comintern_time = Q.time + 2;
+Q.comintern_time = Q.time + 6;
+Q.trial_time = Q.time + 3;
 
 Q.rev_factions = ['bordigist', 'ordinovist', 'maximalist', 'socpat', 'syndicalist', 'labour', 'turatian', 'gradualist', 'other'];
 
@@ -172,7 +175,7 @@ if (window && d3) {
     d3.select("#chamber").datum(data).call(parliament);
 }
 !}
-on-departure: next_election_year = next_election_year + 1; n_elections += 1; next_election_time = time + 24;
+on-departure: next_election_year = next_election_year + 1; n_elections += 1; next_election_time = time + 24; week_actions += 1
 go-to: decisions
 
 = First <span style="color: #BF0000">**Congress of Soviets**</span>
@@ -409,11 +412,11 @@ The formation of the Central Executive Committee and the election of a Chariman 
 - @sign_abortion: Sign the Decree to Liberalise Abortion Laws.
 - @sign_suffrage: Sign the Decree on Women's Suffrage.
 - @sign_labour: Sign the Decree on the Outlaw of Child Labour.
-- @decisions: We have done enough.
+- @done_signing: We have done enough.
 
 @sign_media
 subtitle: This will outlaw all newspapers opposed to the state.
-on-arrival: state_freedom -= 1; stability += 0.5; gradualist_dissent += 3; bordigist_dissent -= 3; state_freedom -= 0.5 if premier_party = "Bordigist"; turatian_dissent += 5 if premier_party = "Bordigist"; state_freedom += 0.5 if premier_party = "Turatian"; bordigist_dissent += 5 if premier_party = "Turatian";
+on-arrival: state_freedom -= 1; stability += 0.5; gradualist_dissent += 3; bordigist_dissent -= 3; state_freedom -= 0.5 if premier_party = "Bordigist"; turatian_dissent += 5 if premier_party = "Bordigist"; state_freedom += 0.5 if premier_party = "Turatian"; bordigist_dissent += 5 if premier_party = "Turatian"; signed_decrees += 1;
 go-to: decrees_menu
 max-visits: 1
 
@@ -425,7 +428,7 @@ In an effort to prevent subterfuge by the bourgeois elements remaining in the na
 
 @sign_abortion
 subtitle: This will liberalise abortion laws within the nation.
-on-arrival: abortion_rights += 1; womens_rights += 1; socialist_sentiment += 5; republican_sentiment += 3;
+on-arrival: abortion_rights += 1; womens_rights += 1; socialist_sentiment += 5; republican_sentiment += 3; signed_decrees += 1;
 view-if: abortion_rights != 1
 go-to: decrees_menu
 
@@ -433,7 +436,7 @@ Religious principles have constrained the liberties of the opposite sex for too 
 
 @sign_suffrage
 subtitle: This will grant women the right to vote, bringing universal suffrage for the first time.
-on-arrival: womens_suffrage = 1; women += 27; womens_rights += 1; socialist_sentiment += 3;
+on-arrival: womens_suffrage = 1; women += 27; womens_rights += 1; socialist_sentiment += 3; signed_decrees += 1;
 view-if: womens_suffrage != 1
 go-to: decrees_menu
 
@@ -442,6 +445,7 @@ Every citizen that lives within this new Italy must be granted true equality, no
 @sign_labour
 subtitle: This will outlaw labour for children below the age of 16.
 on-arrival: {!
+Q.signed_decrees += 1;
 Q.child_labour_laws = 1;
 Q.socialist_sentiment += 4; 
 Q.unemployment -= 0.6;
@@ -452,3 +456,9 @@ view-if: child_labour_laws != 1
 go-to: decrees_menu
 
 Why should a child be subjected to a life without education, toiling away for the sake of another human so they don’t have to work? This injustice must be remedied, and with our revolutionary state at the helm, it shall. Children will now be allowed to learn freely, unchained of the cycle that child labour perpetuates. No one votes against the eradication of this unsightly blemish on our society, and though the more business-minded individuals that remain may bawk at us, we will let the lack of their humanity be shown to the common man.
+
+@done_signing
+on-arrival: bordigist_dissent += 5 if signed_decrees == 0; ordinovist_dissent += 5 if signed_decrees == 0; maximalist_dissent += 5 if signed_decrees == 0
+go-to: decisions
+
+[? if signed_decrees == 0 : Our refusal to sign any decrees frustrates a not insignificant portion of the <span style="color: #BF0000">**Congress**</span>, seeing our actions as inaction in a time where it is desperately needed. ?]

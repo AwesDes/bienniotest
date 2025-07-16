@@ -1443,6 +1443,9 @@ if (Q.week_actions >= 1) {
     }
 
     if (Q.violent_revolution) {
+
+        // para triggers
+       
         if (Q.nda_active != 1) {
             Q.nda_trigger_prog += 100/24;
 
@@ -1465,6 +1468,43 @@ if (Q.week_actions >= 1) {
 
         if (Q.mafia_active != 1) {
             Q.mafia_trigger_prog += 100/8;
+        }
+
+        // incompatiable chairman and sec-gen increases factionalism
+
+        if (Q.premier_party != Q.psi_leader_faction) {
+            if (Q.premier_party == "Left" || Q.psi_leader_faction == "Left") {
+                Q.bordigist_dissent += 10/12;
+                Q.ordinovist_dissent += 10/12;
+            }
+
+            if (Q.premier_party == "Centre" || Q.psi_leader_faction == "Centre") {
+                Q.maximalist_dissent += 10/12;
+                Q.socpat_dissent += 10/12;
+            }
+
+            if (Q.premier_party == "Right" || Q.psi_leader_faction == "Right") {
+                Q.turatian_dissent += 10/12;
+                Q.gradualist_dissent += 10/12;
+            }
+        }
+
+        // factionalism infection to other organisations
+
+        if (Q.party_unity >= 20 && Q.party_unity < 40) {
+            Q.interior_factionalism += (Q.party_unity/10)/12;
+        }
+
+        if (Q.party_unity >= 40 && Q.party_unity < 60) {
+            Q.interior_factionalism += (Q.party_unity/8)/12;
+        }
+
+        if (Q.party_unity >= 60 && Q.party_unity < 80) {
+            Q.interior_factionalism += (Q.party_unity/6)/12;
+        }
+
+        if (Q.party_unity >= 80) {
+            Q.interior_factionalism += (Q.party_unity/4)/12;
         }
     }
 }
