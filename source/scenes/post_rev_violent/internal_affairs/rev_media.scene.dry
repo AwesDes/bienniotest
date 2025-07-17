@@ -8,12 +8,11 @@ card-image: img/Media.jpg
 
 = Media
 
-*Avanti!* is the cornerstone of the party's media
+*Avanti!* is the cornerstone of the party's media, and now the largest selling newspaper within the country following the revolution.
 
 - @propaganda
 - @ideological
 - @radio_activate
-- @radio
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 
@@ -34,19 +33,11 @@ on-arrival: gradualist_dissent -= 4; turatian_dissent -= 4; socpat_dissent -= 4;
 This has been our media course historically, and it has successfully paved over the many tensions in our party.
 
 @radio_activate
-title: Invest into a radio network.
+title: Invest into a radio network for further purposes.
 subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources. (Need 2)
 view-if: radio < 2
 on-arrival: radio += 1; resources -= 2;
 
-A radio station would be one of the first of its kind in Italy, and the first socialist station in the nation. Funding is expensive, and radio's in it of itself seem only affordable to the richest of the middle class, alongside industrialists and landowners, who will be the main consumers of our content, it seems.
-
-@radio
-title: Placeholder
-subtitle: Placeholder
-view-if: radio >= 2
-on-arrival: 
-
-Placeholder
+A radio station would be one of the first of its kind in Italy, and the first socialist station in the nation. Funding is expensive, and radio's in it of itself seem only affordable to the richest of us, though local production might be able to bring supply up.
