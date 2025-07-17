@@ -90,6 +90,9 @@ Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international
 
 Q.left_eco_support = 0;
 Q.right_eco_support = 0;
+
+Q.bureaucratic_loyalty = Q.psi_votes;
+Q.bureaucratic_efficiency = (Q.psi_votes * 2)
 !}
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events, especially past this point, will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.

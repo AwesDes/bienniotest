@@ -44,11 +44,9 @@ on-arrival: radio += 1; resources -= 2;
 A radio station would be one of the first of its kind in Italy, and the first socialist station in the nation. Funding is expensive, and radio's in it of itself seem only affordable to the richest of the middle class, alongside industrialists and landowners, who will be the main consumers of our content, it seems.
 
 @radio
-title: We must keep on building up our radio network.
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources. (Need 1)
+title: Placeholder
+subtitle: Placeholder
 view-if: radio >= 2
-on-arrival: radio += 1; resources -= 1; industrialists_psi += 4*(1 - dissent); middle_class_psi += 3*(1 - dissent); workers_psi += 1*(1 - dissent); socialist_sentiment += 1*(1 - dissent); nationalist_sentiment -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; republican_sentiment += 3*(1-dissent)*(democratisation-2) if democratisation > 2; middle_class_psi -= 2*(1-dissent) if nationalisation_adopted; industrialists_psi -= 2*(1-dissent) if nationalisation_adopted; pcdi_gramsci += 1;
+on-arrival: 
 
-Our new radio network has a mix of popular and political programming, and is proving a success.
+Placeholder

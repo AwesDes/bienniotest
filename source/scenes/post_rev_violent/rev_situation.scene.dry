@@ -29,6 +29,10 @@ Corruption within the state is **[+ state_corruption : corruption +]**.
 
 = State of the Organisations
 
+Loyalty within the Bureaucracy is **[+ bureaucratic_loyalty : opinion +]**
+
+Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]**
+
 [? if not cheka_formed : Factionalism within the Ministry of the Interior is **[+ interior_factionalism : factional_dissent +]**. ?]
 
 [? if cheka_formed : Factionalism within the Internal Affairs Committee is **[+ interior_factionalism : factional_dissent +]**. ?]

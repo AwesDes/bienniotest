@@ -1,0 +1,10 @@
+title: Trial of the Reactionaries
+subtitle: We must decide the fate of the men who stood against us.
+new-page: true
+view-if: time >= comintern_time and first_congress_formed
+max-visits: 1
+tags: event
+
+= Trial of the Reactionaries
+
+Placeholder
