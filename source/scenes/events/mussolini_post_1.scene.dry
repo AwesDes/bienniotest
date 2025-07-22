@@ -1,5 +1,5 @@
 title: Repeal of the Acerbo Law
-view-if: acerbo_law_passed and psi_in_government and pnf_waiting = 0 and pnf_in_power = 0 and pnf_leader = "Mussolini"
+view-if: acerbo_law_passed and psi_in_government and pnf_waiting = 0 and pnf_in_power = 0 and (pnf_leader = "Mussolini" or pnf_leader = "Balbo")
 priority: -1
 max-visits: 1
 new-page: true

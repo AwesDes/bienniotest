@@ -1,7 +1,7 @@
 title: King [+ king +] rescinds support for the PNF
 audio: clear shuffle music/post/FischiaIlVento.mp3 music/main/Innodeilavoratori.mp3 music/main/FraIl19FraLAnno20.mp3 music/main/BandieraRossa.mp3 music/main/Canzonieredelventorosso.mp3 music/main/WorkersHymn.mp3 music/main/LeOttoOre.mp3 music/main/CantoDeiReclusi.mp3 music/main/MarciaSocialistaMondiale.mp3 music/main/QuattroSignoriAParigiVanno.mp3
 set-bg: img/background.png
-view-if: pnf_in_power = 1 and pnf_in_government = 0 and pnf_leader = "Mussolini"
+view-if: pnf_in_power = 1 and pnf_in_government = 0 and (pnf_leader = "Mussolini" or pnf_leader = "Balbo")
 on-arrival: {!
 Q.pnf_in_power = 0; 
 Q.pnf_weakened = 1;

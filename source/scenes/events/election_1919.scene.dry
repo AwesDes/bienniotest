@@ -1223,7 +1223,7 @@ on-departure: catholic_negotiations = 0
 go-to: catholic_demands
 
 @grand_coalition
-title: [? if (socialist_catholic_coalition_r >= 50) or (centre_left_coalition_r > 50 and ul_allies) or ((centre_left_coalition_r + ul_seating_disp > 50) and (not ul_allies)) : Refuse to form a government, and let the other parties assume responsibility. ?][? if (socialist_catholic_coalition_r < 50) or (centre_left_coalition_r < 50 and ul_allies) or ((centre_left_coalition_r + ul_seating_disp < 50) and (not ul_allies)) : We are unable to form a government. The task is handed over to the Liberals. ?]
+title: [? if (socialist_catholic_coalition_r >= 50) and (centre_left_coalition_r >= 50 and ul_allies) and ((centre_left_coalition_r + ul_seating_disp > 50) and (not ul_allies)) : Refuse to form a government, and let the other parties assume responsibility. ?][? if (socialist_catholic_coalition_r < 50) or (centre_left_coalition_r < 50 and ul_allies) or ((centre_left_coalition_r + ul_seating_disp < 50) and (not ul_allies)) : We are unable to form a government. The task is handed over to the Liberals. ?]
 view-if: centre_right_coalition_r < 50 and anti_socialist_coalition_r < 50
 subtitle: PSRI + PPI + [+ ldr_name +] + [+ ul_name +] + [+ ds_name +] + Others [? if pll_formed :+ PLL?]: ([+ grand_coalition_r +]%). 
 go-to: grand_coalition_yes if (socialist_catholic_coalition_r < 50) or (centre_left_coalition_r < 50 and ul_allies) or ((centre_left_coalition_r + ul_seating_disp < 50) and (not ul_allies)) or not_participating = 1

@@ -67,8 +67,8 @@ Q.state_freedom = 0;
 Q.economic_plan = 0;
 Q.british_relation = Q.entente_relation;
 Q.french_relation = Q.entente_relation;
-Q.corruption = 50;
-Q.public_opinion = 50
+Q.state_corruption = 50;
+Q.public_opinion = 60
 
 Q.bordigist_dissent = 0;
 Q.labour_dissent = 0;
@@ -92,7 +92,9 @@ Q.left_eco_support = 0;
 Q.right_eco_support = 0;
 
 Q.bureaucratic_loyalty = Q.psi_votes;
-Q.bureaucratic_efficiency = (Q.psi_votes * 2)
+Q.bureaucratic_efficiency = (Q.psi_votes * 2);
+
+Q.colonial_policy = 0;
 !}
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events, especially past this point, will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.

@@ -3,6 +3,46 @@ is-pinned-card: true
 tags: foreign_pol
 card-image: img/Colonialism.jpg
 new-page: true
+go-to: decolonisation_choice if colonial_policy = 0; decolonise_menu if colonial_policy = 1; independence_menu if colonial_policy = 2
 
 = The <span style="color: #009246">**Colonial Empire**</span
 
+Colonialism has spread across the world, as the European powers have scrambled to seize control of lands beyond to expand their 'Empire', with the <span style="color: #009246">**Italian Kingdom**</span> being no different. 
+
+Though late to the charade of colonialism, the former Kingdom carved out an 'Empire' of its own, suppressing the native peoples while the forces of capital exploited the very ground they seized. 
+
+It is nevertheless our duty to clean our hands of heinous deeds, for though the people and lands have suffered a cruel fate, it is the hope that we will be able to make amends and right the wrongs of the reactionaries who came before us.
+
+@decolonisation_choice
+
+With revolution so close behind, we have not yet set a concrete policy regarding the former colonies of the Kingdom. There are, naturally, several options at hand, of which an agenda must be decided for us to proceed any further.
+
+Members of <span style="color: #a00000ff">**the Centre**</span> have proposed devolution, delegating powers to local socialist government organs before granting the colonies independence and ensure they are to stand on their own.
+
+On the other hand, <span style="color: #740000ff">**the Left**</span> have proposed a swift process of independence, setting up local governance and returning the lands before withdrawing in order to focus solely on domestic matters.
+
+<span style="color: #db0000ff">**The Right**</span> has supported the proposal led by <span style="color: #a00000ff">**the Centre**</span>, though some of the more radical elements of both <span style="color: #db0000ff">**the Right**</span> and <span style="color: #a00000ff">**the Centre**</span> have stated their opinion of colonialism remaining as a necessary evil to recover domestically, something which has been met with significant backlash from the other factions.
+
+What should we do?
+
+- @proposal_right: Continue colonialism until the situation domestically improves as a necessary evil, as proposed by the radical elements of <span style="color: #db0000ff">**the Right**</span>.
+- @proposal_centre: Begin the process of devolution and establishment of socialist governance alongside independence, as proposed by <span style="color: #a00000ff">**the Centre**</span>.
+- @proposal_left: Begin the process of independence, as proposed by <span style="color: #740000ff">**the Left**</span>.
+- @root: Return to main.
+
+@proposal_right
+choose-if: never
+unavailable-subtitle: Support for this within the party is extremely limited, as well as controversial.
+on-arrival: stop_datamining = 1;
+
+C'mon, man.
+
+@proposal_centre
+on-arrival: colonial_policy = 1; week_actions += 1;
+
+Placeholder
+
+@proposal_left
+on-arrival: colonial_policy = 2; week_actions += 1;
+
+Placeholder

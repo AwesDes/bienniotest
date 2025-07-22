@@ -1,5 +1,5 @@
 title: The Economic Elites pull the PNF’s rug...
-view-if: pnf_weakened = 1 and pnf_leader = "Mussolini"
+view-if: pnf_weakened = 1 and (pnf_leader = "Mussolini" or pnf_leader = "Balbo")
 on-arrival: {!
 
 Q.industrialists_ldr += Q.industrialists_pnf * 0.3;

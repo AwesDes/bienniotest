@@ -64,6 +64,7 @@ We, naturally, extend our thanks to our <span style="color: #bf0000">**Russian**
 
 @delegate_internationalism
 on-arrival: soviet_relation += 1; german_relation += 1; hungarian_relation += 1;
+go-to: final_end
 
 Our revolution is merely the first step towards *World Revolution*. Germany holds itself on the brink of success. The <span style="color: #964B00">**Hungarian**</span> <span style="color: #BF0000">**Soviet Republic**</span> has shown itself as merely the first domino in revolutions, only brought to its knees by outside intervention. Nevertheless, our delegates reaffirm the goal of the Republc, reassuring the Congress of its commitment to aid revolutions abroad, as well as our Soviet comrades in economic recovery, and vice versa.
 
@@ -79,12 +80,18 @@ Q.ordinovist_dissent -= 10;
 Q.syndicalist_dissent -= 10;
 Q.other_seating_disp -= 10;
 !}
+go-to: final_end
 
 The factionalism of the party before the revolution brought it to its knees. Revolution almost a failure due to the squabbles of left against right, of the implementation of policy, of leadership. Yet this cannot happen once more. The opportunity granted to us is the only one we will receive, and to fail in the duty, the burden that falls upon us because of mere factionalism; to unwittingly aid in the forces of reaction who seek our destruction is unacceptable.
 
 @delegate_army 
 on-arrival: army_conduct += 3; army_morale += 5;
+go-to: final_end
 
 Like the <span style="color: #bf0000">**Russians**</span>, we are surrounded once more by enemies. Outside, the Yugoslavian Kingdom sharpens it claws, waiting for the right opportunity to seize lands under the guise of nationalism. The Entente ever so willing to place yet another Monarch on the throne, indifferent and uncaring of the will or lives of the masses who toil every day of their lives for him. Even within the Republic, the forces of reaction seek to bring down the state, fearful and opportunistic.
 
-Thus, the state, our delegates continue, must continue its militarisation. The duty of defense falls not merely to the party, but to the proletariat, men and women willing to pick up arms to defend the nation from evils abroad and within. 
+Thus, the state, our delegates continue, must continue its militarisation. The duty of defense falls not only merely to the party, but to the proletariat, men and women willing to pick up arms to defend the nation from evils abroad and within. 
+
+@final_end
+
+Our delegates conclude, as the Congress continues on. A new Executive Committee of the <span style="color: #800000">**International**</span> is formed, and we are granted a significant portion of the seats, alongside the <span style="color: #bf0000">**Soviets**</span>.
