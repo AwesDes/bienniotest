@@ -41,9 +41,37 @@ C'mon, man.
 @proposal_centre
 on-arrival: colonial_policy = 1;
 
-Placeholder
+Following the proposal of <span style="color: #a00000ff">**the Centre**</span>, we begin the process of devolution and socialist governance. It will be a long and arduous process, yet nevertheless important to spread the ideals of socialism internationally.
 
 @proposal_left
 on-arrival: colonial_policy = 2;
 
+Following the proposal of <span style="color: #740000ff">**the Left**</span>, the proposal to grant the colonies independence is adopted. It is our duty, as such, to grant them the powers to govern themselves and find their place in the world.
+
+@decolonise_menu
+
+Though adopted, the process of devolution poses a significant challenge to us. 
+
+North Africa's reliance on us is
+
+East Africa's reliance on us is 
+
+- @decolonise_libya_menu: North Africa.
+- @decolonise_east_africe_menu: East Africa.
+- @rev_pinned_return
+
+@decolonise_libya_menu
+
 Placeholder
+
+- @libya_infrastructure: Continue constructing infrastructure within Libya.
+- @libya_bureaucracy: Continue building up the bureaucracy of Libya.
+- @libya_independence: Grant the Libyan Socialist Republic independence.
+
+@decolonise_east_africe_menu
+
+Placeholder
+
+- @ea_infrastructure: Continue constructing infrastructure within Eritrea and Somalia.
+- @ea_bureaucracy: Continue building up the bureaucracy of Eritrea and Somalia.
+- @ea_independence: Grant the Eritrean Socialist Republic and the Somali Democratic Republic independence.
