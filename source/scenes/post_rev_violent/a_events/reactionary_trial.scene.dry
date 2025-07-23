@@ -199,7 +199,11 @@ The Bureaucratic Trial opens. The trial, unlike most others that have taken plac
 
 Nevertheless, the trial continues as per usual. As it concludes, there are, naturally, two verdicts possibly granted, and with some pushing, we could let the judges select a verdict more suited for our goals. 
 
-The first of which would be to purge the bureaucrats. To find them all guilty, as well as produce adequate sentences for the former bureaucrats would allow for a fresh restart, placing figures loyal to us to replace them. 
+The first of which would be to purge the bureaucrats. To find them all guilty, as well as produce adequate sentences for the former bureaucrats would allow for a fresh restart, placing figures loyal to us to replace them. However, to replace the bureaucracy with forces loyal to us, in a nation with still a significant illiteracy rate would be challenging at best, not to mention the time needed to acclimate new workers and train them to be efficient, nor the possibility of corruption should our new workers come from families less fortunate.
+
+The other option, as suggested by pragmatists on <span style="color: #db0000ff">**the Right**</span> would be to retain low-levelled bureaucrats, those who did not actively collaborate against us, keeping them in order to ensure the state is able to continue running efficiently. Proponents naturally argue that their loyalty would be uncertain, and that placing potential reactionaries so close within the heart of the state would spell almost inevitable doom for the Republic.
+
+What are we to do?
 
 - @bureaucracy_purge: Purge the Bureaucrats.
 - @bureaucracy_keep: Retain those willing to work with us.
@@ -226,7 +230,9 @@ if (Q.trial_radio == 2) {
 !}
 go-to: trials_menu
 
+The verdict goes down, and the bureaucracy is purged. In place, we hire a slew of new bureaucrats loyal to the revolution, though it is likely we will see the inefficiencies of our bureaucracy for some time.
 
+[? if trial_radio = 1 or trial_radio = 2: Due to our publication of the trial, sympathy of the bureaucrats have increased, with some viewing the trial as unfair to workers merely doing their job. ?]
 
 @bureaucracy_keep
 subtitle: Irregardless of loyalty, the bureaucracy has to function, even if it means restoring dubious bureaucrats.
@@ -251,4 +257,4 @@ if (Q.trial_radio == 2) {
 !}
 go-to: trials_menu
 
-Placeholder
+The verdict goes down, finding numerous low-levelled bureaucrats innocent, who are able to return to their jobs under the new government. Some of the more radical elements of the revolutionaries protest what looks to be a compromise of our ideals, but what's done is done.

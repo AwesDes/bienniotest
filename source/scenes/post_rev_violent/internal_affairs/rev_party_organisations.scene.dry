@@ -5,50 +5,23 @@ tags: party_affairs
 view-if: party_organisations_timer <= 0
 on-arrival: week_actions += 1; party_organisations_timer = 3;
 card-image: img/PartyOrganisations.jpg
-max-visits: 15
 
 = Party Organisations
 
-In addition to being a political party, the [+ psi_name +] is a social world onto itself, with a vast array of associated organisations which serve the social needs of their members from cradle to grave.
+In addition to being a political party, the [+ psi_full_name +] is a social world onto itself, with a vast array of associated organisations which serve the social needs of their members from cradle to grave.
+
+#TODO - Add more options
 
 - @newspapers: Fund more newspapers and journalists.
-- @welfare: Fund more mutual aid and welfare programs.
-- @culture: Fund sports leagues, educational, and cultural programs.
-- @rg: Fund the Red Guards, our paramilitary organisation.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
-- @cancel_advisor_action
 
 @newspapers
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources. (Need 1)
 subtitle: -1 resources
 on-arrival: resources -= 1; media_timer = 0;
-go-to: media
-
-@welfare
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources. (Need 1)
-subtitle: -1 resources
-on-arrival: resources -= 1; veterans_psi += 5*(1 - dissent);
-
-We have increased funding to *Unione Nazionale fra Militari Cattolici Mutilati, Invalidi e Reduci di Guerra*, our veterans welfare organisation.
-
-@culture
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; maximalist_dissent -= 6; communist_dissent -= 6; labour_dissent -= 6; reformist_dissent -= 6; syndicalist_dissent -= 6 if syndicalist_active; socialist_sentiment += 2*(1-dissent);
-
-It is not enough for the [+ psi_name +] to solely be a political party. Our schools, libraries, cultural events and initiatives are crucial to our members' lives. Funding these organisations makes our members more committed to the party, even when our policies might not be to their liking.
-
-@rg
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; rg_strength += 15*revolutionary_exhaustion; rg_militancy += 0.01*revolutionary_exhaustion; red_guards_timer = 3;
-
-We have increased recruiting to the Red Guards.
+go-to: rev_media
 
 @nothing
 
