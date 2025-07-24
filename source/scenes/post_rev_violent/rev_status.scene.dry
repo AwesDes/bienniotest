@@ -45,21 +45,21 @@ Next Election: [+ next_election_month : month +] [+ next_election_year +]
 
 {!<p style="text-align: center">!}The Party is currently **[+ party_unity : unity +]**.{!</p>!}
 
-The Bordigists are **[+ bordigist_dissent : factional_dissent +]**.
+{!<p style="text-align: center">!}The Bordigists are **[+ bordigist_dissent : factional_dissent +]**.{!</p>!}
 
-The Ordinovists are **[+ ordinovist_dissent : factional_dissent +]**.
+{!<p style="text-align: center">!}The Ordinovists are **[+ ordinovist_dissent : factional_dissent +]**.{!</p>!}
 
-The Maximalists are **[+ maximalist_dissent : factional_dissent +]**.
+{!<p style="text-align: center">!}The Maximalists are **[+ maximalist_dissent : factional_dissent +]**.{!</p>!}
 
-The Social Patriots are **[+ socpat_dissent : factional_dissent +]**.
+{!<p style="text-align: center">!}The Social Patriots are **[+ socpat_dissent : factional_dissent +]**.{!</p>!}
 
-[? if syndicalist_active : The Syndicalists are **[+ syndicalist_dissent : factional_dissent +]**. ?]
+{!<p style="text-align: center">!}[? if syndicalist_active : The Syndicalists are **[+ syndicalist_dissent : factional_dissent +]**. ?]{!</p>!}
 
-The Labour Reformists are **[+ labour_dissent : factional_dissent +]**.
+{!<p style="text-align: center">!}The Labour Reformists are **[+ labour_dissent : factional_dissent +]**.{!</p>!}
 
-The Turatians are **[+ turatian_dissent : factional_dissent +]**.
+{!<p style="text-align: center">!}The Turatians are **[+ turatian_dissent : factional_dissent +]**.{!</p>!}
 
-The Gradualists are **[+ gradualist_dissent : factional_dissent +]**.
+{!<p style="text-align: center">!}The Gradualists are **[+ gradualist_dissent : factional_dissent +]**.{!</p>!}
 
 @paramilitaries
 

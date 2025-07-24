@@ -112,12 +112,12 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 There is no current information about the Italian Soviet Republic, but you will be able to access an overview of the nation through the 'Situations' tab on the top.
 
-- @new_changes: The page turns on the Italian Kingdom.
+- @new_changes: The Mantle is assumed by the <span style="color: #BF0000">**Soviet Republic**</span>.
 
 @new_changes
 
-Naturally, with the ascension of the [+ psi_full_name +] as the leading force and party, our responsibilities have shifted as well. The civil war brought upon Italy was an ugly, prolonged process. It will take time for the nation to heal, and that burden falls upon us.
+Swift and decrepit voting stations are placed across the nation. Yet, participation seems higher than ever. Peasants, Labourers, Toilers. All to do their duty, to shape the nation, to bring them the state promised to them.
 
-Elections to the Italian Congress of Soviets are quickly conducted in an effort to begin the restoration of order to society.
+The First Elections to the <span style="color: #BF0000">**Congress of Soviets**</span> begin.
 
 - @first_elections: May we do our best...
