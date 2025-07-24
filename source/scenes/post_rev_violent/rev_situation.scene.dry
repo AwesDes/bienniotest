@@ -75,14 +75,14 @@ Our relations with the <span style="color: #bf0000">**Soviet Union**</span> are 
 
 {!<div style="display: flex"!}
 {!<div>!}
-{!<img src='img/FlagUK.png' style="display: flex; justify-content: left; margin: auto; border: 5px solid grey">!}
-{!<p style="text-align: center;">Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> are **[+ british_relation : low_high_small +]**.</p>!}
+{!<img src='img/FlagUK.png' style="justify-content: left; margin: auto; border: 5px solid grey; height: 100px; width: 200px">!}
+{!<p style="text-align: center;">!}Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> are **[+ british_relation : low_high_small +]**.{!</p>!}
 {!</div>!}
 {!<div>!}
-{!<img src='img/FlagFrance.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey">!}
-{!<p style="text-align: center;">Our relations with the <span style="color: #39AAAA">**French Republic**</span> are **[+ french_relation : low_high_small +]**.</p>!}
+{!<img src='img/FlagFrance.png' style="justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px">!}
+{!<p style="text-align: center;">!}Our relations with the <span style="color: #39AAAA">**French Republic**</span> are **[+ french_relation : low_high_small +]**.{!</p>!}
 {!<div>!}
-{!<img src='img/FlagUSSR.png' style="display: flex; justify-content: right; margin: auto; border: 5px solid grey">!}
-{!<p style="text-align: center;">Our relations with the <span style="color: #bf0000">**Soviet Union**</span> are **[+ soviet_relation : low_high_small +]**.</p>!}
+{!<img src='img/FlagUSSR.png' style="justify-content: right; margin: auto; border: 5px solid grey; height: 100px; width: 200px">!}
+{!<p style="text-align: center;">!}Our relations with the <span style="color: #bf0000">**Soviet Union**</span> are **[+ soviet_relation : low_high_small +]**.{!</p>!}
 {!</div>!}
 {!</div>!}
