@@ -59,22 +59,22 @@ Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]*
 
 = State of the World
 
-{!<div style="display: flex">!}
-{!<img src='img/FlagUK.png' style="margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
+{!<div>!}
+{!<img src='img/FlagUK.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
 {!<p style="text-align: center;">!}Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> are **[+ british_relation : low_high_small +]**.{!</p>!}
 {!</div>!}
 
-{!<div style="display: flex">!}
-{!<img src='img/FlagFrance.png' style="margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
+{!<div>!}
+{!<img src='img/FlagFrance.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
 {!<p style="text-align: center;">!}Our relations with the <span style="color: #39AAAA">**French Republic**</span> are **[+ french_relation : low_high_small +]**.{!</p>!}
 {!</div>!}
 
-{!<div style="display: flex">!}
-{!<img src='img/FlagYugoslavia.png' style="margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
+{!<div>!}
+{!<img src='img/FlagYugoslavia.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
 {!<p style="text-align: center;">!}Our relations with the <span style="color: #9e00c5ff">**Kingdom of Yugoslavia**</span> are **[+ balkan_relation : low_high_small +]**.**.{!</p>!}
 {!</div>!}
 
-{!<div style="display: flex">!}
-{!<img src='img/FlagUSSR.png' style="margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
+{!<div>!}
+{!<img src='img/FlagUSSR.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
 {!<p style="text-align: center;">!}Our relations with the <span style="color: #bf0000">**Soviet Union**</span> are **[+ soviet_relation : low_high_small +]**.{!</p>!}
 {!</div>!}
