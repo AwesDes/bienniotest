@@ -54,6 +54,12 @@ elem7.style.display = "none";
 const elem8 = document.getElementById('poll_tab')
 elem8.style.display = "none";
 
+const elem9 = document.getElementById('rev_economic_tab')
+elem8.style.display = "";
+
+const elem8 = document.getElementById('foreign_tab')
+elem8.style.display = "none";
+
 window.changeTab('rev_status', 'rev_main_tab')
 
 document.getElementsByTagName("body")[0].style.setProperty('--link-color', '#900');
@@ -61,7 +67,7 @@ document.getElementsByTagName("body")[0].style.setProperty('--link-color', '#900
 Q.violent_revolution = 1;
 
 Q.stability = 0;
-Q.party_unity = 100;
+Q.party_unity = 0;
 Q.state_freedom = 0;
 
 Q.economic_plan = 0;

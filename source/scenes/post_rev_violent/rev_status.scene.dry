@@ -41,25 +41,11 @@ Independents: [+ other_seating_disp +]%
 
 Next Election: [+ next_election_month : month +] [+ next_election_year +]
 
-= Economics
-
-Budget: [+ budget +]
-
-Inflation: [+ inflation_2 +]%
-
-Economic Growth: [+ economic_growth_2 +]%
-
-Unemployment: [+ unemployment_2 +]%
-
-British Debts: [? if uk_debts > 0 and not in_default : Significant ?] [? if uk_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
-
-American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? if us_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
-
 @politics
 
 = State of the Party
 
-The Cohesion of the [+ psi_full_name +] is currently **[+ party_unity : unity +]**.
+The Party is currently **[+ party_unity : unity +]**.
 
 The Bordigists are **[+ bordigist_dissent : factional_dissent +]**.
 
@@ -91,3 +77,18 @@ The Gradualists are **[+ gradualist_dissent : factional_dissent +]**.
 
 [? if army_formed : Conduct within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_conduct : conduct +]**. ?]
 
+@economy
+
+= Economics
+
+Budget: [+ budget +]
+
+Inflation: [+ inflation_2 +]%
+
+Economic Growth: [+ economic_growth_2 +]%
+
+Unemployment: [+ unemployment_2 +]%
+
+British Debts: [? if uk_debts > 0 and not in_default : Significant ?] [? if uk_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
+
+American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? if us_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
