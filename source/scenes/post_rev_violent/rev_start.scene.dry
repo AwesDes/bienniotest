@@ -55,10 +55,10 @@ const elem8 = document.getElementById('poll_tab')
 elem8.style.display = "none";
 
 const elem9 = document.getElementById('rev_economic_tab')
-elem8.style.display = "";
+elem9.style.display = "";
 
 const elem10 = document.getElementById('foreign_tab')
-elem8.style.display = "none";
+elem10.style.display = "none";
 
 window.changeTab('rev_status', 'rev_main_tab')
 
