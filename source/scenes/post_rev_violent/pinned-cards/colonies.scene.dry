@@ -56,22 +56,4 @@ North Africa's reliance on us is
 
 East Africa's reliance on us is 
 
-- @decolonise_libya_menu: North Africa.
-- @decolonise_east_africe_menu: East Africa.
-- @rev_pinned_return
-
-@decolonise_libya_menu
-
-Placeholder
-
-- @libya_infrastructure: Continue constructing infrastructure within Libya.
-- @libya_bureaucracy: Continue building up the bureaucracy of Libya.
-- @libya_independence: Grant the Libyan Socialist Republic independence.
-
-@decolonise_east_africe_menu
-
-Placeholder
-
-- @ea_infrastructure: Continue constructing infrastructure within Eritrea and Somalia.
-- @ea_bureaucracy: Continue building up the bureaucracy of Eritrea and Somalia.
-- @ea_independence: Grant the Eritrean Socialist Republic and the Somali Democratic Republic independence.
+# TO-DO: IMPROVE, DONT JUST DO THE REGULAR BULLSHIT

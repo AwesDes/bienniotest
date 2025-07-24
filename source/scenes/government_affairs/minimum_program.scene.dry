@@ -73,7 +73,7 @@ on-arrival: uncultivated_redistributed += 1; unemployment -= 0.1 if unemployment
 subtitle: -1 Budget - We can utilise our surplus to continue economic development and reduce unemployment. [? if public_works_minister_party != psi_name :- Thankfully, the [+ public_works_minister_party +] seems willing to help us. ?]
 view-if: min_public_works = 0
 choose-if: (public_works_minister_party = psi_name or public_works_minister_party == ldr_name or public_education_minister_party = ul_name) and (budget > 0 or violent_revolution)
-unavailable-subtitle: -1 Budget - [? if not public_works_minister_party = psi_name or not public_works_minister_party == ldr_name or not public_education_minister_party = ul_name : We do not control the Public Works Ministry. ?][? if budget <= 0 : We do not have a surplus. ?]
+unavailable-subtitle: -1 Budget - [? if not public_works_minister_party = psi_name and not public_works_minister_party == ldr_name or not public_works_minister_party = ul_name : We do not control the Public Works Ministry. ?][? if budget <= 0 : We do not have a surplus. ?]
 on-arrival: budget -= 1; min_public_works += 1; veterans_psi += 3*(1-dissent); rural_psi += 1*(1-dissent); inflation += 0.2; inflation += 0.1 if budget < 0; economic_growth += 0.3; economic_growth += 0.1 if economic_growth < 0; unemployment -= 0.4; unemployment -= 0.1 if unemployment >= 8
 
 We order the construction of railways, canals, streets and more, hiring unemployed workers to do so.
@@ -82,7 +82,7 @@ We order the construction of railways, canals, streets and more, hiring unemploy
 subtitle: -[+ min_public_works +] - We can continue utilising our surplus to continue economic development and reduce unemployment. [? if public_works_minister_party != psi_name :- Thankfully, the [+ public_works_minister_party +] seems willing to help us. ?]
 view-if: min_public_works > 0
 choose-if: (public_works_minister_party = psi_name or public_works_minister_party == ldr_name or public_education_minister_party = ul_name) and (budget >= min_public_works or violent_revolution)
-unavailable-subtitle: -[+ min_public_works +] Budget - [? if not public_works_minister_party = psi_name or not public_works_minister_party == ldr_name or not public_education_minister_party = ul_name : We do not control the Public Works Ministry. ?][? if budget < min_public_works : We do not have a surplus. ?]
+unavailable-subtitle: -[+ min_public_works +] Budget - [? if not public_works_minister_party = psi_name and not public_works_minister_party == ldr_name and not public_works_minister_party = ul_name : We do not control the Public Works Ministry. ?][? if budget < min_public_works : We do not have a surplus. ?]
 max-visits: 2
 on-arrival: budget -= min_public_works; min_public_works += 1; veterans_psi += 3*(1-dissent)*min_public_works; rural_psi += 1*(1-dissent)*min_public_works; inflation += 0.2*min_public_works; inflation += 0.3 if budget < 0; economic_growth += 0.3*min_public_works; economic_growth += 0.2 if economic_growth < 0; unemployment -= 0.4*min_public_works; unemployment -= 0.2 if unemployment >= 8; socialist_sentiment += 3
 

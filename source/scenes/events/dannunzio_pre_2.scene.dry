@@ -1,6 +1,6 @@
 title: Syndicalists defect!
 subtitle: Our syndicalist wing have defected!
-view-if: syndicalist_active and dannunzio_tour_seen
+view-if: syndicalist_active and dannunzio_tour_seen and pnf_leader = "D'Annunzio"
 on-arrival: syndicalist_break = 1; workers_psi *= 0.9; rg_strength *= 0.8; veterans_psi *= 0.9; workers_psri += 5; workers_pnf *= 0.05; n_advisors -= 1 if divittorio_advisor == 1; divittorio_advisor = 0; n_advisors -= 1 if deambris_advisor == 1; deambris_advisor = 0; syndicalist_strength *= 0.5
 new-page: true
 max-visits: 1

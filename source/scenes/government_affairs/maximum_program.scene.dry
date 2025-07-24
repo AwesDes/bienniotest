@@ -10,7 +10,7 @@ card-image: img/portraits/GiacintoMenottiSerrati.png
 
 = Maximum Program
 
-We have already formulated an economic plan. Now we have to implement it. [? if not left_wing_coalition and not psi_majority :Unfortunately, our coalition partners will resist us every step of the way. ?]
+We have already formulated an economic plan. Now we have to implement it. [? if not psi_majority : Unfortunately, our coalition partners will resist us every step of the way. ?]
 
 # nationalisations & organisations of workers councils will be gov only, land redistributions will be both, forceful work councils and factory occupations will be non-gov only
 

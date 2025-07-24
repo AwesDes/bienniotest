@@ -1,5 +1,5 @@
 title: 13th Congress of the Russian Communist Party
-view-if: year == 1924 and month == 5 and week == 3 and not violent_revolution
+view-if: year == 1924 and month >= 5 and week == 3
 max-visits: 1
 on-arrival: {!
 Q.stalin_influence = 3;
@@ -58,9 +58,9 @@ new-page: true
 
 = 13th Congress of the Russian Communist Party
 
-The 13th Congress of the Russian Communist Party has officially begun. The first Congress to take place following the death of Vladimir Lenin, various prominent figures of the parties have risen in an attempt to succeed Lenin in becoming General-Secretary of the Soviet Union. Plagued by the economic instability of the *New Economic Policy*, it is unclear how the future lies for the five men vying for control.
+The 13th Congress of the Russian Communist Party has officially begun. The first Congress to take place following the death of Vladmir Lenin, various prominent figures of the parties have risen in an attempt to succeed Lenin in becoming General-Secretary of the Soviet Union. Plagued by the economic instability of the *New Economic Policy*, it is unclear how the future lies for the five men vying for control.
 
-On the Left, Leon Trotsky has risen to form the *Left Opposition*, advocating for rapid industrialisation, the expansion of democracy as well as the policy of *Permanent Revolution*. Trotsky holds the support of intellectuals locally, and holds himself well internationally with his policies. On the Right, *Nikola Bukharin* has consolidated influence, advocating for the continuation of the *New Economic Policy* and the policy of *Socialism in one Country*. And in the Centre, Joesph Stalin currently holds the reigns of the nation, leading the nation as General-Secretary following the death of Lenin. Joined alongside him are Grigory Zinoviev and Lev Kamenev, forming a *Triumvirate* of men in an effort to prevent Trotsky's ascension to power.
+On the Left, Leon Trotsky has risen to form the *Left Opposition*, advocating for rapid industrialisation, the expansion of democracy as well as the policy of *Permanent Revolution*. Trotsky holds the support of intellectuals locally, and holds himself well internationally with his policies. On the Right, *Nikolai Bukharin* has consolidated influence, advocating for the continuation of the *New Economic Policy* and the policy of *Socialism in one Country*. And in the Centre, Joesph Stalin currently holds the reigns of the nation, leading the nation as General-Secretary following the death of Lenin. Joined alongside him are Grigory Zinoviev and Lev Kamenev, forming a *Triumvirate* of men in an effort to prevent Trotsky's ascension to power.
 
 After fierce deliberations and voting, the Congress elects the 13th Central Committee of the Russian Communist Party.
 
