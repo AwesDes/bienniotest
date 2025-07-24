@@ -17,15 +17,13 @@ if (Q.unemployment) {
 
 Week [+ week +], [+ month : month +] [+ year +]
 
-Internal Dissent: [+ dissent_percent : dissent +]
-
-Resources: [+ resources +]
+Party Resources: [+ resources +]
 
 = Government
 
-Chairman of the Italian Soviet Republic: [+ premier +] ([? if premier_party = "Bordigist" or premier_party = "Maximalist" or premier_party = "Turatian" : [+ premier_party +]?][? if premier_party = "Left" : <span style="color: #740000ff">**[+ premier_party +]**</span>?][? if premier_party = "Centre" : <span style="color: #a00000ff">**[+ premier_party +]**</span>?][? if premier_party = "Right" : <span style="color: #db0000ff">**[+ premier_party +]**</span>?])
+Chairman of the Italian Soviet Republic: [+ premier +] ([? if premier_party = "Bordigist" or premier_party = "Maximalist" or premier_party = "Turatian" or premier_party = "N/A" : [+ premier_party +]?][? if premier_party = "Left" : <span style="color: #740000ff">**[+ premier_party +]**</span>?][? if premier_party = "Centre" : <span style="color: #a00000ff">**[+ premier_party +]**</span>?][? if premier_party = "Right" : <span style="color: #db0000ff">**[+ premier_party +]**</span>?])
 
-General-Secretary of the [+ psi_full_name +]: [+ psi_leader +] ([? if psi_leader_faction = "Bordigist" or psi_leader_faction = "Maximalist" or psi_leader_faction = "Turatian" : [+ psi_leader_faction +]?][? if psi_leader_faction = "Left" : <span style="color: #740000ff">**[+ psi_leader_faction +]**</span>?][? if psi_leader_faction = "Centre" : <span style="color: #a00000ff">**[+ psi_leader_faction +]**</span>?][? if psi_leader_faction = "Right" : <span style="color: #db0000ff">**[+ psi_leader_faction +]**</span>?])
+General-Secretary of the [+ psi_full_name +]: [+ psi_leader +] ([? if psi_leader_faction = "Bordigist" or psi_leader_faction = "Maximalist" or psi_leader_faction = "Turatian" or psi_leader_faction = "N/A" : [+ psi_leader_faction +]?][? if psi_leader_faction = "Left" : <span style="color: #740000ff">**[+ psi_leader_faction +]**</span>?][? if psi_leader_faction = "Centre" : <span style="color: #a00000ff">**[+ psi_leader_faction +]**</span>?][? if psi_leader_faction = "Right" : <span style="color: #db0000ff">**[+ psi_leader_faction +]**</span>?])
 
 Congress of Soviets composition:
 
@@ -45,7 +43,7 @@ Next Election: [+ next_election_month : month +] [+ next_election_year +]
 
 = State of the Party
 
-The Party is currently **[+ party_unity : unity +]**.
+{!<p style="text-align: center">!}The Party is currently **[+ party_unity : unity +]**.{!</p>!}
 
 The Bordigists are **[+ bordigist_dissent : factional_dissent +]**.
 

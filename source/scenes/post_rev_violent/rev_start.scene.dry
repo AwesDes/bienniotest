@@ -74,7 +74,12 @@ Q.economic_plan = 0;
 Q.british_relation = Q.entente_relation;
 Q.french_relation = Q.entente_relation;
 Q.state_corruption = 50;
-Q.public_opinion = 60
+Q.public_opinion = 60;
+
+Q.psi_leader = "Empty";
+Q.psi_leader_faction = "N/A";
+Q.premier = "Empty";
+Q.premier_party = "N/A";
 
 Q.bordigist_dissent = 0;
 Q.labour_dissent = 0;
