@@ -6,7 +6,7 @@ new-page: true
 on-arrival: week_actions += 1;
 go-to: decolonisation_choice if colonial_policy = 0; decolonise_menu if colonial_policy = 1; independence_menu if colonial_policy = 2
 
-= The <span style="color: #009246">**Colonial Empire**</span
+= The <span style="color: #009246">**Colonial Empire**</span>
 
 Colonialism has spread across the world, as the European powers have scrambled to seize control of lands beyond to expand their 'Empire', with the <span style="color: #009246">**Italian Kingdom**</span> being no different. 
 

@@ -58,7 +58,7 @@ if (Q.veterans_psi_normalised && Q.veterans_psi_normalised >= 50) {
 if (Q.catholic_psi_normalised && Q.catholic_psi_normalised >= 50) {
     this.achieve('bolscevismo_bianco');
 }
-if (Q.middle_class_psi_normalised >= 40 && Q.rural_psi_normalised >= 40 && Q.industrialists_psi_normalised >= 50 && Q.veterans_psi_normalised >= 50 && Q.catholic_psi_normalised >= 50) {
+if (Q.middle_class_psi_normalised >= 40 && Q.rural_psi_normalised >= 40 && Q.industrialists_psi_normalised >= 40 && Q.veterans_psi_normalised >= 40 && Q.catholic_psi_normalised >= 40) {
     this.achieve('partito_del_popolo');
 }
 if (Q.workers_psi_normalised >= 80 && Q.middle_class_psi_normalised < 40 && Q.rural_psi_normalised < 40) {

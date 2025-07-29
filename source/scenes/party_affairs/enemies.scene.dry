@@ -13,7 +13,7 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the PCd'I, and the PNF.
+- @anti_dem: The anti-democratic parties of the far right and left - the PCd'I, and the [+ pnf_name +].
 - @communists: The PCd'I alone.
 - @pnf: The [+ pnf_name +] alone.
 - @religious: The Religious parties - the PPI.

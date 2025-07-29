@@ -4,6 +4,7 @@ tags: foreign_pol
 card-image: img/Comintern.jpg
 new-page: true
 view-if: comintern_seen
+go-to: sov_struggle if stalin_struggle = 1; sov_regular if stalin_struggle != 1
 
 = The <span style="color: #800000">**Communist International**</span>
 
@@ -15,3 +16,9 @@ Yet failure after failure has left the <span style="color: #bf0000">**Soviet Uni
 
 Nevertheless, we must ensure the <span style="color: #800000">**Communist International**</span>, however its original intentions, must return to its roots, aiding nations around the world, rather than operating under the whims of <span style="color: #bf0000">**one nation**</span>.
 
+@sov_regular
+
+Our relations with the <span style="color: #800000">**International**</span> remain cordial, for now. Though we remain dedicated to spreading the revolution globally, our economic recovery is imperative for us to continue, and as such, our trade relations and connections using the <span style="color: #800000">**Comintern**</span> is our current priority.
+
+- @improve_relation: Improve relations with the <span style="color: #bf0000">**Soviet Union**</span>.
+- @open_trade: Open trade relations with the <span style="color: #bf0000">**Soviet Union**</span>.

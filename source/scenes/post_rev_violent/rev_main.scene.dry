@@ -38,5 +38,6 @@ is-deck: true
 title: Military Affairs
 card-image: img/MilitaryInfluence.jpg
 is-deck: true
+view-if: focus_foreign
 
 - #military_affairs
