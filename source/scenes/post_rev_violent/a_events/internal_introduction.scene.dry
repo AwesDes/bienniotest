@@ -55,7 +55,7 @@ Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as
 
 @situation_economic
 on-arrival: reports_check -= 1; {!
-document.getElementById('economy_link').style.display = "";
+document.getElementById('economy-link').style.display = "";
 !}
 max-visits: 1
 go-to: situation_menu
@@ -72,10 +72,12 @@ The Road to Economic Recovery will be a long, gruelling effort, and it is recomm
 
 @situation_social
 on-arrival: reports_check -= 1;
+max-visits: 1
+go-to: situation_menu
 
 Social issues have only exacerbated following the end of the Civil War, as displaced individuals struggle to find a way to survive.
 
-{!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px">!} **Poverty** and **Homelessness* remains an ever-present issue in Italy, as people struggle to find employment or work in the remnants of bombed and damaged cities.
+{!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px">!} **Poverty** and **Homelessness** remains an ever-present issue in Italy, as people struggle to find employment or work in the remnants of bombed and damaged cities.
 
 {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px">!} **Illiteracy** continues to plague Italy, limiting us economically and our ability to employ bureaucrats to allow for the government to function more efficiently.
 

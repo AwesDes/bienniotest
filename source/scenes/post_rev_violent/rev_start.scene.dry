@@ -43,10 +43,9 @@ document.getElementById('paramilitary_tab').style.display = "none";
 document.getElementById('poll_tab').style.display = "none";
 document.getElementById('foreign_tab').style.display = "none";
 document.getElementById('interior_tab').style.display = "none";
-document.getElementById('stats_link').style.display = "none";
+document.getElementById('stats-link').style.display = "none";
 
-
-window.changeTab('rev_status', 'rev_main_tab')
+window.changeTab('rev_status', 'rev_main_tab');
 
 document.getElementsByTagName("body")[0].style.setProperty('--link-color', '#900');
 
