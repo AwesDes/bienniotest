@@ -30,44 +30,21 @@ go-to: rev_info
 @rev_info
 on-arrival: rev_year = year
 on-departure: {!
-const elem1 = document.getElementById('situation-link');
-elem1.style.display = "";
+document.getElementById('situation-link').style.display = "";
+document.getElementById('rev_main_tab').style.display = "";
+document.getElementById('rev_politics_tab').style.display = "";
+document.getElementById('rev_paramilitary_tab').style.display = "";
+document.getElementById('rev_economic_tab').style.display = "";
+document.getElementById('rev_social_tab').style.display = "";
 
-const elem2 = document.getElementById('rev_main_tab');
-elem2.style.display = "";
+document.getElementById('main_tab').style.display = "none";
+document.getElementById('politics_tab').style.display = "none";
+document.getElementById('paramilitary_tab').style.display = "none";
+document.getElementById('poll_tab').style.display = "none";
+document.getElementById('foreign_tab').style.display = "none";
+document.getElementById('interior_tab').style.display = "none";
+document.getElementById('stats_link').style.display = "none";
 
-const elem3 = document.getElementById('rev_politics_tab');
-elem3.style.display = "";
-
-const elem4 = document.getElementById('rev_paramilitary_tab');
-elem4.style.display = "";
-
-const elem5 = document.getElementById('main_tab')
-elem5.style.display = "none";
-
-const elem6 = document.getElementById('politics_tab')
-elem6.style.display = "none";
-
-const elem7 = document.getElementById('paramilitary_tab')
-elem7.style.display = "none";
-
-const elem8 = document.getElementById('poll_tab')
-elem8.style.display = "none";
-
-const elem9 = document.getElementById('rev_economic_tab')
-elem9.style.display = "";
-
-const elem10 = document.getElementById('foreign_tab')
-elem10.style.display = "none";
-
-const elem11 = document.getElementById('rev_social_tab')
-elem11.style.display = "";
-
-const elem12 = document.getElementById('interior_tab')
-elem12.style.display = "none";
-
-const elem13 = document.getElementById('stats_link')
-elem13.style.display = "none";
 
 window.changeTab('rev_status', 'rev_main_tab')
 

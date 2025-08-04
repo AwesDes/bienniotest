@@ -55,8 +55,7 @@ Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as
 
 @situation_economic
 on-arrival: reports_check -= 1; {!
-const elem14 = document.getElementById('economy_link')
-elem14.style.display = "";
+document.getElementById('economy_link').style.display = "";
 !}
 max-visits: 1
 go-to: situation_menu
