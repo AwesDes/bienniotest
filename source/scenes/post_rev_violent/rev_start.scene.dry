@@ -111,6 +111,86 @@ Q.bureaucratic_loyalty = Q.psi_votes;
 Q.bureaucratic_efficiency = (Q.psi_votes * 2);
 
 Q.colonial_policy = 0;
+
+if (Q.mafia_strength <= 2) {
+    if (Q.mafia_strength == 2) {
+        Q.mafia_trigger_prog -= 5;
+    }
+    if (Q.mafia_strength == 1) {
+        Q.mafia_trigger_prog -= 7;
+    }
+    if (Q.mafia_strength <= 0) {
+        Q.mafia_trigger_prog -= 10;
+    }
+}
+
+// Economy
+
+// 90/10 southern/central
+
+Q.southern_agricultural_health = 5;
+Q.central_agricultural_health = 5;
+
+// even split, 25/25/25/25
+
+Q.northeast_supply_health = 9;
+Q.northwest_supply_health = 9;
+Q.central_supply_health = 9;
+Q.southern_supply_health = 9;
+
+// 45/45/15 northeast/northwest/central
+
+Q.northeast_industry_health = 18;
+Q.northwest_industry_health = 18;
+Q.central_industry_health = 18;
+
+// modifiers
+
+Q.northeast_supply_health += Q.public_works_funded/4;
+Q.northwest_supply_health += Q.public_works_funded/4;
+Q.central_supply_health += Q.public_works_funded/4;
+Q.southern_supply_health += Q.public_works_funded/4;
+
+if (Q.southern_resolved) {
+    Q.southern_agricultural_health += 5;
+    Q.southern_supply_health += 5;
+}
+
+if (Q.southern_land_reformed) {
+    Q.southern_agricultural_health += 2;
+}
+
+if (Q.southern_education_funded) {
+    Q.southern_supply_health += (Q.southern_infrastructure_funded * 2);
+}
+
+Q.agricultural_health = (Q.southern_agricultural_health * 0.9) + (Q.central_agricultural_health * 0.1);
+Q.supply_health = Q.northeast_supply_health + Q.northwest_supply_health + Q.central_supply_health + Q.southern_supply_health;
+Q.industry_health = (Q.northeast_industry_health * 0.45) + (Q.northwest_industry_health * 0.45) + (Q.central_industry_health * 0.15);
+
+// Social
+
+// 25/25/20/30 northeast/northwest/central/southern
+
+Q.northeast_poverty = 17.6;
+Q.northwest_poverty = 15.2;
+Q.central_poverty = 17.5;
+Q.southern_poverty = 21.4;
+
+Q.northeast_homelessness = 4.4;
+Q.northwest_homelessness = 4.6;
+Q.central_homelessness = 4.8;
+Q.southern_homelessness = 7.2;
+
+Q.northeast_illiteracy = 7.7;
+Q.northwest_illiteracy = 7.9;
+Q.central_illiteracy = 6.3;
+Q.southern_illiteracy = 13;
+
+Q.poverty = (Q.northeast_poverty * 0.25) + (Q.northwest_poverty * 0.25) + (Q.central_poverty * 0.2) + (Q.southern_poverty * 0.3);
+Q.homelessness = (Q.northeast_homelessness * 0.25) + (Q.northwest_homelessness * 0.25) + (Q.central_homelessness * 0.2) + (Q.southern_homelessness * 0.3);
+Q.illiteracy = (Q.northeast_illiteracy * 0.25) + (Q.northwest_illiteracy * 0.25) + (Q.central_illiteracy * 0.2) + (Q.southern_illiteracy * 0.3);
+
 !}
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events, especially past this point, will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.

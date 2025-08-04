@@ -77,7 +77,13 @@ Next Election: [+ next_election_month : month +] [+ next_election_year +]
 
 @economy
 
-= Economics
+= Overview
+
+Total Agricultural Output is **[+ agricultural_health : health +]**.
+
+Total Industrial Output is **[+ industry_health : health +]**.
+
+Total Infrastructural Transportation is **[+ supply_health : health +]**.
 
 Budget: [+ budget +]
 
@@ -90,6 +96,36 @@ Unemployment: [+ unemployment_2 +]%
 British Debts: [? if uk_debts > 0 and not in_default : Significant ?] [? if uk_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
 
 American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? if us_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
+
+= The Northeast
+
+Northeast Industrial Output is **[+ northeast_industry_health : health +]**.
+
+Northeast Infrastructural Transportation is **[+ northeast_supply_health : health +]**.
+
+= The Northwest
+
+Total Agricultural Output is **[+ agricultural_health : health +]**.
+
+Total Industrial Output is **[+ industry_health : health +]**.
+
+Total Infrastructural Transportation is **[+ supply_health : health +]**.
+
+= The Centre
+
+Total Agricultural Output is **[+ agricultural_health : health +]**.
+
+Total Industrial Output is **[+ industry_health : health +]**.
+
+Total Infrastructural Transportation is **[+ supply_health : health +]**.
+
+= The South
+
+Total Agricultural Output is **[+ agricultural_health : health +]**.
+
+Total Industrial Output is **[+ industry_health : health +]**.
+
+Total Infrastructural Transportation is **[+ supply_health : health +]**.
 
 @social
 

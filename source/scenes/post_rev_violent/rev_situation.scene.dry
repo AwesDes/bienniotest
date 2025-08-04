@@ -47,12 +47,6 @@ Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]*
 
 [? if eco_plan and both_eco_adopted : Economic Regional Dualism is currently in effect. ?]
 
-[? if eco_seen : Agricultural Output is **[+ agri_health : health +]**. ?]
-
-[? if eco_seen :  Industrial Output is **[+ ind_health : health +]**. ?]
-
-[? if eco_seen : Infrastructural Transportation is **[+ infra_health : health +]**. ?]
-
 {!<hr>!}
 
 = State of the World
