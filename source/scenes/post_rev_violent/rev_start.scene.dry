@@ -66,6 +66,9 @@ elem11.style.display = "";
 const elem12 = document.getElementById('interior_tab')
 elem12.style.display = "none";
 
+const elem13 = document.getElementById('stats_link')
+elem13.style.display = "none";
+
 window.changeTab('rev_status', 'rev_main_tab')
 
 document.getElementsByTagName("body")[0].style.setProperty('--link-color', '#900');
@@ -151,17 +154,18 @@ Q.northwest_supply_health += Q.public_works_funded/4;
 Q.central_supply_health += Q.public_works_funded/4;
 Q.southern_supply_health += Q.public_works_funded/4;
 
-if (Q.southern_resolved) {
-    Q.southern_agricultural_health += 5;
-    Q.southern_supply_health += 5;
-}
-
-if (Q.southern_land_reformed) {
+if (Q.southern_land_reformed > 0) {
     Q.southern_agricultural_health += 2;
 }
 
-if (Q.southern_education_funded) {
+if (Q.southern_infrastructure_funded > 0) {
     Q.southern_supply_health += (Q.southern_infrastructure_funded * 2);
+    Q.southern_poverty -= (0.3 * Q.southern_infrastructure_funded);
+    Q.southern_homelessness -= (0.2 * Q.southern_infrastructure_funded);
+}
+
+if (Q.southern_education_funded > 0) {
+    Q.southern_illiteracy -= (0.4 * Q.southern_education_funded);
 }
 
 Q.agricultural_health = (Q.southern_agricultural_health * 0.9) + (Q.central_agricultural_health * 0.1);
@@ -186,6 +190,119 @@ Q.northeast_illiteracy = 7.7;
 Q.northwest_illiteracy = 7.9;
 Q.central_illiteracy = 6.3;
 Q.southern_illiteracy = 13;
+
+if (Q.education_funded > 0) {
+    Q.northeast_illiteracy -= 0.2 * Q.education_funded;
+    Q.northwest_illiteracy -= 0.2 * Q.education_funded;
+    Q.central_illiteracy -= 0.2 * Q.education_funded;
+    Q.southern_illiteracy -= 0.2 * Q.education_funded;
+
+    Q.northeast_poverty -= 0.3 * Q.education_funded;
+    Q.northwest_poverty -= 0.3 * Q.education_funded;
+    Q.central_poverty -= 0.3 * Q.education_funded;
+    Q.southern_poverty -= 0.3 * Q.education_funded;
+}
+
+if (Q.education_reformed > 0) {
+    Q.northeast_illiteracy -= 0.2 * Q.education_reformed;
+    Q.northwest_illiteracy -= 0.2 * Q.education_reformed;
+    Q.central_illiteracy -= 0.2 * Q.education_reformed;
+    Q.southern_illiteracy -= 0.2 * Q.education_reformed;
+}
+
+if (Q.trade_school_funded > 0) {
+    Q.northeast_illiteracy -= 0.3 * Q.trade_school_funded;
+    Q.northwest_illiteracy -= 0.3 * Q.trade_school_funded;
+    Q.central_illiteracy -= 0.3 * Q.trade_school_funded;
+    Q.southern_illiteracy -= 0.3 * Q.trade_school_funded;
+
+    Q.northeast_poverty -= 0.2 * Q.trade_school_funded;
+    Q.northwest_poverty -= 0.2 * Q.trade_school_funded;
+    Q.central_poverty -= 0.2 * Q.trade_school_funded;
+    Q.southern_poverty -= 0.2 * Q.trade_school_funded;
+
+    Q.northeast_homelessness -= 0.1 * Q.trade_school_funded;
+    Q.northwest_homelessness -= 0.1 * Q.trade_school_funded;
+    Q.central_homelessness -= 0.1 * Q.trade_school_funded;
+    Q.southern_homelessness -= 0.1 * Q.trade_school_funded;
+}
+
+if (Q.working_hours > 0) {
+    Q.northeast_poverty -= 0.1 * Q.working_hours;
+    Q.northwest_poverty -= 0.1 * Q.working_hours;
+    Q.central_poverty -= 0.1 * Q.working_hours;
+    Q.southern_poverty -= 0.1 * Q.working_hours;
+
+    Q.northeast_homelessness -= 0.1 * Q.working_hours;
+    Q.northwest_homelessness -= 0.1 * Q.working_hours;
+    Q.central_homelessness -= 0.1 * Q.working_hours;
+    Q.southern_homelessness -= 0.1 * Q.working_hours;
+}
+
+if (Q.workers_safety > 0) {
+    Q.northeast_poverty -= 0.1;
+    Q.northwest_poverty -= 0.1;
+    Q.central_poverty -= 0.1;
+    Q.southern_poverty -= 0.1;
+
+    Q.northeast_homelessness -= 0.1;
+    Q.northwest_homelessness -= 0.1;
+    Q.central_homelessness -= 0.1;
+    Q.southern_homelessness -= 0.1;
+}
+
+if (Q.wage_increase > 0) {
+    Q.northeast_poverty -= 0.3 * Q.wage_increase;
+    Q.northwest_poverty -= 0.3 * Q.wage_increase;
+    Q.central_poverty -= 0.3 * Q.wage_increase;
+    Q.southern_poverty -= 0.3 * Q.wage_increase;
+
+    Q.northeast_homelessness -= 0.1 * Q.wage_increase;
+    Q.northwest_homelessness -= 0.1 * Q.wage_increase;
+    Q.central_homelessness -= 0.1 * Q.wage_increase;
+    Q.southern_homelessness -= 0.1 * Q.wage_increase;
+}
+
+if (Q.womens_work > 0) {
+    Q.northeast_illiteracy -= 0.2 * Q.womens_work;
+    Q.northwest_illiteracy -= 0.2 * Q.womens_work;
+    Q.central_illiteracy -= 0.2 * Q.womens_work;
+    Q.southern_illiteracy -= 0.2 * Q.womens_work;
+
+    Q.northeast_poverty -= 0.3 * Q.womens_work;
+    Q.northwest_poverty -= 0.3 * Q.womens_work;
+    Q.central_poverty -= 0.3 * Q.womens_work;
+    Q.southern_poverty -= 0.3 * Q.womens_work;
+
+    Q.northeast_homelessness -= 0.1 * Q.womens_work;
+    Q.northwest_homelessness -= 0.1 * Q.womens_work;
+    Q.central_homelessness -= 0.1 * Q.womens_work;
+    Q.southern_homelessness -= 0.1 * Q.womens_work; 
+}
+
+if (Q.child_labour_laws == 0) {
+    Q.northeast_poverty -= 0.3;
+    Q.northwest_poverty -= 0.3;
+    Q.central_poverty -= 0.3;
+    Q.southern_poverty -= 0.3;
+
+    Q.northeast_homelessness -= 0.1;
+    Q.northwest_homelessness -= 0.1;
+    Q.central_homelessness -= 0.1;
+    Q.southern_homelessness -= 0.1; 
+} else if (Q.child_labour_laws == 1) {
+    Q.northeast_illiteracy -= 0.3;
+    Q.northwest_illiteracy -= 0.3;
+    Q.central_illiteracy -= 0.3;
+    Q.southern_illiteracy -= 0.3;
+}
+
+if (Q.child_attendance > 0) {
+    Q.northeast_illiteracy -= 0.3 * Q.child_attendance;
+    Q.northwest_illiteracy -= 0.3 * Q.child_attendance;
+    Q.central_illiteracy -= 0.3 * Q.child_attendance;
+    Q.southern_illiteracy -= 0.3 * Q.child_attendance; 
+}
 
 Q.poverty = (Q.northeast_poverty * 0.25) + (Q.northwest_poverty * 0.25) + (Q.central_poverty * 0.2) + (Q.southern_poverty * 0.3);
 Q.homelessness = (Q.northeast_homelessness * 0.25) + (Q.northwest_homelessness * 0.25) + (Q.central_homelessness * 0.2) + (Q.southern_homelessness * 0.3);

@@ -99,34 +99,68 @@ American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? 
 
 = The Northeast
 
-Northeast Industrial Output is **[+ northeast_industry_health : health +]**.
+Northeastern Industrial Output is **[+ northeast_industry_health : health +]**.
 
-Northeast Infrastructural Transportation is **[+ northeast_supply_health : health +]**.
+Northeastern Infrastructural Transportation is **[+ northeast_supply_health : health +]**.
 
 = The Northwest
 
-Total Agricultural Output is **[+ agricultural_health : health +]**.
+Northwestern Industrial Output is **[+ northwest_industry_health : health +]**.
 
-Total Industrial Output is **[+ industry_health : health +]**.
-
-Total Infrastructural Transportation is **[+ supply_health : health +]**.
+Northwestern Infrastructural Transportation is **[+ northwest_supply_health : health +]**.
 
 = The Centre
 
-Total Agricultural Output is **[+ agricultural_health : health +]**.
+Central Agricultural Output is **[+ central_agricultural_health : health +]**.
 
-Total Industrial Output is **[+ industry_health : health +]**.
+Central Industrial Output is **[+ central_industry_health : health +]**.
 
-Total Infrastructural Transportation is **[+ supply_health : health +]**.
+Central Infrastructural Transportation is **[+ central_supply_health : health +]**.
 
 = The South
 
-Total Agricultural Output is **[+ agricultural_health : health +]**.
+Southern Agricultural Output is **[+ southern_agricultural_health : health +]**.
 
-Total Industrial Output is **[+ industry_health : health +]**.
-
-Total Infrastructural Transportation is **[+ supply_health : health +]**.
+Southern Infrastructural Transportation is **[+ southern_supply_health : health +]**.
 
 @social
 
 = Overview
+
+Total Poverty Rate is **[+ poverty +]**%.
+
+Total Homelessness Rate is **[+ homelessness +]**%.
+
+Total Illiteracy Rate is **[+ illiteracy +]**%.
+
+= The Northeast
+
+Northeastern Poverty Rate is **[+ northeast_poverty +]**%.
+
+Northeastern Homelessness Rate is **[+ northeast_homelessness +]**%.
+
+Northeastern Illiteracy Rate is **[+ northeast_illiteracy +]**%.
+
+= The Northwest
+
+Northwestern Poverty Rate is **[+ northwest_poverty +]**%.
+
+Northwestern Homelessness Rate is **[+ northwest_homelessness +]**%.
+
+Northwestern Illiteracy Rate is **[+ northwest_illiteracy +]**%.
+
+= The Centre
+
+Central Poverty Rate is **[+ central_poverty +]**%.
+
+Central Homelessness Rate is **[+ central_homelessness +]**%.
+
+Central Illiteracy Rate is **[+ central_illiteracy +]**%.
+
+= The South
+
+Southern Poverty Rate is **[+ southern_poverty +]**%.
+
+Southern Homelessness Rate is **[+ southern_homelessness +]**%.
+
+Southern Illiteracy Rate is **[+ southern_illiteracy +]**%.

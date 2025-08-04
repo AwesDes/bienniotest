@@ -54,7 +54,10 @@ The <span style="color: #00247D">**Action**</span> <span style="color: #000000">
 Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as the Mafia in general still exist within Sicily and the general South, albeit having lowered their presence. They are, naturally, not enthusiastic about our policies and it is likely we can expect significant difficulty in the suppression of criminal activity within the South, worsened by their seemingly uneasy alliance with the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>.
 
 @situation_economic
-on-arrival: reports_check -= 1;
+on-arrival: reports_check -= 1; {!
+const elem14 = document.getElementById('economy_link')
+elem14.style.display = "";
+!}
 max-visits: 1
 go-to: situation_menu
 
@@ -78,7 +81,6 @@ Social issues have only exacerbated following the end of the Civil War, as displ
 {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px">!} **Illiteracy** continues to plague Italy, limiting us economically and our ability to employ bureaucrats to allow for the government to function more efficiently.
 
 Our {!<img src='img/HealthSymbol.png' style="height: 16px; width: 16px">!} **Healthcare and Labour Laws** still remain haplessly outdated, and we should act to pass legislation improving them to lift our population up further as soon as possible.
-
 
 @situation_recommendation
 on-arrival: reports_check -= 1; interior_factionalism = 25
