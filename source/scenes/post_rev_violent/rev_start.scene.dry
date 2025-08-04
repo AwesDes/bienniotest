@@ -60,6 +60,12 @@ elem9.style.display = "";
 const elem10 = document.getElementById('foreign_tab')
 elem10.style.display = "none";
 
+const elem11 = document.getElementById('rev_social_tab')
+elem11.style.display = "";
+
+const elem12 = document.getElementById('interior_tab')
+elem12.style.display = "none";
+
 window.changeTab('rev_status', 'rev_main_tab')
 
 document.getElementsByTagName("body")[0].style.setProperty('--link-color', '#900');
@@ -68,7 +74,6 @@ Q.violent_revolution = 1;
 
 Q.stability = 0;
 Q.party_unity = 0;
-Q.state_freedom = 0;
 
 Q.economic_plan = 0;
 Q.british_relation = Q.entente_relation;

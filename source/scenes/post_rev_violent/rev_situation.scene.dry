@@ -11,9 +11,7 @@ is-special: true
 
 = State of the Union
 
-The Italian Soviet Republic is currently **[+ stability : stability +]**.
-
-The State is currently viewed as **[+ state_freedom : freedom +]**.
+The Stability of the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> is currently **[+ stability : stability +]**.
 
 Public Opinion is currently **[+ public_opinion : opinion +]**.
 
@@ -29,9 +27,9 @@ Corruption within the state is **[+ state_corruption : corruption +]**.
 
 = State of the Organisations
 
-Loyalty within the Bureaucracy is **[+ bureaucratic_loyalty : opinion +]**
+Loyalty within the Bureaucracy is **[+ bureaucratic_loyalty : opinion +]**.
 
-Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]**
+Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]**.
 
 [? if not cheka_formed : Factionalism within the Ministry of the Interior is **[+ interior_factionalism : factional_dissent +]**. ?]
 
@@ -78,3 +76,5 @@ Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]*
 {!<img src='img/FlagUSSR.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!}
 {!<p style="text-align: center; margin-top: 10px; padding-left: 50px; padding-right: 50px">!}Our relations with the <span style="color: #bf0000">**Soviet Union**</span> are **[+ soviet_relation : low_high_small +]**.{!</p>!}
 {!</div>!}
+
+- @backSpecialScene: Exit.

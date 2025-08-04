@@ -2,7 +2,7 @@ title: Report on the Internal Situation and Stability
 subtitle: The first of our work begins.
 new-page: true
 view-if: first_congress_formed
-on-arrival: reports_check = 4;
+on-arrival: reports_check = 5;
 max-visits: 1
 tags: event
 go-to: situation_menu
@@ -20,6 +20,7 @@ The direness of the current situation within the <span style="color: #009246">**
 - @situation_party: The Party.
 - @situation_paramilitary: The Paramilitaries.
 - @situation_economic: The Economy.
+- @situation_social: The Society.
 - @situation_recommendation: Policy Recommendations.
 
 @situation_party
@@ -33,28 +34,24 @@ Though the party is divided into significantly smaller factions, three main tend
 
 <span style="color: #740000ff">**The Left.**</span> Representing a mixture of ideologues towards the party's left, it has encouraged a rather 'hardliner' stance, stressing the importance of the state's militarisation and necessity to defend itself. Regularly coming into conflict with <span style="color: #db0000ff">**the Right**</span>, the vast majority of conflict and factionalism within the party has come from the disdain both tendencies have held for one another, the most prominent of members being Amadeo Bordiga and Antonio Gramsci, leading the Bordigists and Ordinovists respectively.
 
-<span style="color: #a00000ff">**The Centre.**</span> Representing the political centre of the party and the successor to the Maximalists before the revolution, the Centre best represents the 'mainstream' of Orthodox Marxism based on the Erfurt Program. Giacomo Mennoti Serrati, Constantino Lazzari belong to the Center, alongside men such as Nicola Bombacci, whose ideals we have seen warily drift into the realm of Fascism. 
+<span style="color: #a00000ff">**The Centre.**</span> Representing the political centre of the party and the successor to the Maximalists before the revolution, the Centre best represents the 'mainstream' of Orthodox Marxism based on the Erfurt Program. Giacomo Mennoti Serrati, Constantino Lazzari belong to the Center, alongside men such as Nicola Bombacci, whose ideals have been compared to Fascism.
 
 <span style="color: #db0000ff">**The Right.**</span> Representing primarily the right of the party, the vast majority of the General Confederation of Labour and the remnants of the socialist minority from the PSRI allowed entry into the party, the Right have been in favour of reform since the beginning. Opposing <span style="color: #740000ff">**the Left**</span>, the Right have advocated for a slower transition, expressing support for Lenin's *New Economic Policy*, primarily led by Filippo Turati, who has seemingly coalesced the Right into a united faction.
-
-In conclusion, the party's instability is a major liability to the state, and it is recommended factionalism be reigned in as soon as possible.
 
 @situation_paramilitary
 on-arrival: reports_check -= 1; para_seen = 1;
 max-visits: 1
 go-to: situation_menu
 
-Operationally, any organised resistance within the state has been reduced significantly, though we do expect a resurgence in activity should the party not act in time to prevent so. Prominent forces loyal to the King, such as army leaders have already either fled the nation or have been captured and arrested, and unless our ability to control the situation significantly deteriorates, the chances of a reactionary coup are slim to none.
+The majority of organised resistance within the state has been reduced significantly, though we do expect a resurgence in activity should the party not act in time to prevent so. Prominent forces loyal to the King, such as army leaders and nobles have already either fled the nation or have been captured and arrested, and unless our ability to control the situation significantly deteriorates, the chances of a reactionary coup are slim to none.
 
 Nevertheless, the remnants of the paramilitaries before the revolution have organised themselves into two prominent forces.
 
 The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> represent the so-called 'moderates', comprising of the liberal, social democratic and occasional Catholic resistance within the state. The organisation operates as a single entity, coordinating their actions through a single body rather than independent groups. The Alliance operates primarily within the Northern regions, utilising the industralised north to its advantages, aided along by the worst vestiges of capital that still remain.
 
-The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> represent the radicals of the reactionaries. Under the guise of 'restoration', the fascists have rallied together conservative opposition in an effort to bring down the revolution. Enjoying support from the Monarchy-in-exile and operating primarily within the Mezzogiorno, the organisation acts through numerous independent covert groups rather than a single organised entity.
+The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> represent the radicals of the reactionaries. Under the guise of a 'monarchist restoration', the fascists have rallied together conservative opposition in an effort to bring down the revolution. Enjoying support from the Monarchy-in-exile and operating primarily within the Mezzogiorno, the organisation acts through numerous independent covert groups rather than a single organised entity.
 
 Naturally, the <span style="color: #465053ff">**Cosa Nostra**</span>, as well as the Mafia in general still exist within Sicily and the general South, albeit having lowered their presence. They are, naturally, not enthusiastic about our policies and it is likely we can expect significant difficulty in the suppression of criminal activity within the South, worsened by their seemingly uneasy alliance with the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>.
-
-Though united in their goals, both the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> and the <span style="color: #87CEFA">**Alliance**</span> regularly come into conflict with one another, as well as operate in separate regions of Italy, limiting interactions in general.
 
 @situation_economic
 on-arrival: reports_check -= 1; agri_health = 5; agri_health += 5 if south_resolved; infra_health = 9; infra_health += public_works_funded; ind_health = 21; eco_seen = 1
@@ -63,24 +60,36 @@ go-to: situation_menu
 
 The economic devastation In <span style="color: #009246">**Italy**</span> cannot be overstated. The First World War brought unemployment to peaks alongside economic collapse, while the Civil War, particularly the policies of scorched-earth has only exacerbated a wound not yet fulled closed.
 
-{!<img src='img/AgriculturalSymbol.png' style="display: flex; margin: auto;">!} Agricultural Production within the South is **[+ agri_health : health +]**. Both wars have brought young men, primarily from the South, to arms, leaving fields neglected while manpower was necessary in the North to field the industrial war machine. Furthermore, numerous fields across Italy have been burnt to the ground, its lands unsuitable for agricultural growth for the foreseeable future. [? if south_resolved : Thankfully, our efforts before the revolution has stemmed the worst of the bleeding, though the situation remains critical. ?]
+{!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px">!} **Agricultural Production** within the South is **[+ agri_health : health +]**. Both wars have brought young men, primarily from the South, to arms, leaving fields neglected while manpower remained relatively untouched in the North to man the industrial war machine. Furthermore, numerous fields across Italy have been burnt to the ground, its lands unsuitable for agricultural growth for the foreseeable future, not to mention the startling lack of mechanisation in the remaining fields. [? if south_resolved : Thankfully, our efforts before the revolution has stemmed the worst of the bleeding, though the situation remains critical. ?]
 
-{!<img src='img/IndustrySymbol.png' style="display: flex; margin: auto;">!} Industrial Production within the North is **[+ ind_health : health +]**. The Northern industrial regions have, for the most part, remained fairly in tact. The vast majority of workers support us, and with limited damage to the factories, there is optimism that industrial output will recover at a quick pace. Nevertheless, without raw material or resources from the collapsing South or Foreign Trade, production will likely remain at a low for some time.
+{!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px">!} **Industrial Production** within the North is **[+ ind_health : health +]**. The Northern industrial regions have, for the most part, remained fairly in tact. The vast majority of workers support us, and with limited damage to the factories, there is optimism that industrial output will recover at a quick pace. Nevertheless, without raw material or resources from the collapsing South or Foreign Trade, production, whether it be **Commodities, Machinery or Arms** will remain at lows for some time.
 
-{!<img src='img/SupplySymbol.png' style="display: flex; margin: auto;">!} Infrastructural Transportation is **[+ infra_health : health +]**. The railways, roads and ports, though impacted significantly, will most likely be the easiest to recover, as well as the most important facet of economic recovery for both regions. Though more susceptible to sabotage via subterfuge, the restoration and expansion of transportation will allow for further economic development.
+{!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px">!} **Infrastructural Transportation** is **[+ infra_health : health +]**. The supply within Italy mainly consists of two parts: The Railways and the Ports. The Railways are the lifeblood of the internal economy, transporting goods from the North to the South, to fuel the factories and the field, as well as feed our population. The Ports, on the other hand, are our main source to Foreign Trade, utilising the Mediterranean to transport goods, not to mention allowing for both Sicily and Sardinia to receive necessary goods.
 
-The road to economic recovery will be a long, gruelling effort, and it is recommended a economic plan be formed, presented to the <span style="color: #BF0000">**Congress of Soviets**</span> and approved as soon as possible for recovery to begin.
+The Road to Economic Recovery will be a long, gruelling effort, and it is recommended a economic plan be formed, presented to the <span style="color: #BF0000">**Congress of Soviets**</span> and approved as soon as possible for recovery to begin.
+
+@situation_social
+on-arrival: reports_check -= 1;
+
+Social issues have only exacerbated following the end of the Civil War, as displaced individuals struggle to find a way to survive.
+
+{!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px">!} **Poverty** and **Homelessness* remains an ever-present issue in Italy, as people struggle to find employment or work in the remnants of bombed and damaged cities.
+
+{!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px">!} **Illiteracy** continues to plague Italy, limiting us economically and our ability to employ bureaucrats to allow for the government to function more efficiently.
+
+Our {!<img src='img/HealthSymbol.png' style="height: 16px; width: 16px">!} **Healthcare and Labour Laws** still remain haplessly outdated, and we should act to pass legislation improving them to lift our population up further as soon as possible.
+
 
 @situation_recommendation
 on-arrival: reports_check -= 1; interior_factionalism = 25
 view-if: reports_check = 1
 max-visits: 1
 
-Resolution on Party Unity passed in the 10th Party Congress of the <span style="color: #bf0000">**Soviet Union**</span> could be of importance within the party context; the party cannot be divided in this time, and a ban on factionalism would aid in party unity and resolve conflict.
+The Resolution on Party Unity passed in the 10th Party Congress of the <span style="color: #bf0000">**Soviet Union**</span> could be of importance within the party context; the party cannot be divided in this time, and a ban on factionalism would aid in party unity and resolve conflict.
 
 As suggested in the sub-report, it is imperative that a new economic outlook be decided upon and implemented as soon as possible for economic recovery to begin. Numerous options have been drafted, and will be debated and approved upon accordingly.
 
-Nevertheless, there are actions able to be taken immediately: The issue of Security. Internal Security within the nation is currently under the jurisdiction of the Ministry of the Interior, alongside judicial aid from the Ministry of Justice. However, the Interior Ministry sits currently overburdened, overworked and underfunded. Regularly requesting aid from whatever remnants of the Carabinieri and <span style="color:#d42f2f">Italian Red Army</span>, it is imperative something must change in order to alleviate the burden on the Ministry.
+Nevertheless, there are actions able to be taken immediately: The issue of Security. Internal Security within the nation is currently under the jurisdiction of the Ministry of the Interior, alongside judicial aid from the Ministry of Justice. However, the Interior Ministry sits currently overburdened, overworked and underfunded. Regularly requesting aid from whatever remnants of the Carabinieri and <span style="color:#d42f2f">**Italian Red Army**</span>, it is imperative something must change in order to alleviate the burden on the Ministry.
 
 Two proposals have been placed forward. The first is a mere increase to the funding of the Ministry of the Interior, alongside the reorganisation of a new gendarmerie that would reassume the responsibilities of the previous Carabinieri. [? if not rg_reorg : Our decision to disband the Red Guards could aid us as well, employing men with experience in suppressing dissent. ?] The second proposal goes further. Referencing the <span style="color: #bf0000">**All-Russian**</span> Extraordinary Commission, also known as the *Cheka*, some within the party have floated the idea of the formation of an <span style="color: #009246">**Italian**</span> equivalent, namely one *Internal Affairs Commission*, necessary to ensure the revolution, like in <span style="color: #bf0000">**Russia**</span>, survives.
 
@@ -91,7 +100,7 @@ What are we to do?
 
 @form_committee
 subtitle: -1 Budget
-on-arrival: state_freedom -= 1; stability += 0.7; cheka_formed = 1; turatian_dissent += 3; gradualist_dissent += 5; budget -= 1; interior_factionalism -= 10
+on-arrival: stability += 0.7; cheka_formed = 1; turatian_dissent += 3; gradualist_dissent += 5; budget -= 1; interior_factionalism -= 10
 go-to: situation_menu
 
 The Internal Affairs Committee is formed, taking over the responsibilities of the Interior Ministry, alongside others. Though officially reporting to the <span style="color: #BF0000">**Congress of Soviets**</span>, naturally some matters, including party affairs, will report directly to the Chairman of the Central Executive Committee. 

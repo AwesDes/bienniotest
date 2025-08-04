@@ -90,3 +90,7 @@ Unemployment: [+ unemployment_2 +]%
 British Debts: [? if uk_debts > 0 and not in_default : Significant ?] [? if uk_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
 
 American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? if us_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
+
+@social
+
+= Overview

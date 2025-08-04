@@ -143,7 +143,6 @@ Muted murmurs fill the room. To most, this seemed like the expected verdict, aft
 @military_exile
 subtitle: This is deeply unpopular.
 on-arrival: {!
-Q.state_freedom += 0.5
 
 if (Q.trial_radio == 0) {
     Q.public_opinion += 5;

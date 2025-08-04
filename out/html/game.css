@@ -241,7 +241,7 @@ blockquote + blockquote.attribution {
     padding: 10px;
 }
 
-#foreign_tab, #interior_tab, #rev_economic_tab {
+#foreign_tab, #interior_tab, #rev_economic_tab, #rev_social_tab {
   width: 49%;
 }
 

@@ -418,7 +418,7 @@ The formation of the Central Executive Committee and the election of a Chariman 
 
 @sign_media
 subtitle: This will outlaw all newspapers opposed to the state.
-on-arrival: media_restricted = 1; state_freedom -= 1; stability += 0.5; gradualist_dissent += 3; bordigist_dissent -= 3; state_freedom -= 0.5 if premier_party = "Bordigist"; turatian_dissent += 5 if premier_party = "Bordigist"; state_freedom += 0.5 if premier_party = "Turatian"; bordigist_dissent += 5 if premier_party = "Turatian"; signed_decrees += 1;
+on-arrival: media_restricted = 1; stability += 0.5; gradualist_dissent += 3; bordigist_dissent -= 3; turatian_dissent += 5 if premier_party = "Bordigist"; bordigist_dissent += 5 if premier_party = "Turatian"; signed_decrees += 1;
 go-to: decrees_menu
 max-visits: 1
 
