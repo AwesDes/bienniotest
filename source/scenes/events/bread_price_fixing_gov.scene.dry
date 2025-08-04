@@ -37,7 +37,7 @@ Our grassroots party members are shocked by our intransigence! Many party branch
 The workers view this as betrayal, as do the unions. The bill is dropped by the liberals regardless in fear of the ongoing general strike.
 
 @vote_no
-on-arrival: ul_relation -= 10; ldr_relation -= 5; communist_dissent -= 5; labour_dissent -= 5; workers_psi += 3*(1-dissent); coalition_dissent += 1;
+on-arrival: ul_relation -= 10; ldr_relation -= 5; communist_dissent -= 5; labour_dissent -= 5; workers_psi += 3*(1-dissent); coalition_dissent += 1 if in_unstable_coalition;
 
 [? if in_unstable_coalition : Our coalition partners are angered by our defiance! ?] Regardless of our vote, the bill is voted down a significant measure in fear of the ongoing general strike. The coalition government does not seem that it will last.
 

@@ -381,7 +381,7 @@ max-visits: 1
 
 Similar to the Tsars of <span style="color: #bf0000">**Russia**</span>, Vittorio Emanuele III, in his fruitless and useless entry into the First World War has accumulated momumental debt, owed primarily to <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span>, <span style="color: #39AAAA">**French**</span> and <span style="color: #3C3B6E">**Amer**</span><span style="color: #B22234">**ican**</span> debtors. [? if uk_debts_over or us_debts_over : Significant debt negotiations and repayments have already been conducted by the previous state under our direction, nevertheless. ?]
 
-Though unfortunate, the financial stituation of the state is concerning, to say the least. As such, a motion to repudiate all debts owed from the Kingdom has been brought fourth, in an effort to the state remains fiscally stable in its infancy. Regardless, many on the right oppose the bill, calling it a 'death-blow' to <span style="color: #009246">**Italo**</span>-<span style="color: #046276">**Entente**</span> relations and the closing of trade or diplomatic opportunities with them.
+Though unfortunate, the financial stituation of the state is concerning, to say the least. As such, a motion to repudiate all debts owed from the Kingdom has been brought fourth, in an effort to ensure the state remains fiscally stable in its infancy. Regardless, many on the right oppose the bill, calling it a 'death-blow' to <span style="color: #009246">**Italo**</span>-<span style="color: #046276">**Entente**</span> relations and the closing of trade or diplomatic opportunities with them.
 
 What should we do?
 
@@ -389,7 +389,7 @@ What should we do?
 - @debts_no: Repudiate all sovereign debts owed and financial obligations!
 
 @debts_yes
-on-arrival: debt = 4; british_relation += 1; maximalist_dissent += 10; labour_dissent += 10; bordigist_dissent += 10; ordinovist_dissent += 10
+on-arrival: debt = 7; debt -= 2 if uk_debts_over; british_relation += 1; maximalist_dissent += 10; labour_dissent += 10; bordigist_dissent += 10; ordinovist_dissent += 10
 go-to: decisions
 
 In an effort to continue cordial relations with the <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and <span style="color: #3C3B6E">**Amer**</span><span style="color: #B22234">**icans**</span>, we assume responsibility of the debts left behind by the <span style="color: #009246">**Italian Kingdom**</span>, placing us in a relatively unstable financial position.

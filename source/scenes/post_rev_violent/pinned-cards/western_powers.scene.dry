@@ -3,14 +3,17 @@ is-pinned-card: true
 tags: foreign_pol
 card-image: img/Entente.jpg
 new-page: true
+go-to: trade_menu
 
 = The <span style="color: #046276">**Western Powers**</span>
 
-Battered, exhausted, weakened. The <span style="color: #046276">**Western Powers**</span>. The <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> and the <span style="color: #39AAAA">**French Republic**</span> stand, nearly a decade after the guns of war fell silent in 1918 still deeply scarred.
+Battered, exhausted, weakened. The <span style="color: #046276">**Western Powers**</span>. The <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> and the <span style="color: #39AAAA">**French Republic**</span>, nearly a decade after the guns of war fell silent in 1918, stand still deeply haunted by its echos.
 
-<span style="color: #39AAAA">**France**</span> continues its pursuit of financial reparations, continuing its enimity against the <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> Republic. 
+<span style="color: #39AAAA">**France**</span> continues its pursuit of financial reparations, continuing its enmity against the <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> Republic. 
 
-The <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> has entered financial ruin; Inflation, Debts, Currency Devaluation has brought the nation to its knees, alongside the slow slip of Imperialism. <span style="color: #009A44>**Irish**</span> independence. The growing desires of the Canada and Australia. Even at home, Labour has achieved victory.
+The <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> has entered financial ruin; Inflation, Debts, Currency Devaluation has brought the nation to its knees, alongside the slow slip of imperialism. <span style="color: #009A44>**Irish**</span> independence. The growing desires of the Canada and Australia. Even at home, Labour has achieved victory for the first time since its founding.
 
-Yet, to call these nations weak, to call them sympathetic would be a grave mistake. The <span style="color: #046276">**Western Powers**</span> still remain the greatest powers in Europe, if not the world. Thus, though unwillingly, we must extend diplomatic overtures, as <span style="color: #bf0000">**Russia**</span> did, to ensure the scars of war inflicted on our people must no longer happen.
+Yet, to call these nations weak, to call them sympathetic to us would be a grave mistake. The <span style="color: #046276">**Western Powers**</span> still remain the greatest powers in Europe, if not the world. Thus, though unwillingly, we must extend diplomatic overtures, as <span style="color: #bf0000">**Russia**</span> did, to ensure the horrors and scenes of war inflicted on our people shall not repeat a third, if not final, time.
+
+@trade_menu
 
