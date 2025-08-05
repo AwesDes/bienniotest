@@ -517,6 +517,8 @@ is-special: true
 
 Northeast Placeholder
 
+{!</div>!}
+
 {!<div id="northwest-economy" style="display: none">!}
 
 = The Northwest
