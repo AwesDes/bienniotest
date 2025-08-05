@@ -152,20 +152,20 @@ Q.industry_health = (Q.northeast_industry_health * 0.45) + (Q.northwest_industry
 
 // 25/25/20/30 northeast/northwest/central/southern
 
-Q.northeast_poverty = 17.6;
-Q.northwest_poverty = 15.2;
-Q.central_poverty = 17.5;
-Q.southern_poverty = 21.4;
+Q.northeast_poverty = 21.6;
+Q.northwest_poverty = 22.2;
+Q.central_poverty = 19.5;
+Q.southern_poverty = 31.6;
 
-Q.northeast_homelessness = 4.4;
-Q.northwest_homelessness = 4.6;
-Q.central_homelessness = 4.8;
-Q.southern_homelessness = 7.2;
+Q.northeast_homelessness = 5.4;
+Q.northwest_homelessness = 5.6;
+Q.central_homelessness = 6.8;
+Q.southern_homelessness = 9.7;
 
-Q.northeast_illiteracy = 7.7;
-Q.northwest_illiteracy = 7.9;
-Q.central_illiteracy = 6.3;
-Q.southern_illiteracy = 13;
+Q.northeast_illiteracy = 17.3;
+Q.northwest_illiteracy = 15.8;
+Q.central_illiteracy = 13.3;
+Q.southern_illiteracy = 24.4;
 
 if (Q.education_funded > 0) {
     Q.northeast_illiteracy -= 0.2 * Q.education_funded;
