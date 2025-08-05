@@ -125,10 +125,12 @@ Q.central_industry_health = 18;
 
 // modifiers
 
-Q.northeast_supply_health += parseFloat(Q.public_works_funded)/4;
-Q.northwest_supply_health += parseFloat(Q.public_works_funded)/4;
-Q.central_supply_health += parseFloat(Q.public_works_funded)/4;
-Q.southern_supply_health += parseFloat(Q.public_works_funded)/4;
+if (Q.public_works_funded > 0) {
+    Q.northeast_supply_health += parseFloat(Q.public_works_funded)/4;
+    Q.northwest_supply_health += parseFloat(Q.public_works_funded)/4;
+    Q.central_supply_health += parseFloat(Q.public_works_funded)/4;
+    Q.southern_supply_health += parseFloat(Q.public_works_funded)/4;
+}
 
 if (Q.southern_land_reformed > 0) {
     Q.southern_agricultural_health += 2;
