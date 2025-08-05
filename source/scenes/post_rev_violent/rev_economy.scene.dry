@@ -714,8 +714,7 @@ is-special: true
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
-        {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
-        Southern Industrial Output: **[+ southern_industry_health : health +]**
+      N/A
     {!</div>!}
 {!</div>!}
 
