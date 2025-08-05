@@ -459,7 +459,7 @@ is-special: true
    />
 </svg>!}
 
-{!<p style="text-align: center;">Click on a region to view specific information.</p>!}
+{!<p style="text-align: center; margin-top: -20px">Click on a region to view specific information.</p>!}
 
 = Total Overview
 
@@ -467,22 +467,25 @@ is-special: true
 
 {!<div style="display: flex; flex-direction: column">!}
 
-{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center align-items: center; display: flex;">!}
-
-{!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px">!} Total Agricultural Production: **[+ agricultural_health : health +]**
-
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex;">!}
+    {!<div style="display: flex; align-items: center; gap: 6px;">!}
+        {!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px;">!}
+        {!<span>Total Agricultural Production: <strong>[+ agricultural_health : health +]</strong></span>!}
+    {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex;">!}
-
-{!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px">!} Total Industrial Output: **[+ industry_health : health +]**
-
+    {!<div style="display: flex; align-items: center; gap: 6px;">!}
+        {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
+        {!<span>Total Industrial Output: <strong>[+ industry_health : health +]</strong></span>!}
+    {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex;">!}
-
-{!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px">!} Total Infrastructural Transport: **[+ supply_health : health +]**
-
+    {!<div style="display: flex; align-items: center; gap: 6px;">!}
+        {!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px;">!}
+        {!<span>Total Infrastructural Transport: <strong>[+ supply_health : health +]</strong></span>!}
+    {!</div>!}
 {!</div>!}
 
 {!</div>!}
@@ -490,21 +493,24 @@ is-special: true
 {!<div style="display: flex; flex-direction: column">!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex;">!}
-
-{!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px">!} Total Poverty: **[+ poverty +]**%
-
+    {!<div style="display: flex; align-items: center; gap: 6px;">!}
+        {!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px;">!}
+        {!<span>Total Poverty: <strong>[+ poverty +]</strong>%</span>!}
+    {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex;">!}
-
-{!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px">!} Total Homelessness: **[+ homelessness +]**%
-
+    {!<div style="display: flex; align-items: center; gap: 6px;">!}
+        {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
+        {!<span>Total Homelessness: <strong>[+ homelessness +]</strong>%</span>!}
+    {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex;">!}
-
-{!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px">!} Total Illiteracy: **[+ illiteracy +]**%
-
+    {!<div style="display: flex; align-items: center; gap: 6px;">!}
+        {!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px;">!}
+        {!<span>Total Illiteracy: <strong>[+ illiteracy +]</strong>%</span>!}
+    {!</div>!}
 {!</div>!}
 
 {!</div>!}
