@@ -406,7 +406,7 @@ Education Attendance: [? if child_attendance = 0: Nonexistent ?][? if child_atte
 
 Workplace Safety: [? if child_safety = 0 : Dangerous ?][? if child_safety = 1 : Safe ?][? if child_safety >= 2 : Monitored ?]
 
-= Mezzogiorno 
+= Mezzogiorno
 
 Southern Question: [? if not southern_resolved : Ongoing ?][? if southern_resolved : Ameliorated ?]
 
