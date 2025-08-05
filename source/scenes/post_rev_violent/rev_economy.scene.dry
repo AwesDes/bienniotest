@@ -460,3 +460,5 @@ is-special: true
 </svg>!}
 
 {!<p style="text-align: center;">Click on a region to view specific information.</p>!}
+
+{!<script src="economy.js"></script>!}
