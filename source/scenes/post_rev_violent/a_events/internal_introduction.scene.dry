@@ -81,7 +81,7 @@ Social issues have only exacerbated following the end of the Civil War, as displ
 
 {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px">!} **Illiteracy** continues to plague Italy, limiting us economically and our ability to employ bureaucrats to allow for the government to function more efficiently.
 
-Our {!<img src='img/HealthSymbol.png' style="height: 16px; width: 16px">!} **Healthcare and Labour Laws** still remain haplessly outdated, and we should act to pass legislation improving them to lift our population up further as soon as possible.
+Our {!<img src='img/HealthSymbol.png' style="height: 16px; width: auto">!} **Healthcare and Labour Laws** still remain haplessly outdated, and we should act to pass legislation improving them to lift our population up further as soon as possible.
 
 @situation_recommendation
 on-arrival: reports_check -= 1; interior_factionalism = 25

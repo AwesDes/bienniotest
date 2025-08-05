@@ -463,15 +463,59 @@ is-special: true
 
 = Total Overview
 
-Placeholder
+{!<div style="display: flex"!}
+
+{!<div style="display: flex; flex-direction: column"!}
+
+{!<div style="border: solid 2px black; border-radius: 25px;" !}
+
+{!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px">!} Total Agricultural Production: **[+ agricultural_health : health +]**
+
+{!</div>!}
+
+{!<div style="border: solid 2px black; border-radius: 25px;" !}
+
+{!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px">!} Total Industrial Output: **[+ industry_health : health +]**
+
+{!</div>!}
+
+{!<div style="border: solid 2px black; border-radius: 25px;" !}
+
+{!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px">!} Total Infrastructural Transport: **[+ supply_health : health +]**
+
+{!</div>!}
+
+{!</div>!}
+
+{!<div style="display: flex; flex-direction: column"!}
+
+{!<div style="border: solid 2px black; border-radius: 25px;" !}
+
+{!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px">!} Total Poverty: **[+ poverty +]**%
+
+{!</div>!}
+
+{!<div style="border: solid 2px black; border-radius: 25px;" !}
+
+{!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px">!} Total Homelessness: **[+ homelessness +]**%
+
+{!</div>!}
+
+{!<div style="border: solid 2px black; border-radius: 25px;" !}
+
+{!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px">!} Total Illiteracy: **[+ illiteracy +]**%
+
+{!</div>!}
+
+{!</div>!}
+
+{!</div>!}
 
 {!<div id="northeast-economy" style="display: none">!}
 
 = The Northeast
 
 Northeast Placeholder
-
-{!</div>!}
 
 {!<div id="northwest-economy" style="display: none">!}
 
@@ -498,3 +542,5 @@ South Placeholder
 {!</div>!}
 
 {!<script src="economy.js"></script>!}
+
+- @backSpecialScene: Exit.
