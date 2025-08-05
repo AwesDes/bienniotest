@@ -2,6 +2,8 @@ title: economy
 new-page: true
 is-special: true
 
+= The Italian Road to Recovery
+
 {!<svg
    version="1.0"
    style="border: 5px solid grey"
@@ -521,7 +523,58 @@ is-special: true
 
 = The Northeast
 
-Northeast Placeholder
+{!<div style="display: flex">!}
+
+{!<div style="display: flex; flex-direction: column">!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+      N/A
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
+        Northeastern Industrial Output: **[+ northeast_industry_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px;">!}
+        Northeastern Infrastructural Transport: **[+ northeast_supply_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!</div>!}
+
+{!<div style="display: flex; flex-direction: column">!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/PovertySymbol.png' style="height: 16px; width: 16px;">!}
+        Northeastern Poverty: **[+ northeast_poverty +]**%
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px;">!}
+        Northeastern Homelessness: **[+ northeast_homelessness +]**%
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px;">!}
+        Northeastern Illiteracy: **[+ northeast_illiteracy +]**%
+    {!</div>!}
+{!</div>!}
+
+{!</div>!}
+
+{!</div>!}
 
 {!</div>!}
 
@@ -529,7 +582,58 @@ Northeast Placeholder
 
 = The Northwest
 
-Northwest Placeholder
+{!<div style="display: flex">!}
+
+{!<div style="display: flex; flex-direction: column">!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+      N/A
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
+        Northwestern Industrial Output: **[+ northwest_industry_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px;">!}
+        Northwestern Infrastructural Transport: **[+ northwest_supply_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!</div>!}
+
+{!<div style="display: flex; flex-direction: column">!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/PovertySymbol.png' style="height: 16px; width: 16px;">!}
+        Northwestern Poverty: **[+ northwest_poverty +]**%
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px;">!}
+        Northwestern Homelessness: **[+ northwest_homelessness +]**%
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px;">!}
+        Northwestern Illiteracy: **[+ northwest_illiteracy +]**%
+    {!</div>!}
+{!</div>!}
+
+{!</div>!}
+
+{!</div>!}
 
 {!</div>!}
 
@@ -537,7 +641,59 @@ Northwest Placeholder
 
 = The Centre
 
-Centre Placeholder
+{!<div style="display: flex">!}
+
+{!<div style="display: flex; flex-direction: column">!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px;">!}
+        Central Agricultural Production: **[+ central_agricultural_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
+        Central Industrial Output: **[+ central_southern_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px;">!}
+        Central Infrastructural Transport: **[+ central_supply_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!</div>!}
+
+{!<div style="display: flex; flex-direction: column">!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/PovertySymbol.png' style="height: 16px; width: 16px;">!}
+        Central Poverty: **[+ central_poverty +]**%
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px;">!}
+        Central Homelessness: **[+ central_homelessness +]**%
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px;">!}
+        Central Illiteracy: **[+ central_illiteracy +]**%
+    {!</div>!}
+{!</div>!}
+
+{!</div>!}
+
+{!</div>!}
 
 {!</div>!}
 
@@ -545,7 +701,59 @@ Centre Placeholder
 
 = The South
 
-South Placeholder
+{!<div style="display: flex">!}
+
+{!<div style="display: flex; flex-direction: column">!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px;">!}
+        Southern Agricultural Production: **[+ southern_agricultural_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
+        Southern Industrial Output: **[+ southern_industry_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px;">!}
+        Southern Infrastructural Transport: **[+ southern_supply_health : health +]**
+    {!</div>!}
+{!</div>!}
+
+{!</div>!}
+
+{!<div style="display: flex; flex-direction: column">!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/PovertySymbol.png' style="height: 16px; width: 16px;">!}
+        Southern Poverty: **[+ southern_poverty +]**%
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px;">!}
+        Southern Homelessness: **[+ southern_homelessness +]**%
+    {!</div>!}
+{!</div>!}
+
+{!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
+    {!<div style="align-items: center; gap: 6px;">!}
+        {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px;">!}
+        Southern Illiteracy: **[+ southern_illiteracy +]**%
+    {!</div>!}
+{!</div>!}
+
+{!</div>!}
+
+{!</div>!}
 
 {!</div>!}
 
