@@ -461,4 +461,40 @@ is-special: true
 
 {!<p style="text-align: center;">Click on a region to view specific information.</p>!}
 
+= Total Overview
+
+Placeholder
+
+{!<div id="northeast-economy" style="display: none">!}
+
+= The Northeast
+
+Northeast Placeholder
+
+{!</div>!}
+
+{!<div id="northwest-economy" style="display: none">!}
+
+= The Northwest
+
+Northwest Placeholder
+
+{!</div>!}
+
+{!<div id="central-economy" style="display: none">!}
+
+= The Centre
+
+Centre Placeholder
+
+{!</div>!}
+
+{!<div id="southern-economy" style="display: none">!}
+
+= The South
+
+South Placeholder
+
+{!</div>!}
+
 {!<script src="economy.js"></script>!}
