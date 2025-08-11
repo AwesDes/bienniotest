@@ -1,6 +1,6 @@
 title: D'Annunzio seizes control of the [+ psi_full_name +]
 subtitle: We have handed too much power to D'Annunzio.
-view-if: dannunzio_influence >= 10 and pnf_in_government and pnf_leader = "D'Annunzio"
+view-if: dannunzio_influence >= 5 and pnf_in_government and pnf_leader = "D'Annunzio"
 new-page: true
 max-visits: 1
 tags: event

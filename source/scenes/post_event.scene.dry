@@ -63,6 +63,13 @@ if (Q.violent_revolution) {
     Q.southern_poverty = parseFloat(Q.southern_poverty).toFixed(1);
     Q.southern_homelessness = parseFloat(Q.southern_homelessness).toFixed(1);
     Q.southern_illiteracy = parseFloat(Q.southern_illiteracy).toFixed(1);
+
+    Q.agricultural_health = (Q.southern_agricultural_health * 0.9) + (Q.central_agricultural_health * 0.1);
+    Q.supply_health = Q.northeast_supply_health + Q.northwest_supply_health + Q.central_supply_health + Q.southern_supply_health;
+    Q.industry_health = (Q.northeast_industry_health * 0.45) + (Q.northwest_industry_health * 0.45) + (Q.central_industry_health * 0.15);
+    Q.poverty = (Q.northeast_poverty * 0.25) + (Q.northwest_poverty * 0.25) + (Q.central_poverty * 0.2) + (Q.southern_poverty * 0.3);
+    Q.homelessness = (Q.northeast_homelessness * 0.25) + (Q.northwest_homelessness * 0.25) + (Q.central_homelessness * 0.2) + (Q.southern_homelessness * 0.3);
+    Q.illiteracy = (Q.northeast_illiteracy * 0.25) + (Q.northwest_illiteracy * 0.25) + (Q.central_illiteracy * 0.2) + (Q.southern_illiteracy * 0.3);
 }
 
 if (Q.year == 1924 && Q.month == 10 && Q.week == 3 && Q.supported_entente >= 2) {
@@ -1509,6 +1516,22 @@ if (Q.week_actions >= 1) {
             Q.mafia_trigger_prog += 100/8;
         }
 
+        if (Q.nda_attack_timer <= 0 && Q.nda_decision == 0) {
+            Q.nda_decision = Math.floor(Math.random() * 2) + 1;
+            Q.northern_regions = Math.floor(Math.random() * 5) + 1;
+        }
+
+        if (Q.as_attack_timer <= 0 && Q.as_decision == 0) {
+            Q.as_decision = Math.floor(Math.random() * 2) + 1;
+            Q.southern_railways = Math.floor(Math.random() * 8) + 1;
+            Q.southern_fields = Math.floor(Math.random() * 8) + 1;
+        }
+
+        if (Q.mafia_attack_timer <= 0 && Q.mafia_decision == 0) {
+            Q.mafia_decision = Math.floor(Math.random() * 2) + 1;
+            Q.southern_regions = Math.floor(Math.random() * 8) + 1
+        }
+
         // incompatiable chairman and sec-gen increases factionalism
 
         if (Q.premier_party != Q.psi_leader_faction) {
@@ -1544,6 +1567,14 @@ if (Q.week_actions >= 1) {
 
         if (Q.party_unity >= 80) {
             Q.interior_factionalism += (Q.party_unity/4)/12;
+        }
+
+        // emergency triggers 
+
+        if (Q.stabiity <= 0) {
+            Q.stability_check_timer += 1;
+        } else {
+            Q.stability_check_timer = 6;
         }
     }
 }

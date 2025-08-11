@@ -1,0 +1,12 @@
+title: [+ southern_regions : southern_regions +] <span style="color: #465053ff">**Mafia**</span> Activity goes Rampant
+subtitle: The <span style="color: #465053ff">**Mafia**</span> make their move!
+new-page: true
+view-if: mafia_attack_timer <= 0 and mafia_decision = 1
+on-arrival: mafia_decision = 0; mafia_attack_timer = 6; southern_illiteracy += 1.3; southern_homelessness += 0.4; stability -= 0.2;
+tags: event
+
+= <span style="color: #465053ff">**Mafia**</span> Activity goes Rampant
+
+The <span style="color: #465053ff">**Mafia**</span>, especially within [+ southern_regions : southern_regions +], have ramped up significantly, as citizens have become tied up in loan sharks, smuggling and burglary, only put down by a significantly stretched thin Interior Ministry.
+
+Though we have managed to suppress them temporarily, their social impact on the region, such as poverty and homelessness, cannot be reversed.

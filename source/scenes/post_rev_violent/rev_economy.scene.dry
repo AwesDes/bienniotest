@@ -463,6 +463,12 @@ is-special: true
 
 {!<p style="text-align: center; margin-top: -20px">Click on a region to view specific information.</p>!}
 
+{!<p style="text-align: center;">!}Unemployment is at [+ unemployment : display_unemployment +] levels.{!</p>!}
+
+{!<p style="text-align: center;">!}Inflation is at [+ inflation : display_inflation +] levels.{!</p>!}
+
+{!<p style="text-align: center;">!}Economic Growth is at [+ economic_growth : display_display +] levels.{!</p>!}
+
 = Total Overview
 
 {!<div style="display: flex">!}

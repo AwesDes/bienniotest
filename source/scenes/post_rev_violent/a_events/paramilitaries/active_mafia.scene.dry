@@ -1,0 +1,14 @@
+title: Reemergence of the <span style="color: #465053ff">**Mafia**</span> in the Mezzogiorno
+new-page: true
+view-if: mafia_trigger_prog >= 100
+on-arrival: mafia_active = 1; mafia_decision = 0; mafia_attack_timer = 6 {!
+Q.timers.push('mafia_attack');
+!}
+max-visits: 1
+tags: event
+
+= Reemergence of the <span style="color: #465053ff">**Mafia**</span> in the Mezzogiorno
+
+An active investigation has revealed the <span style="color: #465053ff">**Mafia**</span> have come out of hiding and begun operations once more, following a drastic increase in cases of corruption within the local bureaucracy.
+
+Albeit expected, this poses a new challenge towards economic recovery, especially within the South, as it is clear we will be facing sabotage and interference by them who seek our downfall.

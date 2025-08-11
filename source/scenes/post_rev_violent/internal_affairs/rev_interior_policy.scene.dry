@@ -15,8 +15,11 @@ The Internal Affairs Committee, like the Cheka, represents a necessary evil in t
 - @self_investigate: Root out factionalism within the Committee.
 - @corruption_investigate
 - @as_investigate
+- @as_eliminate
 - @nda_investigate
+- @nda_eliminate
 - @mafia_investigate
+- @mafia_eliminate
 - @clandestine_internal_menu: Delve into more clandestine internal policy.
 - @clandestine_foreign_menu: Delve into more clandestine foreign policy.
 - @root: Do nothing, for now.
@@ -30,7 +33,9 @@ The Interior Ministry, alongside the Gendarmerie, assume responsibility of the i
 - @self_investigate: Root out factionalism within the Ministry.
 - @corruption_investigate
 - @as_investigate
+- @as_eliminate
 - @nda_investigate
+- @nda_eliminate
 - @mafia_investigate
 - @gendarmerie_menu: Delve into the Gendarmerie.
 - @root: Do nothing, for now.
@@ -50,27 +55,56 @@ Corruption exists in all forms, especially in the government. From bribes to ext
 
 @as_investigate
 title: Investigate the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>.
-on-arrival: as_trigger_prog -= 5 if not as_active;
+view-if: not as_eliminated
+on-arrival: as_trigger_prog -= 5 if not as_active; as_attack_timer += 1 if as_active; as_investigated += 1 if rev_economic_recovery
 
 [? if not as_active : On paper, the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> are splintered, unable to pose a threat to the state. On the ground, however, this is very much not true. Reports of <span style="color: #000000">**Squads**</span> reorganising and arming themselves back up again are widespread, as are paper financial trails aiding these groups. ?]
 
 [? if not as_active : [? if cheka_formed : Our operatives?][? if not cheka_formed : The Gendarmerie?] are able to disrupt these groups, raiding bases and confiscating weapons. Though we naturally cannot stamp out the <span style="color: #000000">**Squads**</span> in a day, we can certainly impede and delay them until the state stabilises enough to quell them for good. ?]
 
+[? if as_active : The <span style="color: #000000">**Squads**</span> remain a decentralised group, making targeting them significantly more challenging than others. Nevertheless, we are able to raid cell hideouts, discovering plans of attack on fields and key infrastructure, forcing them to adapt and rework their plans. ?]
+
 @nda_investigate
 title: Investigate the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>.
-on-arrival: nda_trigger_prog -= 5 if not nda_active;
+view-if: not nda_eliminated
+on-arrival: nda_trigger_prog -= 5 if not nda_active; nda_attack_timer += 2 if nda_active; nda_investigated += 1 if rev_economic_recovery
 
 [? if not nda_active : The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> was set up following the end of the Civil War as whatever remnants of republican resistance lingers. Operating primarily in the North, they are, for now, unable to impact industrial production nor be a major threat. ?]
 
 [? if not nda_active : Nevertheless, to let such a group operate within the heartland of our industry is unacceptable, and we must ensure they do not recover enough to bring the economy crashing right back down. [? if cheka_formed : Our operatives?][? if not cheka_formed : The Gendarmerie?] are able to thwart the <span style="color: #87CEFA">**Alliance**</span>, capturing members and seizing weaponry. ?]
 
+[? if nda_active : We are able to capture and interrogate members of the <span style="color: #87CEFA">**Alliance**</span>, allowing us to raid their bases, forcing them to rework their sabotage plans now that we control them. ?]
+
 @mafia_investigate
 title: Investigate the <span style="color: #465053ff">**Mafia**</span>.
-on-arrival: mafia_trigger_prog -= 3 if not mafia_active;
+view-if: mafia_investigated < 3
+on-arrival: mafia_trigger_prog -= 3 if not mafia_active; mafia_attack_timer += 2 if as_active;
 
 [? if not mafia_active : <span style="color: #465053ff">**Cosa Nostra**</span> has been a scourge upon Sicily and her neighbours since its inception, partially due to the negligence and failures of our precedessors and the Kingdom. It is our duty, now, to reassert control and put down the forces plaguing the South. ?]
 
 [? if not mafia_active : With the <span style="color: #465053ff">**Mafia**</span> in hiding, there is not much to do, however, we reinforce our positions within the South, rooting out corruption and officials willing to bend to their whims, preparing for their emergence from the shadows once more. ?]
+
+[? if mafia_active : The <span style="color: #465053ff">**Mafia**</span> have always remained an elusive entity, yet key corruption investigations are able to lead us towards lists of bureaucrats bribed or on the side of the <span style="color: #465053ff">**Mafia**</span>, allowing us to hold off their influence. ?]
+
+@as_eliminate
+title: Eliminate the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> fully.
+view-if: as_investigated >= 3
+on-arrival: as_active = 0; as_eliminated = 1
+max-visits: 1
+
+Gathering up the last remnants of the investigation, we launch simultaneous raids on <span style="color: #000000">**Squad**</span> bases across the Mezzogiorno, capturing key leaders and imprisoning them. Their remnants are left scattered, as Interior Forces hunt them down.
+
+The <span style="color: #000000">**Squads**</span> have been eliminated.
+
+@nda_eliminate
+title: Eliminate the  <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> fully.
+view-if: nda_investigated >= 3
+on-arrival: nda_active = 0; nda_eliminated = 1
+max-visits: 1
+
+With the last pieces of information given, we are able to find the locations of leaders of the Committee leading the <span style="color: #87CEFA">**Alliance**</span>, arresting them as remaining members are arrested. Whatever remains of the group either flee or attempt to escape.
+
+The <span style="color: #87CEFA">**Alliance**</span> has been eliminated.
 
 @clandestine_internal_menu
 
@@ -101,12 +135,15 @@ The Gendarmerie operate as a national paramilitary under the jurisdiction of the
 - @internal_menu: Return back to regular policy.
 
 @investigate_left
+on-arrival: bordigist_dissent += 5 if interior_factionalism >= 50; ordinovist_dissent += 5 if interior_factionalism >= 50;
 go-to: investigate_left_success if interior_factionalism >= 50; investigate_failure if interior_factionalism < 50
 
 @investigate_centre
+on-arrival: maximalist_dissent += 5 if interior_factionalism >= 50; socpat_dissent += 5 if interior_factionalism >= 50;
 go-to: investigate_centre_success if interior_factionalism >= 50; investigate_failure if interior_factionalism < 50
 
 @investigate_right
+on-arrival: turatian_dissent += 5 if interior_factionalism >= 50; gradualist_dissent += 5 if interior_factionalism >= 50;
 go-to: investigate_right_success if interior_factionalism >= 50; investigate_failure if interior_factionalism < 50
 
 @investigate_left_success

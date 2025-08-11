@@ -1,0 +1,12 @@
+title: Northern Ports Disrupted
+subtitle: The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> make their move!
+new-page: true
+view-if: nda_attack_timer <= 0 and nda_decision = 2
+on-arrival: nda_decision = 0; nda_attack_timer = 6; public_opinion -= 5; northeast_supply_health -= 5 if northern_regions >= 4; northwest_supply_health -= 5 if northern_regions < 4; stability -= 0.2;
+tags: event
+
+= Report on Foreign Trade
+
+Ports within the Northern Regions have been attacked by the <span style="color: #87CEFA">**Alliance**</span>, managing to disrupt our capacity to operate within the Mediterranean significantly.
+
+The damage and time to repair will seemingly halve our capacity for Foreign Trade for half a year.

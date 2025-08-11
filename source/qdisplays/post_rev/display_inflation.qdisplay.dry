@@ -1,0 +1,7 @@
+
+(..0)  <span style="color: #FFB74D;">Deflationary</span>  
+(0..1)   <span style="color: #66BB6A;">Negligible</span>  
+(1..3)  <span style="color: #81C784;">Low</span>  
+(3..6)  <span style="color: #FFD54F;">Elevated</span>  
+(6..10)  <span style="color: #FFB74D;">Severe</span>  
+(10..)    <span style="color: #d42f2f;">Hyperinflationary</span>

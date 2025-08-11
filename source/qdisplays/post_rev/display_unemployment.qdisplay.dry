@@ -1,0 +1,6 @@
+
+(..2)   <span style="color: #66BB6A;">Negligible</span>  
+(2..4)  <span style="color: #81C784;">Low</span>  
+(4..7)  <span style="color: #FFD54F;">Moderate</span>  
+(7..12)  <span style="color: #FFB74D;">Severe</span>  
+(12..)    <span style="color: #d42f2f;">Catastrophic</span>

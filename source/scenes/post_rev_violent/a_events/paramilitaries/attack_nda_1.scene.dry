@@ -1,0 +1,10 @@
+title: [+ northern_regions : northern_regions +] Factories Disrupted
+subtitle: The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> make their move!
+new-page: true
+view-if: nda_attack_timer <= 0 and nda_decision = 1
+on-arrival: nda_decision = 0; nda_attack_timer = 6; northeast_industry_health -= 5 if northern_regions >= 4; northwest_industry_health -= 5 if northern_regions < 4; stability -= 0.2;
+tags: event
+
+= [+ northern_regions : northern_regions +] Factories Disrupted
+
+Factories within [+ northern_regions : northern_regions +] have faced disruptions following coordinated attacks on them, targeting crucial Infrastructure and machinery necessary for operations. These attacks have been linked to the <span style="color: #87CEFA">**Alliance**</span>, who will seemingly continue to plague operations within the Northern regions for the foreseeable future.

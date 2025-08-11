@@ -1,0 +1,14 @@
+title: <span style="color: #800000">**Report on Critical Stability**</span>
+subtitle: Stopgaps have proven ineffective.
+new-page: true
+view-if: stability <= 0 and stability_check_timer >= 6 and not rev_economic_recovery and not in_emergency
+on-arrival: in_emergency = 1
+tags: event
+
+= <span style="color: #800000">**Report on Critical Stability**</span>
+
+Our failures to contain the <span style="color: #1E99C5">**para**</span><span style="color: #00247D">**mili**</span><span style="color: #465053ff">**taries**</span>, alongside its impacts on economic recovery have pushed the nation to its brink. Public Opinion has turned on us drastically, as calls to oust the party from power grows larger.
+
+An Emergency Session of the <span style="color: #BF0000">**Congress of Soviets**</span> has been called. 
+
+- @emergency_start: The Sword of Damocles finally falls.

@@ -1,0 +1,12 @@
+title: [+ southern_regions : southern_regions +]'s Local Bureaucracy Purged
+subtitle: The <span style="color: #465053ff">**Mafia**</span> make their move!
+new-page: true
+view-if: mafia_attack_timer <= 0 and mafia_decision = 2
+on-arrival: mafia_decision = 0; mafia_attack_timer = 6; state_corruption += 5; bureaucratic_loyalty -= 5; stability -= 0.2;
+tags: event
+
+= Report on <span style="color: #465053ff">**Mafia**</span> Influence on [+ southern_regions : southern_regions +]
+
+Corruption investigations intro [+ southern_regions : southern_regions +] have revealed significant influence by the <span style="color: #465053ff">**Mafia**</span> into the local bureaucracy, as a not insignificant portion of bureaucrats have been charged with corruption and collaboration with local criminals as well.
+
+Though we have rooted out some of the corruption, some remnants remain, of which will likely be hiding further to avoid detection. Replacements for the bureaucrats will be hired soon, though loyalty might remain a question for these new hires.

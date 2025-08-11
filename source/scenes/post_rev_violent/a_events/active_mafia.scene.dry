@@ -1,7 +1,0 @@
-title: Placeholder
-subtitle: Placeholder
-new-page: true
-view-if: mafia_trigger_prog >= 100
-on-arrival: mafia_active = 1
-max-visits: 1
-tags: event

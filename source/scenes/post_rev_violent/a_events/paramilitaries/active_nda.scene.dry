@@ -1,0 +1,14 @@
+title: Emergence of the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>
+new-page: true
+view-if: nda_trigger_prog >= 100
+on-arrival: nda_active = 1; nda_decision = 0; nda_attack_timer = 6 {!
+Q.timers.push('nda_attack');
+!}
+max-visits: 1
+tags: event
+
+= Emergence of the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>
+
+Numerous industrial actions within the Northern regions have been discovered to be a result of outside influence, particularly from the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>, which have seemingly been able to begin disrupting us in the North.
+
+It is likely the <span style="color: #87CEFA">**Alliance**</span> will hinder our economic efforts within the North, and it is recommended that a plan be placed to disrupt them as much as possible. 

@@ -219,6 +219,7 @@ Neither proposals are able to achieve a majority in the <span style="color: #BF0
 on-arrival: left_eco_adopted = 1; economic_plan = 1; turatian_dissent += 7; gradualist_dissent += 10; labour_dissent += 4; syndicalist_dissent += 5 if syndicalist_active; communist_strength += 8
 choose-if: premier_party != "Turatian"
 unavailable-subtitle: Chairman [+ premier +] would never choose this.
+go-to: goals_choose
 
 Eventually, the Central Economic Plan is adopted by order of Chairman [+ premier +]. Reactions of outrage from the Pragmatists naturally occur, who demand a revote instead. 
 
@@ -228,6 +229,7 @@ Nevertheless, amongst some protests, we must act. There is much work to be done.
 on-arrival: right_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 10; ordinovist_dissent += 7; reformist_strength += 7
 choose-if: premier_party != "Bordigist"
 unavailable-subtitle: Chairman [+ premier +] would never choose this.
+go-to: goals_choose
 
 Eventually, the New Economic Policy is adopted by order of Chairman [+ premier +]. Reactions of outrage from the Orthodox Marxists naturally occur, who demand a revote instead. 
 
@@ -236,8 +238,41 @@ Nevertheless, amongst some protests, we must act. There is much work to be done.
 @choose_both
 subtitle: This will be significantly harder to manage compared to the other proposals.
 view-if: left_eco_yes + right_eco_yes < 50
-on-arrival: both_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 4; ordinovist_dissent += 4; gradualist_dissent += 4; turatian_dissent += 4; 
+on-arrival: both_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 4; ordinovist_dissent += 4; gradualist_dissent += 4; turatian_dissent += 4;
+go-to: goals_choose
 
 Rather than the two proposals, the new proposed system of 'Regional Dualism' is selected instead, with specifics to be drafted up in the future. Though attempting to appease both sides, murmurs of grumbling have been heard from both sides, albeit more muted than if we had solely chosen a side.
 
 There is significant work to be done, staffers informed, plans drafted and people to be hired. It is imperative the success of the plan is shown swiftly, yet implemented fully to quell dissenting voices.
+
+@goals_choose
+
+With an economic plan chosen, discussions on the goals set for the plan begin. Though numerous options are discussed and debated, three plans are eventually decided upon, one of which to be picked.
+
+The First Plan sets minimum goals for the first year of the Economic Plan, advocating for lowered expectations in an effort to ensure success and boost morale and public opinion before embarking on further endeavours.
+
+The Second Plan sets standard goals for the first year of the Economic Plan, advocating for a standardised introduction to our economic goals rather than selecting radical goals.
+
+The Third Plan would set high goals for the first year of the Economic Plan, advocating for a swift recovery back to pre-war standards as a springboard towards actual economic growth rather than mere recovery from the Civil War.
+
+- @low_quota: Select the First Plan.
+- @medium_quota: Select the Second Plan.
+- @high_quota: Select the Third Plan.
+
+@low_quota
+subtitle: This will set our total Economic Goals to grow at least **20%**, and to reduce Social Inequality by **10%**.
+on-arrival: economic_goal = 20; social_goal = -10;
+
+Placeholder
+
+@medium_quota
+subtitle: This will set our total Economic Goals to grow at least **40%**, and to reduce Social Inequality by **20%**.
+on-arrival: economic_goal = 40; social_goal = -20;
+
+Placeholder
+
+@high_quota
+subtitle: This will set our total Economic Goals to grow at least **60%**, and to reduce Social Inequality by **30%**.
+on-arrival: economic_goal = 60; social_goal = -30;
+
+Placeholder
