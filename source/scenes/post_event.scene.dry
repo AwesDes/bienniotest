@@ -68,6 +68,7 @@ if (Q.violent_revolution) {
         }
     }
 
+
     Q.agricultural_health = parseFloat(Q.agricultural_health).toFixed(1);
     Q.industry_health = parseFloat(Q.industry_health).toFixed(1);
     Q.supply_health = parseFloat(Q.supply_health).toFixed(1);
@@ -106,11 +107,15 @@ if (Q.violent_revolution) {
     Q.southern_illiteracy = parseFloat(Q.southern_illiteracy).toFixed(1);
 
     Q.agricultural_health = (Q.southern_agricultural_health * 0.9) + (Q.central_agricultural_health * 0.1);
-    Q.supply_health = Q.northeast_supply_health + Q.northwest_supply_health + Q.central_supply_health + Q.southern_supply_health;
+    Q.supply_health = Number(Q.northeast_supply_health) + Number(Q.northwest_supply_health) + Number(Q.central_supply_health) + Number(Q.southern_supply_health);
     Q.industry_health = (Q.northeast_industry_health * 0.45) + (Q.northwest_industry_health * 0.45) + (Q.central_industry_health * 0.15);
     Q.poverty = (Q.northeast_poverty * 0.25) + (Q.northwest_poverty * 0.25) + (Q.central_poverty * 0.2) + (Q.southern_poverty * 0.3);
     Q.homelessness = (Q.northeast_homelessness * 0.25) + (Q.northwest_homelessness * 0.25) + (Q.central_homelessness * 0.2) + (Q.southern_homelessness * 0.3);
     Q.illiteracy = (Q.northeast_illiteracy * 0.25) + (Q.northwest_illiteracy * 0.25) + (Q.central_illiteracy * 0.2) + (Q.southern_illiteracy * 0.3);
+
+    Q.supply_health = Number(Q.supply_health).toFixed(1);
+    Q.industry_health = Number(Q.industry_health).toFixed(1);
+    Q.agricultural_health = Number(Q.agricultural_health).toFixed(1);
 }
 
 if (Q.year == 1924 && Q.month == 10 && Q.week == 3 && Q.supported_entente >= 2) {
