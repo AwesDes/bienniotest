@@ -1,7 +1,7 @@
 title: Deliberations of the Economy
 new-page: true
 is-card: true
-view-if: not economic_plan and eco_plan_timer <= 0
+view-if: not economic_plan_adopted and eco_plan_timer <= 0
 tags: economic_affairs
 on-arrival: week_actions += 1; eco_plan_timer = 3
 
