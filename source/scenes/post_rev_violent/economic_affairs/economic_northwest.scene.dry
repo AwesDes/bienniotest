@@ -81,7 +81,7 @@ go-to: industry_delegate
 
 @increase_arms
 subtitle: Military Production is necessary to keep our borders defended.
-choose-if: choose-if: northwest_indus_free_unit > 0
+choose-if: northwest_indus_free_unit > 0
 unavailable-subtitle: We do not have enough free units.
 on-arrival: northwest_indus_free_unit -= 1; northwest_military_goods_unit += 1; military_goods_unit += 1;
 go-to: industry_delegate

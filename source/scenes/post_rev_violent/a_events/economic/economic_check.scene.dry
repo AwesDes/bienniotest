@@ -30,7 +30,7 @@ The Report on Social Inequality have been presented to the <span style="color: #
 @social_yes
 view-if: changeSocial <= social_goal
 on-arrival: stability += 1; public_opinion += 10; public_opinion -= 5 if low_goal; public_opinion += 5 if high_goal; corruption *= 0.8 if medium_goal; corruption *= 0.9 if low_goal; corruption *= 0.7 if high_goal;
-go-to: economic_check
+go-to: economic_check_2
 
 The Reports have indicated a successful drop in Social Inequality in line or even better than the goals set.
 
@@ -41,7 +41,7 @@ Reports have delivered shocking, perhaps expected news: We have failed to meet o
 
 - @economic_failure: Our Economic Plan is declared a failure.
 
-@economic_check
+@economic_check_2
 
 The Report on Economic Development have been presented to the <span style="color: #BF0000">**Congress of Soviets**</span>.
 

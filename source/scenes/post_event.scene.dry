@@ -1877,6 +1877,10 @@ if (Q.week_actions >= 1) {
             Q.army_conduct += 2/4 * Q.military_goods_unit;
         }
 
+        Q.agricultural_goods_unit_disp = Q.agricultural_goods_unit * 10;
+
+        Q.total_staple_crops = Q.staple_crops_unit + Q.imported_staple_crops_unit;
+
     }
 }
 Q.has_event = 0;

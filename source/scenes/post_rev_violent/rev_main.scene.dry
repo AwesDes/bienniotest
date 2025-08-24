@@ -6,6 +6,16 @@ max-cards: 6
 
 [? if budget < -5 : Our debt has ballooned to the point where we are unable to fund certain social programs, negatively impacting national poverty, homelessness and illiteracy levels. ?]
 
+[? if stability_check_timer < 6 : Our stability has reached critical failure, and the <span style="color: #BF0000">**Congress of Soviets**</span> will act should we not bring this back up in time. ?]
+
+[? if opinion_check_timer < 6 : Public Opinion has turned against us significantly, and will reach critical levels should we not rectify the situation immediately. ?]
+
+[? if corruption >= 40 : Reports of disappearing or missing funds, details have been heard at an uptick across the country, leaving social programs and salaries underfunded. Corruption investigations are recommended. ?]
+
+[? if total_staple_crops < 6 : We currently estimate 6 production units are necessary for staple crop growth, otherwise our population will starve. We have not hit that goal. ?]
+
+[? if central_supply_health < agricultural_goods_unit_disp : Bottlenecks regarding transportation of Agricultural Equipment to the Southern Regions have been reported, likely due to Central Supply Infrastructure unable to keep up with demand. ?]
+
 - @internal
 - @economic
 - @military
@@ -25,9 +35,9 @@ max-cards: 6
 
 [? if corruption >= 40 : Reports of disappearing or missing funds, details have been heard at an uptick across the country, leaving social programs and salaries underfunded. Corruption investigations are recommended. ?]
 
-[? if staple_crops_unit + imported_staple_crops_unit < 6 : We currently estimate 6 production units are necessary for staple crop growth, otherwise our population will starve. We have not hit that goal. ?]
+[? if total_staple_crops < 6 : We currently estimate 6 production units are necessary for staple crop growth, otherwise our population will starve. We have not hit that goal. ?]
 
-[? if central_supply_health < agricultural_goods_unit * 10 : Bottlenecks regarding transportation of Agricultural Equipment to the Southern Regions have been reported, likely due to Central Supply Infrastructure unable to keep up with demand. ?]
+[? if central_supply_health < agricultural_goods_unit_disp : Bottlenecks regarding transportation of Agricultural Equipment to the Southern Regions have been reported, likely due to Central Supply Infrastructure unable to keep up with demand. ?]
 
 - @internal
 - @economic
