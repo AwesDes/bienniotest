@@ -1,7 +1,7 @@
 title: <span style="color: #800000">**Report on Critical Stability**</span>
 subtitle: Stopgaps have proven ineffective.
 new-page: true
-view-if: stability <= 0 and stability_check_timer >= 6 and not rev_economic_recovery and not in_emergency
+view-if: stability <= 0 and stability_check_timer < 0 and not rev_economic_recovery and not in_emergency
 on-arrival: in_emergency = 1
 tags: event
 

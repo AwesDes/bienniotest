@@ -1,0 +1,133 @@
+title: Northwest Economic Planning
+new-page: true
+is-card: true
+tags: economic_affairs
+view-if: economic_northwest_timer <= 0 and economic_plan_adopted = 1
+on-arrival: week_actions += 1; economic_northwest_timer = 3; {!
+Q.bureaucratic_modifier = (Q.bureaucratic_loyalty / 100) * (Q.bureaucratic_efficiency / 100);
+!}
+card-image:
+go-to: northwest_menu
+
+= Northwest Economic Planning
+
+The Northwest Region holds significant industrial capacity, most of which still remains from prior to the civil war, remaining idle or unorganised. It is our duty to restore its industrial capacity, so that it can benefit the region and nation as a whole.
+
+@northwest_menu
+
+[? if left_eco_adopted : With the Central Economic Plan, the State Planning Committee has drafted up plans to improve the economic situation regarding the Northwestern Region. Our economic direction means, thankfully, we will be able to directly order workers to their necessary positions. ?]
+
+[? if right_eco_adopted : The New Economic Plan has allowed us to take a more hands-off approach to managing the economic situation. Though not directly managing the situation, we can certainly nudge independent and private enterprise to aid us in economic recovery. ?]
+
+[? if both_eco_adopted : Our Regional Dualism Policy will, unfortunately, impact the Northwest, leaving it under the Central Economic Plan. Though we will naturally need to recover the region, its importance, as least temporarily, will be industrial purposes and to act as a production hub, like the Northeast. ?]
+
+Every action will be impacted by the loyalties and efficiency of our bureaucracy.
+
+- @industry_delegate: Reallocate Central Industrial Production.
+- @industry_expand_cec: Expand the Industrial Factories.
+- @industry_expand_nep: Subsidise Industrial Production
+- @supply_railways_expand: Expand the Freight Railways.
+- @northwest_supply_repair: Repair Existing Infrastructure.
+- @root: Don't touch economic policy for now.
+- @easy_discard
+
+@industry_delegate
+
+We will gain a Production Unit at 20%, 40%, 60& and 80% Northwest Industrial Health.
+
+Consumer Goods Production: [+ consumer_goods_unit +] Units allocated ([+ northwest_consumer_goods_unit +] from Northwest)
+
+Military Arms Production: [+ military_goods_unit +] Units allocated ([+ northwest_military_goods_unit +] from Northwest)
+
+Agricultural Equipment Production: [+ agricultural_goods_unit +] Units allocated ([+ northwest_agricultural_goods_unit +] from Northwest)
+
+**Unused Production Units: [+ northwest_indus_free_unit +] Units**
+
+- @reduce_consumer: Reduce Consumer Goods Production.
+- @reduce_arms: Reduce Military Arms Production.
+- @reduce_agri: Reduce Agricultural Equipment Production.
+- @increase_consumer: Increase Consumer Goods Production.
+- @increase_arms: Increase Military Arms Production.
+- @increase_agri: Increase Agricultural Equipment Production.
+- @northwest_menu: Back to menu.
+
+@reduce_consumer
+subtitle: Consumer Goods are essential for social recovery.
+choose-if: northwest_consumer_goods_unit > 0
+unavailable-subtitle: No Northwest Production Units are allocated to Consumer Goods.
+on-arrival: northwest_indus_free_unit += 1; northwest_consumer_goods_unit -= 1; consumer_goods_unit -= 1;
+go-to: industry_delegate
+
+@reduce_arms
+subtitle: Military Production is necessary to keep our borders defended.
+choose-if: northwest_military_goods_unit > 0
+unavailable-subtitle: No Northwest Production Units are allocated to Military Arms.
+on-arrival: northwest_indus_free_unit += 1; northwest_military_goods_unit -= 1; military_goods_unit -= 1;
+go-to: industry_delegate
+
+@reduce_agri
+subtitle: Agricultural Equipment can speed up mechanisation of agriculture.
+choose-if: northwest_agricultural_goods_unit > 0
+unavailable-subtitle: No Northwest Production Units are allocated to Agricultural Equipment.
+on-arrival: northwest_indus_free_unit += 1; northwest_agricultural_goods_unit -= 1; agricultural_goods_unit -= 1;
+go-to: industry_delegate
+
+@increase_consumer
+subtitle: Consumer Goods are essential for social recovery.
+choose-if: northwest_indus_free_unit > 0
+unavailable-subtitle: We do not have enough free units.
+on-arrival: northwest_indus_free_unit -= 1; northwest_consumer_goods_unit += 1; consumer_goods_unit += 1;
+go-to: industry_delegate
+
+@increase_arms
+subtitle: Military Production is necessary to keep our borders defended.
+choose-if: choose-if: northwest_indus_free_unit > 0
+unavailable-subtitle: We do not have enough free units.
+on-arrival: northwest_indus_free_unit -= 1; northwest_military_goods_unit += 1; military_goods_unit += 1;
+go-to: industry_delegate
+
+@increase_agri
+subtitle: Agricultural Equipment can speed up mechanisation of agriculture.
+choose-if: northwest_indus_free_unit > 0
+unavailable-subtitle: We do not have enough free units.
+on-arrival: northwest_indus_free_unit -= 1; northwest_agricultural_goods_unit += 1; agricultural_goods_unit += 1;
+go-to: industry_delegate
+
+@industry_expand_cec
+subtitle: -2 Budget - Heavy Industry remains the core of the industrial sector, and we can restore it.
+view-if: left_eco_adopted or both_eco_adopted
+on-arrival: {!
+Q.budget -= 2;
+Q.northwest_industry_health += 2.7 * Q.bureaucratic_modifier;
+!}
+
+Though relatively untouched, the factories have remained fairly idle following the civil war, and we can stimulate investment into these factories to expand them and get them functioning once more.
+
+@industry_expand_nep
+subtitle: -1 Budget - We can subsidise small industries to stimulate them.
+view-if: right_eco_adopted
+on-arrival: {!
+Q.budget -= 1;
+Q.northwest_industry_health += 1.6 * Q.bureaucratic_modifier;
+!}
+
+Investments, especially foreign, have dried up since the civil war, leaving many smaller businesses unsustainable. Though against our goals, we could help to subsidise these businesses to stimulate the economy.
+
+@supply_railways_expand
+subtitle: -1 Budget - Railways are essential for our agricultural transports.
+on-arrival: {!
+Q.budget -= 1;
+Q.northwest_supply_health += 1.9 * Q.bureaucratic_modifier;
+!}
+
+Railways, especially Freight Railways, remain scarce across the region. We can construct new railways with funding to restore connection between the regions, especially as their necessity furthers as time goes on.
+
+@northwest_supply_repair
+subtitle: -0.5 Budget - We can repair the remaining railways that still exist in the region.
+on-arrival: {!
+Q.budget -= 0.5;
+Q.northwest_supply_health += 1.3;
+!}
+max-visits: 2
+
+The railways, albeit damaged, still exist across the region. Some funding would allow for us to restore these infrastructure, being cheaper than building new railways without bureaucracy.

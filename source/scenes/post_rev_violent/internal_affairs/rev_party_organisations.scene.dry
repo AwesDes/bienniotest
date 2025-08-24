@@ -10,9 +10,11 @@ card-image: img/PartyOrganisations.jpg
 
 In addition to being a political party, the [+ psi_full_name +] is a social world onto itself, with a vast array of associated organisations which serve the social needs of their members from cradle to grave.
 
-#TODO - Add more options
-
 - @newspapers: Fund more newspapers and journalists.
+- @youth_org: We can expand our youth organisations.
+- @education_org: Fund our Education organisation.
+- @mutual_aid_org: Expand our mutual aid organisation.
+- @community_org: Expand community organisations, such as community centres and libraries.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
 
@@ -22,6 +24,38 @@ unavailable-subtitle: Not enough resources. (Need 1)
 subtitle: -1 resources
 on-arrival: resources -= 1; media_timer = 0;
 go-to: rev_media
+
+@youth_org
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources. (Need 1)
+subtitle: -1 resources
+on-arrival: resources -= 1; public_opinion += 5
+
+The Federazione Giovanile Socialista Italiana has existed as our youth organisation since the turn of the century. Though nominally a youth organisation, it existence has been primarily to act as a 'Cadre School' for aspiring members of the party. With our duties expanded, however, we can begin utilising the youth organisation as a means to both aid the youth as well as help educate the future generations on socialism.
+
+@education_org
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources. (Need 1)
+subtitle: -1 resources
+on-arrival: resources -= 1; illiteracy_modifier += 0.1 if illiteracy_modifier < 2; bureaucratic_loyalty += 2 if illiteracy_modifier >= 2
+
+Acting as a hub for education, the Università Popolari Socialiste has been affiliated with the party, responsible for educating workers with the help of unions as well as spreading cultural and scientific knowledge.
+
+@mutual_aid_org
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources. (Need 1)
+subtitle: -1 resources
+on-arrival: resources -= 1; poverty_modifier += 0.1 if poverty_modifier < 2; southern_poverty -= 0.2 if poverty_modifier >= 2
+
+Mutual Aid has existed within the party since its inception, serving the needs of people who need it. Now, more than ever, this duty should be expanded to aid all those in need of it, who have suffered the devastation of the civil war.
+
+@community_org
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources. (Need 1)
+subtitle: -1 resources
+on-arrival: resources -= 1; homelessness_modifier += 0.1 if homelessness_modifier < 2; public_opinion += 2 if homelessness_modifier >= 2
+
+Community Organisations exist as a parallel society for workers. Libraries, Community Centres, Schools. These have allowed workers to establish a support network, as well as receive educational, legal or welfare support if necessary, and we should strengthen these facilities.
 
 @nothing
 

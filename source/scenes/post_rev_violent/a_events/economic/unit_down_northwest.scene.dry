@@ -1,0 +1,35 @@
+title: Report on Reduced Production Units in the Northwest Region
+new-page: true
+view-if: (northwest_industry_health < 20 and (northwest_agricultural_goods_unit + northwest_consumer_goods_unit + northwest_military_goods_unit + northwest_indus_free_unit) >= 1) or (northwest_industry_health < 40 and (northwest_agricultural_goods_unit + northwest_consumer_goods_unit + northwest_military_goods_unit + northwest_indus_free_unit) >= 2) or (northwest_industry_health < 60 and (northwest_agricultural_goods_unit + northwest_consumer_goods_unit + northwest_military_goods_unit + northwest_indus_free_unit) >= 3) or (northwest_industry_health < 80 and (northwest_agricultural_goods_unit + northwest_consumer_goods_unit + northwest_military_goods_unit + northwest_indus_free_unit) >= 4)
+tags: event
+
+Our Economic Capacity has dropped that we have lost a Production Unit.
+
+- @reduce_consumer
+- @reduce_arms
+- @reduce_agri
+- @reduce_free_indus
+
+@reduce_consumer
+subtitle: Consumer Goods are essential for social recovery.
+choose-if: northwest_consumer_goods_unit > 0
+unavailable-subtitle: No Central Production Units are allocated to Consumer Goods.
+on-arrival: northwest_consumer_goods_unit -= 1; consumer_goods_unit -= 1;
+
+@reduce_arms
+subtitle: Military Production is necessary to keep our borders defended.
+choose-if: northwest_military_goods_unit > 0
+unavailable-subtitle: No Central Production Units are allocated to Military Arms.
+on-arrival: northwest_military_goods_unit -= 1; military_goods_unit -= 1;
+
+@reduce_agri
+subtitle: Agricultural Equipment can speed up mechanisation of agriculture.
+choose-if: northwest_agricultural_goods_unit > 0
+unavailable-subtitle: No Central Production Units are allocated to Agricultural Equipment.
+on-arrival: northwest_agricultural_goods_unit -= 1; agricultural_goods_unit -= 1;
+
+@reduce_free_indus
+subtitle: Free units are idle.
+choose-if: northwest_indus_free_unit > 0
+unavailable-subtitle: No Central Production Units are Idle.
+on-arrival: northwest_indus_free_unit -= 1;

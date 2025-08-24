@@ -1,0 +1,47 @@
+title: Political Rally
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: rally_timer <= 0
+on-arrival: week_actions += 1; rally_timer = 4;
+card-image: img/Rally.jpg
+go-to: main_rally;
+
+@main_rally
+
+= National Rally
+
+Mass rallies have continued to be a common theme in cities across the nation, celebrating the revolution. What should be the main themes for today?
+
+- @celebrate_social: Celebrate our achievements at lowering social inequality.
+- @celebrate_economic: Celebrate our achievements at increasing our economic capacity.
+- @against_corruption: Rally against corruption & unjustness.
+- @general_celebrate: General celebration for the success of the revolution!
+- @easy_discard
+- @cancel_advisor_action
+
+@celebrate_social
+view-if: deadline_active
+choose-if: changeSocial > 0
+unavailable-subtitle: Social Inequality has somehow worsened under our control.
+on-arrival: public_opinion += 7;
+
+Social Inequality has reduced since the start of our economic plan, which is a cause for celebration. Hopefully, if this trend continues, we will be able to bring inequality further below pre-war levels.
+
+@celebrate_economic
+view-if: deadline_active
+choose-if: changeEconomic > 0
+unavailable-subtitle: Economic Development has somehow worsened under our control.
+on-arrival: public_opinion += 7;
+
+Economic Capacity has reduced since the start of our economic plan, which is a cause for celebration. Hopefully, if this trend continues, we will be able to bring our capacity further above pre-war levels.
+
+@against_corruption
+on-arrival: corruption -= 7
+
+Our battle against corruption continues, as we rally against it for a better and fairer future.
+
+@general_celebrate
+on-arrival: public_opinion += 3;
+
+A general fervour within the nation still remains, excited and optimistic for the future that we cannot afford to disappoint. 

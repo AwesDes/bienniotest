@@ -1,0 +1,133 @@
+title: Labour Reforms
+new-page: true
+is-card: true
+tags: economic_affairs
+view-if: reforms_labour_timer <= 0 and economic_plan_adopted = 1 and labour_complete != 1
+on-arrival: week_actions += 1; reforms_labour_timer = 3;
+card-image: 
+
+= Labour Reform
+
+Labour Reform represents a policy in tandem with our goals, bringing it to the standards of the modern day and idealism that we strive to achieve. Via legislation, we can advance our labour laws to grant workers a voice as well as more power to exercise their rights.
+
+- @labour_hours: Lower the maximum working hours.
+- @labour_wage: Increase the minimum wage.
+- @labour_safety: Reform Workplace Safety Laws.
+- @labour_unions: Strengthen union representation and powers in the workplace.
+- @labour_pension: Establish a national pension for public servants.
+- @labour_complete: Declare our reforms complete!
+- @root: Do nothing for now.
+- @easy_discard
+
+@labour_hours
+subtitle: We can strengthen regulations ensuring workers are not overworked or exploited.
+view-if: working_hours < 3
+on-arrival: {!
+Q.northeast_poverty -= 0.1;
+Q.northwest_poverty -= 0.1;
+Q.central_poverty -= 0.1;
+Q.southern_poverty -= 0.1;
+
+Q.northeast_homelessness -= 0.1;
+Q.northwest_homelessness -= 0.1;
+Q.central_homelessness -= 0.1;
+Q.southern_homelessness -= 0.1;
+!}
+
+Laws regarding working hours are few and far-between, if any at all, which allowed the bourgeois to exploit workers to the point of working themselves to death. We can institute changes to finally legislate laws to prevent this from occurring again, as well as allow workers be given time off outside of work.
+
+@labour_wage
+subtitle: We can increase the minimum wage to a living wage to reduce poverty.
+view-if: wage_increase < 2
+on-arrival: {!
+Q.northeast_poverty -= 0.3;
+Q.northwest_poverty -= 0.3;
+Q.central_poverty -= 0.3;
+Q.southern_poverty -= 0.3;
+
+Q.northeast_homelessness -= 0.1;
+Q.northwest_homelessness -= 0.1;
+Q.central_homelessness -= 0.1;
+Q.southern_homelessness -= 0.1;
+!}
+
+Minimum wage laws do not currently exist, as wages are determined by the employer, leading to underpaid workers who are unable to sustain themselves on a single job. Through legislation, we can change this, raising the minimum wage and allowing workers to live off a wage, no matter the job.
+
+@labour_safety
+subtitle: We can strengthen safety legislation and bring accidents to a minimum.
+view-if: workers_safety < 3
+on-arrival: {!
+Q.northeast_poverty -= 0.1;
+Q.northwest_poverty -= 0.1;
+Q.central_poverty -= 0.1;
+Q.southern_poverty -= 0.1;
+
+Q.northeast_homelessness -= 0.1;
+Q.northwest_homelessness -= 0.1;
+Q.central_homelessness -= 0.1;
+Q.southern_homelessness -= 0.1;
+!}
+
+Much neglect has been given to labour laws, the worst of which has been our safety regulations, paired with a non-existent healthcare system or insurance has led to deadly incidents ruining the livelihoods of families and workers. It is up to us to strengthen these laws, minimising workplace accidents from ever occuring at all.
+
+@labour_unions
+subtitle: Unions represent a key part of the economy, as well as a unified voice for workers to bargain and speak to the government.
+on-arrival: {!
+Q.labour_reform += 1;
+Q.northeast_poverty -= 0.2;
+Q.northwest_poverty -= 0.3;
+Q.central_poverty -= 0.2;
+
+Q.northeast_homelessness -= 0.2;
+Q.northwest_homelessness -= 0.2;
+Q.central_homelessness -= 0.1;
+!}
+max-visits: 2
+
+Unions have represented a cornerstone of the <span style="color: #009246">**Italian**</span worker organisations and political expression, serving as a means to advocate for better working conditions during the years of the Kingdom, and now as an organisation to educate workers as well as act as a familiar voice and a mediator between worker and state. Furthering the powers of unions grants them indirect control over their workplaces, acting as an effective conduit and communication for a well-oiled economy.
+
+@labour_pension
+subtitle: -3 Budget - We can ensure our workers can retire without worry by establishing a national pension system.
+on-arrival: {!
+Q.labour_reform += 1;
+Q.budget -= 3;
+
+Q.southern_poverty -= 0.6;
+Q.northeast_poverty -= 0.5;
+Q.northwest_poverty -= 0.4;
+Q.central_poverty -= 0.4;
+
+Q.southern_homelessness -= 0.4;
+Q.northeast_homelessness -= 0.3;
+Q.northwest_homelessness -= 0.3;
+Q.central_homelessness -= 0.3;
+!}
+max-visits: 1
+
+Pensions are a fairly foreign term for <span style="color: #009246">**Italy**</span>, existing limited for private organisations via payroll taxes. The necessity of pensions, or at least some form of social security has become evident as more of the older generation has fallen into poverty, and a state-funded pension would ensure this benefit would be granted to all workers, not merely private employees.
+
+@labour_complete
+view-if: labour_reform >= 3
+on-arrival: {!
+Q.southern_poverty -= 0.3;
+Q.northeast_poverty -= 0.3;
+Q.northwest_poverty -= 0.2;
+Q.central_poverty -= 0.4;
+
+Q.southern_homelessness -= 0.3;
+Q.northeast_homelessness -= 0.2;
+Q.northwest_homelessness -= 0.2;
+
+Q.northeast_industry_health += 0.4;
+Q.northwest_industry_health += 0.3;
+Q.central_industry_health += 0.3;
+Q.central_agricultural_health += 0.3;
+Q.southern_agricultural_health += 0.4;
+
+Q.labour_complete = 1;
+Q.public_opinion += 6;
+!}
+
+The Ministry of Labour has reported a significant drop in workplace incidents, conflict between state policy and workers, as well as a general improvement in terms of poverty reduction, thanks to our labour reforms. 
+
+Though we have invested significantly into our reforms, this only represents a small step towards our goals of idealism and reducing social inequality to its fullest.

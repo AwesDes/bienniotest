@@ -463,11 +463,7 @@ is-special: true
 
 {!<p style="text-align: center; margin-top: -20px">Click on a region to view specific information.</p>!}
 
-{!<p style="text-align: center;">!}Unemployment is at [+ unemployment : display_unemployment +] levels.{!</p>!}
-
-{!<p style="text-align: center;">!}Inflation is at [+ inflation : display_inflation +] levels.{!</p>!}
-
-{!<p style="text-align: center;">!}Economic Growth is at [+ economic_growth : display_display +] levels.{!</p>!}
+[? if deadline_active : {!<p style="text-align: center;">!}Our Economic Direction will be reviewed on **[+ deadline_month : month +], [+ deadline_year +]**.{!</p>!} ?]
 
 = Total Overview
 
@@ -478,21 +474,21 @@ is-special: true
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px;">!}
-        Total Agricultural Production: **[+ agricultural_health : health +]**
+        Total Agricultural Production: **[+ agricultural_health : health +]** [? if deadline_active : ([+ changeAgricultural_Disp +]) ?]
     {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
-        Total Industrial Output: **[+ industry_health : health +]**
+        Total Industrial Output: **[+ industry_health : health +]** [? if deadline_active : ([+ changeIndustry_Disp +]) ?]
     {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px;">!}
-        Total Infrastructural Transport: **[+ supply_health : health +]**
+        Total Infrastructural Transport: **[+ supply_health : health +]** [? if deadline_active : ([+ changeSupply_Disp +]) ?]
     {!</div>!}
 {!</div>!}
 
@@ -503,21 +499,21 @@ is-special: true
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/PovertySymbol.png' style="height: 16px; width: 16px;">!}
-        Total Poverty: **[+ poverty +]**%
+        Total Poverty: **[+ poverty +]**% [? if deadline_active : ([+ changePoverty_Disp +]) ?]
     {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px;">!}
-        Total Homelessness: **[+ homelessness +]**%
+        Total Homelessness: **[+ homelessness +]**% [? if deadline_active : ([+ changeHomelessness_Disp +]) ?]
     {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px;">!}
-        Total Illiteracy: **[+ illiteracy +]**%
+        Total Illiteracy: **[+ illiteracy +]**% [? if deadline_active : ([+ changeIlliteracy_Disp +]) ?]
     {!</div>!}
 {!</div>!}
 

@@ -1,0 +1,128 @@
+title: Southern Economic Planning
+new-page: true
+is-card: true
+tags: economic_affairs
+view-if: economic_southern_timer <= 0 and economic_plan_adopted = 1
+on-arrival: week_actions += 1; economic_southern_timer = 3; {!
+Q.bureaucratic_modifier = (Q.bureaucratic_loyalty / 100) * (Q.bureaucratic_efficiency / 100);
+!}
+card-image: 
+go-to: southern_menu
+
+= Southern Economic Planning
+
+The Southern Region holds significant agricultural potential, especially after the damage inflicted upon the Po Valley, leaving most lands unable to be tilled. The South remains as a last hope for domestic agricultural production, especially following the redistribution of its land to peasants rather than large estates with landlords not occupying the region.
+
+@southern_menu
+
+[? if left_eco_adopted : With the Central Economic Plan, the State Planning Committee has drafted up plans to improve the economic situation regarding the Southern Region. Our economic direction means, thankfully, we will be able to directly order farmers to their necessary positions. ?]
+
+[? if right_eco_adopted : The New Economic Plan has allowed us to take a more hands-off approach to managing the economic situation. Though not directly managing the situation, we can certainly nudge independent and private farmers to aid us in economic recovery. ?]
+
+[? if both_eco_adopted : Our Regional Dualism Policy has allowed the South greater freedom in open market trading, encouraging productivity of farmers who would be able to gain a profit, as well as sell to the government. ?]
+
+Every action will be impacted by the loyalties and efficiency of our bureaucracy.
+
+- @supply_railways_expand: Expand the Freight Railways.
+- @southern_supply_repair: Repair Existing Infrastructure.
+- @agriculture_delegate: Reallocate Agricultural Production.
+- @agriculture_expand_cec: Expand the Agricultural Fields.
+- @agriculture_expand_nep: Subsidise Farmers and Purchase Yields.
+- @agriculture_aid: Could we utilise the Radio for Agricultural Purposes?
+- @root: Don't touch economic policy for now.
+- @easy_discard
+
+@supply_railways_expand
+subtitle: -1 Budget - Railways are essential for our agricultural transports.
+on-arrival: {!
+Q.budget -= 1;
+Q.southern_supply_health += 2.3 * Q.bureaucratic_modifier;
+!}
+
+Railways, especially Freight Railways, remain scarce across the region. We can construct new railways with funding to restore connection between the regions, especially as their necessity furthers as time goes on.
+
+@southern_supply_repair
+subtitle: -0.5 Budget - We can repair the remaining railways that still exist in the region.
+on-arrival: {!
+Q.budget -= 0.5;
+Q.southern_supply_health += 1.8;
+!}
+max-visits: 2
+
+The railways, albeit damaged, still exist across the region. Some funding would allow for us to restore these infrastructure, being cheaper than building new railways without bureaucracy.
+
+@agriculture_delegate
+
+We will gain a Production Unit at 9%, 18%, 27%, 36%, 45%, 54%, 63%, 72%, 81% Southern Agricultural Health.
+
+Staple Crops Output: [+ staple_crops_unit +] Units allocated ([+ southern_staple_crops_unit +] from Central)
+
+Cash Crops Output: [+ cash_crops_unit +] Units allocated ([+ southern_cash_crops_unit +] from Central)
+
+**Unused Production Units: [+ southern_agri_free_unit +] Units**
+
+- @reduce_staple: Reduce Staple Crops Output.
+- @reduce_cash: Reduce Cash Crops Output.
+- @increase_staple: Increase Staple Crops Output.
+- @increase_cash: Increase Cash Crops Output.
+- @southern_menu: Back to menu.
+
+@reduce_staple
+subtitle: Staple Crops are necessary to feed our population.
+choose-if: southern_staple_crops_unit > 0
+unavailable-subtitle: No Agricultural Units are allocated to Staple Crops.
+on-arrival: southern_agri_free_unit += 1; southern_staple_crops_unit -= 1; staple_crops_unit -= 1;
+go-to: agriculture_delegate
+
+@reduce_cash
+subtitle: Cash Crops are able to be traded for funds to pay for our social programs.
+choose-if: southern_cash_crops_unit > 0
+unavailable-subtitle: No Agricultural Units are allocated to Cash Crops.
+on-arrival: southern_agri_free_unit += 1; southern_cash_crops_unit -= 1; cash_crops_unit -= 1;
+go-to: agriculture_delegate
+
+@increase_staple
+subtitle: Staple Crops are necessary to feed our population.
+choose-if: southern_agri_free_unit > 0
+unavailable-subtitle: We do not have enough free units.
+on-arrival: southern_agri_free_unit -= 1; southern_staple_crops_unit += 1; staple_crops_unit += 1;
+go-to: agriculture_delegate
+
+@increase_cash
+subtitle: Cash Crops are able to be traded for funds to pay for our social programs.
+choose-if: southern_agri_free_unit > 0
+unavailable-subtitle: We do not have enough free units.
+on-arrival: southern_agri_free_unit -= 1; southern_cash_crops_unit += 1; cash_crops_unit += 1;
+go-to: agriculture_delegate
+
+@agriculture_expand_cec
+subtitle: -1 Budget - We can aid farmers directly.
+view-if: left_eco_adopted
+on-arrival: {!
+Q.budget -= 1;
+Q.southern_agricultural_health += 3.6 * Q.bureaucratic_modifier;
+!}
+
+Fields across the region remain destroyed from the devastation of the war, which we can help to end by stimulating growth and invest in them to produce crops for our benefit.
+
+@agriculture_expand_nep
+subtitle: -0.5 Budget - We can aid struggling farmers indirectly.
+view-if: right_eco_adopted or both_eco_adopted
+on-arrival: {!
+Q.budget -= 0.5;
+Q.southern_poverty -= 0.7;
+Q.southern_agricultural_health += 2.4 * Q.bureaucratic_modifier;
+!}
+
+Peasants, now in control of fields, are able to grow crops by themselves and sell them for a profit to the government or the market. Many, however, still lack suitable markets following the civil war, and purchasing yields at a low price and help reduce poverty and aid farmers at the same time.
+
+@agriculture_aid
+subtitle: -2 Budget - We could use the radio to help out farmers.
+view-if: radio >= 2
+on-arrival: {!
+Q.budget -= 2;
+Q.southern_agricultural_health += 4.8;
+!}
+max-visits: 1
+
+The introduction of radio has presented with a valuable opportunity to aid farmers. Utilising radio, we can educate them, provide weather reports and inform them of market prices, making regional productivity increase.

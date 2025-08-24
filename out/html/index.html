@@ -327,6 +327,23 @@
                     <div id="qualities">
                     </div>
                 </div>
+
+                <div id="radio_sidebar" class="tools right" style="display: none">
+                    <div class="tab_container">
+                        <button class="tab_button" id="radio_tab">Radio Rome</button> <!-- This shouldn't do anything -->
+                    </div>
+                    <div class="radio-container">
+                    <p id="RadioText">Now Playing:</p>
+                    <img id="radioImage" class="radio-image" src="" alt="Station Image">
+                    <div id="radioTitle" class="radio-title"></div>
+                    <audio id="radioPlayer" controls loop></audio>
+                    <br>
+                    <div class="AudioButton">
+                        <button onclick="prevTrack()">Previous</button>
+                        <button onclick="nextTrack()">Next</button>
+                    </div>
+                    </div>
+                </div>
             </div>
 
             <div id='content'>
@@ -347,5 +364,6 @@
             </footer>
         </div>
     </div>
+    <script src="radio.js"></script>
   </body>
 </html>

@@ -4,6 +4,7 @@ is-card: true
 tags: internal_affairs
 on-arrival: cheka_timer = 3; week_actions += 1;
 view-if: cheka_timer <= 0
+card-image: img/portraits/FilippoTurati.jpg
 go-to: cheka_menu if cheka_formed; internal_menu if not cheka_formed
 
 @cheka_menu
@@ -19,7 +20,6 @@ The Internal Affairs Committee, like the Cheka, represents a necessary evil in t
 - @nda_investigate
 - @nda_eliminate
 - @mafia_investigate
-- @mafia_eliminate
 - @clandestine_internal_menu: Delve into more clandestine internal policy.
 - @clandestine_foreign_menu: Delve into more clandestine foreign policy.
 - @root: Do nothing, for now.

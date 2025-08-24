@@ -246,6 +246,33 @@ Rather than the two proposals, the new proposed system of 'Regional Dualism' is 
 There is significant work to be done, staffers informed, plans drafted and people to be hired. It is imperative the success of the plan is shown swiftly, yet implemented fully to quell dissenting voices.
 
 @goals_choose
+on-arrival: deadline_active = 1; trade_union_time = time + 2 {!
+if (Q.left_eco_adopted || Q.right_eco_adopted) {
+    Q.deadline_month = Q.month;
+    Q.deadline_year = Q.year + 1;
+}
+
+if (Q.both_eco_adopted) {
+    Q.deadline_year = Q.year;
+    Q.deadline_month = Q.month + 8;
+    if (Q.deadline_month > 12) {
+        Q.deadline_month -= 12;
+        Q.deadline_year += 1;
+    }
+}
+
+Q.initialIndustry = Q.industry_health;
+Q.initialSupply = Q.supply_health;
+Q.initialAgricultural = Q.agricultural_health;
+
+Q.initialPoverty = Q.poverty;
+Q.initialHomelessness = Q.homelessness;
+Q.initialIlliteracy = Q.illiteracy;
+
+Q.changesCheck = ['Industry', 'Supply', 'Agricultural', 'Poverty', 'Homelessness', 'Illiteracy'];
+Q.changesEconomic = ['Industry', 'Supply', 'Agricultural'];
+Q.changesSocial = ['Poverty', 'Homelessness', 'Illiteracy'];
+!}
 
 With an economic plan chosen, discussions on the goals set for the plan begin. Though numerous options are discussed and debated, three plans are eventually decided upon, one of which to be picked.
 
@@ -261,18 +288,18 @@ The Third Plan would set high goals for the first year of the Economic Plan, adv
 
 @low_quota
 subtitle: This will set our total Economic Goals to grow at least **20%**, and to reduce Social Inequality by **10%**.
-on-arrival: economic_goal = 20; social_goal = -10;
+on-arrival: economic_goal = 20; social_goal = -10; socpat_dissent += 3; bordigist_dissent += 5; low_goal = 1;
 
-Placeholder
+The First Quota is chosen. Though there is some disgruntlement from some of the more radical elements of the <span style="color: #a00000ff">**Centre**</span> and <span style="color: #740000ff">**Left**</span> who see our goals as too low, reactions are mostly muted.
 
 @medium_quota
 subtitle: This will set our total Economic Goals to grow at least **40%**, and to reduce Social Inequality by **20%**.
-on-arrival: economic_goal = 40; social_goal = -20;
+on-arrival: economic_goal = 40; social_goal = -20; medium_goal = 1;
 
-Placeholder
+The Second Quota is chosen. Largely uncontroversial, it is hoped this will allow our economy to recover back to pre-war levels and strengthen our bonds with our <span style="color: #800000">**International**</span>, seeing as how we are the only majorly industrialised nation in the organisation.
 
 @high_quota
 subtitle: This will set our total Economic Goals to grow at least **60%**, and to reduce Social Inequality by **30%**.
-on-arrival: economic_goal = 60; social_goal = -30;
+on-arrival: economic_goal = 60; social_goal = -30; high_goal = 1;
 
-Placeholder
+The Third Quota is chosen. Though there is some disgruntlement from some of the more radical elements of the <span style="color: #db0000ff">**Right**</span> who see our goals are unrealistic, reactions are mostly muted.

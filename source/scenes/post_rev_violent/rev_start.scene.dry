@@ -49,6 +49,10 @@ window.changeTab('rev_status', 'rev_main_tab');
 
 document.getElementsByTagName("body")[0].style.setProperty('--link-color', '#900');
 
+if (Q.radio >= 2) {
+    document.getElementById('radio_sidebar').style.display = "";
+}
+
 Q.violent_revolution = 1;
 
 Q.stability = 0;
@@ -79,12 +83,52 @@ if (Q.reformists_expelled == 1) {
     Q.comintern_member = 1;
 }
 
-Q.timers.push('eco_plan', 'cheka');
+Q.eco_plan_timer = 0;
+Q.cheka_timer = 0;
+
+Q.economic_central_timer = 0;
+Q.economic_northeast_timer = 0;
+Q.economic_northwest_timer = 0;
+Q.economic_southern_timer = 0;
+
+Q.reforms_health_timer = 0;
+Q.reforms_labour_timer = 0;
+
+Q.social_central_timer = 0;
+Q.social_northeast_timer = 0;
+Q.social_northwest_timer = 0;
+Q.social_southern_timer = 0;
+
+Q.timers.push('eco_plan', 'cheka', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
 
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
 
 Q.left_eco_support = 0;
 Q.right_eco_support = 0;
+
+Q.poverty_modifier = 1;
+Q.illiteracy_modifier = 1;
+Q.homelessness_modifier = 1;
+
+Q.zeroCheck1 = ['agricultural', 'industry', 'supply'];
+Q.zeroCheck2 = ['northeast', 'northwest', 'central', 'southern'];
+Q.zeroCheck3 = ['poverty', 'homelessness', 'illiteracy'];
+
+Q.agricultural_goods_unit = 0;
+Q.consumer_goods_unit = 0;
+Q.military_goods_unit = 0;
+Q.staple_crops_unit = 0;
+Q.cash_crops_unit = 0;
+
+for (var Checking of Q.zeroCheck2) {
+    Q[Checking + '_agricultural_goods_unit'] = 0;
+    Q[Checking + '_consumer_goods_unit'] = 0;
+    Q[Checking + '_military_goods_unit'] = 0;
+    Q[Checking + '_agri_free_unit'] = 0;
+    Q[Checking + '_indus_free_unit'] = 0;
+    Q[Checking + '_staple_crops_unit'] = 0;
+    Q[Checking + '_cash_crops_unit'] = 0;
+}
 
 Q.bureaucratic_loyalty = Q.psi_votes;
 Q.bureaucratic_efficiency = (Q.psi_votes * 2);
@@ -282,13 +326,122 @@ if (Q.child_attendance > 0) {
     Q.southern_illiteracy -= 0.3 * Q.child_attendance; 
 }
 
+if (Q.education_funded > 0 || Q.education_reformed > 0) {
+    Q.education_initial = 1;
+}
+
+if (Q.dues > 1) {
+    Q.dues -= 1;
+    Q.dues_info = 1;
+}
+
+// eco modifiers
+
+if (Q.unemployment > 7) {
+    Q.northeast_poverty += 0.5;
+    Q.northwest_poverty += 0.5;
+    Q.central_poverty += 0.5;
+    Q.southern_poverty += 0.5;
+
+    Q.northeast_homelessness += 0.3;
+    Q.northwest_homelessness += 0.3;
+    Q.central_homelessness += 0.3;
+    Q.southern_homelessness += 0.3; 
+}
+
+if (Q.unemployment > 12) {
+    Q.northeast_poverty += 0.5;
+    Q.northwest_poverty += 0.5;
+    Q.central_poverty += 0.5;
+    Q.southern_poverty += 0.5;
+
+    Q.northeast_homelessness += 0.3;
+    Q.northwest_homelessness += 0.3;
+    Q.central_homelessness += 0.3;
+    Q.southern_homelessness += 0.3; 
+}
+
+if (Q.unemployment < 4) {
+    Q.northeast_poverty -= 0.5;
+    Q.northwest_poverty -= 0.5;
+    Q.central_poverty -= 0.5;
+    Q.southern_poverty -= 0.5;
+
+    Q.northeast_homelessness -= 0.3;
+    Q.northwest_homelessness -= 0.3;
+    Q.central_homelessness -= 0.3;
+    Q.southern_homelessness -= 0.3; 
+}
+
+if (Q.inflation < 2) {
+    Q.northeast_poverty -= 0.5;
+    Q.northwest_poverty -= 0.5;
+    Q.central_poverty -= 0.5;
+    Q.southern_poverty -= 0.5;
+
+    Q.northeast_homelessness -= 0.3;
+    Q.northwest_homelessness -= 0.3;
+    Q.central_homelessness -= 0.3;
+    Q.southern_homelessness -= 0.3; 
+}
+
+if (Q.inflation > 6) {
+    Q.northeast_poverty += 0.3;
+    Q.northwest_poverty += 0.3;
+    Q.central_poverty += 0.3;
+    Q.southern_poverty += 0.3;
+}
+
+if (Q.inflation > 10) {
+    Q.northeast_poverty += 0.4;
+    Q.northwest_poverty += 0.4;
+    Q.central_poverty += 0.4;
+    Q.southern_poverty += 0.4;
+}
+
+if (Q.economic_growth > 4) {
+    Q.northeast_poverty -= 0.5;
+    Q.northwest_poverty -= 0.5;
+    Q.central_poverty -= 0.5;
+    Q.southern_poverty -= 0.5;
+
+    Q.northeast_homelessness -= 0.3;
+    Q.northwest_homelessness -= 0.3;
+    Q.central_homelessness -= 0.3;
+    Q.southern_homelessness -= 0.3; 
+}
+
+if (Q.economic_growth < -2) {
+    Q.northeast_poverty += 0.5;
+    Q.northwest_poverty += 0.5;
+    Q.central_poverty += 0.5;
+    Q.southern_poverty += 0.5;
+
+    Q.northeast_homelessness += 0.3;
+    Q.northwest_homelessness += 0.3;
+    Q.central_homelessness += 0.3;
+    Q.southern_homelessness += 0.3; 
+}
+
+if (Q.economic_growth < -6) {
+    Q.northeast_poverty += 0.5;
+    Q.northwest_poverty += 0.5;
+    Q.central_poverty += 0.5;
+    Q.southern_poverty += 0.5;
+
+    Q.northeast_homelessness += 0.3;
+    Q.northwest_homelessness += 0.3;
+    Q.central_homelessness += 0.3;
+    Q.southern_homelessness += 0.3; 
+}
+
 Q.poverty = (Q.northeast_poverty * 0.25) + (Q.northwest_poverty * 0.25) + (Q.central_poverty * 0.2) + (Q.southern_poverty * 0.3);
 Q.homelessness = (Q.northeast_homelessness * 0.25) + (Q.northwest_homelessness * 0.25) + (Q.central_homelessness * 0.2) + (Q.southern_homelessness * 0.3);
 Q.illiteracy = (Q.northeast_illiteracy * 0.25) + (Q.northwest_illiteracy * 0.25) + (Q.central_illiteracy * 0.2) + (Q.southern_illiteracy * 0.3);
 
 !}
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *mod*, and that past this point, significant elements of the mod will necessarily have to involve some element of make-believe, as well as simplification for balance. Nevertheless, please let the author know if there are any glaring mistakes.
+This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *mod*, and that past this point, significant elements of the mod will necessarily have to involve some element of make-believe, as well as simplification for balance. (Yes, I know about the Po Valley.) Nevertheless, please let the author know if there are any glaring mistakes.
 
 There is no current information about the Italian Soviet Republic, but you will be able to access an overview of the nation through the 'Situations' tab on the top.
 
@@ -301,6 +454,8 @@ Victory. Like Lenin in <span style="color: #bf0000">**Russia**</span>, like Gari
 Nevertheless, the time for celebration is quick, as the party scrambles to fill in the gaps left. The South, the Agricultural heart of the nation. The North, an ever churning industrial empire. Both brought to ruin by the scars of war, both needing repairs and restoration so <span style="color: #009246">**Italy**</span> may stand once more.
 
 Swift and decrepit voting stations are placed across the nation. Yet, participation seems higher than ever. Peasants, Labourers, Toilers. All to do their duty, to shape the nation, to bring them the state promised to them.
+
+Time slows further. We enter a week-by-week basis.
 
 The First Elections to the <span style="color: #BF0000">**Congress of Soviets**</span> begin.
 

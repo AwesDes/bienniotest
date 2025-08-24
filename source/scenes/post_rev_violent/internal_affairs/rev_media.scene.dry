@@ -38,6 +38,12 @@ subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources. (Need 2)
 view-if: radio < 2
-on-arrival: radio += 1; resources -= 2;
+on-arrival: radio += 1; resources -= 2; {!
+if (Q.radio >= 2) {
+    if (document.getElementById('radio_sidebar').style.display != "") {
+        document.getElementById('radio_sidebar').style.display = "";
+    }
+}
+!}
 
 A radio station would be one of the first of its kind in Italy, and the first socialist station in the nation. Funding is expensive, and radio's in it of itself seem only affordable to the richest of us, though local production might be able to bring supply up.

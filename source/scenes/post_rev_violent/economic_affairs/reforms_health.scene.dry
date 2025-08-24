@@ -1,0 +1,134 @@
+title: Health Reforms
+new-page: true
+is-card: true
+tags: economic_affairs
+view-if: reforms_health_timer <= 0 and economic_plan_adopted = 1 and health_complete != 1
+on-arrival: week_actions += 1; reforms_health_timer = 3;
+card-image: 
+go-to: health_menu
+
+= Health Reform
+
+Our Healthcare System, through the policies of the previous Kingdom, are outrageously outdated. Public Healthcare is not guaranteed for our people, general funding limited and instead delegated to privatised industry, resulting in still high disease rates, prices and low quality healthcare that we must rectify immediately.
+
+Thankfully, we can pass legislation improving the situation drastically via legislation introduced to the <span style="color: #BF0000">**Congress of Soviets**</span>, granted we have enough budget to do so.
+
+@health_menu
+
+- @health_insurance_menu: Expand Public Health Insurance.
+- @health_south_land_reclaimation: Begin reclaimation of malaria-filled marshlands.
+- @health_expand_free_tests: Expand free medical programs to the poor.
+- @health_modernise: Modernise healthcare systems for rural regions.
+- @health_standardise: Standardise healthcare systems utilising our bureaucracy.
+- @health_complete: Declare our reforms complete!
+- @root: Do nothing for now.
+- @easy_discard
+
+@health_insurance_menu
+view-if: worker_insurance_expanded and family_insurance_expanded
+
+Health Insurance in <span style="color: #009246">**Italy**</span> remains rare, the majority granted through non-state entities or via mutual aid, resulting in people paying exorbitant amounts for healthcare. Nevertheless, we can begin bringing this responsibility under the jurisdiction of the state, removing a significant financial burden for many and hopefully, reducing poverty.
+
+- @expand_worker_insurance: Expand Workers Insurance to Agricultural Labourers & Service Workers.
+- @expand_family_insurance: Expand Insurance to include Family Members.
+- @health_menu: Back to menu.
+
+@health_south_land_reclaimation
+subtitle: -1 Budget - We can reduce disease as well as cultivate land for Agriculture.
+max-visits: 2
+on-arrival: southern_agricultural_health += 0.2; southern_poverty -= 0.2; central_poverty -= 0.1; budget -= 1; health_reformed += 1;
+
+Southern <span style="color: #009246">**Italy**</span> remains a hotbed for malaria wildlife through habitats such as marshland. Thankfully, we can reclaim these lands, removing these habitats while cultivating new arable land for farmers to utilise, hopefully both reducing healthcare costs while strengthening the southern economy at once.
+
+@health_expand_free_tests
+subtitle: -0.5 Budget - We can introduce free vaccinations and specific medical programs for the poor.
+max-visits: 2
+on-arrival: budget -= 0.5; health_reformed += 1; northeast_poverty -= 0.1; central_poverty -= 0.1; northwest_poverty -= 0.1;
+
+Through targeted programs for the downtrodden, we can help to reduce the financial burden of healthcare as well as prevent epidemics from occurring once more. Though a universal healthcare system is hopefully to be implemented in the future, this represent a step towards the right direction.
+
+@health_modernise
+subtitle: -2 Budget - We can utilise our industry to bring our Healthcare to modern standards.
+on-arrival: {!
+Q.budget -= 2;
+
+Q.southern_poverty -= 0.2;
+Q.northeast_poverty -= 0.1;
+Q.northwest_poverty -= 0.1;
+Q.central_poverty -= 0.1;
+
+Q.health_reformed += 1;
+!}
+max-visits: 1
+
+Our healthcare systems are hilariously outdated, thanks to the policies of the Giolittian Era, worse in rural regions further neglected by the Kingdom. Fortunately, we can begin restoring our systems to modern standards through consumer goods produced in the Northern regions, producing medical equipment for clinics and hospitals around the nation.
+
+@health_standardise
+subtitle: The impact of this action is determined by the loyalty and efficiency of our bureaucracy.
+on-arrival: {!
+Q.bureaucratic_modifier = (Q.bureaucratic_loyalty / 100) * (Q.bureaucratic_efficiency / 100);
+
+Q.southern_poverty -= 0.6 * Q.bureaucratic_efficiency;
+Q.northeast_poverty -= 0.4 * Q.bureaucratic_efficiency;
+Q.northwest_poverty -= 0.4 * Q.bureaucratic_efficiency;
+Q.central_poverty -= 0.3 * Q.bureaucratic_efficiency;
+Q.health_reformed += 1;
+!}
+max-visits: 2
+
+Healthcare in <span style="color: #009246">**Italy**</span> remains a bureaucratic mess across the nation, administered by various local agencies without standardised procedures or communication. Efforts have begun to establish a Central Authority under the jurisdiction of the Ministry of Health to standardise healthcare across <span style="color: #009246">**Italy**</span> and ensure treatment remains fair across the nation.
+
+@health_complete
+view-if: health_reformed >= 9
+on-arrival: {!
+Q.southern_poverty -= 0.9;
+Q.northeast_poverty -= 0.5;
+Q.northwest_poverty -= 0.5;
+Q.central_poverty -= 0.3;
+
+Q.southern_homelessness -= 0.3;
+Q.northeast_homelessness -= 0.1;
+Q.northwest_homelessness -= 0.1;
+
+Q.northeast_industry_health += 0.2;
+Q.northwest_industry_health += 0.2;
+Q.central_industry_health += 0.3;
+Q.central_agricultural_health += 0.3;
+Q.southern_agricultural_health += 0.2;
+
+Q.health_complete = 1;
+Q.public_opinion += 6;
+!}
+
+The impacts of our reforms have shown significantly via reports from the Ministry of Health. Improved treatment times, higher medicine effectiveness, lower costs, lower percentage of income for healthcare issues, alongside a hundred more statistics.
+
+Regardless, the results are clear: The financial burden for families have gone down significantly, alongside a slight increase in general productivity from a healthy workforce.
+
+@expand_worker_insurance
+subtitle: -2 Budget - This mainly impacts the Agricultural South, though will generally aid Workers.
+on-arrival: {!
+Q.worker_insurance_expanded = 1;
+Q.health_reformed += 1;
+Q.budget -= 2;
+
+Q.southern_poverty -= 1.3;
+Q.central_poverty -= 0.4;
+!}
+max-visits: 1
+
+Health Insurance, currently limited to Industrial Workers, has received a proposal to expand this policy towards Agricultural Workers as well. granting them the same benefits as workers in the North. Since the number of Agricultural Labourers outweigh Industrial Workers significantly, the price of this increase will be significant, albeit impact Healthcare Costs for Workers significantly.
+
+@expand_family_insurance
+subtitle: -3 Budget - This will help to significantly reduce costs, as well as poverty.
+on-arrival: {!
+Q.family_insurance_expanded = 1;
+Q.budget -= 3;
+
+Q.southern_poverty -= 1.0;
+Q.central_poverty -= 0.3;
+Q.northeast_poverty -= 0.4;
+Q.northwest_poverty -= 0.5;
+!}
+max-visits: 1
+
+Worker Insurance, at least now, has only benefitted the Worker themselves. However, a push has been made to rather extend these benefits to the families of Workers, such as their spouses or children who could become eligible as well. This would cost us significantly, but would also come with the benefit of significantly decreasing the amount of people not covered under health insurance.

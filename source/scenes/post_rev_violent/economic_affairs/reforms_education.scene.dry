@@ -1,0 +1,124 @@
+title: Education Reforms
+new-page: true
+is-card: true
+tags: economic_affairs
+view-if: reforms_education_timer <= 0 and economic_plan_adopted = 1 and education_complete != 1
+on-arrival: week_actions += 1; reforms_education_timer = 3;
+card-image: 
+
+= Education Reform
+
+Education remains a cornerstone of society, and <span style="color: #009246">**Italy**</span> is no different. Unfortunately, decades of neglect, combined with the recent economic crisis has led to a drop in education, with more children preparing to work rather than study.
+
+It is up to us to rectify this situation, through a series of education reforms suggested by the Ministry of Education. [? if education_initial : Thankfully, our previous reforms while in government have lessened the amount of reforms necessary to resolve the crisis. ?]
+
+- @education_funding: Increase funding for Schools.
+- @education_vocational: Expand Vocational Schools for Adults and Older Children.
+- @education_curriculum: Reform and Modernise the Educational Curriculum.
+- @education_illiteracy: Begin widespread Anti-illiteracy Campaigns.
+- @education_teachers: Expand Teaching Programs for Teachers.
+- @education_complete: Declare our Reforms Complete!
+- @root: Do nothing for now.
+- @easy_discard
+
+@education_funding
+subtitle: -1 Budget - We can ensure educational facilities are up to modern standards to function.
+view-if: education_funded < 3
+on-arrival: {!
+Q.budget -= 1;
+Q.education_funded += 1;
+
+Q.northeast_illiteracy -= 0.2;
+Q.northwest_illiteracy -= 0.2;
+Q.central_illiteracy -= 0.2;
+Q.southern_illiteracy -= 0.2;
+!}
+
+Education remains laughably underfunded, with students and teachers alike forced to deal with shoddy equipment in an Institution meant for education. Nevertheless, we can increase the budgets of Schools nationwide, hopefully allowing for students to focus their attention on education in an effective environment.
+
+@education_vocational
+subtitle: -1 Budget - We can establish further skills-based facilities for students or adults looking to learn.
+on-arrival: {!
+Q.budget -= 1;
+Q.education_reformation += 1;
+
+Q.northeast_illiteracy -= 0.1;
+Q.northwest_illiteracy -= 0.1;
+Q.southern_illiteracy -= 0.1;
+
+Q.northeast_poverty -= 0.1;
+Q.northwest_poverty -= 0.1;
+!}
+max-visits: 2
+
+Vocational Schools remain far and few between in <span style="color: #009246">**Italy**</span>, though we can certainly fix that, expanding and creating more facilities for both students looking to enter specialised trades not taught by regular schools or adults looking to further their skills or abilities in their field of work.
+
+@education_curriculum
+subtitle: We can ensure the curriculum is brought up to date as well as remove any traces of the Monarchy. 
+view-if: education_reformed < 3
+on-arrival: {!
+Q.education_reformed += 1;
+
+Q.northeast_illiteracy -= 0.1;
+Q.northwest_illiteracy -= 0.1;
+Q.southern_illiteracy -= 0.1;
+Q.central_illiteracy -= 0.1;
+!}
+
+Our Curriculum remains outdated as well as a relic of the Monarchist Kingdom before us that we can rectify. Through this, we can allow our students to compete on the global stage and allow them to hopefully pioneer the future for the <span style="color: #BF0000">**Soviet Republic**</span>.
+
+@education_illiteracy
+subtitle: -1 Budget - We can start programs to reduce illiteracy via programs and events primarily for illiterate adults.
+on-arrival: {!
+Q.budget -= 1;
+Q.education_reformation += 1;
+
+Q.northeast_illiteracy -= 0.2;
+Q.northwest_illiteracy -= 0.2;
+Q.southern_illiteracy -= 0.2;
+Q.central_illiteracy -= 0.2;
+!}
+max-visits: 2
+
+Illiteracy remains widespread, especially amongst adults who never got the opportunity to study or attend school, leaving many unable to read. A proposal has been made to begin illiteracy programs targeting these individuals specifically, allowing them to learn and educate themselves through programs and events organised by the state.
+
+@education_teachers
+subtitle: -1 Budget - We can start encouraging more teachers, as well as help aid existing teachers in the workplace.
+on-arrival: {!
+Q.budget -= 1;
+Q.education_reformation += 1;
+
+Q.northeast_illiteracy -= 0.2;
+Q.northwest_illiteracy -= 0.3;
+Q.southern_illiteracy -= 0.4;
+Q.central_illiteracy -= 0.1;
+!}
+max-visits: 1
+
+One of the more prominent issues in the Education System is the lack of teachers in general, resulting in classes filled past capacity often, resulting in many students going unattended or unable to be aided.
+
+Though we cannot rectify this immediately, we can certainly help the situation by constructing more programs for existing teachers as well as expand training facilities for new, aspiring teachers.
+
+@education_complete
+view-if: education_reformation >= 5 and education_curriculum >= 3 and education_funded >= 3
+on-arrival: {!
+Q.southern_illiteracy -= 0.7;
+Q.northeast_illiteracy -= 0.4;
+Q.northwest_illiteracy -= 0.5;
+Q.central_illiteracy -= 0.2;
+
+Q.southern_homelessness -= 0.3;
+Q.northeast_homelessness -= 0.1;
+Q.northwest_homelessness -= 0.1;
+
+Q.northeast_industry_health += 0.2;
+Q.northwest_industry_health += 0.2;
+Q.central_industry_health += 0.3;
+Q.central_agricultural_health += 0.3;
+Q.southern_agricultural_health += 0.2;
+
+Q.education_complete = 1;
+Q.public_opinion += 6;
+!}
+
+Reports from the Ministry of Education has shown our reforms have proven effective in combatting illiteracy, as well as ensuring our education systems remains up to date and efficient. Though the true impacts of our current reforms will probably only occur decades after, our decisions here have ensured <span style="color: #009246">**Italy**</span> technological and educational prowess is ensured for decades to come. 

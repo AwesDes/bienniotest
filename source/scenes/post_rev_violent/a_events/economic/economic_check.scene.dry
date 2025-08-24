@@ -1,0 +1,94 @@
+title: Report on the First Session of the Economic plan
+subtitle: The moment of truth...
+new-page: true
+view-if: deadline_active and deadline_month >= month and deadline_year = year
+tags: event
+
+= Report by the [? if left_eco_adopted : State Planning Committee ?] [? if right_eco_adopted : Ministry of Economy ?] [? if both_eco_adopted : State Planning Committee and the Ministry of Economy ?]
+
+The Report on Social Inequality have been presented to the <span style="color: #BF0000">**Congress of Soviets**</span>.
+
+[? if changePoverty > initialPoverty : National Poverty has <span style="color: #BF0000">**increased**</span> by [+ changePoverty +]%. ?]
+
+[? if changePoverty <= initialPoverty : National Poverty has <span style="color: #009246">**decreased**</span> by [+ changePoverty +]%. ?]
+
+[? if changeHomelessness > initialPoverty : National Homelessness has <span style="color: #BF0000">**increased**</span> by [+ changeHomelessness +]%. ?]
+
+[? if changeHomelessness <= initialPoverty : National Homelessness has <span style="color: #009246">**decreased**</span> by [+ changeHomelessness +]%. ?]
+
+[? if changeIlliteracy > initialPoverty : National Illiteracy has <span style="color: #BF0000">**increased**</span> by [+ changeIlliteracy +]%. ?]
+
+[? if changeIlliteracy <= initialPoverty : National Illiteracy has <span style="color: #009246">**decreased**</span> by [+ changeIlliteracy +]%. ?]
+
+[? if changeSocial > 0 : Total Social Inequality has gone <span style="color: #BF0000">**up**</span> by [+ changeSocial +]%. ?]
+
+[? if changeSocial <= 0 : Total Social Inequality has gone <span style="color: #009246">**down**</span> by [+ changeSocial +]%. ?]
+
+- @social_yes: Our social goals have been met.
+- @social_no: We have fallen short of our social goals.
+
+@social_yes
+view-if: changeSocial <= social_goal
+on-arrival: stability += 1; public_opinion += 10; public_opinion -= 5 if low_goal; public_opinion += 5 if high_goal; corruption *= 0.8 if medium_goal; corruption *= 0.9 if low_goal; corruption *= 0.7 if high_goal;
+go-to: economic_check
+
+The Reports have indicated a successful drop in Social Inequality in line or even better than the goals set.
+
+@social_no
+view-if: changeSocial > social_goal
+
+Reports have delivered shocking, perhaps expected news: We have failed to meet our social goals as set in the Economic Plan.
+
+- @economic_failure: Our Economic Plan is declared a failure.
+
+@economic_check
+
+The Report on Economic Development have been presented to the <span style="color: #BF0000">**Congress of Soviets**</span>.
+
+[? if changeIndustry < initialIndustry : National Industrial Health has <span style="color: #BF0000">**decreased**</span> by [+ changeIndustry +]%. ?]
+
+[? if changeIndustry >= initialIndustry : National Industrial Health has <span style="color: #009246">**increased**</span> by [+ changeIndustry +]%. ?]
+
+[? if changeSupply < initialSupply : National Supply Health has <span style="color: #BF0000">**decreased**</span> by [+ changeSupply +]%. ?]
+
+[? if changeSupply >= initialSupply : National Supply Health has <span style="color: #009246">**increased**</span> by [+ changeSupply +]%. ?]
+
+[? if changeAgricultural < initialAgricultural : National Agricultural Health has <span style="color: #BF0000">**decreased**</span> by [+ changeAgricultural +]%. ?]
+
+[? if changeAgricultural >= initialAgricultural : National Agricultural Health has <span style="color: #009246">**increased**</span> by [+ changeAgricultural +]%. ?]
+
+[? if changeEconomic < 0 : Total Economic Development has gone <span style="color: #BF0000">**down**</span> by [+ changeEconomic +]%. ?]
+
+[? if changeEconomic >= 0 : Total Economic Development has gone <span style="color: #009246">**up**</span> by [+ changeEconomic +]%. ?]
+
+- @economic_yes: Our economic goals have been met.
+- @economic_no: We have fallen short of our social goals.
+
+@economic_yes
+view-if: changeEconomic >= economic_goal
+on-arrival: stability += 1; public_opinion += 5; public_opinion -= 3 if low_goal; public_opinion += 5 if high_goal; corruption *= 0.8 if medium_goal; corruption *= 0.9 if low_goal; corruption *= 0.7 if high_goal; bureaucratic_loyalty *= 1.3 if high_goal; bureaucratic_loyalty *= 1.1 if medium_goal
+go-to: yippee
+
+The Reports have indicated a successful increase in Economic Development in line or even better than the goals set.
+
+@social_no
+view-if: changeEconomic < economic_goal
+
+Reports have delivered shocking, perhaps expected news: We have failed to meet our economic goals as set in the Economic Plan.
+
+- @economic_failure: Our Economic Plan is declared a failure.
+
+@yippee
+
+Placeholder
+
+- @foreign_focus: Focus our direction on the world.
+- @internal_focus: Focus our direction internally.
+
+@foreign_focus
+
+Placeholder
+
+@internal_focus
+
+Placeholder

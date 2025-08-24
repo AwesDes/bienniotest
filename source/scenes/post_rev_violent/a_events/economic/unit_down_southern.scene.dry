@@ -1,0 +1,28 @@
+title: Report on Reduced Production Units in the Southern Region
+new-page: true
+view-if: (central_agricultural_health < 9 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 1) or (central_agricultural_health < 18 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 2) or (central_agricultural_health < 27 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 3) or (central_agricultural_health < 36 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 4) or (central_agricultural_health < 45 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 5) or (central_agricultural_health < 54 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 6) or (central_agricultural_health < 63 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 7) or (central_agricultural_health < 72 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 8) or (central_agricultural_health < 81 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 9)
+tags: event
+
+Our Agricultural Capacity has dropped that we have lost a Production Unit.
+
+- @reduce_cash
+- @reduce_staple
+- @reduce_free_agri
+
+@reduce_staple
+subtitle: Staple Crops are necessary to feed our population.
+choose-if: southern_staple_crops_unit > 0
+unavailable-subtitle: No Agricultural Units are allocated to Staple Crops.
+on-arrival: southern_staple_crops_unit -= 1; staple_crops_unit -= 1;
+
+@reduce_cash
+subtitle: Cash Crops are able to be traded for funds to pay for our social programs.
+choose-if: southern_cash_crops_unit > 0
+unavailable-subtitle: No Agricultural Units are allocated to Cash Crops.
+on-arrival: southern_cash_crops_unit -= 1; cash_crops_unit -= 1;
+
+@reduce_free_agri
+subtitle: Free units are idle.
+choose-if: southern_agri_free_unit > 0
+unavailable-subtitle: No Central Production Units are Idle.
+on-arrival: southern_agri_free_unit -= 1;

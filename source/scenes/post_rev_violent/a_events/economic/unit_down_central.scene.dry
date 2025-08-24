@@ -1,0 +1,65 @@
+title: Report on Reduced Production Units in the Central Region
+new-page: true
+view-if: (central_industry_health < 33 and (central_agricultural_goods_unit + central_consumer_goods_unit + central_military_goods_unit + central_indus_free_unit) >= 1) or (central_industry_health < 66 and (central_agricultural_goods_unit + central_consumer_goods_unit + central_military_goods_unit + central_indus_free_unit) >= 2) or (central_agricultural_health < 50 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 1)
+tags: event
+go-to: down_indus_unit if (central_industry_health < 33 and (central_agricultural_goods_unit + central_consumer_goods_unit + central_military_goods_unit + central_indus_free_unit) >= 1) or (central_industry_health < 66 and (central_agricultural_goods_unit + central_consumer_goods_unit + central_military_goods_unit + central_indus_free_unit) >= 2); down_agri_unit if (central_agricultural_health < 50 and (central_staple_crops_unit + central_cash_crops_unit + central_agri_free_unit) >= 1)
+
+@down_indus_unit
+
+Our Economic Capacity has dropped that we have lost a Production Unit.
+
+- @reduce_consumer
+- @reduce_arms
+- @reduce_agri
+- @reduce_free_indus
+
+@reduce_consumer
+subtitle: Consumer Goods are essential for social recovery.
+choose-if: central_consumer_goods_unit > 0
+unavailable-subtitle: No Central Production Units are allocated to Consumer Goods.
+on-arrival: central_consumer_goods_unit -= 1; consumer_goods_unit -= 1;
+
+@reduce_arms
+subtitle: Military Production is necessary to keep our borders defended.
+choose-if: central_military_goods_unit > 0
+unavailable-subtitle: No Central Production Units are allocated to Military Arms.
+on-arrival: central_military_goods_unit -= 1; military_goods_unit -= 1;
+
+@reduce_agri
+subtitle: Agricultural Equipment can speed up mechanisation of agriculture.
+choose-if: central_agricultural_goods_unit > 0
+unavailable-subtitle: No Central Production Units are allocated to Agricultural Equipment.
+on-arrival: central_agricultural_goods_unit -= 1; agricultural_goods_unit -= 1;
+
+@reduce_free_indus
+subtitle: Free units are idle.
+choose-if: central_indus_free_unit > 0
+unavailable-subtitle: No Central Production Units are Idle.
+on-arrival: central_indus_free_unit -= 1;
+
+@down_agri_unit
+
+Our Agricultural Capacity has dropped that we have lost a Production Unit.
+
+- @reduce_cash
+- @reduce_staple
+- @reduce_free_agri
+
+@reduce_staple
+subtitle: Staple Crops are necessary to feed our population.
+choose-if: central_staple_crops_unit > 0
+unavailable-subtitle: No Agricultural Units are allocated to Staple Crops.
+on-arrival: central_staple_crops_unit -= 1; staple_crops_unit -= 1;
+
+@reduce_cash
+subtitle: Cash Crops are able to be traded for funds to pay for our social programs.
+choose-if: central_cash_crops_unit > 0
+unavailable-subtitle: No Agricultural Units are allocated to Cash Crops.
+on-arrival: central_cash_crops_unit -= 1; cash_crops_unit -= 1;
+
+@reduce_free_agri
+subtitle: Free units are idle.
+choose-if: central_agri_free_unit > 0
+unavailable-subtitle: No Central Production Units are Idle.
+on-arrival: central_agri_free_unit -= 1;
+

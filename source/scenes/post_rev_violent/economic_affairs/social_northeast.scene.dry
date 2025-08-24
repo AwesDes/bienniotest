@@ -1,0 +1,139 @@
+title: Northeast Social Planning
+new-page: true
+is-card: true
+tags: economic_affairs
+view-if: social_northeast_timer <= 0 and economic_plan_adopted = 1
+on-arrival: week_actions += 1; social_northeast_timer = 3; {!
+Q.bureaucratic_modifier = (Q.bureaucratic_loyalty / 100) * (Q.bureaucratic_efficiency / 100);
+!}
+card-image: 
+
+= Northeast Social Planning
+
+Social inequality exists across <span style="color: #009246">**Italy**</span>, and Northeastern Region is no different. Poverty, Homelessness and Illiteracy remain high, and it is our duty to help rid the nation of these.
+
+Every action will be impacted by the loyalties and efficiency of our bureaucracy.
+
+- @nep_poverty: Levy taxes on private industry to fund social programs.
+- @cec_poverty: Expand public works programs to reduce unemployment.
+- @both_poverty: Expand existing social programs in the region. 
+- @nep_homeless: Subsidise and offer subsidies for Housing Development.
+- @cec_homeless: Expand State Housing Development.
+- @both_homeless: Begin converting unused buildings into homes.
+- @nep_illiteracy: Subsidise publications for textbooks for workers
+- @cec_illiteracy: Continue mass literacy campaigns across rural regions.
+- @both_illiteracy: Utilise the *Università Popolari Socialiste* to teach workers.
+- @root: Don't touch social policy for now.
+- @easy_discard
+
+@nep_poverty
+subtitle: We can tax the limited private traders and businessmen still in the country for their fair share.
+view-if: right_eco_adopted
+on-arrival: {!
+Q.northeast_poverty -= 1.2 * Q.bureaucratic_modifier * Q.poverty_modifier;
+Q.public_opinion -= 4;
+!}
+
+The New Economic Policy has mainly allowed the remnants of private industry to remain untouched, who have not been paying their fair share. New levies have been implemented on these people. taxing them higher and redistributing their wealth via social programs in the Central Region.
+
+[? if poverty_modifier > 1 : Our party organisation strengthens this action. ?]
+
+@cec_poverty
+subtitle: -1 Budget - Public Works can also help to restore infrastructure.
+view-if: left_eco_adopted or both_eco_adopted
+on-arrival: {!
+Q.budget -= 1;
+Q.northeast_poverty -= 1.7 * Q.bureaucratic_modifier;
+Q.public_opinion += 2;
+
+Q.central_supply_health += 1.2 * Q.bureaucratic_modifier * Q.poverty_modifier;
+!}
+
+Unemployment remains a key issue across <span style="color: #009246">**Italy**</span>, with many falling into poverty after the civil war. We can begin Public Works Programs in the region, both to restore destroyed infrastructure, but also to employ more people and pull them out of poverty.
+
+[? if poverty_modifier > 1 : Our party organisation strengthens this action. ?]
+
+@both_poverty
+subtitle: -2 Budget - We can utilise funds through our own organisations and social programs.
+on-arrival: {!
+Q.budget -= 2;
+Q.northeast_poverty -= 2.5 * Q.bureaucratic_modifier * Q.poverty_modifier;
+Q.public_opinion += 4;
+!}
+
+Funding of Social Programs has dried up significantly, even if the Kingdom were providing the bare minimum, if not none at all. Nevertheless, we should redouble our efforts to combat social inequality and poverty.
+
+[? if poverty_modifier > 1 : Our party organisation strengthens this action. ?]
+
+@nep_homeless
+subtitle: -1 Budget - We can encourage further housing development.
+view-if: right_eco_adopted
+on-arrival: {!
+Q.budget -= 1;
+Q.northeast_homelessness -= 0.4 * Q.bureaucratic_modifier * Q.homelessness_modifier;
+Q.public_opinion += 1;
+!}
+
+Numerous construction businesses still exist in the region following our policies, and with some nudging via monetary means, we could encourage them to focus on housing.
+
+[? if homelessness_modifier > 1 : Our party organisation strengthens this action. ?]
+
+@cec_homeless
+subtitle: -1.5 Budget - We can expand state-controlled housing.
+view-if: left_eco_adopted or both_eco_adopted
+on-arrival: {!
+Q.budget -= 1.5;
+Q.northeast_homelessness -= 0.6 * Q.bureaucratic_modifier * Q.homelessness_modifier;
+Q.public_opinion += 2;
+!}
+
+Homelessness remains a significant issue, especially with the destruction of the civil war. New plans have been drafted and slated to build new state housing for workers and citizens.
+
+[? if homelessness_modifier > 1 : Our party organisation strengthens this action. ?]
+
+@both_homeless
+subtitle: -0.5 Budget - We can reduce homelessness at a lower price with less time.
+on-arrival: {!
+Q.budget -= 0.5;
+Q.northeast_homelessness -= 0.4 * Q.bureaucratic_modifier * Q.homelessness_modifier;
+Q.public_opinion += 1;
+!}
+
+The Civil War has left destruction in its wake, uncleared even now. These destroyed buildings have allowed a new opportunity however, being cheaper than constructing homes from scratch to repurpose these relics.
+
+[? if homelessness_modifier > 1 : Our party organisation strengthens this action. ?]
+
+@nep_illiteracy
+subtitle: -0.5 Budget - We can ensure workers can educate themselves for reduced cost.
+view-if: right_eco_adopted
+on-arrival: {!
+Q.budget -= 0.5;
+Q.northeast_illiteracy -= 0.5 * Q.bureaucratic_efficiency * Q.illiteracy_modifier;
+Q.public_opinion += 1;
+!}
+
+Printing presses still exist in the region, willing and able to be ordered. As such, we could mass produce basic textbooks, reducing illiteracy and educating workers at a low cost. 
+
+[? if illiteracy_modifier > 1 : Our party organisation strengthens this action. ?]
+
+@cec_illiteracy
+subtitle: -1 Budget - We can reduce illiteracy across the region via programs.
+view-if: left_eco_adopted or both_eco_adopted
+on-arrival: {!
+Q.budget -= 1;
+Q.northeast_illiteracy -= 0.8 * Q.bureaucratic_efficiency * Q.illiteracy_modifier;
+Q.public_opinion += 2;
+!}
+
+Rural regions have experienced the worst of the lack of educational funding, with limited schools, teachers or facilities. Dedicated literacy campaigns aimed at these regions could help reduce the rural-urban divide in regards to illiteracy.
+
+[? if illiteracy_modifier > 1 : Our party organisation strengthens this action. ?]
+
+@both_illiteracy
+subtitle: -1 Budget - We can utilise our party organisations to reduce illiteracy.
+on-arrival: {!
+Q.budget -= 1;
+Q.northeast_illiteracy -= (Q.illiteracy_modifier - 0.5) * Q.bureaucratic_efficiency;
+!}
+
+The *Università Popolari Socialiste* has functioned as a means to educate workers alongside the party. With the revolution, these duties have expanded massively, as the organisation has taken forward to continue the fight against illiteracy and for education, which it can do with further funding.

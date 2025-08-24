@@ -23,6 +23,12 @@ Corruption within the state is **[+ state_corruption : corruption +]**.
 
 [? if para_seen = 1 and not mafia_active : The <span style="color: #465053ff">**Mafia**</span> are currently <span style="color: #00CC00;">**in retreat**</span>. ?]
 
+[? if para_seen = 1 and as_active : The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> are currently <span style="color: #d42f2f;">**active**</span>. ?]
+
+[? if para_seen = 1 and nda_active : The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> is currently <span style="color: #d42f2f;">**active**</span>. ?]
+
+[? if para_seen = 1 and mafia_active : The <span style="color: #465053ff">**Mafia**</span> are currently <span style="color: #d42f2f;">**meddling in government**</span>. ?]
+
 {!<hr>!}
 
 = State of the Organisations
@@ -34,18 +40,6 @@ Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]*
 [? if not cheka_formed : Factionalism within the Ministry of the Interior is **[+ interior_factionalism : factional_dissent +]**. ?]
 
 [? if cheka_formed : Factionalism within the Internal Affairs Committee is **[+ interior_factionalism : factional_dissent +]**. ?]
-
-{!<hr>!}
-
-= State of the Economy
-
-[? if not eco_plan : There is currently no Economic Plan. ?]
-
-[? if eco_plan and left_eco_adopted : Central Economic Planning is currently in effect. ?]
-
-[? if eco_plan and right_eco_adopted : The New Economic Policy is currently in effect. ?]
-
-[? if eco_plan and both_eco_adopted : Economic Regional Dualism is currently in effect. ?]
 
 {!<hr>!}
 

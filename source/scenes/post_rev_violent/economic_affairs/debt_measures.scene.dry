@@ -1,0 +1,60 @@
+title: Debt Measures
+new-page: true
+is-card: true
+tags: economic_affairs
+view-if: debt_measures_timer <= 0 and budget < 0
+on-arrival: week_actions += 1; debt_measures_timer = 2;
+card-image:
+
+= Debt Financial Measures
+
+Our finances are looking...less than optimal, and though expected, we cannot afford to continue recovering the economy if we have no funding for social programs or worker salaries.
+
+What are we to do?
+
+- @raise_taxes: Raise taxes across the board.
+- @encourage_bonds: Encourage more long-term bonds.
+- @allied_aid: Could we petition our allies for aid?
+- @austerity: Engage in further budget discipline.
+- @print_money: Print Money.
+- @root: There is nothing we can do.
+- @easy_discard
+
+@raise_taxes
+subtitle: +2 Budget
+on-arrival: public_opinion -= 7; budget += 2; northeast_poverty += 0.3; northwest_poverty += 0.3; central_poverty += 0.2; southern_poverty += 0.5;
+max-visits: 2
+
+Through a hard choice, we can temporarily raise taxes to generate enough revenue to pay off loans and debts.
+
+@encourage_bonds
+subtitle: +3 Budget
+max-visits: 3
+on-arrival: public_opinion -= 5; budget += 3;
+
+We can encourage citizens to take up bonds, as well as convert existing bonds to long-term bonds to generate revenue.
+
+@allied_aid
+subtitle: +2 Budget - This will harm our relations with the <span style="color: #800000">**Communist International**</span>.
+choose-if: soviet_relation >= 2
+unavailable-subtitle: Not enough relations.
+on-arrival: budget += 2; soviet_relation -= 2;
+
+Via our petition for financial aid from the <span style="color: #800000">**Communist International**</span>, we have received a considerable sum from the <span style="color: #bf0000">**Soviet Union**</span> as a gesture of goodwill.
+
+@austerity
+subtitle: +2 Budget - We can cut government salaries further.
+on-arrival: bureaucratic_efficiency -= 7; bureaucratic_loyalty -= 7; corruption += 5; budget += 2;
+max-visits: 4
+
+Budget cuts within the bureaucracy are hard, but necessarily to maintain a balanced budget. However, murmurs of discontent have naturally been heard, alongside a decrease in effectiveness. Bureaucrats may also attempt to find...other means to sustain themselves.
+
+@print_money
+subtitle: +4 Budget - This will do significant harm to our economy, and should be our last resort.
+on-arrival: public_opinion -= 10; northeast_poverty += 0.4; northwest_poverty += 0.4; central_poverty += 0.3; southern_poverty += 0.7; {!
+Q.budget += 4;
+Q.bureaucratic_loyalty -= 4; 
+Q.corruption += 10;
+!}
+
+Printing money has allowed us to resolve our debts, but have also resulted in inflation increasing significantly. Prices have doubled overnight, as money loses value quickly, with our people losing trust in us, turning to other illicit means to earn money.
