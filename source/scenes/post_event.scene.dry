@@ -1539,6 +1539,11 @@ if (Q.week_actions >= 1) {
 
     if (Q.violent_revolution) {
 
+        for (timer of Q.timers) {
+            if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
+                Q[timer+'_timer'] -= 2;
+        }
+
         // para triggers
        
         if (Q.nda_active != 1) {
