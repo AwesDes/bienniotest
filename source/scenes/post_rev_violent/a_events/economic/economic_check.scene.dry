@@ -1,7 +1,7 @@
 title: Report on the First Session of the Economic plan
 subtitle: The moment of truth...
 new-page: true
-view-if: deadline_active and deadline_month >= month and deadline_year = year
+view-if: deadline_active and month >= deadline_month and deadline_year = year
 tags: event
 
 = Report by the [? if left_eco_adopted : State Planning Committee ?] [? if right_eco_adopted : Ministry of Economy ?] [? if both_eco_adopted : State Planning Committee and the Ministry of Economy ?]
