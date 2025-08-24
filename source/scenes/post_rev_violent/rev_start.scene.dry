@@ -1,5 +1,5 @@
 title: Revolutionary Start
-audio: clear shuffle music/post_rev/GuardaGiuDallaPianura.mp3 music/post_rev/Innodeilavoratoridelmare.mp3 music/post_rev/InnodeiPezzenti.mp3 music/post_rev/InnodelleBarricate.mp3 music/post_rev/LaBrigataGaribaldi.mp3 music/post_rev/Sonlamondina.mp3
+audio: clear
 set-bg: img/RevBg.jpg
 new-page: true
 go-to: maximalist_quote if maximalist_strength >= reformist_strength and maximalist_strength >= communist_strength; communist_quote if communist_strength > reformist_strength and maximalist_strength < communist_strength; reformist_quote if maximalist_strength < reformist_strength and reformist_strength > communist_strength
