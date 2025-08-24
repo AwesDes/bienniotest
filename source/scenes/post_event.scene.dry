@@ -1542,6 +1542,7 @@ if (Q.week_actions >= 1) {
         for (timer of Q.timers) {
             if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
                 Q[timer+'_timer'] -= 2;
+            }
         }
 
         // para triggers
