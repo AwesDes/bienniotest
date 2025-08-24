@@ -28,4 +28,6 @@ Our trade volume places us at [+ trade_deficit +] every month.
 on-arrival: imported_staple_crops_unit += 1; trade_deficit -= 1;
 
 @sell_cash_crops
+choose-if: cash_crops_unit >= exported_cash_crops_unit
+unavailable-subtitle: Not enough Cash Crops Units.
 on-arrival: exported_cash_crops_unit += 1; trade_deficit += 1;

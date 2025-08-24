@@ -169,7 +169,6 @@ max-cards: 3
 - @paramilitary
 - @govt
 - @natdef
-- @cheat
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -344,7 +343,6 @@ max-cards: 4
 - @paramilitary
 - @govt
 - @natdef
-- @cheat
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -378,9 +376,3 @@ card-image: img/governmentdeck.jpg
 is-deck: true
 
 - #govt_affairs
-
-@cheat
-title: Accessibility
-is-deck: true
-
-- #cheats
