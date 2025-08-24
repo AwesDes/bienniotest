@@ -71,7 +71,7 @@ go-to: yippee
 
 The Reports have indicated a successful increase in Economic Development in line or even better than the goals set.
 
-@social_no
+@economic_no
 view-if: changeEconomic < economic_goal
 
 Reports have delivered shocking, perhaps expected news: We have failed to meet our economic goals as set in the Economic Plan.

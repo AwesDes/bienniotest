@@ -1615,7 +1615,7 @@ if (Q.week_actions >= 1) {
 
         // emergency triggers 
 
-        if (Q.stabiity <= 0) {
+        if (Q.stability <= 0) {
             Q.stability_check_timer -= 1;
         } else {
             Q.stability_check_timer = 6;
@@ -1637,7 +1637,7 @@ if (Q.week_actions >= 1) {
             Q.changeSocial = Q.changePoverty + Q.changeHomelessness + Q.changeIlliteracy;
 
             for (var Check of Q.changesCheck) {
-                Q['change' + Check] = Q['change' + Check].toFixed(2);
+                Q['change' + Check] = Number(Q['change' + Check].toFixed(2));
                 }
 
             for (var Check of Q.changesEconomic) {
@@ -1756,37 +1756,37 @@ if (Q.week_actions >= 1) {
 
         
 
-        if (Q.northeast_industry_health >= 20 && ((Q.northeast_agricultural_goods_unit + Q.northeast_consumer_goods_unit + Q.northeast_military_goods_unit + Q.northeast_free_unit) < 1)) {
+        if (Q.northeast_industry_health >= 20 && ((Q.northeast_agricultural_goods_unit + Q.northeast_consumer_goods_unit + Q.northeast_military_goods_unit + Q.northeast_indus_free_unit) < 1)) {
             Q.northeast_indus_free_unit += 1;
         }
 
-        if (Q.northeast_industry_health >= 40 && ((Q.northeast_agricultural_goods_unit + Q.northeast_consumer_goods_unit + Q.northeast_military_goods_unit + Q.northeast_free_unit) < 2)) {
+        if (Q.northeast_industry_health >= 40 && ((Q.northeast_agricultural_goods_unit + Q.northeast_consumer_goods_unit + Q.northeast_military_goods_unit + Q.northeast_indus_free_unit) < 2)) {
             Q.northeast_indus_free_unit += 1;
         }
 
-        if (Q.northeast_industry_health >= 60 && ((Q.northeast_agricultural_goods_unit + Q.northeast_consumer_goods_unit + Q.northeast_military_goods_unit + Q.northeast_free_unit) < 3)) {
+        if (Q.northeast_industry_health >= 60 && ((Q.northeast_agricultural_goods_unit + Q.northeast_consumer_goods_unit + Q.northeast_military_goods_unit + Q.northeast_indus_free_unit) < 3)) {
             Q.northeast_indus_free_unit += 1;
         }
 
-        if (Q.northeast_industry_health >= 80 && ((Q.northeast_agricultural_goods_unit + Q.northeast_consumer_goods_unit + Q.northeast_military_goods_unit + Q.northeast_free_unit) < 4)) {
+        if (Q.northeast_industry_health >= 80 && ((Q.northeast_agricultural_goods_unit + Q.northeast_consumer_goods_unit + Q.northeast_military_goods_unit + Q.northeast_indus_free_unit) < 4)) {
             Q.northeast_indus_free_unit += 1;
         }
 
 
 
-        if (Q.northwest_industry_health >= 20 && ((Q.northwest_agricultural_goods_unit + Q.northwest_consumer_goods_unit + Q.northwest_military_goods_unit + Q.northwest_free_unit) < 1)) {
+        if (Q.northwest_industry_health >= 20 && ((Q.northwest_agricultural_goods_unit + Q.northwest_consumer_goods_unit + Q.northwest_military_goods_unit + Q.northwest_indus_free_unit) < 1)) {
             Q.northwest_indus_free_unit += 1;
         }
 
-        if (Q.northwest_industry_health >= 40 && ((Q.northwest_agricultural_goods_unit + Q.northwest_consumer_goods_unit + Q.northwest_military_goods_unit + Q.northwest_free_unit) < 2)) {
+        if (Q.northwest_industry_health >= 40 && ((Q.northwest_agricultural_goods_unit + Q.northwest_consumer_goods_unit + Q.northwest_military_goods_unit + Q.northwest_indus_free_unit) < 2)) {
             Q.northwest_indus_free_unit += 1;
         }
 
-        if (Q.northwest_industry_health >= 60 && ((Q.northwest_agricultural_goods_unit + Q.northwest_consumer_goods_unit + Q.northwest_military_goods_unit + Q.northwest_free_unit) < 3)) {
+        if (Q.northwest_industry_health >= 60 && ((Q.northwest_agricultural_goods_unit + Q.northwest_consumer_goods_unit + Q.northwest_military_goods_unit + Q.northwest_indus_free_unit) < 3)) {
             Q.northwest_indus_free_unit += 1;
         }
 
-        if (Q.northwest_industry_health >= 80 && ((Q.northwest_agricultural_goods_unit + Q.northwest_consumer_goods_unit + Q.northwest_military_goods_unit + Q.northwest_free_unit) < 4)) {
+        if (Q.northwest_industry_health >= 80 && ((Q.northwest_agricultural_goods_unit + Q.northwest_consumer_goods_unit + Q.northwest_military_goods_unit + Q.northwest_indus_free_unit) < 4)) {
             Q.northwest_indus_free_unit += 1;
         }
 
