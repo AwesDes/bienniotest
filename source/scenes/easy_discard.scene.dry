@@ -8,10 +8,15 @@ if (Q.week_actions > 0) {
 // return card to hand
 var card = this.state.lastPlayedCard;
 card.image = card.cardImage;
-if (Q.difficulty >= 0) {
+if (Q.difficulty >= 0 && Q.violent_revolution != 1) {
     this.state.currentHands['main'].push(card);
 } else {
     this.state.currentHands['main.main_easy'].push(card);
+}
+if (Q.difficulty >= 0 && Q.violent_revolution == 1) {
+    this.state.currentHands['rev_main'].push(card);
+} else {
+    this.state.currentHands['rev_main.main_easy'].push(card);
 }
 // reset the timer...
 if (Q[card.id + "_timer"]) {
