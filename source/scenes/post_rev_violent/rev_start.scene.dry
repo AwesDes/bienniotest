@@ -191,7 +191,7 @@ if (Q.southern_education_funded > 0) {
 }
 
 Q.agricultural_health = (Q.southern_agricultural_health * 0.9) + (Q.central_agricultural_health * 0.1);
-Q.supply_health = Q.northeast_supply_health + Q.northwest_supply_health + Q.central_supply_health + Q.southern_supply_health;
+Q.supply_health = Number(Q.northeast_supply_health) + Number(Q.northwest_supply_health) + Number(Q.central_supply_health) + Number(Q.southern_supply_health);
 Q.industry_health = (Q.northeast_industry_health * 0.45) + (Q.northwest_industry_health * 0.45) + (Q.central_industry_health * 0.15);
 
 // Social

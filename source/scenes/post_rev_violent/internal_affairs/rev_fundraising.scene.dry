@@ -6,7 +6,7 @@ on-departure: dues_info = 0;
 frequency: 500
 is-card: true
 card-image: img/Fundraising.jpg
-tags: party_affairs
+tags: internal_affairs
 
 = Fundraising
 
