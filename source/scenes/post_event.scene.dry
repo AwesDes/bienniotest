@@ -1657,7 +1657,6 @@ if (Q.week_actions >= 1) {
                                         : '<img style="height: 11px; width: 11px;" src="img/Steady2.png">';
                 Q['change' + Check + '_Disp'] = sign + Q['change' + Check];
                 }           
-            }
         }
 
         // debt modifiers
