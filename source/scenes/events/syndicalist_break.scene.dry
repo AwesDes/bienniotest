@@ -2,7 +2,7 @@ title: USI breaks from the Party
 new-page: true 
 subtitle: Syndicalist disagreements with our policies have grown too severe.
 tags: event
-view-if: syndicalist_dissent >= 60 and syndicalist_active = 1
+view-if: syndicalist_dissent >= 60 and syndicalist_active = 1 and not violent_revolution
 on-arrival: syndicalist_break = 1; workers_psi *= 0.9; rg_strength *= 0.8; veterans_psi *= 0.9; workers_psri += 5; workers_pnf *= 0.05; n_advisors -= 1 if divittorio_advisor == 1; divittorio_advisor = 0; n_advisors -= 1 if deambris_advisor == 1; deambris_advisor = 0; syndicalist_strength *= 0.5
 max-visits: 1
 

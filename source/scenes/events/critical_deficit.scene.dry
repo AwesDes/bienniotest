@@ -1,7 +1,7 @@
 title: Banca d'Italia reports critical deficit!
 new-page: true
 tags: event
-view-if: (budget <= -5 and psi_in_government and deficit_extension == 0) or (budget <= -5 and psi_in_government and deficit_timer <= 0 and deficit_extension == 1)
+view-if: (budget <= -5 and psi_in_government and deficit_extension == 0) or (budget <= -5 and psi_in_government and deficit_timer <= 0 and deficit_extension == 1) and not violent_revolution
 
 = Banca d'Italia reports critical deficit!
 

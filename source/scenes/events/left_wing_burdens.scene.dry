@@ -1,5 +1,5 @@
 title: Burden of Left-Wing Governance
-view-if: psi_left_wing_time = 1
+view-if: psi_left_wing_time = 1 and not violent_revolution
 new-page: true
 tags: event
 max-visits: 1

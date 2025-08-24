@@ -1,7 +1,7 @@
 title: Worker Insurance Funding
 new-page: true
 subtitle: It's time to fund the program once more.
-view-if: insurance_payments_workers_timer = 0 and unemployment_insurance_expanded == 1
+view-if: insurance_payments_workers_timer = 0 and unemployment_insurance_expanded == 1 and not violent_revolution
 tags: event
 
 = Unemployment Insurance Funding

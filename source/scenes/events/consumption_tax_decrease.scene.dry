@@ -1,7 +1,7 @@
 title: Consumption Taxes
 subtitle: An immediate motion has been filed.
 tags: event
-view-if: psi_in_government and finance_minister_party == psi_name and not national_economic_recovery
+view-if: psi_in_government and finance_minister_party == psi_name and not national_economic_recovery and not violent_revolution
 max-visits: 1
 
 = Immediate Motion Filed

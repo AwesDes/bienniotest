@@ -1,7 +1,7 @@
 title: 1923 Congress of the Partito Popolare Italiano
 subtitle: The PPI elects its Secretary General.
 new-page: true
-view-if: year = 1923 and month = 4 and week = 1 and not ppi_banned
+view-if: year = 1923 and month = 4 and week = 1 and not ppi_banned and not violent_revolution
 on-arrival: {!
 Q.ppi_left -= 2;
 Q.ppi_moderates -= 2;

@@ -187,7 +187,7 @@ if (window && d3) {
 @adopt_central
 choose-if: left_eco_yes >= 50
 unavailable-subtitle: The proposal fails to receive the necessary votes to pass.
-on-arrival: left_eco_adopted = 1; economic_plan = 1
+on-arrival: left_eco_adopted = 1; economic_plan_adopted = 1
 
 With a simple majority in the <span style="color: #BF0000">**Congress of Soviets**</span>, the Proposal on the Central Economic Plan passes! Murmurs of grumbling does come from the Pragmatists, but a majority is hard to dispute.
 
@@ -196,7 +196,7 @@ Nevertheless, there is much work to be done.
 @adopt_nep
 choose-if: right_eco_yes >= 50
 unavailable-subtitle: The proposal fails to receive the necessary votes to pass.
-on-arrival: right_eco_adopted = 1; economic_plan = 1
+on-arrival: right_eco_adopted = 1; economic_plan_adopted = 1
 
 With a simple majority in the <span style="color: #BF0000">**Congress of Soviets**</span>, the Proposal on the New Economic Policy passes! Murmurs of grumbling does come from the Orthodox Marxists, but a majority is hard to dispute.
 
@@ -216,7 +216,7 @@ Neither proposals are able to achieve a majority in the <span style="color: #BF0
 - @choose_both: Adopt the 'Regional Dualism' system.
 
 @choose_central
-on-arrival: left_eco_adopted = 1; economic_plan = 1; turatian_dissent += 7; gradualist_dissent += 10; labour_dissent += 4; syndicalist_dissent += 5 if syndicalist_active; communist_strength += 8
+on-arrival: left_eco_adopted = 1; economic_plan_adopted = 1; turatian_dissent += 7; gradualist_dissent += 10; labour_dissent += 4; syndicalist_dissent += 5 if syndicalist_active; communist_strength += 8
 choose-if: premier_party != "Turatian"
 unavailable-subtitle: Chairman [+ premier +] would never choose this.
 go-to: goals_choose
@@ -226,7 +226,7 @@ Eventually, the Central Economic Plan is adopted by order of Chairman [+ premier
 Nevertheless, amongst some protests, we must act. There is much work to be done.
 
 @choose_nep
-on-arrival: right_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 10; ordinovist_dissent += 7; reformist_strength += 7
+on-arrival: right_eco_adopted = 1; economic_plan_adopted = 1; bordigist_dissent += 10; ordinovist_dissent += 7; reformist_strength += 7
 choose-if: premier_party != "Bordigist"
 unavailable-subtitle: Chairman [+ premier +] would never choose this.
 go-to: goals_choose
@@ -238,7 +238,7 @@ Nevertheless, amongst some protests, we must act. There is much work to be done.
 @choose_both
 subtitle: This will be significantly harder to manage compared to the other proposals.
 view-if: left_eco_yes + right_eco_yes < 50
-on-arrival: both_eco_adopted = 1; economic_plan = 1; bordigist_dissent += 4; ordinovist_dissent += 4; gradualist_dissent += 4; turatian_dissent += 4;
+on-arrival: both_eco_adopted = 1; economic_plan_adopted = 1; bordigist_dissent += 4; ordinovist_dissent += 4; gradualist_dissent += 4; turatian_dissent += 4;
 go-to: goals_choose
 
 Rather than the two proposals, the new proposed system of 'Regional Dualism' is selected instead, with specifics to be drafted up in the future. Though attempting to appease both sides, murmurs of grumbling have been heard from both sides, albeit more muted than if we had solely chosen a side.

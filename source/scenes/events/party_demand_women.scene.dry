@@ -1,6 +1,6 @@
 title: Petition of the Women
 subtitle: Our Women support base have pushed forward demands.
-view-if: ((class1_set = 'women' and class1_timer <= 0) or (class2_set = 'women' and class2_timer <= 0)) and party_demands_timer <= 0 and (psi_majority or left_wing_coalition) and womens_suffrage
+view-if: ((class1_set = 'women' and class1_timer <= 0) or (class2_set = 'women' and class2_timer <= 0)) and party_demands_timer <= 0 and (psi_majority or left_wing_coalition) and womens_suffrage and not violent_revolution
 on-arrival: {! 
 
 Q.party_demands_timer = 6;

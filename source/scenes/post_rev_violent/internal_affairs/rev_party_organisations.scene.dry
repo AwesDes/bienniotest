@@ -2,8 +2,8 @@ title: Party Organisations
 new-page: true
 is-card: true
 tags: internal_affairs
-view-if: party_organisations_timer <= 0
-on-arrival: week_actions += 1; party_organisations_timer = 3;
+view-if: rev_party_organisations_timer <= 0
+on-arrival: week_actions += 1; rev_party_organisations_timer = 3;
 card-image: img/PartyOrganisations.jpg
 
 = Party Organisations

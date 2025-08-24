@@ -2,7 +2,7 @@ title: Maximalist leaders resign
 new-page: true 
 subtitle: Maximalist disagreements with our policies have grown too severe.
 tags: event
-view-if: maximalist_dissent >= 60
+view-if: maximalist_dissent >= 60 and not violent_revolution
 on-arrival: maximalist_strength *= 0.3; workers_psi *= 0.85; n_advisors -= 1 if bombacci_advisor == 1; n_advisors -= 1 if serrati_advisor == 1; n_advisors -= 1 if lazzari_advisor == 1; serrati_advisor = 0; lazzari_advisor = 0; bombacci_advisor = 0; rg_strength -= maximalist_strength; maximalists_resign = 1;
 max-visits: 1
 

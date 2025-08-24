@@ -1,7 +1,7 @@
 title: PRI rises in prominence
 subtitle: The Republicans rise from obscurity.
 new-page: true
-view-if: republican_sentiment > 40 and (workers_other_normalised > 10 or middle_class_other_normalised > 10 or rural_other_normalised > 5 or industrialists_other_normalised > 10 or veterans_other_normalised > 10 or catholic_other_normalised > 10)
+view-if: republican_sentiment > 40 and (workers_other_normalised > 10 or middle_class_other_normalised > 10 or rural_other_normalised > 5 or industrialists_other_normalised > 10 or veterans_other_normalised > 10 or catholic_other_normalised > 10) and not violent_revolution
 on-arrival: {!
 Q.workers_pri += Q.workers_other * 0.6;
 Q.middle_class_pri += Q.middle_class_other * 0.6; 

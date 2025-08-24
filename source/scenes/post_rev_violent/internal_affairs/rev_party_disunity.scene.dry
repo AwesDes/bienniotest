@@ -1,8 +1,8 @@
 title: Party Disunity
 new-page: true
 is-card: true
-view-if: party_disunity_timer = 0 and (party_unity >= 30 or (gradualist_dissent > 20 or turatian_dissent > 20 or socpat_dissent > 20 or labour_dissent > 20 or syndicalist_dissent > 20 or maximalist_dissent > 20 or ordinovist_dissent > 20 or bordigist_dissent > 20))
-on-arrival: week_actions += 1; party_disunity_timer = 2
+view-if: rev_party_disunity_timer = 0 and (party_unity >= 30 or (gradualist_dissent > 20 or turatian_dissent > 20 or socpat_dissent > 20 or labour_dissent > 20 or syndicalist_dissent > 20 or maximalist_dissent > 20 or ordinovist_dissent > 20 or bordigist_dissent > 20))
+on-arrival: week_actions += 1; rev_party_disunity_timer = 2
 card-image: img/PartyDisunity.jpg
 tags: internal_affairs
 

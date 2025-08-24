@@ -18,3 +18,14 @@ Yet, to call these nations weak, to call them sympathetic to us would be a grave
 # temp for now, add more options
 
 @trade_menu
+
+Our trade volume places us at [+ trade_deficit +] every month.
+
+- @buy_staple_crops: Purchase Staple Crops from the <span style="color: #046276">**Western Powers**</span>.
+- @sell_cash_crops: Sell Cash Crops to the <span style="color: #046276">**Western Powers**</span>.
+
+@buy_staple_crops
+on-arrival: imported_staple_crops_unit += 1; trade_deficit -= 1;
+
+@sell_cash_crops
+on-arrival: exported_cash_crops_unit += 1; trade_deficit += 1;

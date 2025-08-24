@@ -2,7 +2,7 @@ title: CGL breaks from the Party
 new-page: true 
 subtitle: Labour disagreements with our policies have grown too severe.
 tags: event
-view-if: labour_dissent >= 60
+view-if: labour_dissent >= 60 and not violent_revolution
 on-arrival: unions_break = 1; workers_psi *= 0.6; rg_strength *= 0.7; veterans_psi *= 0.9; workers_psri += 5; workers_pnf += 5; n_advisors -= 1 if rigola_advisor == 1; rigola_advisor = 0; labour_strength = labour_strength/2
 max-visits: 1
 

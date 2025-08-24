@@ -86,10 +86,6 @@ if (Q.violent_revolution) {
     Q.southern_agricultural_health = parseFloat(Q.southern_agricultural_health).toFixed(1);
     Q.southern_supply_health = parseFloat(Q.southern_supply_health).toFixed(1);
 
-    Q.poverty = parseFloat(Q.poverty).toFixed(1);
-    Q.homelessness = parseFloat(Q.homelessness).toFixed(1);
-    Q.illiteracy = parseFloat(Q.illiteracy).toFixed(1);
-
     Q.northeast_poverty = parseFloat(Q.northeast_poverty).toFixed(1);
     Q.northeast_homelessness = parseFloat(Q.northeast_homelessness).toFixed(1);
     Q.northeast_illiteracy = parseFloat(Q.northeast_illiteracy).toFixed(1);
@@ -116,6 +112,10 @@ if (Q.violent_revolution) {
     Q.supply_health = Number(Q.supply_health).toFixed(1);
     Q.industry_health = Number(Q.industry_health).toFixed(1);
     Q.agricultural_health = Number(Q.agricultural_health).toFixed(1);
+
+    Q.poverty = Number(Q.poverty).toFixed(1);
+    Q.homelessness = Number(Q.homelessness).toFixed(1);
+    Q.illiteracy = Number(Q.illiteracy).toFixed(1);
 }
 
 if (Q.year == 1924 && Q.month == 10 && Q.week == 3 && Q.supported_entente >= 2) {
@@ -1632,6 +1632,12 @@ if (Q.week_actions >= 1) {
             Q.stability_check_timer = 6;
         }
 
+        if (Q.public_opinion <= 10) {
+            Q.opinion_check_timer -= 1;
+        } else {
+            Q.opinion_check_timer = 6;
+        }
+
         // economic goals update
 
         if (Q.deadline_active) {
@@ -1890,6 +1896,17 @@ if (Q.week_actions >= 1) {
         Q.agricultural_goods_unit_disp = Q.agricultural_goods_unit * 10;
 
         Q.total_staple_crops = Q.staple_crops_unit + Q.imported_staple_crops_unit;
+
+        // trade check
+
+        if (Q.week == 1) {
+            Q.budget += Q.trade_deficit;
+        }
+
+        if (Q.exported_cash_crops_unit >= Q.cash_crops_unit) {
+            Q.trade_deficit -= 1;
+            Q.exported_cash_crops_unit -= 1;
+        }
 
     }
 }

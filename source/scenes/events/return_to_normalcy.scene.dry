@@ -1,7 +1,7 @@
 title: Return to Normalcy
 subtitle: Have we finally found our way out of the crisis?
 new-page: true
-view-if: (pnf_collapse_seen or pnf_weakened) and anti_monarchist_sentiment > nationalist_sentiment and national_economic_recovery and not king_event
+view-if: (pnf_collapse_seen or pnf_weakened) and anti_monarchist_sentiment > nationalist_sentiment and national_economic_recovery and not king_event and not violent_revolution
 max-visits: 1
 on-arrival: return_to_normalcy = 1;
 tags: event

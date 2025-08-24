@@ -2,7 +2,7 @@ title: Reformist leaders defect
 new-page: true 
 subtitle: Reformist disagreements with our policies have grown too severe.
 tags: event
-view-if: reformist_dissent >= 60
+view-if: reformist_dissent >= 60 and not violent_revolution
 on-arrival: reformist_seen = 1; rural_psu += rural_psi * 0.5; workers_other += 2; workers_psri += 2; workers_psu += workers_psi * 0.3; workers_psi *= 0.7; reformist_strength *= 0.3; n_advisors -= 1 if matteotti_advisor == 1; n_advisors -= 1 if buozzi_advisor == 1; n_advisors -= 1 if altobelli_advisor == 1; n_advisors -= 1 if salvemini_advisor == 1; n_advisors -= 1 if kuliscioff_advisor == 1; n_advisors -= 1 if turati_advisor == 1; matteotti_advisor = 0; buozzi_advisor = 0; kuliscioff_advisor = 0; altobelli_advisor = 0; turati_advisor = 0; salvemini_advisor = 0; rg_strength -= 10; reformists_defect = 1; psri_relation -= 7; psu_formed = 1; psu_seating = (psi_seating/3)*2; psi_seating = psi_seating/3; psu_seating_disp = (psi_seating_disp/3)*2; psi_seating_disp = psi_seating_disp/3; psu_negotiating_timer = 12; prime_minister_party = "PSU" if prime_minister = "Turati"
 max-visits: 1
 

@@ -2,8 +2,8 @@ title: [? if cheka_formed : Internal Affairs Committee ?][? if not cheka_formed 
 new-page: true
 is-card: true
 tags: internal_affairs
-on-arrival: cheka_timer = 3; week_actions += 1;
-view-if: cheka_timer <= 0
+on-arrival: rev_interior_policy_timer = 3; week_actions += 1;
+view-if: rev_interior_policy_timer <= 0
 card-image: img/portraits/FilippoTurati.jpg
 go-to: cheka_menu if cheka_formed; internal_menu if not cheka_formed
 

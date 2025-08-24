@@ -474,21 +474,21 @@ is-special: true
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/AgricultureSymbol.png' style="height: 16px; width: 16px;">!}
-        Total Agricultural Production: **[+ agricultural_health : health +]** [? if deadline_active : ([+ changeAgricultural_Disp +]) ?]
+        Total Agricultural Production: **[+ agricultural_health : health +]** [? if deadline_active : ([+ changeAgricultural_Disp +]%) ?]
     {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/IndustrySymbol.png' style="height: 16px; width: 16px;">!}
-        Total Industrial Output: **[+ industry_health : health +]** [? if deadline_active : ([+ changeIndustry_Disp +]) ?]
+        Total Industrial Output: **[+ industry_health : health +]** [? if deadline_active : ([+ changeIndustry_Disp +]%) ?]
     {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-right: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/SupplySymbol.png' style="height: 16px; width: 16px;">!}
-        Total Infrastructural Transport: **[+ supply_health : health +]** [? if deadline_active : ([+ changeSupply_Disp +]) ?]
+        Total Infrastructural Transport: **[+ supply_health : health +]** [? if deadline_active : ([+ changeSupply_Disp +]%) ?]
     {!</div>!}
 {!</div>!}
 
@@ -499,21 +499,21 @@ is-special: true
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/PovertySymbol.png' style="height: 16px; width: 16px;">!}
-        Total Poverty: **[+ poverty +]**% [? if deadline_active : ([+ changePoverty_Disp +]) ?]
+        Total Poverty: **[+ poverty +]**% [? if deadline_active : ([+ changePoverty_Disp +]%) ?]
     {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/HomelessSymbol.png' style="height: 16px; width: 16px;">!}
-        Total Homelessness: **[+ homelessness +]**% [? if deadline_active : ([+ changeHomelessness_Disp +]) ?]
+        Total Homelessness: **[+ homelessness +]**% [? if deadline_active : ([+ changeHomelessness_Disp +]%) ?]
     {!</div>!}
 {!</div>!}
 
 {!<div style="border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-bottom: 5px; height: 75px; width: 250px; text-align: center; justify-content: center; align-items: center; display: flex; margin-left: 10px">!}
     {!<div style="align-items: center; gap: 6px;">!}
         {!<img src='img/IlliteracySymbol.png' style="height: 16px; width: 16px;">!}
-        Total Illiteracy: **[+ illiteracy +]**% [? if deadline_active : ([+ changeIlliteracy_Disp +]) ?]
+        Total Illiteracy: **[+ illiteracy +]**% [? if deadline_active : ([+ changeIlliteracy_Disp +]%) ?]
     {!</div>!}
 {!</div>!}
 

@@ -123,11 +123,11 @@ Total Homelessness Rate is **[+ homelessness +]**%.
 
 Total Illiteracy Rate is **[+ illiteracy +]**%.
 
-Our Health Reforms are [? if health_complete : <span style="color: #009246">Complete</span>. ?][? if not health_complete : <span style="color: #d42f2f;">Incomplete</span>. ?]
+Our Health Reforms are [? if health_complete : <span style="color: #009246">**Complete**</span>. ?][? if not health_complete : <span style="color: #d42f2f;">**Incomplete**</span>. ?]
 
-Our Labour Reforms are [? if labour_complete : <span style="color: #009246">Complete</span>. ?][? if not labour_complete : <span style="color: #d42f2f;">Incomplete</span>. ?]
+Our Labour Reforms are [? if labour_complete : <span style="color: #009246">**Complete**</span>. ?][? if not labour_complete : <span style="color: #d42f2f;">**Incomplete**</span>. ?]
 
-Our Education Reforms are [? if education_complete : <span style="color: #009246">Complete</span>. ?][? if not education_complete : <span style="color: #d42f2f;">Incomplete</span>. ?]
+Our Education Reforms are [? if education_complete : <span style="color: #009246">**Complete**</span>. ?][? if not education_complete : <span style="color: #d42f2f;">**Incomplete**</span>. ?]
 
 = The Northeast
 

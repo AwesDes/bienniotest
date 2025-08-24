@@ -1,6 +1,6 @@
 title: Petition of the Middle Class
 subtitle: Our Middle Class support base have pushed forward demands.
-view-if: ((class1_set = 'middle_class' and class1_timer <= 0) or (class2_set = 'middle_class' and class2_timer <= 0)) and party_demands_timer <= 0 and (psi_majority or left_wing_coalition)
+view-if: ((class1_set = 'middle_class' and class1_timer <= 0) or (class2_set = 'middle_class' and class2_timer <= 0)) and party_demands_timer <= 0 and (psi_majority or left_wing_coalition) and not violent_revolution
 on-arrival: {! 
 
 Q.party_demands_timer = 6;

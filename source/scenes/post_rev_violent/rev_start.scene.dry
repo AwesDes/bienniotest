@@ -54,6 +54,7 @@ if (Q.radio >= 2) {
 }
 
 Q.violent_revolution = 1;
+Q.national_congress_seen = 1;
 
 Q.stability = 0;
 Q.party_unity = 0;
@@ -83,6 +84,9 @@ if (Q.reformists_expelled == 1) {
     Q.comintern_member = 1;
 }
 
+Q.stability_check_timer = 6;
+Q.opinion_check_timer = 6;
+
 Q.eco_plan_timer = 0;
 Q.cheka_timer = 0;
 
@@ -99,7 +103,7 @@ Q.social_northeast_timer = 0;
 Q.social_northwest_timer = 0;
 Q.social_southern_timer = 0;
 
-Q.timers.push('eco_plan', 'cheka', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
+Q.timers.push('eco_plan', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
 
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
 

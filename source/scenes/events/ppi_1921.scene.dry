@@ -1,7 +1,7 @@
 title: 1921 Congress of the Partito Popolare Italiano
 subtitle: The PPI elects its Secretary General.
 new-page: true
-view-if: year = 1921 and month = 10 and week = 3 and not ppi_banned
+view-if: year = 1921 and month = 10 and week = 3 and not ppi_banned and not violent_revolution
 on-arrival: {!
 
 if (Q.socialist_catholic_coalition == 1) {
