@@ -8,10 +8,10 @@ go-to: down_indus_unit if (central_industry_health < 33 and (central_agricultura
 
 Our Economic Capacity has dropped that we have lost a Production Unit.
 
-- @reduce_consumer
-- @reduce_arms
-- @reduce_agri
-- @reduce_free_indus
+- @reduce_consumer: Reduce Consumer Goods Production.
+- @reduce_arms: Reduce Military Arms Production.
+- @reduce_agri: Reduce Agricultural Equipment Production.
+- @reduce_free_indus: Reduce Free Units.
 
 @reduce_consumer
 subtitle: Consumer Goods are essential for social recovery.
@@ -41,9 +41,9 @@ on-arrival: central_indus_free_unit -= 1;
 
 Our Agricultural Capacity has dropped that we have lost a Production Unit.
 
-- @reduce_cash
-- @reduce_staple
-- @reduce_free_agri
+- @reduce_cash: Reduce Cash Crops Output.
+- @reduce_staple: Reduce Staple Crops Output.
+- @reduce_free_agri: Reduce Free Units.
 
 @reduce_staple
 subtitle: Staple Crops are necessary to feed our population.

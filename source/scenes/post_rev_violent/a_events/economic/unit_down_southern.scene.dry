@@ -5,9 +5,9 @@ tags: event
 
 Our Agricultural Capacity has dropped that we have lost a Production Unit.
 
-- @reduce_cash
-- @reduce_staple
-- @reduce_free_agri
+- @reduce_cash: Reduce Cash Crops Output.
+- @reduce_staple: Reduce Staple Crops Output.
+- @reduce_free_agri: Reduce Free Units.
 
 @reduce_staple
 subtitle: Staple Crops are necessary to feed our population.

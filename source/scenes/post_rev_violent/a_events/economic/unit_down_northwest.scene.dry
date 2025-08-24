@@ -5,10 +5,10 @@ tags: event
 
 Our Economic Capacity has dropped that we have lost a Production Unit.
 
-- @reduce_consumer
-- @reduce_arms
-- @reduce_agri
-- @reduce_free_indus
+- @reduce_consumer: Reduce Consumer Goods Production.
+- @reduce_arms: Reduce Military Arms Production.
+- @reduce_agri: Reduce Agricultural Equipment Production.
+- @reduce_free_indus: Reduce Free Units.
 
 @reduce_consumer
 subtitle: Consumer Goods are essential for social recovery.
