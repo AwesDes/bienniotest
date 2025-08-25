@@ -179,13 +179,7 @@ if (Q.adp_strength) {
 if (Q.abl_strength) {
     Q.abl_strength_2 = Math.round(Q.abl_strength);
 }
-Q.communist_bomb_display = Q.communist_bomb_timer - Q.time;
-Q.republican_bomb_display = Q.republican_bomb_timer - Q.time;
-Q.fascist_bomb_display = Q.fascist_bomb_timer - Q.time;
-Q.foreign_invasion_display = Q.foreign_invasion_time - Q.time;
 !}
-
-[? if violent_revolution: Foreign intervention Likelihood : [+ foreign_invasion_display : warnings +] ?]
 
 Streetfighting: [+ violent_prevalence : violence +]
 
@@ -251,7 +245,7 @@ Streetfighting: [+ violent_prevalence : violence +]
 
 [? if psi_in_government : Carabinieri: [+ interior_police_strength +] thousand officers ?]
 
-[? if psi_in_government : Carabinieri Loyalty: [+ interior_police_loyalty: loyalty +] ?]
+[? if psi_in_government : Carabinieri Loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
 @polls
 on-arrival: {!
