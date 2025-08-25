@@ -225,18 +225,6 @@ Streetfighting: [+ violent_prevalence : violence +]
 
 [? if not national_congress_seen : Anti-Bolshevik Leagues Militarization: [+ abl_militancy : militancy +] ?]
 
-[? if communist_terror : {!<span class="tooltip-text" title="The new Red Guards are a radical paramilitary group asscoiated with the PCd'I.">New Red Guards</span>!} ?]
-
-[? if communist_terror: NRG Attack Likelihood : [+ communist_bomb_display : warnings +] ?]
-
-[? if republican_terror : {!<span class="tooltip-text" title="The Anti-Communist Brigades are a republican paramilitary group asscoiated with the former liberal parties.">Anti-Communist Brigades</span>!} ?]
-
-[? if republican_terror: ACB Attack Likelihood : [+ republican_bomb_display : warnings +] ?]
-
-[? if fascist_terror : {!<span class="tooltip-text" title="The new Fasci are a radical paramilitary group asscoiated with the former PNF..">Fasci</span>!} ?]
-
-[? if fascist_terror: FdC Attack Likelihood : [+ fascist_bomb_display : warnings +] ?]
-
 = Government Forces
 
 [? if not national_congress_seen : Regio Esercito: ?][? if national_congress_seen : Esercito Italiano: ?] [+ army_strength +] thousand troops.
