@@ -168,7 +168,6 @@ max-cards: 3
 - @party
 - @paramilitary
 - @govt
-- @natdef
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -342,7 +341,6 @@ max-cards: 4
 - @party
 - @paramilitary
 - @govt
-- @natdef
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -355,19 +353,11 @@ is-deck: true
 
 @paramilitary
 title: Paramilitary Affairs
-view-if: not national_congress_seen and not pacification_pact
+view-if: not pacification_pact
 card-image: img/redguarddeck.jpg
 is-deck: true
 
 - #para_affairs
-
-@natdef 
-title: National Defence
-view-if: national_congress_seen
-card-image: img/redguarddeck.jpg
-is-deck: true
-
-- #national_def
 
 @govt
 title: Government Affairs
