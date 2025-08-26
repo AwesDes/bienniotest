@@ -1853,12 +1853,12 @@ if (Q.week_actions >= 1) {
 
         // agri equipment supply railway bottleneck check
 
-        Q.agri_goods_total = Q.agricultural_goods_unit + Q.exported_agricultural_goods_unit
+        Q.agri_goods_total = Q.agricultural_goods_unit + Q.exported_agricultural_goods_unit;
 
         if (Q.agri_goods_total > 0) {
             if (Q.central_supply_health >= (Q.agri_goods_total * 10)) {
                 Q.southern_agricultural_health += 0.4 * Q.agri_goods_total;
-            } else {
+            } else if {
                 Q.southern_agricultural_health += 0.1 * Q.agri_goods_total;
             }
         }
