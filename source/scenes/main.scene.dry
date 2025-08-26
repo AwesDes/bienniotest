@@ -168,6 +168,7 @@ max-cards: 3
 - @party
 - @paramilitary
 - @govt
+- @cheats
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -341,6 +342,7 @@ max-cards: 4
 - @party
 - @paramilitary
 - @govt
+- @cheats
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -366,3 +368,10 @@ card-image: img/governmentdeck.jpg
 is-deck: true
 
 - #govt_affairs
+
+@cheats
+title: Skip to Rev (Click any card first)
+view-if: week = 3
+is-deck: true
+
+- #cheats
