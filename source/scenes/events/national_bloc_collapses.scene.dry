@@ -1,5 +1,5 @@
 title: Collapse of the National Bloc
-view-if: year == 1921 and month == 7 and week == 1 and bn_formed and pnf_in_bn
+view-if: year == 1921 and month == 7 and week == 1 and bn_formed and pnf_in_bn and not violent_revolution
 on-arrival: ani_in_bn = 0; ul_in_bn = 0; pnf_in_bn = 0; bn_formed = 0; ul_giolitti -= 1;
 max-visits: 1
 tags: event
