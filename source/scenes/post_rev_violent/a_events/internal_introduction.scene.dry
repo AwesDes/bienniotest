@@ -2,7 +2,7 @@ title: Report on the Internal Situation and Stability
 subtitle: The first of our work begins.
 new-page: true
 view-if: first_congress_formed
-on-arrival: reports_check = 5;
+on-arrival: reports_check = 5; internal_seen = 1;
 max-visits: 1
 tags: event
 go-to: situation_menu

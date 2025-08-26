@@ -1540,6 +1540,31 @@ if (Q.week_actions >= 1) {
 
     if (Q.violent_revolution) {
 
+        // check if loaded in from save
+
+        if (document.getElementById('rev_main_tab').style.display != "none";) {
+            document.getElementById('situation-link').style.display = "";
+            document.getElementById('rev_main_tab').style.display = "";
+            document.getElementById('rev_politics_tab').style.display = "";
+            document.getElementById('rev_paramilitary_tab').style.display = "";
+            document.getElementById('rev_economic_tab').style.display = "";
+            document.getElementById('rev_social_tab').style.display = "";
+
+            document.getElementById('main_tab').style.display = "none";
+            document.getElementById('politics_tab').style.display = "none";
+            document.getElementById('paramilitary_tab').style.display = "none";
+            document.getElementById('poll_tab').style.display = "none";
+            document.getElementById('foreign_tab').style.display = "none";
+            document.getElementById('interior_tab').style.display = "none";
+            document.getElementById('stats-link').style.display = "none";
+
+            window.changeTab('rev_status', 'rev_main_tab');
+
+            if (Q.internal_seen == 1) {
+                document.getElementById('economy-link').style.display = "";
+            }
+        }
+
         for (timer of Q.timers) {
             if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
                 Q[timer+'_timer'] -= 2;
