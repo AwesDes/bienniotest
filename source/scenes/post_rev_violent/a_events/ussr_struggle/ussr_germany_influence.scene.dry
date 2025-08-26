@@ -1,0 +1,13 @@
+title: <span style="color: #bf0000">**Soviet**</span> Influence on <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>
+subtitle: The <span style="color: #bf0000">**Soviets**</span> tighten their grip.
+on-arrival: germany_influence_timer = 12; soviet_influence_germany += 1;
+tags: event
+view-if: germany_influence_timer <= 0 and soviet_germany and stalin_struggle
+
+= <span style="color: #bf0000">**Soviet**</span> Influence on <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>
+
+Reports on increased <span style="color: #bf0000">**Soviet**</span> activity with <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> delegates have been noticed, indicating a potential increase in influence.
+
+We should redouble our efforts.
+
+- @root: Concerning.

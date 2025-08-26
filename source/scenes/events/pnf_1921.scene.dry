@@ -1,7 +1,7 @@
 title: 1921 Congress of the PNF
 subtitle: The PNF is established.
 new-page: true
-view-if: year = 1921 and month = 11 and week = 1 and not pnf_banned
+view-if: year = 1921 and month = 11 and week = 1 and not pnf_banned and not violent_revolution
 on-arrival: pnf_formed = 1; pnf_name = "PNF"; pnf_full_name = "National Fascist Party"; pnf_full_italian = "Partito Nazionale Fascista";
 max-visits: 1
 tags: event

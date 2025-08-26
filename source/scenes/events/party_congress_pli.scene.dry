@@ -1,7 +1,7 @@
 title: [+ year +] [+ ul_name +] Party Congress
 subtitle: The [+ ul_name +] holds its Biennial Congress.
 new-page: true
-view-if: ul_congress_trigger = 1 and not ul_banned
+view-if: ul_congress_trigger = 1 and not ul_banned and not violent_revolution
 on-arrival: {!
 Q.ul_congress_trigger = 0
 

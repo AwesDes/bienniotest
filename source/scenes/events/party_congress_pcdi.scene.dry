@@ -1,7 +1,7 @@
 title: [+ year +] PCd'I Party Congress
 subtitle: The PCd'I holds its first Congress.
 new-page: true
-view-if: communist_split and pcdi_congress_time <= time
+view-if: communist_split and pcdi_congress_time <= time and not violent_revolution
 tags: event
 max-visits: 1
 

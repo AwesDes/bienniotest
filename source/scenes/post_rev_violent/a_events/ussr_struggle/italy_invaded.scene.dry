@@ -1,0 +1,14 @@
+title: Declaration of War
+subtitle: The final nail in a laid coffin.
+tags: event
+view-if: comintern_expelled and foreign_invasion_timer <= 0 and foreign_introduced and not economic_goals_reached
+
+= Entente Invasion
+
+One report streams into the War Office. Then another, and another. By lunch, a hundred reports have reached the eyes of the Central Committee; the Cabinet. The <span style="color: #39AAAA">**French**</span>, alongside the <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and the opportunists of <span style="color: #9e00c5ff">**Yugoslavia**</span> have begun moving forces into <span style="color: #009246">**Italian**</span> lands.
+
+Our forces; albeit of course expecting a potential intervention, are unable to hold the invaders back. The colonies go first, then Sardinia, then Sicily, Naples, Rome. In our place, the King and his den of snakes return back into his throne of greed, built upon the corpses of <span style="color: #009246">**Italian**</span> men as he thanks the powers that brought him back to the throne.
+
+The same power that massacre the citizens he so desperately pretends to represent.
+
+- @game_over: Game over.

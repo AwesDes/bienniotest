@@ -1,5 +1,5 @@
 title: [+ prime_minister +] calls snap elections
-view-if: year == 1921 and month == 3 and week == 1 and prime_minister_party = "UL"
+view-if: year == 1921 and month == 3 and week == 1 and prime_minister_party = "UL" and not violent_revolution
 on-arrival: next_election_year = 1921; next_election_month = 5
 max-visits: 1
 tags: event

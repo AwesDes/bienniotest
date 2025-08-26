@@ -88,7 +88,7 @@ on-arrival: mafia_trigger_prog -= 3 if not mafia_active; mafia_attack_timer += 2
 
 @as_eliminate
 title: Eliminate the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> fully.
-view-if: as_investigated >= 3
+view-if: as_investigated >= 3 and economic_goals_reached = 1
 on-arrival: as_active = 0; as_eliminated = 1
 max-visits: 1
 
@@ -98,7 +98,7 @@ The <span style="color: #000000">**Squads**</span> have been eliminated.
 
 @nda_eliminate
 title: Eliminate the  <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> fully.
-view-if: nda_investigated >= 3
+view-if: nda_investigated >= 3 and economic_goals_reached = 1
 on-arrival: nda_active = 0; nda_eliminated = 1
 max-visits: 1
 

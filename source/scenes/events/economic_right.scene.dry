@@ -1,5 +1,5 @@
 title: Minority Parties endorse the [+ pnf_full_name +]
-view-if: ((radicalisation >= 7 and not_participating = 1) or (radicalisation >= 8 and participating = 1) or largest_party == pnf_name) and pnf_r >= 5
+view-if: ((radicalisation >= 7 and not_participating = 1) or (radicalisation >= 8 and participating = 1) or largest_party == pnf_name) and pnf_r >= 5 and not violent_revolution
 on-arrival: economic_right = 1;
 max-visits: 1
 tags: event

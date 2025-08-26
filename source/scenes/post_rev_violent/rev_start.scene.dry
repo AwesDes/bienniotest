@@ -103,9 +103,24 @@ Q.social_northeast_timer = 0;
 Q.social_northwest_timer = 0;
 Q.social_southern_timer = 0;
 
-Q.timers.push('eco_plan', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
+Q.entente_trade_deficit = 0;
+Q.comintern_trade_deficit = 0;
+
+Q.timers.push('eco_plan', 'hungary_influence', 'germany_influence', 'uncommitted_influence', 'rev_ideology', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
 
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
+
+if (Q.soviet_leader == "Stalin") {
+    Q.soviet_emergency_timer = Q.time + 12;
+}
+
+Q.soviet_influence_germany = 0;
+Q.soviet_influence_hungary = 0;
+Q.soviet_influence_uncommitted = 0;
+
+Q.italy_influence_germany = 0;
+Q.italy_influence_hungary = 0;
+Q.italy_influence_uncommitted = 0;
 
 Q.left_eco_support = 0;
 Q.right_eco_support = 0;
@@ -123,6 +138,11 @@ Q.consumer_goods_unit = 0;
 Q.military_goods_unit = 0;
 Q.staple_crops_unit = 0;
 Q.cash_crops_unit = 0;
+
+Q.exported_agricultural_goods_unit = 0;
+Q.exported_cash_crops_unit = 0;
+Q.imported_staple_crops_unit = 0;
+Q.imported_consumer_goods_unit = 0;
 
 for (var Checking of Q.zeroCheck2) {
     Q[Checking + '_agricultural_goods_unit'] = 0;

@@ -1,0 +1,19 @@
+title: Rumors in the <span style="color: #800000">**Comintern**</span>
+subtitle: <span style="color: #bf0000">**Stalin**</span> begins his play.
+on-arrival: stalin_struggle = 1; hungary_influence_timer = 8; germany_influence_timer = 12; uncommitted_influence_timer = 4; second_comintern_time = time + 48; {!
+if (Q.exported_agricultural_goods_unit > 0) {
+    Q.comintern_trade_deficit += (1.5 * Q.exported_agricultural_goods_unit);
+    Q.exported_agricultural_goods_unit = 0;
+}
+!}
+tags: event
+view-if: soviet_leader = "Stalin" and soviet_emergency_timer <= time and violent_revolution
+max-visits: 1
+
+= Rumors in the <span style="color: #800000">**Comintern**</span>
+
+Our delegates within the <span style="color: #800000">**Comintern**</span> have reported suspicious activity by the <span style="color: #bf0000">**Soviet**</span> representatives, many replaced with seemingly more loyal delegates to Stalin, as well as sentiments of a centralisation of the organisation towards one nation. The Ministry of Foreign Affairs has also reported any trade with the <span style="color: #bf0000">**Soviets**</span> has been **suspended**, citing various excuses.
+
+This is of grave concern to us, and it is recommended we begin attempting to sway the uncommitted delegates to our side, lest the <span style="color: #bf0000">**Soviet Union**</span> attempts anything rash.
+
+A New World Congress is scheduled **one year** from now.

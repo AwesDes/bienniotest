@@ -1,0 +1,12 @@
+title: Report on Foreign Impact on our Expulsion
+tags: event
+view-if: comintern_expelled and foreign_intro_time <= time and not economic_goals_reached
+on-arrival: foreign_introduced = 1; foreign_invasion_timer = 6;
+
+= Report on Foreign Impact on our Expulsion
+
+Our expulsion from the <span style="color: #800000">**Communist International**</span> vulnerable, as reports from our <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and <span style="color: #39AAAA">**French**</span> correspondents have noted a decrease in relations.
+
+Though no definitive action has proven their intent to invade us, the devastation of the civil war means we would be unable to repel any sort of invasion by the <span style="color: #046276">**Entente**</span>.
+
+A rough estimate places the combined forces of the <span style="color: #046276">**Entente**</span> at **400,000** forces. Any less would risk a potential invasion we cannot fight, at least until we recover economically.

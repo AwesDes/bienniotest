@@ -15,6 +15,7 @@ What are we to do?
 - @raise_taxes: Raise taxes across the board.
 - @encourage_bonds: Encourage more long-term bonds.
 - @allied_aid: Could we petition our allies for aid?
+- @demobilise: We can demobilise some of our forces.
 - @austerity: Engage in further budget discipline.
 - @print_money: Print Money.
 - @root: There is nothing we can do.
@@ -41,6 +42,14 @@ unavailable-subtitle: Not enough relations.
 on-arrival: budget += 2; soviet_relation -= 2;
 
 Via our petition for financial aid from the <span style="color: #800000">**Communist International**</span>, we have received a considerable sum from the <span style="color: #bf0000">**Soviet Union**</span> as a gesture of goodwill.
+
+@demobilise
+subtitle: +2 Budget, -50k Army Strength - We can reduce our army numbers to decrease expenditures.
+on-arrival: budget += 2; army_strength -= 50;
+choose-if: army_strength < 20
+unavailable-subtitle: We do not have enough troops left in the <span style="color:#d42f2f">**Red Army**</span>.
+
+Against protests by <span style="color: #740000ff">**the Left**</span>, we can demobilise some of our forces to reduce expenditures that we cannot afford.
 
 @austerity
 subtitle: +2 Budget - We can cut government salaries further.

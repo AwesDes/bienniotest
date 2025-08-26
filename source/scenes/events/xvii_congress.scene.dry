@@ -2,7 +2,7 @@ title: XVII Congress of the [+ psi_full_name +]
 subtitle: A divergence in paths is to be decided once more.
 new-page: true
 tags: event
-view-if: year = 1921 and month = 1
+view-if: year = 1921 and month = 1 and not violent_revolution
 max-visits: 1
 face-image: img/XVIICongress.jpg
 

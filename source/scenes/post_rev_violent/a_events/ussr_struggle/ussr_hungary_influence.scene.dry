@@ -1,0 +1,13 @@
+title: <span style="color: #bf0000">**Soviet**</span> Influence on <span style="color: #964B00">**Hungary**</span>
+subtitle: The <span style="color: #bf0000">**Soviets**</span> tighten their grip.
+on-arrival: hungary_influence_timer = 8; soviet_influence_hungary += 1;
+tags: event
+view-if: hungary_influence_timer <= 0 and soviet_hungary and stalin_struggle
+
+= <span style="color: #bf0000">**Soviet**</span> Influence on <span style="color: #964B00">**Hungary**</span>
+
+Reports on increased <span style="color: #bf0000">**Soviet**</span> activity with <span style="color: #964B00">**Hungarian**</span> delegates have been noticed, indicating a potential increase in influence.
+
+We should redouble our efforts.
+
+- @root: Concerning.

@@ -1,0 +1,13 @@
+title: <span style="color: #bf0000">**Soviet**</span> Influence on the Delegates
+subtitle: The <span style="color: #bf0000">**Soviets**</span> tighten their grip.
+on-arrival: uncommitted_influence_timer = 4; soviet_influence_uncommitted += 1;
+tags: event
+view-if: uncommitted_influence_timer <= 0 and stalin_struggle
+
+= <span style="color: #bf0000">**Soviet**</span> Influence on <span style="color: #800000">**Comintern**</span> Delegates
+
+Reports on increased <span style="color: #bf0000">**Soviet**</span> activity with some of the Uncommitted delegates from other parties have been noticed, indicating a potential increase in influence.
+
+We should redouble our efforts.
+
+- @root: Concerning.

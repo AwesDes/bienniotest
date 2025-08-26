@@ -17,6 +17,7 @@ Mass rallies have continued to be a common theme in cities across the nation, ce
 - @celebrate_economic: Celebrate our achievements at increasing our economic capacity.
 - @against_corruption: Rally against corruption & unjustness.
 - @general_celebrate: General celebration for the success of the revolution!
+- @democracy_stability: Celebrate a democratic and stable Republic.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -45,3 +46,11 @@ Our battle against corruption continues, as we rally against it for a better and
 on-arrival: public_opinion += 3;
 
 A general fervour within the nation still remains, excited and optimistic for the future that we cannot afford to disappoint. 
+
+@democracy_stability
+on-arrival: stability_count += 1; stability += 1 if stability >= 2; stability_text = 1 if stability_count >= 2; stability_count -= 2 if stability_count >= 2;
+on-departure: stability_text = 0
+
+The Kingdom represented a cruel time for the nation, workers suppressed and voting available only to the fortunate, alongside reactionary laws that brought its eventual ruin. The Republic must not follow its path, and stability and democracy are key to its longevity.
+
+[? if stability_text : Our stability has increased. ?]

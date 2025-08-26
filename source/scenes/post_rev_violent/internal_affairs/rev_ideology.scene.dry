@@ -1,0 +1,58 @@
+title: Questions of Ideology
+new-page: true
+is-card: true
+tags: internal_affairs
+view-if: rev_ideology_timer = 0
+on-arrival: week_actions += 1; old_ideology = ideology; rev_ideology_timer = 5
+card-image: img/Ideology.jpg
+max-visits: 8
+
+= Questions of Ideology
+
+The [+ psi_name +] is torn between many different ideological currents. What should be our primary ideological guidance for now?
+
+[? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
+
+- @left: Our primary task should be deepening class struggle against the counterrevolutionaries and defending the revolution.
+- @centrist: Maximalism remains the best balance to guide us towards stability in a time it is the most necessary.
+- @right: Following Eduard Bernstein & Filippo Turati, we can further strengthen democracy, expand participation and improve social inequality in the new state.
+- @easy_discard
+- @cancel_advisor_action
+
+@left
+on-arrival: {!
+if (Q.ideology && Q.ideology != "left") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "left"; communist_strength += 10; bordigist_dissent -= 5; ordinovist_dissent -= 5; gradualist_dissent += 3;
+
+<span style="color: #740000ff">**The Left**</span> supports its continued fight to defend the revolution.
+
+@centrist
+on-arrival: {!
+if (Q.ideology && Q.ideology != "maximalist") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "maximalist"; maximalist_strength += 10; maximalist_dissent -= 5; socpat_dissent -= 5; ordinovist_dissent -= 3; turatian_dissent -= 3
+
+<span style="color: #a00000ff">**The Centre**</span> represent a careful balance, attempting to bring together the <span style="color: #740000ff">**Left**</span> and <span style="color: #db0000ff">**Right**</span> as it did before the revolution.
+
+@right
+on-arrival: {!
+if (Q.ideology && Q.ideology != "right") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "right"; reformist_strength += 10; gradualist_dissent -= 5; turatian_dissent -= 5; bordigist_dissent += 3;
+
+<span style="color: #db0000ff">**The Right**</span> supports expanding democracy in the new revolution, as well as participation in a fairer and more equal society.
+
+@changed
+on-arrival: ordinovist_dissent += 5; bordigist_dissent += 5; maximalist_dissent += 5; socpat_dissent += 5; labour_dissent += 5; gradualist_dissent += 5; turatian_dissent += 5; syndicalist_dissent += 5 if syndicalist_active
+
+We have changed ideologies. Many in the party feel unmoored.

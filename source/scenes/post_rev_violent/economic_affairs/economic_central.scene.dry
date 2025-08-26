@@ -102,7 +102,7 @@ go-to: industry_delegate
 subtitle: -1.5 Budget - Heavy Industry remains the core of the industrial sector, and we can restore it.
 view-if: left_eco_adopted or both_eco_adopted
 on-arrival: {!
-Q.budget -= 2;
+Q.budget -= 1.5;
 Q.central_industry_health += 2.3 * Q.bureaucratic_modifier;
 !}
 
@@ -219,6 +219,7 @@ Peasants, now in control of fields, are able to grow crops by themselves and sel
 subtitle: -0.5 Budget - We could use the radio to help out farmers.
 view-if: radio >= 2
 on-arrival: {!
+Q.budget -= 0.5;
 Q.central_agricultural_health += 2.3;
 !}
 max-visits: 1

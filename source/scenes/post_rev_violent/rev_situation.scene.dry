@@ -65,4 +65,14 @@ Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]*
 {!<p style="text-align: center; margin-top: 10px; padding-left: 50px; padding-right: 50px">!}Our relations with the <span style="color: #bf0000">**Soviet Union**</span> are **[+ soviet_relation : low_high_small +]**.{!</p>!}
 {!</div>!}
 
+[? if soviet_hungary : {!<div>!} ?]
+[? if soviet_hungary : {!<img src='img/FlagHungary.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!} ?]
+[? if soviet_hungary : {!<p style="text-align: center; margin-top: 10px; padding-left: 50px; padding-right: 50px">!}Our relations with the <span style="color: #964B00">**Hungarian**</span> <span style="color: #BF0000">**Soviet Republic**</span> are **[+ hungary_relation : low_high_small +]**.{!</p>!} ?]
+[? if soviet_hungary : {!</div>!} ?]
+
+[? if soviet_germany : {!<div>!} ?]
+[? if soviet_germany : {!<img src='img/FlagGermany.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!} ?]
+[? if soviet_germany : {!<p style="text-align: center; margin-top: 10px; padding-left: 50px; padding-right: 50px">!}Our relations with the <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> <span style="color: #BF0000">**Soviet Republic**</span> are **[+ germany_relation : low_high_small +]**.{!</p>!} ?]
+[? if soviet_germany : {!</div>!} ?]
+
 - @backSpecialScene: Exit.

@@ -1,6 +1,6 @@
 title: Giolitti V Government Collapses!
 subtitle: The current coalition has fallen...
-view-if: year = 1921 and month = 7 and (not psi_in_government or not_participating = 1) and prime_minister = "Giolitti"
+view-if: year = 1921 and month = 7 and (not psi_in_government or not_participating = 1) and prime_minister = "Giolitti" and not violent_revolution
 new-page: true
 max-visits: 1
 on-arrival: {!

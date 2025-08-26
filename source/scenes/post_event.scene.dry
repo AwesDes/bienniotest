@@ -69,45 +69,45 @@ if (Q.violent_revolution) {
     }
 
 
-    Q.agricultural_health = parseFloat(Q.agricultural_health).toFixed(1);
-    Q.industry_health = parseFloat(Q.industry_health).toFixed(1);
-    Q.supply_health = parseFloat(Q.supply_health).toFixed(1);
+    Q.agricultural_health = Number(parseFloat(Q.agricultural_health).toFixed(1));
+    Q.industry_health = Number(parseFloat(Q.industry_health).toFixed(1));
+    Q.supply_health = Number(parseFloat(Q.supply_health).toFixed(1));
 
-    Q.northeast_industry_health = parseFloat(Q.northeast_industry_health).toFixed(1);
-    Q.northeast_supply_health = parseFloat(Q.northeast_supply_health).toFixed(1);
+    Q.northeast_industry_health = Number(parseFloat(Q.northeast_industry_health).toFixed(1));
+    Q.northeast_supply_health = Number(parseFloat(Q.northeast_supply_health).toFixed(1));
 
-    Q.northwest_industry_health = parseFloat(Q.northwest_industry_health).toFixed(1);
-    Q.northwest_supply_health = parseFloat(Q.northwest_supply_health).toFixed(1);
+    Q.northwest_industry_health = Number(parseFloat(Q.northwest_industry_health).toFixed(1));
+    Q.northwest_supply_health = Number(parseFloat(Q.northwest_supply_health).toFixed(1));
 
-    Q.central_agricultural_health = parseFloat(Q.central_agricultural_health).toFixed(1);
-    Q.central_industry_health = parseFloat(Q.central_industry_health).toFixed(1);
-    Q.central_supply_health = parseFloat(Q.central_supply_health).toFixed(1);
+    Q.central_agricultural_health = Number(parseFloat(Q.central_agricultural_health).toFixed(1));
+    Q.central_industry_health = Number(parseFloat(Q.central_industry_health).toFixed(1));
+    Q.central_supply_health = Number(parseFloat(Q.central_supply_health).toFixed(1));
 
-    Q.southern_agricultural_health = parseFloat(Q.southern_agricultural_health).toFixed(1);
-    Q.southern_supply_health = parseFloat(Q.southern_supply_health).toFixed(1);
+    Q.southern_agricultural_health = Number(parseFloat(Q.southern_agricultural_health).toFixed(1));
+    Q.southern_supply_health = Number(parseFloat(Q.southern_supply_health).toFixed(1));
 
-    Q.northeast_poverty = parseFloat(Q.northeast_poverty).toFixed(1);
-    Q.northeast_homelessness = parseFloat(Q.northeast_homelessness).toFixed(1);
-    Q.northeast_illiteracy = parseFloat(Q.northeast_illiteracy).toFixed(1);
+    Q.northeast_poverty = Number(parseFloat(Q.northeast_poverty).toFixed(1));
+    Q.northeast_homelessness = Number(parseFloat(Q.northeast_homelessness).toFixed(1));
+    Q.northeast_illiteracy = Number(parseFloat(Q.northeast_illiteracy).toFixed(1));
 
-    Q.northwest_poverty = parseFloat(Q.northwest_poverty).toFixed(1);
-    Q.northwest_homelessness = parseFloat(Q.northwest_homelessness).toFixed(1);
-    Q.northwest_illiteracy = parseFloat(Q.northwest_illiteracy).toFixed(1);
+    Q.northwest_poverty = Number(parseFloat(Q.northwest_poverty).toFixed(1));
+    Q.northwest_homelessness = Number(parseFloat(Q.northwest_homelessness).toFixed(1));
+    Q.northwest_illiteracy = Number(parseFloat(Q.northwest_illiteracy).toFixed(1));
 
-    Q.central_poverty = parseFloat(Q.central_poverty).toFixed(1);
-    Q.central_homelessness = parseFloat(Q.central_homelessness).toFixed(1);
-    Q.central_illiteracy = parseFloat(Q.central_illiteracy).toFixed(1);
+    Q.central_poverty = Number(parseFloat(Q.central_poverty).toFixed(1));
+    Q.central_homelessness = Number(parseFloat(Q.central_homelessness).toFixed(1));
+    Q.central_illiteracy = Number(parseFloat(Q.central_illiteracy).toFixed(1));
     
-    Q.southern_poverty = parseFloat(Q.southern_poverty).toFixed(1);
-    Q.southern_homelessness = parseFloat(Q.southern_homelessness).toFixed(1);
-    Q.southern_illiteracy = parseFloat(Q.southern_illiteracy).toFixed(1);
+    Q.southern_poverty = Number(parseFloat(Q.southern_poverty).toFixed(1));
+    Q.southern_homelessness = Number(parseFloat(Q.southern_homelessness).toFixed(1));
+    Q.southern_illiteracy = Number(parseFloat(Q.southern_illiteracy).toFixed(1));
 
-    Q.agricultural_health = (Q.southern_agricultural_health * 0.9) + (Q.central_agricultural_health * 0.1);
+    Q.agricultural_health = Number((Q.southern_agricultural_health) * 0.9) + Number((Q.central_agricultural_health) * 0.1);
     Q.supply_health = Number(Q.northeast_supply_health) + Number(Q.northwest_supply_health) + Number(Q.central_supply_health) + Number(Q.southern_supply_health);
-    Q.industry_health = (Q.northeast_industry_health * 0.45) + (Q.northwest_industry_health * 0.45) + (Q.central_industry_health * 0.15);
-    Q.poverty = (Q.northeast_poverty * 0.25) + (Q.northwest_poverty * 0.25) + (Q.central_poverty * 0.2) + (Q.southern_poverty * 0.3);
-    Q.homelessness = (Q.northeast_homelessness * 0.25) + (Q.northwest_homelessness * 0.25) + (Q.central_homelessness * 0.2) + (Q.southern_homelessness * 0.3);
-    Q.illiteracy = (Q.northeast_illiteracy * 0.25) + (Q.northwest_illiteracy * 0.25) + (Q.central_illiteracy * 0.2) + (Q.southern_illiteracy * 0.3);
+    Q.industry_health = Number((Q.northeast_industry_health) * 0.45) + Number((Q.northwest_industry_health) * 0.45) + Number((Q.central_industry_health) * 0.15);
+    Q.poverty = Number((Q.northeast_poverty) * 0.25) + Number((Q.northwest_poverty) * 0.25) + Number((Q.central_poverty) * 0.2) + Number((Q.southern_poverty) * 0.3);
+    Q.homelessness = Number((Q.northeast_homelessness) * 0.25) + Number((Q.northwest_homelessness) * 0.25) + Number((Q.central_homelessness) * 0.2) + Number((Q.southern_homelessness) * 0.3);
+    Q.illiteracy = Number((Q.northeast_illiteracy) * 0.25) + Number((Q.northwest_illiteracy) * 0.25) + Number((Q.central_illiteracy) * 0.2) + Number((Q.southern_illiteracy) * 0.3);
 
     Q.supply_health = Number(Q.supply_health).toFixed(1);
     Q.industry_health = Number(Q.industry_health).toFixed(1);
@@ -124,6 +124,7 @@ if (Q.year == 1924 && Q.month == 10 && Q.week == 3 && Q.supported_entente >= 2) 
 
 if (Q.year == 1919 && Q.month == 8 && Q.week == 1 && Q.supported_hungary >= 2) {
     Q.soviet_hungary = 1;
+    Q.hungary_relation = 7;
 }
 
 if (Q.year == 1920 && Q.month == 9 && Q.week == 3 && Q.supported_ussr >= 2) {
@@ -1852,11 +1853,13 @@ if (Q.week_actions >= 1) {
 
         // agri equipment supply railway bottleneck check
 
-        if (Q.agricultural_goods_unit > 0) {
-            if (Q.central_supply_health >= (Q.agricultural_goods_unit * 10)) {
-                Q.southern_agricultural_health += 0.4 * Q.agricultural_goods_unit;
+        Q.agri_goods_total = Q.agricultural_goods_unit + Q.exported_agricultural_goods_unit
+
+        if (Q.agri_goods_total > 0) {
+            if (Q.central_supply_health >= (Q.agri_goods_total * 10)) {
+                Q.southern_agricultural_health += 0.4 * Q.agri_goods_total;
             } else {
-                Q.southern_agricultural_health += 0.1 * Q.agricultural_goods_unit;
+                Q.southern_agricultural_health += 0.1 * Q.agri_goods_total;
             }
         }
 
@@ -1878,11 +1881,13 @@ if (Q.week_actions >= 1) {
 
         // consumer goods impact
 
-        if (Q.consumer_goods_unit > 0) {
-            Q.northeast_poverty -= 0.1/4 * (Q.consumer_goods_unit);
-            Q.northwest_poverty -= 0.1/4 * (Q.consumer_goods_unit);
-            Q.southern_poverty -= 0.1/4 * (Q.consumer_goods_unit);
-            Q.central_poverty -= 0.1/4 * (Q.consumer_goods_unit);
+        Q.consumer_goods_total = Q.consumer_goods_unit + Q.imported_consumer_goods_unit;
+
+        if (Q.consumer_goods_total > 0) {
+            Q.northeast_poverty -= 0.1/4 * (Q.consumer_goods_total);
+            Q.northwest_poverty -= 0.1/4 * (Q.consumer_goods_total);
+            Q.southern_poverty -= 0.1/4 * (Q.consumer_goods_total);
+            Q.central_poverty -= 0.1/4 * (Q.consumer_goods_total);
         }
 
         // military arms impact
@@ -1900,14 +1905,27 @@ if (Q.week_actions >= 1) {
         // trade check
 
         if (Q.week == 1) {
-            Q.budget += Q.trade_deficit;
+            Q.budget += Q.entente_trade_deficit;
+            Q.budget += Q.comintern_trade_deficit;
         }
 
         if (Q.exported_cash_crops_unit >= Q.cash_crops_unit) {
-            Q.trade_deficit -= 1;
+            Q.entente_trade_deficit -= 1;
             Q.exported_cash_crops_unit -= 1;
         }
 
+        if (Q.exported_agricultural_goods_unit >= Q.agricultural_goods_unit) {
+            Q.comintern_trade_deficit -= 1;
+            Q.exported_agricultural_goods_unit -= 1;
+        }
+
+        // invasion check
+
+        if (Q.foreign_introduced && Q.army_strength < 400) {
+            Q.foreign_invasion_timer -= 1;
+        } else (Q.foreign_introduced && Q.army_strength >= 400 && Q.foreign_invasion_timer < 6) {
+            Q.foreign_invasion_timer = 6;
+        }
     }
 }
 Q.has_event = 0;

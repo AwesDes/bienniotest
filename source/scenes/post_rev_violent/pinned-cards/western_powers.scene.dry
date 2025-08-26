@@ -3,6 +3,7 @@ is-pinned-card: true
 tags: foreign_pol
 card-image: img/Entente.jpg
 new-page: true
+on-arrival: week_actions += 1;
 go-to: trade_menu
 
 = The <span style="color: #046276">**Western Powers**</span>
@@ -19,15 +20,69 @@ Yet, to call these nations weak, to call them sympathetic to us would be a grave
 
 @trade_menu
 
-Our trade volume places us at [+ trade_deficit +] every month.
+[? if entente_trade_deficit != 0 : Our trade volume places us at [+ entente_trade_deficit +] every month, which we pay or receive on first week of every month. ?]
 
+- @improve_relation_uk: Improve our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span>.
+- @improve_relation_france: Improve our relations with <span style="color: #39AAAA">**France**</span>.
+- @seek_investments: Seek & Encourage investments from the <span style="color: #046276">**Western Powers**</span>.
+- @open_trade_entente: Can we open trade with the <span style="color: #046276">**Western Powers**</span>.
 - @buy_staple_crops: Purchase Staple Crops from the <span style="color: #046276">**Western Powers**</span>.
+- @reduce_staple_crops: Reduce the amount of Staple Crops we are importing.
 - @sell_cash_crops: Sell Cash Crops to the <span style="color: #046276">**Western Powers**</span>.
+- @reduce_cash_crops: Reduce the amount of Cash Crops we are exporting.
+- @rev_pinned_return
+
+@improve_relation_uk
+on-arrival: british_relation += 1; foreign_invasion_timer += 2 if foreign_invasion_timer < 6
+
+Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> have always been rocky, from their betrayal following the Treaty of London to our revolution. Nevertheless, <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tain**</span> remains a necessary trading partner in the world, and reassurances would go a long way in repairing relations to cordial terms, at the very least.
+
+@improve_relation_france
+on-arrival: french_relation += 1; foreign_invasion_timer += 2 if foreign_invasion_timer < 6
+
+Our revolution has brought great concern to the <span style="color: #39AAAA">**Republic**</span>, now sharing a border with a <span style="color: #BF0000">**Soviet Republic**</span>. Regardless, we can reassure the <span style="color: #39AAAA">**Republic**</span> that we have no intention of coming into conflict, nor dragging the nation back into a global conflict mere years after its first.
+
+@seek_investments
+subtitle: +1.5 Budget - We can encourage foreign investors to invest in us.
+choose-if: british_relation >= 1 and french_relation >= 1
+view-if: right_eco_adopted
+unavailable-subtitle: [? if british_relation < 1 : Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> are too poor. ?] [? if french_relation < 1 : Our relations with <span style="color: #39AAAA">**France**</span> are too poor. ?]
+on-arrival: british_relation -= 1; french_relation -= 1;
+
+Capital Flight has left the nation in...desperate need for funds. With the *New Economic Policy*, our efforts to return foreign investments back to the nation have redoubled, hopefully aiding our economic and social recovery.
+
+@open_trade_entente
+choose-if: british_relation >= 5 and french_relation >= 5
+unavailable-subtitle: [? if british_relation < 5 : Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> are too poor. ?] [? if french_relation < 5 : Our relations with <span style="color: #39AAAA">**France**</span> are too poor. ?]
+view-if: not opened_trade
+on-arrival: open_trade = 1; 
+
+Foreign Market Access has been limited following the Civil War, with only members of the <span style="color: #800000">**International**</span> opening their arms to trade. Through negotiations, however, we have achieved a trade deal to open markets with the <span style="color: #046276">**Western Powers**</span>! 
+
+This will aid in exporting our goods and importing crops we might need massively.
 
 @buy_staple_crops
-on-arrival: imported_staple_crops_unit += 1; trade_deficit -= 1;
+subtitle: -1.5 Budget Per Staple Crop Unit.
+view-if: opened_trade
+on-arrival: imported_staple_crops_unit += 1; entente_trade_deficit -= 1.5;
+
+Even prior to the war, a significant portion of our domestic food consumption had to be imported, not to mention after the revolution. Hopefully, importing foods from foreign market will have alleviate social inequality plaguing the nation.
+
+@reduce_staple_crops
+subtitle: -1.5 Budget Per Staple Crop Unit.
+view-if: opened_trade and imported_staple_crops_unit > 0
+on-arrival: imported_staple_crops_unit -= 1; entente_trade_deficit += 1.5;
 
 @sell_cash_crops
+subtitle: +1 Budget Per Cash Crop Unit.
+view-if: opened_trade
 choose-if: cash_crops_unit >= exported_cash_crops_unit
 unavailable-subtitle: Not enough Cash Crops Units.
-on-arrival: exported_cash_crops_unit += 1; trade_deficit += 1;
+on-arrival: exported_cash_crops_unit += 1; entente_trade_deficit += 1;
+
+Our surplus of Cash Crops have allowed us to export our yields to willing markets in <span style="color: #39AAAA">**France**</span> and the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span>, netting us profits we can reinvest into the economy.
+
+@reduce_cash_crops
+subtitle: +1 Budget Per Cash Crop Unit.
+view-if: opened_trade and exported_cash_crops_unit > 0
+on-arrival: exported_cash_crops_unit -= 1; entente_trade_deficit -= 1;

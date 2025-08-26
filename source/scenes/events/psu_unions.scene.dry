@@ -1,7 +1,7 @@
 title: PSU consolidates support base
 new-page: true 
 tags: event
-view-if: psu_formed and unions_break
+view-if: psu_formed and unions_break and not violent_revolution
 on-arrival: workers_psu *= 1.4; workers_psu *= 1.2 if pcdi_formed = 0; veterans_psu *= 1.1; veterans_psu *= 1.1 if pcdi = 0; middle_class_psu += 5; socialist_sentiment += 2; republican_sentiment += 4;
 max-visits: 1
 

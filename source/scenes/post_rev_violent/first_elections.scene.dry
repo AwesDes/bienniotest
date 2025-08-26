@@ -83,6 +83,14 @@ for (var faction of Q.rev_factions) {
     Q[faction+'_seating_disp'] = parseFloat(Q[faction+'_seating_disp']).toFixed(1);
 }
 
+Q.bordigist_dissent = 0;
+Q.ordinovist_dissent = 0;
+Q.maximalist_dissent = 0;
+Q.socpat_dissent = 0;
+Q.syndicalist_dissent = 0;
+Q.labour_dissent = 0;
+Q.turatian_dissent = 0;
+Q.gradualist_dissent = 0;
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -353,7 +361,7 @@ max-visits: 1
 
 Foreign recognition of the Soviet Republic has been scarce, with recognition only coming from our socialist allies with the East. However, the establishemt of the Ministry of Foreign Affairs will allow us to expand our international reach further and gain legitimacy as a nation around the world.
 
-[? if not reformists_expelled : Though our explusion from the <span style="color: #800000">**Communist International**</span> was only a couple years ago, we have received yet another invitation to rejoin the International, having been able to overthrow its bourgeois oppressors. Although it will certainly take time and effort from the Foreign Ministry, the mending of ties between <span style="color: #009246">**Italy**</span> and <span style="color: #bf0000">**Russia**</span> would mean a step closer towards internationalism and perhaps mutual aid between the two nations. ?]
+[? if not reformists_expelled : Though our expulsion from the <span style="color: #800000">**Communist International**</span> was only a couple years ago, we have received yet another invitation to rejoin the International, having been able to overthrow its bourgeois oppressors. Although it will certainly take time and effort from the Foreign Ministry, the mending of ties between <span style="color: #009246">**Italy**</span> and <span style="color: #bf0000">**Russia**</span> would mean a step closer towards internationalism and perhaps mutual aid between the two nations. ?]
 
 [? if reformists_expelled : Our victory has warranted a celebration amongst our allies in the <span style="color: #800000">**Communist International**</span>, who have called a new World Congress to discuss developments within the world. With the firm recognition and support of our Communist allies to the East, some within the party have suggested diplomatic overtures to the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> and <span style="color: #39AAAA">**France**</span>, our former allies, in an effort to open trade relations and diplomatic recognition. ?]
 
@@ -389,13 +397,13 @@ What should we do?
 - @debts_no: Repudiate all sovereign debts owed and financial obligations!
 
 @debts_yes
-on-arrival: debt = 7; debt -= 2 if uk_debts_over; british_relation += 1; maximalist_dissent += 10; labour_dissent += 10; bordigist_dissent += 10; ordinovist_dissent += 10
+on-arrival: budget-= 7; budget += 2 if uk_debts_over; british_relation += 1; maximalist_dissent += 10; labour_dissent += 10; bordigist_dissent += 10; ordinovist_dissent += 10
 go-to: decisions
 
 In an effort to continue cordial relations with the <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and <span style="color: #3C3B6E">**Amer**</span><span style="color: #B22234">**icans**</span>, we assume responsibility of the debts left behind by the <span style="color: #009246">**Italian Kingdom**</span>, placing us in a relatively unstable financial position.
 
 @debts_no
-on-arrival: french_relation -= 1; british_relation -= 3;
+on-arrival: french_relation -= 2; british_relation -= 5;
 go-to: decisions
 
 Like the <span style="color: #bf0000">**Russians**</span>, we repudiate all bonds issued by the <span style="color: #009246">**Italian Kingdom**</span>, cancelling all previously issued debt and ceasing payment of foreign debt, declaring them to be void. Foreign assets within the nation have been expropriated.

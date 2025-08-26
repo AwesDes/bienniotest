@@ -1,5 +1,5 @@
 title: Sturzo Dismissed!
-view-if: year == 1923 and month = 7 and week = 1 and (roman_question_answered = 0 or pope = "Del Val") and ppi_leader == "Sturzo" and pnf_in_government
+view-if: year == 1923 and month = 7 and week = 1 and (roman_question_answered = 0 or pope = "Del Val") and ppi_leader == "Sturzo" and pnf_in_government and not violent_revolution
 frequency: 1000
 max-visits: 1
 on-arrival: ppi_leader = "De Gasperi" if ppi_leader == "Sturzo";

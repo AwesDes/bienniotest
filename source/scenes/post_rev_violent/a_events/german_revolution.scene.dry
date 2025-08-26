@@ -1,0 +1,16 @@
+title: <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> October
+subtitle: The dust settles on a new <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>.
+view-if: year = 1923 and month = 10 and week = 3 and not pcdi_formed and violent_revolution and soviet_polish_victory = 1 and comintern_seen
+on-arrival: soviet_germany = 1; public_opinion += 7; stability += 1; communist_strength += 10; germany_relation = 7
+max-visits: 1
+tags: event
+new-page: true
+achievement: spartaco_marcia_ancora
+
+= Establishment of a <span style="color: #bf0000">**Soviet**</span> <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span>
+
+The <span style="color: #700000">**Kommunistische Partei Deutschlands**</span> under the leadership of Paul Levi, have overthrown the Weimar Republic. Following strikes against then-Chancellor Wilhelm Cuno, the <span style="color: #700000">**KPD**</span> was able to enter into coalition governments within numerous states, utilising its position to arm workers and establish paramilitary forces.
+
+First Saxony, then Thuringia and finally Hamburg. In collaboration with the left-wing of the <span style="color: #E3000F">**Sozialdemokratische Partei Deutschlands**</span>, the <span style="color: #700000">**KPD**</span> formed combat units and following a successful workers' congress in Chemnitz, begun a general strike and mobilised its forces, achieving victory in a swift coup.
+
+A wave of socialist sentiment was occurred within Italy following the news, as well as the reinvigoration of optimism within the party, combined with a strengthening of the left-wing of the [+ psi_name +]. Regardless, it seems we will be able to count on further international support should we require it.

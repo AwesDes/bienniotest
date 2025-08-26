@@ -1,7 +1,7 @@
 title: Fascist Sympathisers in the Party
 subtitle: We have caught wind of some interesting information...
 new-page: true
-view-if: fasci_urgency > 5
+view-if: fasci_urgency > 5 and not violent_revolution
 tags: event
 max-visits: 1
 

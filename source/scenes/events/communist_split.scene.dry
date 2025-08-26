@@ -2,7 +2,7 @@ title: Communist Split
 new-page: true 
 subtitle: The Left's disagreements with our policies have grown too severe.
 tags: event
-view-if: communist_dissent >= 60
+view-if: communist_dissent >= 60 and not violent_revolution
 on-arrival: communist_split = 1; rural_pcdi += rural_psi * 0.3; workers_pcdi += workers_psi * 0.2; workers_other += 3; veterans_pcdi *= veterans_psi * 0.5; workers_psi *= 0.85; veterans_psi *= 0.5; communist_strength *= 0.5; n_advisors -= 1 if terracini_advisor == 1; terracini_advisor = 0; n_advisors -= 1 if togliatti_advisor == 1; togliatti_advisor = 0; n_advisors -= 1 if gramsci_advisor == 1; gramsci_advisor = 0; n_advisors -= 1 if bordiga_advisor == 1; bordiga_advisor = 0; pcdi_formed = 1; n_advisors -= 1 if tasca_advisor == 1; tasca_advisor = 0; pcdi_congress_time = time + 4 {!
 Q.sov_rg_strength = Q.rg_strength *= 0.6;
 Q.rg_strength *= 0.4; 

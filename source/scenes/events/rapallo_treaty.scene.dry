@@ -1,7 +1,7 @@
 title: Adriatic Negotiations
 new-page: true
 subtitle: It's time to address the Adriatic.
-view-if: adriatic_timer <= 0 and resolved_adriatic == 0
+view-if: adriatic_timer <= 0 and resolved_adriatic == 0 and not violent_revolution
 tags: event
 face-image: img/YugoslavCommittee.jpg
 

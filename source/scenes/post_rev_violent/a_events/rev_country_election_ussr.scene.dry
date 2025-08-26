@@ -70,7 +70,7 @@ After fierce deliberations and voting, the Congress elects the 13th Central Comm
 - @duumvirate_elected: A Duumvirate between Lev Kamenev and Grigory Zinoviev seizes control of the party!
 
 @stalin_elected
-on-arrival: soviet_leader = "Stalin"
+on-arrival: soviet_leader = "Stalin"; soviet_emergency_timer = time + 12;
 set-bg: img/background.png
 choose-if: stalin_influence >= trotsky_influence and stalin_influence >= bukharin_influence and stalin_influence >= duumvirate_influence
 unavailable-subtitle: [? if pcdi_formed : A more aligned PCd'I could swing the Congress in his favour. ?][? if not pcdi_formed : A party split might just be the way for Stalin to seize control. ?]

@@ -1,6 +1,6 @@
 title: Capital Flight
 subtitle: The ramifications of the Civil War expand.
-on-arrival: northwest_industry_health *= 0.8; northeast_industry_health *= 0.8; inflation += 2.3; economic_growth -= 4.9; unemployment += 8.4;
+on-arrival: northwest_industry_health *= 0.8; northeast_industry_health *= 0.8; 
 tags: event
 view-if: violent_revolution = 1
 max-visits: 1

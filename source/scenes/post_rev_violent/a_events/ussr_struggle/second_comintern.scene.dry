@@ -1,0 +1,103 @@
+title: [+ year +] World Congress of the <span style="color: #800000">**Communist International**</span>
+subtitle: Our delegates arrive in Moscow.
+new-page: true
+view-if: time >= second_comintern_time and stalin_struggle
+max-visits: 1
+tags: event
+face-image: img/CominternImage.jpg
+on-arrival: stalin_struggle = 0;
+
+= <img src="img/CominternLogo.png" style="height: 64px; width: 64px;"> [+ year +] World Congress of the <span style="color: #800000">**Communist International**</span>
+
+The Second World Congress of the <span style="color: #800000">**Communist International**</span> has begun. The first Congress since our struggle, the outcome of this Congress will decide on who comes out on top in Stalin's attempt at subjugation.
+
+There are many issues on the agenda, though one naturally stands out.
+
+- @begin_congress_soviet: The Congress opens. The <span style="color: #bf0000">**Soviet**</span> delegates take the floor.
+
+@begin_congress_soviet
+on-arrival: {!
+Q.italy_delegates = 0;
+Q.soviet_delegates = 0;
+
+Q.soviet_delegates += Q.soviet_influence_uncommitted;
+Q.italy_delegates += Q.italy_influence_uncommitted;
+
+if (Q.soviet_germany) {
+    Q.soviet_delegates += Q.soviet_influence_germany;
+    Q.italy_delegates += Q.italy_influence_germany;
+}
+
+if (Q.soviet_hungary) {
+    Q.soviet_delegates += Q.soviet_influence_hungary;
+    Q.italy_delegates += Q.italy_influence_hungary;
+}
+
+Q.total_delegates = Q.italy_delegates + Q.soviet_delegates;
+!}
+
+Nikolai Bukharin takes the floor. Speaking on a number of issues, from the importance of internationalism to the necessity to defend the revolution from reactionaries, one important issue is brought up.
+
+The Organisation of the <span style="color: #800000">**Comintern**</span>. Espousing the necessity of unity and discipline, Bukharin emphasises the importance of having a vanguard of the <span style="color: #800000">**Communist International**</span>. One led by the <span style="color: #bf0000">**Soviet Union**</span>, bringing the topic towards us. Lies upon lies are thrown upon us, criticising our every move as deviancy from the path of the <span style="color: #800000">**Communist International**</span>, from our social-democratic ties to our inclusion of "Left-Wing" Communism in the party.
+
+The <span style="color: #bf0000">**Soviets**</span> have taken the opportunity. A motion to expel the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> is floored, a move that would cement our isolation amongst not just the <span style="color: #046276">**Entente**</span>, but amongst our <span style="color: #800000">**International**</span> allies as well.
+
+- @comintern_display
+
+@comintern_display
+on-display: {!
+data = []
+
+data.push({
+    "id": "aye",
+    "legend": "Aye",
+    "name": "Aye",
+    "seats": Math.round((Q.soviet_delegates / Q.total_delegates) * 200),
+});
+
+data.push({
+    "id": "nay",
+    "legend": "Nay",
+    "name": "Nay",
+    "seats": Math.round((Q.italy_delegates / Q.total_delegates) * 200),
+});
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("chamber").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#chamber").datum(data).call(parliament);
+}
+!}
+go-to: second_vote
+
+{!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
+
+- @soviet_triumph: The Motion Passes.
+- @italy_triumph: The Motion Fails.
+
+@soviet_triumph
+on-arrival: comintern_expelled = 1; foreign_intro_time = time + 2
+view-if: soviet_delegates >= italy_delegates
+
+The Uncommitted delegates have sided with Stalin, voting for the motion to expel us.
+
+Stalin has won. We are expelled from the <span style="color: #800000">**Communist International**</span>, effective immediately. We should be wary of the <span style="color: #046276">**Western Powers**</span>, now that the <span style="color: #800000">**International**</span> has abandoned us.
+
+@italy_triumph
+on-arrival: stalin_struggle = 0;
+view-if: italy_delegates > soviet_delegates
+
+The Uncommitted delegates are able to swing the votes in our favour, albeit most only joining our side conditionally. Nevertheless, we remain in the <span style="color: #800000">**International**</span>, albeit our relations with the <span style="color: #BF0000">**Soviets**</span> remain tense, naturally.
+
+Stalin's plan has failed, for now.

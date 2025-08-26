@@ -1,7 +1,7 @@
 title: Report on the First Session of the Economic plan
 subtitle: The moment of truth...
 new-page: true
-view-if: deadline_active and month >= deadline_month and deadline_year = year
+view-if: deadline_active and month >= deadline_month and deadline_year = year and not in_emergency
 tags: event
 
 = Report by the [? if left_eco_adopted : State Planning Committee ?] [? if right_eco_adopted : Ministry of Economy ?] [? if both_eco_adopted : State Planning Committee and the Ministry of Economy ?]
@@ -79,16 +79,10 @@ Reports have delivered shocking, perhaps expected news: We have failed to meet o
 - @economic_failure: Our Economic Plan is declared a failure.
 
 @yippee
+on-arrival: economic_goals_reached = 1
 
 Placeholder
 
-- @foreign_focus: Focus our direction on the world.
-- @internal_focus: Focus our direction internally.
+With our economy recovered, we can dedicate resources to eliminating the <span style="color: #1E99C5">**para**</span><span style="color: #00247D">**mili**</span><span style="color: #465053ff">**taries**</span> permanently.
 
-@foreign_focus
-
-Placeholder
-
-@internal_focus
-
-Placeholder
+- @second_election: The Second <span style="color: #BF0000">**Congress of Soviets**</span> is called.
