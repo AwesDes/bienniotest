@@ -79,7 +79,6 @@ if (window && d3) {
     d3.select("#chamber").datum(data).call(parliament);
 }
 !}
-go-to: second_vote
 
 {!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
 
