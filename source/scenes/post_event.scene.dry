@@ -1542,7 +1542,7 @@ if (Q.week_actions >= 1) {
 
         // check if loaded in from save
 
-        if (document.getElementById('rev_main_tab').style.display != "none") {
+        if (document.getElementById('rev_main_tab').style.display != "") {
             document.getElementById('situation-link').style.display = "";
             document.getElementById('rev_main_tab').style.display = "";
             document.getElementById('rev_politics_tab').style.display = "";
