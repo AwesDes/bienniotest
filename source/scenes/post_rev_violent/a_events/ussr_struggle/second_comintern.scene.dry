@@ -42,9 +42,10 @@ The Organisation of the <span style="color: #800000">**Comintern**</span>. Espou
 
 The <span style="color: #bf0000">**Soviets**</span> have taken the opportunity. A motion to expel the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> is floored, a move that would cement our isolation amongst not just the <span style="color: #046276">**Entente**</span>, but amongst our <span style="color: #800000">**International**</span> allies as well.
 
-- @comintern_display
+- @comintern_display: The Motion is floored.
 
 @comintern_display
+subtitle: The moment of truth...
 on-display: {!
 data = []
 
