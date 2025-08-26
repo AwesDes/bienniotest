@@ -109,13 +109,13 @@ if (Q.violent_revolution) {
     Q.homelessness = Number((Q.northeast_homelessness) * 0.25) + Number((Q.northwest_homelessness) * 0.25) + Number((Q.central_homelessness) * 0.2) + Number((Q.southern_homelessness) * 0.3);
     Q.illiteracy = Number((Q.northeast_illiteracy) * 0.25) + Number((Q.northwest_illiteracy) * 0.25) + Number((Q.central_illiteracy) * 0.2) + Number((Q.southern_illiteracy) * 0.3);
 
-    Q.supply_health = Number(Q.supply_health).toFixed(1);
-    Q.industry_health = Number(Q.industry_health).toFixed(1);
-    Q.agricultural_health = Number(Q.agricultural_health).toFixed(1);
+    Q.supply_health = Number(Number(Q.supply_health).toFixed(1));
+    Q.industry_health = Number(Number(Q.industry_health).toFixed(1));
+    Q.agricultural_health = Number(Number(Q.agricultural_health).toFixed(1));
 
-    Q.poverty = Number(Q.poverty).toFixed(1);
-    Q.homelessness = Number(Q.homelessness).toFixed(1);
-    Q.illiteracy = Number(Q.illiteracy).toFixed(1);
+    Q.poverty = Number(Number(Q.poverty).toFixed(1));
+    Q.homelessness = Number(Number(Q.homelessness).toFixed(1));
+    Q.illiteracy = Number(Number(Q.illiteracy).toFixed(1));
 }
 
 if (Q.year == 1924 && Q.month == 10 && Q.week == 3 && Q.supported_entente >= 2) {
@@ -1923,7 +1923,7 @@ if (Q.week_actions >= 1) {
 
         if (Q.foreign_introduced && Q.army_strength < 400) {
             Q.foreign_invasion_timer -= 1;
-        } else (Q.foreign_introduced && Q.army_strength >= 400 && Q.foreign_invasion_timer < 6) {
+        } else if (Q.foreign_introduced && Q.army_strength >= 400 && Q.foreign_invasion_timer < 6) {
             Q.foreign_invasion_timer = 6;
         }
     }
