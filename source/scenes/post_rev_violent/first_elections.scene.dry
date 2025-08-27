@@ -36,41 +36,41 @@ if (Q.pcdi_formed) {
     Q.total_percentage += parseFloat(Q.pcdi_votes);
 }
 
-Q.other_r_disp = (Q.other_votes / Q.total_percentage) * 100;
+Q.other_r = (Q.other_votes / Q.total_percentage) * 100;
 
-Q.maximalist_r_disp = (Q.maximalist_strength / Q.total_strength) * (Q.psi_votes/Q.total_percentage) * 100;
+Q.maximalist_r = (Q.maximalist_strength / Q.total_strength) * (Q.psi_votes/Q.total_percentage) * 100;
 
 Q.communist_r = (Q.communist_strength / Q.total_strength) * (Q.psi_votes/Q.total_percentage) * 100;
-Q.bordigist_r_disp = Q.communist_r/2;
-Q.ordinovist_r_disp = Q.communist_r/2;
-Q.socpat_r_disp = (Q.pnf_votes/Q.total_percentage) * 100;
+Q.bordigist_r = Q.communist_r/2;
+Q.ordinovist_r = Q.communist_r/2;
+Q.socpat_r = (Q.pnf_votes/Q.total_percentage) * 100;
 
-Q.labour_r_disp = (Q.labour_strength / Q.total_strength) * (Q.psi_votes/Q.total_percentage) * 100;
-Q.turatian_r_disp = (Q.reformist_strength / Q.total_strength) * (Q.psi_votes/Q.total_percentage) * 100;
+Q.labour_r = (Q.labour_strength / Q.total_strength) * (Q.psi_votes/Q.total_percentage) * 100;
+Q.turatian_r = (Q.reformist_strength / Q.total_strength) * (Q.psi_votes/Q.total_percentage) * 100;
 
 if (Q.syndicalist_active) {
     Q.syndicalist_r = (Q.syndicalist_strength / Q.total_strength) * (Q.psi_votes/Q.total_percentage) * 100;
 }
 
 if (Q.psu_formed) {
-    Q.turatian_r_disp += (Q.psu_votes/Q.total_percentage) * 100;
+    Q.turatian_r += (Q.psu_votes/Q.total_percentage) * 100;
 }
 
 if (Q.pcdi_formed) {
     if (Q.pcdi_leader == "Bordiga") {
-        Q.bordigist_r_disp += (Q.pcdi_votes/Q.total_percentage) * 0.8 * 100;
-        Q.ordinovist_r_disp += (Q.pcdi_votes/Q.total_percentage) * 0.2 * 100;
+        Q.bordigist_r += (Q.pcdi_votes/Q.total_percentage) * 0.8 * 100;
+        Q.ordinovist_r += (Q.pcdi_votes/Q.total_percentage) * 0.2 * 100;
     }
     if (Q.pcdi_leader == "Gramsci") {
-        Q.bordigist_r_disp += (Q.pcdi_votes/Q.total_percentage) * 0.2 * 100;
-        Q.ordinovist_r_disp += (Q.pcdi_votes/Q.total_percentage) * 0.8 * 100;
+        Q.bordigist_r += (Q.pcdi_votes/Q.total_percentage) * 0.2 * 100;
+        Q.ordinovist_r += (Q.pcdi_votes/Q.total_percentage) * 0.8 * 100;
     }
 }
 
-Q.gradualist_r_disp = (Q.psri_votes/Q.total_percentage) * 100;
+Q.gradualist_r = (Q.psri_votes/Q.total_percentage) * 100;
 
 for (var faction of Q.rev_factions) {
-    Q[faction+'_r_disp'] = parseFloat(Q[faction+'_r_disp']);
+    Q[faction+'_r_disp'] = parseFloat(Q[faction+'_r']);
     Q[faction+'_r_disp'] = parseFloat(Q[faction+'_r_disp']).toFixed(1);
 
     Q['change_' + faction + '_r'] = Q[faction + '_r_disp'] - Q['old_' + faction + '_r'];
