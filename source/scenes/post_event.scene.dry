@@ -1934,12 +1934,12 @@ if (Q.week_actions >= 1) {
             Q.budget += Q.comintern_trade_deficit;
         }
 
-        if (Q.exported_cash_crops_unit >= Q.cash_crops_unit) {
+        if (Q.exported_cash_crops_unit > Q.cash_crops_unit) {
             Q.entente_trade_deficit -= 1;
             Q.exported_cash_crops_unit -= 1;
         }
 
-        if (Q.exported_agricultural_goods_unit >= Q.agricultural_goods_unit) {
+        if (Q.exported_agricultural_goods_unit > Q.agricultural_goods_unit) {
             Q.comintern_trade_deficit -= 1;
             Q.exported_agricultural_goods_unit -= 1;
         }
