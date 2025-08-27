@@ -2,11 +2,22 @@ title: [+ southern_railways : southern_regions +] Railways Bombed
 subtitle: The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> make their move!
 new-page: true
 view-if: as_attack_timer <= 0 and as_decision = 1
-on-arrival: as_decision = 0; as_attack_timer = 6; southern_supply_health -= 5; public_opinion -= 5; stability -= 0.2;
+on-arrival: as_decision = 0; as_attack_timer = 6;
 tags: event
+go-to: attack_success; attack_failure if increased_south >= 1
+
+@attack_success
+on-arrival: southern_supply_health -= 3.4; public_opinion -= 5; stability -= 0.2;
 
 = [+ southern_railways : southern_regions +] Railways Bombed
 
 The Railways within [+ southern_railways : southern_regions +] have been attacked by an <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squad**</span> cell, who have claimed responsibility for the bombing. 
 
 Our Infrastructure within the Mezzogiorno is impacted slightly, and will take time to recover, as is public opinion for our failure to prevent this attack from occurring in the first place.
+
+@attack_failure
+on-arrival: increased_south -= 1;
+
+= [+ southern_railways : southern_regions +] Attack Thwarted
+
+Our efforts to reinforce the South have borne fruit. An attack by the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> has been thwarted due to our increased defences, preventing yet another setback to our attempts at recovery.

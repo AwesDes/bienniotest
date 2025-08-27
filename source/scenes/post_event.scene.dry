@@ -1708,25 +1708,25 @@ if (Q.week_actions >= 1) {
             Q.debt_multiplier = Q.budget + -5;
             Q.debt_multiplier = Math.abs(Q.debt_multiplier);
 
-            Q.northeast_homelessness -= 0.1/4 * Q.debt_multiplier;
-            Q.northwest_homelessness -= 0.1/4 * Q.debt_multiplier;
-            Q.central_homelessness -= 0.1/4 * Q.debt_multiplier;
-            Q.southern_homelessness -= 0.1/4 * Q.debt_multiplier;
+            Q.northeast_homelessness -= 0.2/4 * Q.debt_multiplier;
+            Q.northwest_homelessness -= 0.2/4 * Q.debt_multiplier;
+            Q.central_homelessness -= 0.2/4 * Q.debt_multiplier;
+            Q.southern_homelessness -= 0.2/4 * Q.debt_multiplier;
 
-            Q.northeast_poverty -= 0.1/4 * Q.debt_multiplier;
-            Q.northwest_poverty -= 0.1/4 * Q.debt_multiplier;
-            Q.central_poverty -= 0.1/4 * Q.debt_multiplier;
-            Q.southern_poverty -= 0.1/4 * Q.debt_multiplier;
+            Q.northeast_poverty -= 0.2/4 * Q.debt_multiplier;
+            Q.northwest_poverty -= 0.2/4 * Q.debt_multiplier;
+            Q.central_poverty -= 0.2/4 * Q.debt_multiplier;
+            Q.southern_poverty -= 0.2/4 * Q.debt_multiplier;
 
-            Q.northeast_illiteracy -= 0.1/4 * Q.debt_multiplier;
-            Q.northwest_illiteracy -= 0.1/4 * Q.debt_multiplier;
-            Q.central_illiteracy -= 0.1/4 * Q.debt_multiplier;
-            Q.southern_illiteracy -= 0.1/4 * Q.debt_multiplier;
+            Q.northeast_illiteracy -= 0.2/4 * Q.debt_multiplier;
+            Q.northwest_illiteracy -= 0.2/4 * Q.debt_multiplier;
+            Q.central_illiteracy -= 0.2/4 * Q.debt_multiplier;
+            Q.southern_illiteracy -= 0.2/4 * Q.debt_multiplier;
         }
 
         // corruption modifiers
 
-        if (Q.corruption >= 40) {
+        if (Q.state_corruption >= 40) {
             Q.northeast_homelessness -= 0.1/4;
             Q.northwest_homelessness -= 0.1/4;
             Q.central_homelessness -= 0.1/4;
@@ -1746,7 +1746,7 @@ if (Q.week_actions >= 1) {
             Q.bureaucratic_loyalty -= 4/4;
         }
 
-        if (Q.corruption >= 60) {
+        if (Q.state_corruption >= 60) {
             Q.northeast_homelessness -= 0.2/4;
             Q.northwest_homelessness -= 0.2/4;
             Q.central_homelessness -= 0.2/4;
@@ -1766,7 +1766,7 @@ if (Q.week_actions >= 1) {
             Q.bureaucratic_loyalty -= 4/4;
         }
 
-        if (Q.corruption >= 80) {
+        if (Q.state_corruption >= 80) {
             Q.northeast_homelessness -= 0.1/4;
             Q.northwest_homelessness -= 0.1/4;
             Q.central_homelessness -= 0.1/4;

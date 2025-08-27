@@ -47,7 +47,7 @@ subtitle: +1.5 Budget - We can encourage foreign investors to invest in us.
 choose-if: british_relation >= 1 and french_relation >= 1
 view-if: right_eco_adopted
 unavailable-subtitle: [? if british_relation < 1 : Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> are too poor. ?] [? if french_relation < 1 : Our relations with <span style="color: #39AAAA">**France**</span> are too poor. ?]
-on-arrival: british_relation -= 1; french_relation -= 1;
+on-arrival: british_relation -= 1; french_relation -= 1; budget += 1.5
 
 Capital Flight has left the nation in...desperate need for funds. With the *New Economic Policy*, our efforts to return foreign investments back to the nation have redoubled, hopefully aiding our economic and social recovery.
 

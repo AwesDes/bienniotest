@@ -53,7 +53,7 @@ Against protests by <span style="color: #740000ff">**the Left**</span>, we can d
 
 @austerity
 subtitle: +2 Budget - We can cut government salaries further.
-on-arrival: bureaucratic_efficiency -= 7; bureaucratic_loyalty -= 7; corruption += 5; budget += 2;
+on-arrival: bureaucratic_efficiency -= 7; bureaucratic_loyalty -= 7; state_corruption += 5; budget += 2;
 max-visits: 4
 
 Budget cuts within the bureaucracy are hard, but necessarily to maintain a balanced budget. However, murmurs of discontent have naturally been heard, alongside a decrease in effectiveness. Bureaucrats may also attempt to find...other means to sustain themselves.
@@ -63,7 +63,7 @@ subtitle: +4 Budget - This will do significant harm to our economy, and should b
 on-arrival: public_opinion -= 10; northeast_poverty += 0.4; northwest_poverty += 0.4; central_poverty += 0.3; southern_poverty += 0.7; {!
 Q.budget += 4;
 Q.bureaucratic_loyalty -= 4; 
-Q.corruption += 10;
+Q.state_corruption += 10;
 !}
 
 Printing money has allowed us to resolve our debts, but have also resulted in inflation increasing significantly. Prices have doubled overnight, as money loses value quickly, with our people losing trust in us, turning to other illicit means to earn money.

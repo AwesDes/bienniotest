@@ -2,7 +2,7 @@ title: [+ southern_regions : southern_regions +] <span style="color: #465053ff">
 subtitle: The <span style="color: #465053ff">**Mafia**</span> make their move!
 new-page: true
 view-if: mafia_attack_timer <= 0 and mafia_decision = 1
-on-arrival: mafia_decision = 0; mafia_attack_timer = 6; southern_illiteracy += 1.3; southern_homelessness += 0.4; stability -= 0.2;
+on-arrival: mafia_decision = 0; mafia_attack_timer = 10; southern_illiteracy += 1.3; southern_homelessness += 0.4; stability -= 0.2;
 tags: event
 
 = <span style="color: #465053ff">**Mafia**</span> Activity goes Rampant

@@ -38,7 +38,7 @@ on-arrival: public_opinion += 7;
 Economic Capacity has reduced since the start of our economic plan, which is a cause for celebration. Hopefully, if this trend continues, we will be able to bring our capacity further above pre-war levels.
 
 @against_corruption
-on-arrival: corruption -= 7
+on-arrival: state_corruption -= 7
 
 Our battle against corruption continues, as we rally against it for a better and fairer future.
 
