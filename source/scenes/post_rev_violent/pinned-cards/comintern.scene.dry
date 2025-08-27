@@ -55,11 +55,13 @@ on-arrival: soviet_relation += 1;
 Our relations with the <span style="color: #bf0000">**Soviet Union**</span> have held strong since the inception of the  <span style="color: #BF0000">**Republic**</span>, considering our isolation amongst the global nations, which is unlikely to chance in the future.  
 
 @improve_relation_germany
+view-if: soviet_germany
 on-arrival: germany_relation += 1;
 
 The revolution in <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span> has strengthened our bonds deeply, especially with the 
 
 @improve_relation_hungary
+view-if: soviet_hungary
 on-arrival: hungary_relation += 1;
 
 The <span style="color: #964B00">**Hungarians**</span> were the second to triumph in their struggle against the bourgeois, aided by us. Our bonds are stronger than ever, and though there is no harm in reaffirming these bonds, their proximity to us provides a pivotal opportunity we could take advantage of once we settle internal matters.
