@@ -206,7 +206,7 @@ go-to: decisions
 
 {!<tr><td><div class="box" style='background-color:#CC0000; outline: 2px; outline-style: solid;'> </div>!} **Social Patriots**: {!</td><td>!} [+ socpat_r_disp +]% {!</td><td>!} [+ str_change_socpat +]% {!</td><td>!} [+ socpat_seating +] {!</td><td>!} [+ socpat_seating_disp +]% {!</td></tr>!}
 
-[? if syndicalist_active : {!<tr><td><div class="box" style='background-color:#E00000; outline: 2px; outline-style: solid;'> </div>!} **Syndicalists**: {!</td><td>!} [+ syndicalist_r_disp +]% {!</td><td>!} [+ str_change_syndicalist +]% {!</td><td>!} [+ syndicalist_seating +] {!</td><td>!} [+ syndicalist_seating_disp +]% {!</td></tr>!} ?]
+[? if syndicalist_active : {!<tr><td><div class="box" style='background-color:#2F2F2F; outline: 2px; outline-style: solid;'> </div>!} **Syndicalists**: {!</td><td>!} [+ syndicalist_r_disp +]% {!</td><td>!} [+ str_change_syndicalist +]% {!</td><td>!} [+ syndicalist_seating +] {!</td><td>!} [+ syndicalist_seating_disp +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#F53333; outline: 2px; outline-style: solid;'> </div>!} **Labour Reformists**: {!</td><td>!} [+ labour_r_disp +]% {!</td><td>!} [+ str_change_labour +]% {!</td><td>!} [+ labour_seating +] {!</td><td>!} [+ labour_seating_disp +]% {!</td></tr>!}
 
