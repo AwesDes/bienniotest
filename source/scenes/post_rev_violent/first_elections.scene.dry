@@ -21,6 +21,11 @@ Q.psi_seating_disp = 100.0;
 
 Q.total_percentage = parseFloat(Q.psi_votes) + parseFloat(Q.psri_votes) + parseFloat(Q.other_votes) + parseFloat(Q.pnf_votes);
 
+if (Q.syndicalist_active != 1) {
+    Q.syndicalist_strength = Q.labour_strength * 0.1;
+    Q.labour_strength -= Q.syndicalist_strength
+}
+
 Q.total_strength = Q.communist_strength + Q.maximalist_strength + Q.labour_strength + Q.reformist_strength + Q.syndicalist_strength;
 
 if (Q.psu_formed) {
