@@ -1595,6 +1595,10 @@ if (Q.week_actions >= 1) {
 
         if (Q.mafia_active != 1) {
             Q.mafia_trigger_prog += 100/8;
+
+            if (Q.state_corruption >= 20) {
+                Q.mafia_trigger_prog += 2;
+            }
         }
 
         if (Q.nda_attack_timer <= 0 && Q.nda_decision == 0) {
@@ -1784,6 +1788,18 @@ if (Q.week_actions >= 1) {
 
             Q.public_opinion -= 2/4;
             Q.bureaucratic_loyalty -= 2/4;
+        }
+
+        if (Q.poverty >= 10) {
+            Q.state_corruption += 3/4;
+        }
+
+        if (Q.poverty >= 20) {
+            Q.state_corruption += 2/4;
+        }
+
+        if (Q.poverty >= 30) {
+            Q.state_corruption += 2/4;
         }
 
         // industrial unit checks
