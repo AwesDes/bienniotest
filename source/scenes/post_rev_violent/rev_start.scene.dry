@@ -159,6 +159,10 @@ Q.bureaucratic_efficiency = (Q.psi_votes * 2);
 
 Q.colonial_policy = 0;
 
+Q.as_trigger_prog = 0;
+Q.mafia_trigger_prog = 0;
+Q.nda_trigger_prog = 0;
+
 if (Q.mafia_strength <= 2) {
     if (Q.mafia_strength == 2) {
         Q.mafia_trigger_prog -= 5;

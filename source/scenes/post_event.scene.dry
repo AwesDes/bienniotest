@@ -1577,7 +1577,7 @@ if (Q.week_actions >= 1) {
             Q.nda_trigger_prog += 100/24;
 
             if (Q.french_relation < 4) {
-                Q.as_trigger_prog += 4;
+                Q.nda_trigger_prog += 4;
             }
         }
 
