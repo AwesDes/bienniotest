@@ -46,7 +46,7 @@ Q.budget -= 1;
 Q.southern_poverty -= 1.7 * Q.bureaucratic_modifier;
 Q.public_opinion += 2;
 
-Q.southern_supply_health += 1.2 * Q.bureaucratic_modifier * Q.poverty_modifier;
+Q.southern_supply_health += 0.9 * Q.bureaucratic_modifier * Q.poverty_modifier;
 !}
 
 Unemployment remains a key issue across <span style="color: #009246">**Italy**</span>, with many falling into poverty after the civil war. We can begin Public Works Programs in the region, both to restore destroyed infrastructure, but also to employ more people and pull them out of poverty.
@@ -83,7 +83,7 @@ subtitle: -1.5 Budget - We can expand state-controlled housing.
 view-if: left_eco_adopted
 on-arrival: {!
 Q.budget -= 1.5;
-Q.southern_homelessness -= 0.6 * Q.bureaucratic_modifier * Q.homelessness_modifier;
+Q.southern_homelessness -= 0.5 * Q.bureaucratic_modifier * Q.homelessness_modifier;
 Q.public_opinion += 2;
 !}
 
@@ -121,7 +121,7 @@ subtitle: -1 Budget - We can reduce illiteracy across the region via programs.
 view-if: left_eco_adopted
 on-arrival: {!
 Q.budget -= 1;
-Q.southern_illiteracy -= 0.8 * Q.bureaucratic_efficiency * Q.illiteracy_modifier;
+Q.southern_illiteracy -= 0.7 * Q.bureaucratic_efficiency * Q.illiteracy_modifier;
 Q.public_opinion += 2;
 !}
 

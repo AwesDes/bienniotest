@@ -2,7 +2,7 @@ title: [? if cheka_formed : Internal Affairs Committee ?][? if not cheka_formed 
 new-page: true
 is-card: true
 tags: internal_affairs
-on-arrival: rev_interior_policy_timer = 3; week_actions += 1;
+on-arrival: rev_interior_policy_timer = 2; week_actions += 1;
 view-if: rev_interior_policy_timer <= 0
 card-image: img/portraits/FilippoTurati.jpg
 go-to: cheka_menu if cheka_formed; internal_menu if not cheka_formed
@@ -56,7 +56,7 @@ Corruption exists in all forms, especially in the government. From bribes to ext
 @as_investigate
 title: Investigate the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>.
 view-if: not as_eliminated
-on-arrival: as_trigger_prog -= 5 if not as_active; as_attack_timer += 2 if as_active; as_investigated += 1 if rev_economic_recovery
+on-arrival: as_trigger_prog -= 5 if not as_active; as_attack_timer += 4 if as_active; as_investigated += 1 if rev_economic_recovery
 
 [? if not as_active : On paper, the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> are splintered, unable to pose a threat to the state. On the ground, however, this is very much not true. Reports of <span style="color: #000000">**Squads**</span> reorganising and arming themselves back up again are widespread, as are paper financial trails aiding these groups. ?]
 
@@ -67,7 +67,7 @@ on-arrival: as_trigger_prog -= 5 if not as_active; as_attack_timer += 2 if as_ac
 @nda_investigate
 title: Investigate the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>.
 view-if: not nda_eliminated
-on-arrival: nda_trigger_prog -= 5 if not nda_active; nda_attack_timer += 3 if nda_active; nda_investigated += 1 if rev_economic_recovery
+on-arrival: nda_trigger_prog -= 5 if not nda_active; nda_attack_timer += 5 if nda_active; nda_investigated += 1 if rev_economic_recovery
 
 [? if not nda_active : The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> was set up following the end of the Civil War as whatever remnants of republican resistance lingers. Operating primarily in the North, they are, for now, unable to impact industrial production nor be a major threat. ?]
 
@@ -78,7 +78,7 @@ on-arrival: nda_trigger_prog -= 5 if not nda_active; nda_attack_timer += 3 if nd
 @mafia_investigate
 title: Investigate the <span style="color: #465053ff">**Mafia**</span>.
 view-if: mafia_investigated < 3
-on-arrival: mafia_trigger_prog -= 3 if not mafia_active; mafia_attack_timer += 2 if as_active;
+on-arrival: mafia_trigger_prog -= 3 if not mafia_active; mafia_attack_timer += 3 if as_active;
 
 [? if not mafia_active : <span style="color: #465053ff">**Cosa Nostra**</span> has been a scourge upon Sicily and her neighbours since its inception, partially due to the negligence and failures of our precedessors and the Kingdom. It is our duty, now, to reassert control and put down the forces plaguing the South. ?]
 

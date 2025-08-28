@@ -1594,7 +1594,7 @@ if (Q.week_actions >= 1) {
         }
 
         if (Q.mafia_active != 1) {
-            Q.mafia_trigger_prog += 100/8;
+            Q.mafia_trigger_prog += 100/16;
 
             if (Q.state_corruption >= 20) {
                 Q.mafia_trigger_prog += 2;
@@ -1966,6 +1966,16 @@ if (Q.week_actions >= 1) {
             Q.foreign_invasion_timer -= 1;
         } else if (Q.foreign_introduced && Q.army_strength >= 400 && Q.foreign_invasion_timer < 6) {
             Q.foreign_invasion_timer = 6;
+        }
+
+        // bureaucratic loyalty check
+
+        if (Q.poverty < 20) {
+            Q.bureaucratic_loyalty += 4/4;
+        }
+
+        if (Q.poverty < 10) {
+            Q.bureaucratic_loyalty += 2/4;
         }
     }
 }

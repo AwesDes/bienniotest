@@ -30,7 +30,7 @@ Every action will be impacted by the loyalties and efficiency of our bureaucracy
 subtitle: We can tax the limited private traders and businessmen still in the country for their fair share.
 view-if: right_eco_adopted or both_eco_adopted
 on-arrival: {!
-Q.central_poverty -= 1.2 * Q.bureaucratic_modifier * Q.poverty_modifier;
+Q.central_poverty -= 0.9 * Q.bureaucratic_modifier * Q.poverty_modifier;
 Q.public_opinion -= 4;
 !}
 
@@ -43,10 +43,10 @@ subtitle: -1 Budget - Public Works can also help to restore infrastructure.
 view-if: left_eco_adopted or both_eco_adopted
 on-arrival: {!
 Q.budget -= 1;
-Q.central_poverty -= 1.7 * Q.bureaucratic_modifier;
+Q.central_poverty -= 1.3 * Q.bureaucratic_modifier * Q.poverty_modifier;
 Q.public_opinion += 2;
 
-Q.central_supply_health += 1.2 * Q.bureaucratic_modifier * Q.poverty_modifier;
+Q.central_supply_health += 1.2 * Q.bureaucratic_modifier;
 !}
 
 Unemployment remains a key issue across <span style="color: #009246">**Italy**</span>, with many falling into poverty after the civil war. We can begin Public Works Programs in the region, both to restore destroyed infrastructure, but also to employ more people and pull them out of poverty.
@@ -57,7 +57,7 @@ Unemployment remains a key issue across <span style="color: #009246">**Italy**</
 subtitle: -2 Budget - We can utilise funds through our own organisations and social programs.
 on-arrival: {!
 Q.budget -= 2;
-Q.central_poverty -= 2.5 * Q.bureaucratic_modifier * Q.poverty_modifier;
+Q.central_poverty -= 2.4 * Q.bureaucratic_modifier * Q.poverty_modifier;
 Q.public_opinion += 4;
 !}
 
@@ -70,7 +70,7 @@ subtitle: -1 Budget - We can encourage further housing development.
 view-if: right_eco_adopted or both_eco_adopted
 on-arrival: {!
 Q.budget -= 1;
-Q.central_homelessness -= 0.4 * Q.bureaucratic_modifier * Q.homelessness_modifier;
+Q.central_homelessness -= 0.3 * Q.bureaucratic_modifier * Q.homelessness_modifier;
 Q.public_opinion += 1;
 !}
 
@@ -83,7 +83,7 @@ subtitle: -1.5 Budget - We can expand state-controlled housing.
 view-if: left_eco_adopted or both_eco_adopted
 on-arrival: {!
 Q.budget -= 1.5;
-Q.central_homelessness -= 0.6 * Q.bureaucratic_modifier * Q.homelessness_modifier;
+Q.central_homelessness -= 0.4 * Q.bureaucratic_modifier * Q.homelessness_modifier;
 Q.public_opinion += 2;
 !}
 
@@ -121,7 +121,7 @@ subtitle: -1 Budget - We can reduce illiteracy across the region via programs.
 view-if: left_eco_adopted or both_eco_adopted
 on-arrival: {!
 Q.budget -= 1;
-Q.central_illiteracy -= 0.8 * Q.bureaucratic_efficiency * Q.illiteracy_modifier;
+Q.central_illiteracy -= 0.7 * Q.bureaucratic_efficiency * Q.illiteracy_modifier;
 Q.public_opinion += 2;
 !}
 

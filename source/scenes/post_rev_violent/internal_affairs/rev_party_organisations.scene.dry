@@ -37,7 +37,7 @@ The Federazione Giovanile Socialista Italiana has existed as our youth organisat
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources. (Need 1)
 subtitle: -1 resources
-on-arrival: resources -= 1; illiteracy_modifier += 0.1 if illiteracy_modifier < 2; bureaucratic_loyalty += 2 if illiteracy_modifier >= 2
+on-arrival: resources -= 1; illiteracy_modifier += 0.05 if illiteracy_modifier < 2; bureaucratic_loyalty += 2 if illiteracy_modifier >= 2
 
 Acting as a hub for education, the Università Popolari Socialiste has been affiliated with the party, responsible for educating workers with the help of unions as well as spreading cultural and scientific knowledge.
 
@@ -45,7 +45,7 @@ Acting as a hub for education, the Università Popolari Socialiste has been affi
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources. (Need 1)
 subtitle: -1 resources
-on-arrival: resources -= 1; poverty_modifier += 0.1 if poverty_modifier < 2; southern_poverty -= 0.2 if poverty_modifier >= 2
+on-arrival: resources -= 1; poverty_modifier += 0.05 if poverty_modifier < 2; southern_poverty -= 0.2 if poverty_modifier >= 2
 
 Mutual Aid has existed within the party since its inception, serving the needs of people who need it. Now, more than ever, this duty should be expanded to aid all those in need of it, who have suffered the devastation of the civil war.
 
@@ -53,7 +53,7 @@ Mutual Aid has existed within the party since its inception, serving the needs o
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources. (Need 1)
 subtitle: -1 resources
-on-arrival: resources -= 1; homelessness_modifier += 0.1 if homelessness_modifier < 2; public_opinion += 2 if homelessness_modifier >= 2
+on-arrival: resources -= 1; homelessness_modifier += 0.05 if homelessness_modifier < 2; public_opinion += 2 if homelessness_modifier >= 2
 
 Community Organisations exist as a parallel society for workers. Libraries, Community Centres, Schools. These have allowed workers to establish a support network, as well as receive educational, legal or welfare support if necessary, and we should strengthen these facilities.
 
