@@ -4,7 +4,7 @@ view-if: pnf_in_power and pnf_leader = "Grandi" and dannunzio_coup_seen and time
 max-visits: 1
 tags: event
 new-page: true
-on-arrival: grandi_address_seen = 1; dannunzio_time = time + 2; paranoia_stat = 0; paranoia_stat += 1 if ((fdc_strength*fdc_militancy) + (ard_strength*ard_militancy) + (abl_strength*abl_militancy)) <= (rg_strength*rg_militancy); next_election_time = time + 24 if next_election_time > time+18; next_election_month = month + 12 if next_election_time >= time+24; next_election_year = year if next_election_time >= time+24; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; {!
+on-arrival: grandi_address_seen = 1; dannunzio_time = time + 2; paranoia_stat = 0; paranoia_stat += 1 if ((fdc_strength*fdc_militancy) + (ard_strength*ard_militancy) + (abl_strength*abl_militancy)) <= (rg_strength*rg_militancy); next_election_time = time + 24; next_election_month = month + 12; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; {!
 if (Q.psi_votes >= Q.pnf_votes) {
     Q.paranoia_stat += 1;
 }

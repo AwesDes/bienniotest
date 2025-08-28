@@ -2,6 +2,7 @@ title: Revolutionary Start
 audio: clear
 set-bg: img/RevBg.jpg
 new-page: true
+on-arrival: month += 1; year += 1 if month > 12; month -= 12 if month > 12
 go-to: maximalist_quote if maximalist_strength >= reformist_strength and maximalist_strength >= communist_strength; communist_quote if communist_strength > reformist_strength and maximalist_strength < communist_strength; reformist_quote if maximalist_strength < reformist_strength and reformist_strength > communist_strength
 
 = Vittoria Sovietica: An Alternate History
@@ -106,7 +107,7 @@ Q.social_southern_timer = 0;
 Q.entente_trade_deficit = 0;
 Q.comintern_trade_deficit = 0;
 
-Q.timers.push('eco_plan', 'hungary_influence', 'germany_influence', 'uncommitted_influence', 'rev_ideology', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
+Q.timers.push('eco_plan', 'hungary_influence', 'germany_influence', 'uncommitted_influence', 'rev_carabinieri', 'rev_ideology', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
 
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
 
@@ -128,6 +129,9 @@ Q.right_eco_support = 0;
 Q.poverty_modifier = 1;
 Q.illiteracy_modifier = 1;
 Q.homelessness_modifier = 1;
+
+Q.as_modifier = 1;
+Q.nda_modifier = 1;
 
 Q.zeroCheck1 = ['agricultural', 'industry', 'supply'];
 Q.zeroCheck2 = ['northeast', 'northwest', 'central', 'southern'];

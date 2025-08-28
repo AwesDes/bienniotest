@@ -1,0 +1,44 @@
+title: Carabinieri
+new-page: true
+is-card: true
+tags: military_affairs
+card-image: img/portraits/FilippoTurati.jpg
+view-if: rev_carabinieri_timer <= 0
+on-arrival: rev_carabinieri_timer = 3
+
+= The Carabinieri
+
+The Carabinieri remains as one of the few government organisations still left from before the civil war, necessary now more than ever following the devastation and internal chaos that exist within the nation.
+
+- @study_nda: We can study the patterns of the <span style="color: #87CEFA">**Alliance**</span> to mitigate their impact.
+- @study_as: We can study the <span style="color: #000000">**Squads**</span> and mitigate their attacks.
+- @raid_nda: Attack & Combat the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>.
+- @raid_as: Attack & Combat the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>
+
+@study_nda
+subtitle: This can help weaken the impacts of the attacks in the future.
+choose-if: nda_attacked >= 1
+unavailable-subtitle: We do not have enough information on the <span style="color: #87CEFA">**Alliance**</span>.
+on-arrival: nda_attacked -= 1; nda_modifier -= 0.05;
+
+Strings of attacks from the <span style="color: #87CEFA">**Alliance**</span> allows us to study their patterns, organisations and how they operate, allowing us to learn and potentially mitigate the impacts of their attacks in the future.
+
+@study_as
+subtitle: This can help weaken the impacts of the attacks in the future.
+choose-if: as_attacked >= 1
+unavailable-subtitle: We do not have enough information on the <span style="color: #000000">**Squads**</span>.
+on-arrival: as_attacked -= 1; as_modifier -= 0.05;
+
+The <span style="color: #000000">**Squads**</span> operate on their own, though their attacks represent a pattern that we can learn from, and hopefully mitigate in the future.
+
+@raid_as
+subtitle: We can begin attacks on the Southern Cells, though we might sustain negative social impact.
+on-arrival: as_attack_timer += 4; southern_poverty += 1.5
+
+The South remains a hotbed for subversion, as many citizens still remain loyal to a King as well as having seen the impacts of Socialist rule in <span style="color: #bf0000">**Russia**</span>. Nevertheless, we can begin actively fighting back and rooting out counterrevolutionaries, even if some innocent forces are caught in the mix.
+
+@raid_nda
+subtitle: We can attack Northern Cells, though we might sustain negative social impact.
+on-arrival: nda_attack_timer += 4; northeast_poverty += 0.8; northwest_poverty += 0.7
+
+The Northern Regions continue to pose a threat to us, and we suspect these forces are backed by foreign powers, albeit indirectly. Regardless, we can cut off these forces from resources, draining their strength. Though these resources have necessarily gone into impacting local social programs as well, rooting our foreign influence within the nation will help us in the end.

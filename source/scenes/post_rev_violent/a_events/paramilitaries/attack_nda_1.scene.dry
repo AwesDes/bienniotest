@@ -2,12 +2,12 @@ title: [+ northern_regions : northern_regions +] Factories Disrupted
 subtitle: The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> make their move!
 new-page: true
 view-if: nda_attack_timer <= 0 and nda_decision = 1
-on-arrival: nda_decision = 0; nda_attack_timer = 8;
+on-arrival: nda_decision = 0; nda_attack_timer = 8; nda_attacked += 1;
 tags: event
 go-to: attack_success; attack_failure if increased_north >= 1
 
 @attack_success
-on-arrival: northeast_industry_health -= 2.3 if northern_regions >= 4; northwest_industry_health -= 2.3 if northern_regions < 4; stability -= 0.2;
+on-arrival: northeast_industry_health -= (2.3 * nda_modifier) if northern_regions >= 4; northwest_industry_health -= (2.3 * nda_modifier) if northern_regions < 4; stability -= 0.2;
 
 = [+ northern_regions : northern_regions +] Factories Disrupted
 
