@@ -14,6 +14,8 @@ The Carabinieri remains as one of the few government organisations still left fr
 - @study_as: We can study the <span style="color: #000000">**Squads**</span> and mitigate their attacks.
 - @raid_nda: Attack & Combat the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>.
 - @raid_as: Attack & Combat the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>
+- @return: Do nothing for now.
+- @easy_discard
 
 @study_nda
 subtitle: This can help weaken the impacts of the attacks in the future.

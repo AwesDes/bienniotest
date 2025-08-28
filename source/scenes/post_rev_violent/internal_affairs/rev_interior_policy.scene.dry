@@ -38,7 +38,8 @@ The Interior Ministry assumes responsibility of the internal situation within It
 - @nda_eliminate
 - @mafia_investigate
 - @gendarmerie_menu: Delve into the Gendarmerie.
-- @root: Do nothing, for now.
+- @return: Do nothing, for now.
+- @easy_discard
 
 @self_investigate
 view-if: interior_factionalism > 0
