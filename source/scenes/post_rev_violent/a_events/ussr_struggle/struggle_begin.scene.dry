@@ -2,7 +2,7 @@ title: Rumors in the <span style="color: #800000">**Comintern**</span>
 subtitle: <span style="color: #bf0000">**Stalin**</span> begins his play.
 on-arrival: stalin_struggle = 1; hungary_influence_timer = 8; germany_influence_timer = 12; uncommitted_influence_timer = 4; second_comintern_time = time + 48; {!
 if (Q.exported_agricultural_goods_unit > 0) {
-    Q.comintern_trade_deficit += (1.5 * Q.exported_agricultural_goods_unit);
+    Q.comintern_trade_deficit -= (1.5 * Q.exported_agricultural_goods_unit);
     Q.exported_agricultural_goods_unit = 0;
 }
 !}

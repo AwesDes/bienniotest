@@ -4,10 +4,11 @@ new-page: true
 view-if: public_opinion <= 10 and opinion_check_timer < 0 and not rev_economic_recovery and not in_emergency
 on-arrival: in_emergency = 1
 tags: event
+max-visits: 1
 
 = <span style="color: #800000">**Report on Critical Public Opinion**</span>
 
-Our economic failures have turned public opinion against us, as calls for our removal have gotten stronger and stronger. The revolution cannot survive more war, nor a coup.
+Our attempts at economic recovery have resulted in failure, as whatever skeptic supporters remaining have turned against us. 
 
 An Emergency Session of the <span style="color: #BF0000">**Congress of Soviets**</span> has been called.
 

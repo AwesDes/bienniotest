@@ -1,4 +1,4 @@
-title: Declaration of War
+title: Official Declaration of War
 subtitle: The final nail in a laid coffin.
 tags: event
 view-if: comintern_expelled and foreign_invasion_timer <= 0 and foreign_introduced and not economic_goals_reached

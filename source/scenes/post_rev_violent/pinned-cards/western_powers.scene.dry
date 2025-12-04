@@ -8,9 +8,9 @@ go-to: trade_menu
 
 = The <span style="color: #046276">**Western Powers**</span>
 
-Battered, exhausted, weakened. The <span style="color: #046276">**Western Powers**</span>. The <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> and the <span style="color: #39AAAA">**French Republic**</span>, nearly a decade after the guns of war fell silent in 1918, stand still deeply haunted by its echos.
+Battered, exhausted, weakened. If one were to describe the <span style="color: #046276">**Western Powers**</span>, they would hear these words. The <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> and the <span style="color: #39AAAA">**French Republic**</span>, nearly a decade after the guns of war fell silent in 1918, stand still deeply haunted by its echos.
 
-<span style="color: #39AAAA">**France**</span> continues its pursuit of financial reparations, continuing its enmity against the <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> Republic. 
+<span style="color: #39AAAA">**France**</span> bore the forefront of the war, as millions lay dead, lives lost from war waged by capital. Domestically, the war has impacted all aspects of <span style="color: #39AAAA">**French**</span> society, from labour unions to women's rights to the economic devastation across the northern regions. Internationally, they continue their pursuit of financial reparations, continuing its enmity against the <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> Republic. 
 
 The <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> has entered financial ruin; Inflation, Debts, Currency Devaluation has brought the nation to its knees, alongside the slow slip of imperialism. <span style="color: #009A44>**Irish**</span> independence. The growing desires of the Canada and Australia. Even at home, Labour has achieved victory for the first time since its founding.
 
@@ -73,6 +73,8 @@ subtitle: -1.5 Budget Per Staple Crop Unit.
 view-if: opened_trade and imported_staple_crops_unit > 0
 on-arrival: imported_staple_crops_unit -= 1; entente_trade_deficit += 1.5;
 
+We have reduced trade with the <span style="color: #046276">**Western Powers**</span> in regards to purchasing staple crops.
+
 @sell_cash_crops
 subtitle: +1 Budget Per Cash Crop Unit.
 view-if: opened_trade
@@ -86,3 +88,5 @@ Our surplus of Cash Crops have allowed us to export our yields to willing market
 subtitle: +1 Budget Per Cash Crop Unit.
 view-if: opened_trade and exported_cash_crops_unit > 0
 on-arrival: exported_cash_crops_unit -= 1; entente_trade_deficit -= 1;
+
+We have reduced trade with the <span style="color: #046276">**Western Powers**</span> in regards to selling cash crops.

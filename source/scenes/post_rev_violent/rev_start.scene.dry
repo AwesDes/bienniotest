@@ -60,6 +60,8 @@ Q.national_congress_seen = 1;
 Q.stability = 0;
 Q.party_unity = 0;
 
+Q.syndicalist_active = 1;
+
 Q.economic_plan = 0;
 Q.british_relation = Q.entente_relation;
 Q.french_relation = Q.entente_relation;
@@ -477,18 +479,19 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 There is no current information about the Italian Soviet Republic, but you will be able to access an overview of the nation through the 'Situations' tab on the top.
 
-- @new_changes: The Mantle is assumed by the <span style="color: #BF0000">**Soviet Republic**</span>.
+- @new_changes: The mantle of <span style="color: #009246">**Italy**</span> is assumed by the <span style="color: #BF0000">**Soviet Republic**</span>.
 
 @new_changes
+new-page: true
 
-Victory. Like Lenin in <span style="color: #bf0000">**Russia**</span>, like Garibaldi half a century ago, our enemies have been brought down.  A Red Flag is raised upon Rome, for the first time. The flag of the <span style="color: #BF0000">**Soviet Republic**</span> rings proud, a symbol of the toppling of the bourgeois oppressors, of the Monarchy, of the Nobility, brought to heel.
+Victory. Like Lenin in <span style="color: #bf0000">**Russia**</span> so recently, like Garibaldi half a century ago, Italy is united, no longer under the rule of Kings, Autocrats or Nobles, but as a <span style="color: #BF0000">**Republic**</span> of workers and peasants. A Red Flag is raised upon Rome, for the first time. The flag of the <span style="color: #BF0000">**Soviet Republic**</span> rings proud, a symbol of the toppling of the bourgeois oppressors, of the Monarchy, of the Nobility, brought to heel.
 
-Nevertheless, the time for celebration is quick, as the party scrambles to fill in the gaps left. The South, the Agricultural heart of the nation. The North, an ever churning industrial empire. Both brought to ruin by the scars of war, both needing repairs and restoration so <span style="color: #009246">**Italy**</span> may stand once more.
+Nevertheless, the realities of governance is quick to show itself, as the party scrambles to fill in the gaps left by our predecessors. The South, the agricultural heart of the nation. The North, an ever churning industrial machine. Both brought to ruin by the scars of war, both seeking renewal so <span style="color: #009246">**Italy**</span> may stand once more.
 
-Swift and decrepit voting stations are placed across the nation. Yet, participation seems higher than ever. Peasants, Labourers, Toilers. All to do their duty, to shape the nation, to bring them the state promised to them.
+The aftermath of the civil war will linger on the nation for the foreseeable future. **It will not survive another.**
 
-Time slows further. We enter a week-by-week basis.
+There is much work to be done. Time slows further. We enter a week-by-week basis.
 
-The First Elections to the <span style="color: #BF0000">**Congress of Soviets**</span> begin.
+The first elections to the <span style="color: #BF0000">**Congress of Soviets**</span> begin.
 
 - @first_elections: May we do our best...

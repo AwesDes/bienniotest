@@ -16,7 +16,7 @@ Formed from the ashes of the <span style="color:rgb(226, 102, 102)">**Second Int
 
 Yet failure after failure has left the <span style="color: #bf0000">**Soviet Union**</span> isolated. The <span style="color:rgb(143, 57, 57)">**Spartacist Uprising**</span>, <span style="color:#BF0000">**Red**</span> <span style="color:rgb(170, 170, 170)">**Finland**</span>, the <span style="color:rgb(87, 87, 87)">**Slovak**</span> <span style="color: #BF0000">**Soviet Republic**</span>. But now, we stand alongside the <span style="color: #bf0000">**Soviet Union**</span> as equals, partners in a world deeply bitter and against our very existence.
 
-Nevertheless, we must ensure the <span style="color: #800000">**Communist International**</span>, however its original intentions, must return to its roots, aiding nations around the world, rather than operating under the whims of <span style="color: #bf0000">**one nation**</span>.
+Nevertheless, we must ensure the <span style="color: #800000">**Communist International**</span>, regardless of its current intentions, must return to its roots, aiding nations around the world, rather than operating under the whims of <span style="color: #bf0000">**one nation**</span>.
 
 @sov_regular
 
@@ -36,7 +36,7 @@ Our relations with the <span style="color: #800000">**International**</span> rem
 
 @sov_struggle
 
-The ascension of Joseph Stalin to *General-Secretary* of the <span style="color: #bf0000">**Union**</span> has vastly complicated our ties to the span style="color: #800000">**International**</span>. Though seemingly still on the surface, murmurs of Stalin's movements and actions have not gone unnoticed by us, nor have their intentions. 
+The ascension of Joseph Stalin to *General-Secretary* of the <span style="color: #bf0000">**Union**</span> has vastly complicated our ties to the span style="color: #800000">**International**</span>. Though seemingly peaceful on the surface, murmurs of Stalin's movements and actions have not gone unnoticed, nor have their intentions. 
 
 We cannot let the <span style="color: #800000">**Communist International**</span> become a playground for the <span style="color: #bf0000">**Soviet Union**</span>.
 
@@ -52,13 +52,13 @@ We cannot let the <span style="color: #800000">**Communist International**</span
 @improve_relation_ussr
 on-arrival: soviet_relation += 1;
 
-Our relations with the <span style="color: #bf0000">**Soviet Union**</span> have held strong since the inception of the  <span style="color: #BF0000">**Republic**</span>, considering our isolation amongst the global nations, which is unlikely to chance in the future.  
+Our relations with the <span style="color: #bf0000">**Soviet Union**</span> have held strong since the inception of the <span style="color: #BF0000">**Republic**</span>. Considering our isolation amongst the global nations, which is unlikely to change in the future, we can cultivate further relations with our ideological allies.  
 
 @improve_relation_germany
 view-if: soviet_germany
 on-arrival: germany_relation += 1;
 
-The revolution in <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span> has strengthened our bonds deeply, especially with the 
+The revolution in <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**any**</span> has strengthened our bonds deeply, elevating another nation into the <span style="color: #800000">**Comintern**</span>.
 
 @improve_relation_hungary
 view-if: soviet_hungary
@@ -72,7 +72,7 @@ choose-if: army_experience >= 10
 unavailable-subtitle: [? if army_experience < 10 : Not enough Army Experience. ?]
 on-arrival: army_experience -= 10; hungary_army += 1; 
 
-The <span style="color: #964B00">**Hungarians**</span> were barely able to survive foreign intervention from the <span style="color: #FCD116">**Romanians**</span>, and it is uncertain whether they will strike again. Sending Military Aid to the <span style="color: #964B00">**Hungarians**</span> could prove pivotal to their continued survival, as well as open new avenues should our focus turns outwards.
+The <span style="color: #964B00">**Hungarians**</span> were barely able to survive foreign intervention from the <span style="color: #FCD116">**Romanians**</span>, and it is uncertain whether they will strike again. Sending Military Aid to the <span style="color: #964B00">**Hungarians**</span> could prove pivotal to their continued survival, as well as open new avenues of opportunity should our focus turns outwards.
 
 @buy_indus
 subtitle: -1 Budget Per Consumer Goods Unit.
@@ -85,6 +85,8 @@ Unlike our revolution, the <span style="color: #000000">**Ge**</span><span style
 subtitle: -1 Budget Per Consumer Goods Unit.
 view-if: imported_consumer_goods_unit > 0 and soviet_germany
 on-arrival: imported_consumer_goods_unit -= 1; comintern_trade_deficit += 1;
+
+We have reduced trade with the <span style="color: #800000">**Comintern**</span> in regards to purchasing consumer goods.
 
 @sell_agri
 subtitle: +1.5 Budget Per Agricultural Equipment Unit.
@@ -99,6 +101,8 @@ subtitle: +1.5 Budget Per Agricultural Equipment Unit.
 view-if: exported_agricultural_goods_unit > 0
 on-arrival: exported_agricultural_goods_unit -= 1; comintern_trade_deficit -= 1.5;
 
+We have reduced trade with the <span style="color: #800000">**Comintern**</span> in regards to selling agricultural equipment.
+
 @influence_hungary
 subtitle: Swaying their delegates might help when the World Congress happens...
 view-if: stalin_struggle and soviet_hungary
@@ -106,7 +110,7 @@ choose-if: hungary_relation >= 3
 unavailable-subtitle: Our relations with the <span style="color: #964B00">**Hungarians**</span> are too poor.
 on-arrival: hungary_relation -= 3; italy_influence_hungary += 1;
 
-The <span style="color: #964B00">**Hungarians**</span> remain close to the <span style="color: #bf0000">**Soviets**</span>, though their means of centralising control has sowed doubt in many minds of the delegates. We can seize on the opportunity, utilising our warm relations to convince some of the delegates to at least not vote against us.
+The <span style="color: #964B00">**Hungarians**</span> remain close to the <span style="color: #bf0000">**Soviets**</span>, though their means of centralising control has sowed doubt in many minds of the delegates. We can seize on the opportunity, utilising our warm relations to convince some of the delegates to side with us when the time comes.
 
 @influence_germany
 subtitle: Swaying their delegates might help when the World Congress happens...
@@ -115,7 +119,7 @@ choose-if: germany_relation >= 2
 unavailable-subtitle: Our relations with the <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**ans**</span> are too poor.
 on-arrival: germany_relation -= 2; italy_influence_germany += 1;
 
-The <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**ans**</span> have maintained strong opposition to Stalin's plots since the beginning, making convincing these delegates easier than most. Regardless, the leadership reassures us they remain opposed to any schemes against us, though individual delegates might sway.
+The <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**ans**</span> have maintained strong opposition to Stalin's plots since the beginning, making convincing these delegates easier than most. Regardless, the leadership reassures us they remain opposed to any schemes against us, though individual delegates might be swayed by <span style="color: #bf0000">**Soviet**</span> overtures.
 
 @influence_uncommitted
 subtitle: Swaying their delegates might help when the World Congress happens...

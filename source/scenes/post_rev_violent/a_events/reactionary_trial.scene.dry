@@ -7,9 +7,9 @@ tags: event
 
 = Trial of the Reactionaries
 
-The end of the Civil War saw the surrender of thousands of high-ranking officials loyal to the Monarchy arrested, while the Monarch himself and the politicians fled. Regardless, we now hold in custody men who stood against us, either aiding the reactionaries directly or indirectly, set to be trialed for their crimes against the revolution.
+The end of the Civil War saw the surrender of thousands of high-ranking officials loyal to the Monarchy arrested, while the Monarch himself and the politicians fled. As such, we now hold in custody men who stood against us, either aiding the reactionaries directly or indirectly, set to be trialed for their crimes as counterrevolutionaries.
 
-The first issue on the docket is the privacy of the trial. An open trial would aid in deterring would-be reactionaries and dissidents from propping up in the future, but might sway public opinion against us as well, should our verdict not align with their expectations, while a private trial would be opting for a 'no harm, no foul' approach to any verdict granted.
+The first issue on the docket is the privacy of the trial. An open trial would aid in deterring would-be reactionaries and dissidents from popping up in the future, but might sway public opinion against us as well, should our verdict not align with their expectations, while a private trial would be opting for a 'no harm, no foul' approach to any verdict granted.
 
 The Central Executive Committee, in a private meeting, votes to...
 
@@ -21,31 +21,34 @@ The Central Executive Committee, in a private meeting, votes to...
 subtitle: This option is available to us because we have invested heavily into radio.
 view-if: radio >= 2
 on-arrival: trial_public = 2;
-go-to: trials_menu
+go-to: trials_info
 
 With our recent expansion into radio, the Committee argues in favour of publicising the trial, as well as utilising the opportunity to test the effectiveness of the radio networks.
 
 @publicise_small
 subtitle: We might garner some goodwill and deter future counterrevolutionaries from this.
 on-arrival: trial_radio = 1;
-go-to: trials_menu
+go-to: trials_info
 
 The Committee votes in favour of publicising the trial, utilising our existing media publications to show every facet of the process, as well as the trial, in an effort to deter future counterrevolutionaries from popping up.
 
 @publicise_no
 subtitle: It's best to just get the trial done with.
 on-arrival: trial_radio = 0;
-go-to: trials_menu
+go-to: trials_info
 
 In the end, the Committee votes to keep the trial private, letting whatever results of the trial impact public opinion significantly less.
 
-@trials_menu
+@trials_info
+go-to: trials_menu
 
 The defendants can be primarily split into two groups, though both complicit in aiding the reactionaries.
 
-The Military Tribunal comprises primarily of forces loyal to the Monarchy in battle. Generals, Lieutenants, Fascist leaders, and so on. It is almost all but certain that these men will be found guilty, and it is merely the extent to which punishment will be dealt. 
+The Military Tribunal comprises primarily of forces loyal to the Monarchy in battle. Military leaders, leaders of the fascist *Ras*, and so on. It is almost all but certain that these men will be found guilty, and it is merely the extent to which punishment will be dealt. 
 
-The Bureaucratic Trial comprises of men and women working under the former <span style="color: #009246">**Kingdom**</span>, such as the namesake, bureaucrats. Though some of the more radical elements of the party would rather see them all locked up, the more important issue would be finding replacements that would be able to continue running our own bureaucracy.
+The Bureaucratic Trial comprises of men and women working under the former administration of the <span style="color: #009246">**Kingdom**</span>, such as the namesake, bureaucrats. Though some of the more radical elements of the party would rather see them all locked up, the more important issue would be finding replacements that would be able to continue running our own bureaucracy.
+
+@trials_menu
 
 - @army_check: The Military Tribunal.
 - @bureaucracy_check: The Bureaucratic Trial.
@@ -66,7 +69,7 @@ Days pass. Eventually, as the trial ends, the judges enter deliberation to decid
 - @military_exile: Exile.
 
 @military_execute
-subtitle: Never abolished from the Military Penal Code, after all.
+subtitle: We've never abolished it from the Military Penal Code, after all.
 on-arrival: {!
 if (Q.trial_radio == 0) {
     Q.public_opinion -= 5;
@@ -110,7 +113,7 @@ if (Q.trial_radio == 2) {
 !}
 go-to: trials_menu
 
-Surprise. Then rushed murmurs. Dragging up decades old penal code to execute reactionaries seem...backwards to many, and it is expressed as such. 
+Surprise. Then rushed murmurs. Dragging up decades old penal code to execute reactionaries seem...backwards to many, and it is expressed as such both within the party and outside.
 
 [? if trial_radio = 0 : Outside, however, the reaction is more muted. The privacy given to the trial has allowed minimal news to break outside, aside from scattered rumors. Tension in the <span style="color: #BF0000">**Congress**</span> is heavier in the coming days, perhaps in shock of the verdict or something else. ?]
 
@@ -145,7 +148,7 @@ subtitle: This is deeply unpopular.
 on-arrival: {!
 
 if (Q.trial_radio == 0) {
-    Q.public_opinion += 5;
+    Q.public_opinion += 1;
 
     Q.bordigist_dissent += 3;
     Q.ordinovist_dissent += 3;
@@ -157,7 +160,7 @@ if (Q.trial_radio == 0) {
 }
 
 if (Q.trial_radio == 1) {
-    Q.public_opinion += 7;
+    Q.public_opinion += 2;
     Q.bordigist_dissent += 5;
     Q.ordinovist_dissent += 5;
     Q.socpat_dissent += 5;
@@ -167,7 +170,7 @@ if (Q.trial_radio == 1) {
 }
 
 if (Q.trial_radio == 2) {
-    Q.public_opinion += 9;
+    Q.public_opinion += 4;
     Q.interior_factionalism -= 2;
     Q.bordigist_dissent += 10;
     Q.ordinovist_dissent += 10;
@@ -185,11 +188,11 @@ go-to: trials_menu
 
 Shock. Then outrage. These were men who fought against us, after all. Men who slaughtered those who merely wished for a better life, for a nation ruled by the proletariat rather than a King. And this is the punishment they get? TO walk off free?
 
-[? if trial_radio = 0 : Outside, however, the reaction is more muted. The privacy given to the trial has allowed minimal news to break outside, aside from scattered rumors. Tension in the <span style="color: #BF0000">**Congress**</span> is heavier in the coming days, as calls for investigations into judicial bias grow louder by both <span style="color: #740000ff">**the Left**</span> and <span style="color: #a00000ff">**the Centre**</span>. ?]
+[? if trial_radio = 0 : Outside, however, the reaction is more muted. The privacy given to the trial has allowed minimal news to break outside, aside from scattered rumors. Tension in the <span style="color: #BF0000">**Congress**</span> is heavier in the coming days, as calls for investigations into counterrevolutionaries within the judiciary grow louder by both <span style="color: #740000ff">**the Left**</span> and <span style="color: #a00000ff">**the Centre**</span>. ?]
 
 [? if trial_radio = 1 : Outside, the reaction is significant. With the publicity of the trial under *Avanti!*, our verdict has garnered significant goodwill amongst those distrusting us, albeit at the cost of frustrating our revolutionary comrades. Both <span style="color: #740000ff">**the Left**</span> and <span style="color: #a00000ff">**the Centre**</span> critcise the decision, supported reluctantly by <span style="color: #db0000ff">**the Right**</span>. ?]
 
-[? if trial_radio = 2: Outside, it seems like all hell breaks loose. Public sympathy for the reactionaries soar, with our verdict allowing us to garner some goodwill, especially to men who have seen these generals glorified for the past decade. Approval of our verdict is signalled from both the <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and <span style="color: #39AAAA">**French**</span> ambassadors, while for once, all three factions within the party are united in the criticism of the leniency of the verdict. ?]
+[? if trial_radio = 2: Outside, public reactions are mixed. Significant elements of the populace aligned with us express their frustration and disgust with such a lenient sentence, balanced out by the remainder of the populace skeptical of our cause, having seen the military leaders placed on trial glorified for decades before us. Approval of our verdict is signalled from both the <span style="color: #00247D">**Bri**</span><span style="color: #CF142B">**tish**</span> and <span style="color: #39AAAA">**French**</span> ambassadors, while for once, all three factions within the party are united in the criticism of the leniency of the verdict. ?]
 
 @bureaucracy_check
 max-visits: 1
@@ -198,9 +201,9 @@ The Bureaucratic Trial opens. The trial, unlike most others that have taken plac
 
 Nevertheless, the trial continues as per usual. As it concludes, there are, naturally, two verdicts possibly granted, and with some pushing, we could let the judges select a verdict more suited for our goals. 
 
-The first of which would be to purge the bureaucrats. To find them all guilty, as well as produce adequate sentences for the former bureaucrats would allow for a fresh restart, placing figures loyal to us to replace them. However, to replace the bureaucracy with forces loyal to us, in a nation with still a significant illiteracy rate would be challenging at best, not to mention the time needed to acclimate new workers and train them to be efficient, nor the possibility of corruption should our new workers come from families less fortunate.
+The first of which would be to purge the bureaucrats. To find them all guilty, as well as produce adequate sentences for the former bureaucrats would allow for a fresh restart, placing figures loyal to us to replace them. However, to do so in a nation with still a significant illiteracy rate would be challenging at best, not to mention the time needed to acclimate new workers and train them to be efficient, nor the possibility of corruption or potential subversive elements attempting to slip in.
 
-The other option, as suggested by pragmatists on <span style="color: #db0000ff">**the Right**</span> would be to retain low-levelled bureaucrats, those who did not actively collaborate against us, keeping them in order to ensure the state is able to continue running efficiently. Proponents naturally argue that their loyalty would be uncertain, and that placing potential reactionaries so close within the heart of the state would spell almost inevitable doom for the Republic.
+The other option, as suggested by pragmatists on <span style="color: #db0000ff">**the Right**</span> would be to retain low-levelled bureaucrats, those who did not actively collaborate against us, keeping them in order to ensure the state is able to continue running efficiently. Opposition to this idea naturally argue that their loyalty would be uncertain, and that placing potential reactionaries so close within the heart of the state would spell almost inevitable doom for the <span style="color: #BF0000">**Republic**</span>.
 
 What are we to do?
 
