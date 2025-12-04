@@ -15,10 +15,6 @@ for (var faction of Q.rev_factions) {
     Q['old_' + faction + '_r'] = 0;
 }
 
-Q.psi_r_disp = 100.0;
-Q.psi_seating = 535;
-Q.psi_seating_disp = 100.0;
-
 Q.total_percentage = parseFloat(Q.psi_votes) + parseFloat(Q.psri_votes) + parseFloat(Q.other_votes) + parseFloat(Q.pnf_votes);
 
 if (Q.syndicalist_active != 1) {
@@ -96,6 +92,10 @@ Q.syndicalist_dissent = 0;
 Q.labour_dissent = 0;
 Q.turatian_dissent = 0;
 Q.gradualist_dissent = 0;
+
+Q.psi_r_disp = 100.0 - Q.other_r_disp;
+Q.psi_seating = 535 - Q.other_seating;
+Q.psi_seating_disp = 100.0 - Q.other_seating_disp;
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
