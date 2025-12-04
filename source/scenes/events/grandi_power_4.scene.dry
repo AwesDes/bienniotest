@@ -117,7 +117,7 @@ if (Q.ds_leader == "Giuffrida") {
 }
 
 
-Q.grandi_coalition = parseFloat(Q.pnf_seating_disp);
+Q.grandi_coalition = Number(Q.pnf_seating_disp);
 !}
 go-to: coalition_menu
 
@@ -139,7 +139,7 @@ Though D'Annunzio's economic policies had alienated the conservative right, Gran
 choose-if: ul_sway >= 0
 unavailable-subtitle: The [+ ul_full_name +] are unwilling to join the National Coalition.
 on-arrival: {!
-Q.grandi_coalition += parseFloat(Q.ul_seating_disp);
+Q.grandi_coalition += Number(Q.ul_seating_disp);
 Q.ul_seen = 1;
 Q.ul_in_government = 1;
 !}
@@ -153,7 +153,7 @@ choose-if: ppi_sway >= 0
 unavailable-subtitle: The Italian People's Party are unwilling to join the National Coalition.
 
 on-arrival: {!
-Q.grandi_coalition += parseFloat(Q.ppi_seating_disp);
+Q.grandi_coalition += Number(Q.ppi_seating_disp);
 Q.ppi_seen = 1;
 Q.ppi_in_government = 1;
 !}
@@ -166,7 +166,7 @@ With reassurances to respect religious freedoms within Italy, the Italian People
 choose-if: ldr_sway >= 0
 unavailable-subtitle: The [+ ldr_full_name +] are unwilling to join the National Coalition.
 on-arrival: {!
-Q.grandi_coalition += parseFloat(Q.ldr_seating_disp);
+Q.grandi_coalition += Number(Q.ldr_seating_disp);
 Q.ldr_seen = 1;
 Q.ldr_in_government = 1;
 !}
@@ -179,7 +179,7 @@ The [+ ldr_full_name +] enters the National Coalition, influenced by the leaders
 choose-if: pcs_sway >= 0
 view-if: pcs_formed
 on-arrival: {!
-Q.grandi_coalition += parseFloat(Q.pcs_seating_disp);
+Q.grandi_coalition += Number(Q.pcs_seating_disp);
 Q.pcs_seen = 1;
 Q.pcs_in_government = 1;
 !}
@@ -192,7 +192,7 @@ The Christian Social Party, ideologically aligned with the PNF, joins the Nation
 choose-if: ds_sway >= 0
 unavailable-subtitle: The [+ ds_full_name +] are unwilling to join the National Coalition.
 on-arrival: {!
-Q.grandi_coalition += parseFloat(Q.ds_seating_disp);
+Q.grandi_coalition += Number(Q.ds_seating_disp);
 Q.ds_seen = 1;
 Q.ds_in_government = 1;
 !}

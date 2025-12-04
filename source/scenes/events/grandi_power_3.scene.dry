@@ -1,6 +1,6 @@
 title: Italian Conferences on Reparations
 subtitle: Grandi takes position as both Foreign and Prime Minister.
-view-if: pnf_in_power and pnf_leader = "Grandi" and dannunzio_economy_seen and time >= dannunzio_time and (not uk_debts_over or not us_debts_over)
+view-if: pnf_in_power and pnf_leader = "Grandi" and grandi_economy_seen and time >= dannunzio_time and (not uk_debts_over or not us_debts_over)
 max-visits: 1
 tags: event
 new-page: true

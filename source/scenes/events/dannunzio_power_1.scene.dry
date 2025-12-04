@@ -1,7 +1,7 @@
 title: Formation of the Grand Council of Fascism
 subtitle: The first step towards the merger of state and party.
 view-if: psi_in_government = 0 and not national_congress_seen and prime_minister = "D'Annunzio" and budget > -5
-on-arrival: dannunzio_council_seen = 1; dannunzio_time = time + 2; next_election_time = time + 28; next_election_month = month + 14; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12 
+on-arrival: dannunzio_council_seen = 1; dannunzio_time = time + 2;  next_election_time = time + 72; next_election_year = year + 3;
 new-page: true
 max-visits: 1
 tags: event
