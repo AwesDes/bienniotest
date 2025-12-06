@@ -114,7 +114,7 @@ Q.social_southern_timer = 0;
 Q.entente_trade_deficit = 0;
 Q.comintern_trade_deficit = 0;
  
-Q.timers.push('union', anti_religious', 'eco_plan', 'hungary_influence', 'germany_influence', 'uncommitted_influence', 'rev_mili_reorg', 'rev_mili_prod', 'rev_carabinieri', 'rev_ideology', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
+Q.timers.push('union', 'anti_religious', 'eco_plan', 'hungary_influence', 'germany_influence', 'uncommitted_influence', 'rev_mili_reorg', 'rev_mili_prod', 'rev_carabinieri', 'rev_ideology', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
 
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
 
