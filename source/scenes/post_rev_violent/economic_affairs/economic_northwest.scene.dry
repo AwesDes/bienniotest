@@ -98,7 +98,7 @@ subtitle: -2 Budget - Heavy Industry remains the core of the industrial sector, 
 view-if: left_eco_adopted or both_eco_adopted
 on-arrival: {!
 Q.budget -= 2;
-Q.northwest_industry_health += 2.7 * Q.bureaucratic_modifier;
+Q.northwest_industry_health += 2.7 * Q.bureaucratic_modifier * Q.union_modifier;
 !}
 
 Though relatively untouched, the factories have remained fairly idle following the civil war, and we can stimulate investment into these factories to expand them and get them functioning once more.
@@ -108,7 +108,7 @@ subtitle: -1 Budget - We can subsidise small industries to stimulate them.
 view-if: right_eco_adopted
 on-arrival: {!
 Q.budget -= 1;
-Q.northwest_industry_health += 1.6 * Q.bureaucratic_modifier;
+Q.northwest_industry_health += 1.6 * Q.bureaucratic_modifier * Q.union_modifier;
 !}
 
 Investments, especially foreign, have dried up since the civil war, leaving many smaller businesses unsustainable. Though against our goals, we could help to subsidise these businesses to stimulate the economy.

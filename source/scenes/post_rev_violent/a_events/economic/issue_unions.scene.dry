@@ -1,0 +1,65 @@
+title: Discussion on the National Unions
+subtitle: Another issue enters the <span style="color: #BF0000">**Congress**</span>...
+new-page: true
+view-if: deadline_active = 1 and time >= issue_union_time
+tags: event
+max-visits: 1
+
+= Mandate on the National Unions & their Responsibilities
+
+# this should open up some new options for eco
+
+With the beginning of our new Economic Policy, there exists a need to redefine the role of the trade unions and their responsibilities in a rapidly changing economic environment. Though naturally a significant force before the revolution, the unions have no defined role in the current economy that should be resolved immediately, considering its weight and importance to both the workers and the state.
+
+Four proposals have been brought forward, each supported by a faction of the party, seeking to push forward their agenda. 
+
+The first option, as proposed by the more radical members of the <span style="color: #740000ff">**Left**</span>, would be to **integrate the unions directly into state apparatus**. This would allow us greater control over management and to promote the party and educate the workers, as well as being able to work closely to both the unions and the workers to further economic recovery. This proposal has been met with immediate uproar from the Labour Reformists [? if syndicalist_active : and Syndicalists ?], who have declared complete opposition and a walkout if adopted as our plan, turning many of the trade unions into our enemies.
+
+The second proposal would have the unions retain the vast majority of its functions and roles since their inception, taking up the role as a bridge between the Worker and the State, instead cooperating with the State rather than having to negotiate with it. This proposal would only nominally change the roles of the unions, and has been met with approval by the vast majority of the moderates, opposed only by the Syndicalists and some delegates from the <span style="color: #740000ff">**Left**</span>.
+
+The third proposal would greatly expand the powers of the unions, granting them direct control of the workplace to manage production, as proposed by the Syndicalists. This has been met with criticism by members of both sides of the party, viewing a fragmented leadership and system of economic control unstable, especially in such times of economic crisis. Nevertheless, this remains an option.
+
+The fourth and final proposal, would be to have the unions serve as a 'School of Communism', educating the workers and preparing them for the administration of the economy, allowing them to retain independence as well, arguing cooperation rather than coercion would serve the worker better. [? if (year = 1921 and month = 3 and week >= 3) or (year = 1921 and month > 3) or year >= 1921 : This is also the position enshrined and agreed upon by Lenin, and we will probably see an improvement in relations shall we adopt tendencies similar to their own. ?]
+
+- @union_represent: The Unions must be subjugated to the State, as proposed by the <span style="color: #740000ff">**Bordigists**</span>.
+- @union_democracy: The Unions shall be granted powers to manage production in the Workplace, working with the State, as proposed by the <span style="color: #a00000ff">**Syndicalists**</span>.
+- @union_educators: The Unions shall become educators alongside being Organs of Worker Control.
+
+@union_represent
+subtitle: Neither the CGdL nor Federterra will willingly accept this; tread carefully.
+on-arrival: {!
+Q.labour_dissent += 80;
+Q.syndicalist_dissent += 80;
+
+Q.unions_option = 1;
+Q.cgdl_strength = 4;
+Q.federterra_strength = 3;
+
+Q.cgdl_evidence = 0;
+Q.federterra_evidence = 0;
+
+Q.cgdl_relations -= 80;
+Q.federterra_relations -= 80;
+!}
+
+Much to the outrage of the Syndicalists and Labour Reforms, we begin bringing the trade unions under the control of the state, integrating most of them within the state apparatus. However, both the CGdL and Federterra remain defiant, and we must subjugated them before they can do significant damage to the economy.
+
+*A new card is now available in Economic Affairs.*
+
+@union_democracy
+subtitle: This would grant the Unions considerable power in the Economy.
+choose-if: not left_eco_adopted
+unavailable-subtitle: Our Economic Policy conflicts with this.
+on-arrival: unions_option = 2; bordigist_dissent += 4; turatian_dissent += 8; gradualist_dissent += 10; syndicalist_dissent -= 10; labour_dissent -= 8; ordinovist_dissent += 2;
+
+We hand over control to the unions, granting them significant powers and input into the economy, much to the chagrin of both the <span style="color: #740000ff">**Left**</span> and <span style="color: #db0000ff">**Right**</span>. Nevertheless, hopefully this new reorientation of the economy will help improve our economic situation.
+
+*A new card is now available in Economic Affairs.*
+
+@union_educators
+subtitle: [? if (year = 1921 and month = 3 and week >= 3) or (year = 1921 and month > 3) or year >= 1921 : This is the current position of Lenin and the <span style="color: #bf0000">**Soviet Union**</span>. ?] [? if (year = 1921 and month = 3 and week < 3) or (year = 1921 and month < 3) or year < 1921 : This would turn unions to bridge the gaps between Worker and State, and is considered a compromise solution. ?]
+on-arrival: soviet_relation += 1 if ((year = 1921 and month = 3 and week >= 3) or (year = 1921 and month > 3) or year >= 1921)
+
+Through a broad consensus opposed only by radicals of both ends, the unions continue to retain their autonomy outside the state, operating in an educational capacity to teach our workers and prepare them for the eventual control of production. In practise, this proposal does minimal change to the operations of the unions, and much of the status quo is preserved.
+
+[? if (year = 1921 and month = 3 and week >= 3) or (year = 1921 and month > 3) or year >= 1921 : We have also seen a slight increase in our relations with the Soviets, considering that we have followed their policy regarding the unions. ?]

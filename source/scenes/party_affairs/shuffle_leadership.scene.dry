@@ -51,15 +51,6 @@ go-to: rm_main
 
 Lazzari has been removed as an advisor. The Maximalist faction disapproves.
 
-@remove_ferri
-title: Remove Ferri
-view-if: ferri_advisor = 1
-tags: remove_advisor
-on-arrival: ferri_advisor = 0; maximalist_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Ferri has been removed as an advisor. The Maximalist faction disapproves.
-
 @remove_bombacci
 title: Remove Bombacci
 view-if: bombacci_advisor = 1
@@ -309,18 +300,6 @@ on-arrival: lazzari_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Constantinto Lazzari is now an advisor.
-
-@add_ferri
-title: Enrico Ferri
-subtitle: Enrico Ferri is a criminologist, sociologist, and member of the Maximalist faction. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Editorial Line, Media ?]
-is-card: true
-card-image: img/portraits/EnricoFerri.jpg
-tags: maximalist_advisor
-view-if: ferri_advisor = 0 and n_advisors < 3 and maximalists_resign = 0 and sympathiser_expelled = 0 and advisor_arrested != 1
-on-arrival: ferri_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-
-Enrico Ferri is now an advisor.
 
 @add_bombacci
 title: Nicola Bombacci

@@ -1,0 +1,15 @@
+title: The <span style="color: #740000ff">**Ordinovists**</span> Dissent
+subtitle: Our majority in the <span style="color: #BF0000">**Congress**</span> shrinks...
+new-page: true
+view-if: ordinovist_dissent >= 80
+on-arrival: majority_support -= ordinovist_seating_disp
+tags: event
+max-visits: 1
+
+= The <span style="color: #740000ff">**Ordinovists**</span> Dissent
+
+Our recent actions have caused great concern amongst the <span style="color: #740000ff">**Ordinovists**</span>. In a scathing attack within the <span style="color: #BF0000">**Congress**</span>, Gramsci has accused our policies and recent actions as treasonous and abandoning our ideological goals to cement power, vowing against us.
+
+This alienation has cost us more support within the <span style="color: #BF0000">**Congress**</span>, shrinking our support further. 
+
+- @root: Concerning.

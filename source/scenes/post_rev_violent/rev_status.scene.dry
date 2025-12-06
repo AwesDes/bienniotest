@@ -27,6 +27,8 @@ General-Secretary of the [+ psi_full_name +]: [+ psi_leader +] ([? if psi_leader
 
 Congress of Soviets composition:
 
+We currently have [+ majority_support +]% of the Congress supporting us.
+
 Bordigists: [+ bordigist_seating_disp +]% 
 Ordinovists: [+ ordinovist_seating_disp +]%
 Maximalists: [+ maximalist_seating_disp +]%

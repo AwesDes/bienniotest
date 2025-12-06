@@ -743,7 +743,6 @@ Q.gramsci_advisor = 0; // Antonio Gramsci
 
 // Maximalist advisors
 Q.lazzari_advisor = 0; // Constantinto Lazzari
-Q.ferri_advisor = 0; // Enrico Ferri
 Q.bombacci_advisor = 0; // Nicola Bombacci
 
 // Reformist advisors

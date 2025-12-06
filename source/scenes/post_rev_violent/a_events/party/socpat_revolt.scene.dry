@@ -1,0 +1,15 @@
+title: The <span style="color: #a00000ff">**Social Patriots**</span> Dissent
+subtitle: Our majority in the <span style="color: #BF0000">**Congress**</span> shrinks...
+new-page: true
+view-if: socpat_dissent >= 80
+on-arrival: majority_support -= socpat_seating_disp
+tags: event
+max-visits: 1
+
+= The <span style="color: #a00000ff">**Social Patriots**</span> Dissent
+
+Our recent actions have caused great concern amongst the <span style="color: #a00000ff">**Social Patriots**</span>, who have viewed our efforts as ruinous and destroying <span style="color: #009246">**Italy**</span>. We have seen further relations deteriorate within our allies in the <span style="color: #a00000ff">**Centre**</span>
+
+This alienation has cost us more support within the <span style="color: #BF0000">**Congress**</span>, shrinking our support further. 
+
+- @root: Concerning.

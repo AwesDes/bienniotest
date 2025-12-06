@@ -100,7 +100,7 @@ subtitle: -1 Budget - We can aid farmers directly.
 view-if: left_eco_adopted
 on-arrival: {!
 Q.budget -= 1;
-Q.southern_agricultural_health += 3.6 * Q.bureaucratic_modifier;
+Q.southern_agricultural_health += 3.6 * Q.bureaucratic_modifier * Q.union_modifier;
 !}
 
 Fields across the region remain destroyed from the devastation of the war, which we can help to end by stimulating growth and invest in them to produce crops for our benefit.
@@ -111,7 +111,7 @@ view-if: right_eco_adopted or both_eco_adopted
 on-arrival: {!
 Q.budget -= 0.5;
 Q.southern_poverty -= 0.7;
-Q.southern_agricultural_health += 2.4 * Q.bureaucratic_modifier;
+Q.southern_agricultural_health += 2.4 * Q.bureaucratic_modifier * Q.union_modifier;
 !}
 
 Peasants, now in control of fields, are able to grow crops by themselves and sell them for a profit to the government or the market. Many, however, still lack suitable markets following the civil war, and purchasing yields at a low price and help reduce poverty and aid farmers at the same time.

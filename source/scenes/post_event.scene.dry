@@ -1617,6 +1617,15 @@ if (Q.week_actions >= 1) {
             Q.southern_regions = Math.floor(Math.random() * 8) + 1
         }
 
+        // check the status of unions & adjust modifiers
+
+        if (Q.cgdl_collapse == 1 && Q.federterra_collapse == 1) {
+            Q.union_modifier = 1;
+        } else {
+            Q.modifier_tens = Q.cgdl_relations + Q.federterra_relations;
+            Q.union_modifier = ((Q.modifier_tens / 10)/2);
+        }
+
         // incompatiable chairman and sec-gen increases factionalism
 
         if (Q.premier_party != Q.psi_leader_faction) {
@@ -1976,6 +1985,14 @@ if (Q.week_actions >= 1) {
 
         if (Q.poverty < 10) {
             Q.bureaucratic_loyalty += 2/4;
+        }
+
+        // majority check
+
+        if (Q.majority_support < 50) {
+            Q.majority_check_timer -= 1;
+        } else {
+            Q.majority_check_timer = 6;
         }
     }
 }

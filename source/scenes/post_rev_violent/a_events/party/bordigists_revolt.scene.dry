@@ -1,0 +1,15 @@
+title: The <span style="color: #740000ff">**Bordigists**</span> Dissent
+subtitle: Our majority in the <span style="color: #BF0000">**Congress**</span> shrinks...
+new-page: true
+view-if: bordigist_dissent >= 80
+on-arrival: majority_support -= bordigist_seating_disp
+tags: event
+max-visits: 1
+
+= The <span style="color: #740000ff">**Bordigists**</span> Dissent
+
+Our recent actions have cause great dissent amongst the <span style="color: #740000ff">**Bordigists**</span>, and in a lengthy statement to the <span style="color: #BF0000">**Congress**</span>, Amadeo Bordiga has issues a scathing criticism of our direction, warning of a irreversible point of no return should we continue on this path.
+
+Nevertheless, the alienation of a faction has cost us approval within the <span style="color: #BF0000">**Congress**</span>, and grave consequences shall come should we fail to keep our majority.
+
+- @root: Concerning.

@@ -1,0 +1,15 @@
+title: The <span style="color: #740000ff">**Syndicalists**</span> Dissent
+subtitle: Our majority in the <span style="color: #BF0000">**Congress**</span> shrinks...
+new-page: true
+view-if: syndicalist_dissent >= 80
+on-arrival: majority_support -= syndicalist_seating_disp
+tags: event
+max-visits: 1
+
+= The <span style="color: #740000ff">**Syndicalists**</span> Dissent
+
+Our recent actions have caused great concern amongst the <span style="color: #740000ff">**Syndicalists**</span>, who have denounced the direction we have taken the nation, promising to oppose our future agenda.
+
+This alienation has cost us more support within the <span style="color: #BF0000">**Congress**</span>, shrinking our support further, though unsurprising.
+
+- @root: Concerning.

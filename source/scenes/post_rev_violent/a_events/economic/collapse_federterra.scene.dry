@@ -1,0 +1,21 @@
+title: The Integration of the National Federation of Agricultural Workers 
+subtitle: Our fight against the unions prove successful.
+new-page: true
+view-if: unions_option = 1 and federterra_strength <= 0
+on-arrival: {!
+if (Q.cgdl_strength <= 0) {
+    Q.unions_option = 0;
+}
+
+Q.southern_agricultural_health += 3.7;
+Q.central_agricultural_health += 1.3;
+Q.federterra_collapse = 1;
+!}
+tags: event
+max-visits: 1
+
+= The Integration of Federterra
+
+We have brought Federterra to heel, finally integrating it within the state despite persistent resistance. Hopefully, without the interference of the agricultural unions, our yield and output in the South will grow further.
+
+- @root: Perfect.

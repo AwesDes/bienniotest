@@ -1,0 +1,15 @@
+title: Report from the Ministry of Internal Affairs
+subtitle: Our anti-religious campaigns bear fruit...
+new-page: true
+view-if: religious_success_time <= time and anti_religious_done
+tags: event
+on-arrival: northeast_illiteracy += 2.5; northwest_illiteracy += 2.4; central_illiteracy += 2.2; southern_illiteracy += 2.5; budget += 2;
+max-visits: 1
+
+= Anti-Religious Campaign Results
+
+Reports from the Ministry of Internal Affairs have shown a significant improvement in regards to the standardisation of education and a general boost in efficiency from the Ministry of Education. Illiteracy across the nation has decreased in relation to our efforts to eliminate religious education and bring it under state control.
+
+The Ministry of Finances has also reported a budgetary increase regarding the repurposing and seizure of Church properties, allowing us more leeway to improve the economy further.
+
+- @root: Excellent.

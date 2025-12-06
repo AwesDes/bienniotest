@@ -1,0 +1,22 @@
+title: The Integration of the General Confederation of Labour
+subtitle: Our fight against the unions prove successful.
+new-page: true
+view-if: unions_option = 1 and cgdl_strength <= 0
+on-arrival: {!
+if (Q.federterra_strength <= 0) {
+    Q.unions_option = 0;
+}
+
+Q.northeast_industry_health += 3.4;
+Q.northwest_industry_health += 2.4;
+Q.central_industry_health += 0.5;
+Q.cgdl_collapse = 1;
+!}
+tags: event
+max-visits: 1
+
+= The Integration of the CGdL
+
+We have brought the CGdL to heel, finally integrating it within the state despite persistent resistance. Hopefully, without the interference of the industrial unions, our economic growth in the North will increase further.
+
+- @root: Perfect.

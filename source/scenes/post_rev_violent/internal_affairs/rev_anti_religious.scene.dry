@@ -1,0 +1,52 @@
+title: Anti-Religious Campaign
+new-page: true
+view-if: anti_religious_timer <= 0 and anti_religious_active = 1
+on-arrival: anti_religious_timer = 3; week_actions += 1
+is-card: true
+card-image: 
+tags: internal_affairs
+
+= Anti-Religious Campaign
+
+The party has historically pursued an anti-religious stance, and this has not changed since we have gotten into power. Nevertheless, religion has been entrenched into society at all levels, and as such, a renewed campaign has begun to root out its excesses.
+
+Our means of pursuing this campaign comes primarily from the Ministry of the Interior, who have laid out two actions we can undertake. The Education Ministry has reported obstructions regarding our illiteracy campaigns, which have been attributed to the remaining religious schools across the nation.
+
+On the other end, the Interior has also provided evidence that the Church continues to control and own large portions of land, attributed to loopholes within the system.
+
+What should we do?
+
+- @target_education: Direct the Interior to root out religious schools.
+- @target_property: Direct the Interior to continue expropriating church property.
+- @declare_campaign_complete: Declare the campaign complete.
+- @easy_discard
+
+@target_education
+on-arrival: {!
+Q.religious_resistance -= 1;
+
+regions = ['northeast', 'northwest', 'central', 'southern'];
+
+var random = Math.floor(Math.random() * regions.length);
+
+Q[regions[random] + '_illiteracy'] -= 2.5;
+
+!}
+max-visits: 3
+
+We continue our process of shutting down religious educational facilities, reassigning and ensuring students return to public education facilities instead, hopefully improving literacy slightly.
+
+@target_property
+on-arrival: religious_resistance -= 1; budget += 0.5;
+max-visits: 2
+
+We are able to investigate and arrest numerous individuals acting as intermediaries between the Church and land, as well as close the loopholes to prevent more action from occurring, gaining some funds in the process.
+
+@declare_campaign_complete
+view-if: religious_resistance <= 0
+on-arrival: anti_religious_active = 0; anti_religious_done = 1; anti_religious_timer = time + 24
+
+With the decline in religious schools across the nation, alongside vast swathes of religious land brought under our control, the Interior Ministry has brought an end to the campaign, and a report shall be present once the impacts of our campaign are more evident.
+
+- @root: Excellent.
+

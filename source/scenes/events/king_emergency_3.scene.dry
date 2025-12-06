@@ -29,8 +29,8 @@ Though we naturally protest and argue that this is unconstitutional, the King an
 - @council_deactivate: The Factory Councils are placed under military occupation.
 
 @advisor_deactivate
-subtitle: Enrico Ferri, Guido Picelli and Umberto Terracini will be temporarily unavailable due to arrests.
-on-arrival: advisor_arrested = 1; n_advisors -= 1 if ferri_advisor == 1; n_advisors -= 1 if picelli_advisor == 1; n_advisors -= 1 if terracini_advisor == 1; ferri_advisor = 0; picelli_advisor = 0; terracini_advisor = 0;
+subtitle: Guido Picelli and Umberto Terracini will be temporarily unavailable due to arrests.
+on-arrival: advisor_arrested = 1; n_advisors -= 1 if picelli_advisor == 1; n_advisors -= 1 if terracini_advisor == 1; picelli_advisor = 0; terracini_advisor = 0;
 max-visits: 1
 go-to: action_menu
 

@@ -1,0 +1,31 @@
+title: The Debate on Religious Affairs
+subtitle: Another issue enters the <span style="color: #BF0000">**Congress**</span>...
+new-page: true
+view-if: deadline_active = 1 and time >= issue_religious_time
+tags: event
+max-visits: 1
+
+= Debate on Religious Affairs
+
+Religion, specifically Catholicism remains a significant part of many people's lives, aided by our proximity to the Holy See. Though our constitution have set numerous legislation separating Church and State, enforcement is a wholly new matter, as religious schools, religious property and the influence of the clergy still exist rampantly across <span style="color: #009246">**Italy**</span>.
+
+Many within the <span style="color: #BF0000">**Congress**</span> have called for a anti-religious campaign like our <span style="color: #bf0000">**Russian**</span> counterparts, allowing us to rid the excesses of religion on the people and free them from the opium of the masses. Nevertheless, and perhaps expectedly, opposition has come from our <span style="color: #db0000ff">**Right**</span>, arguing our circumstances are significantly different, and that such a campaign would jeopardise our ties with the Holy See and stir much stronger public backlash against us.
+
+The option is up to us. What should we do?
+
+- @anti_religious: Begin rooting out the excess of religion within the state.
+- @do_nothing: Perhaps it would be best to leave such controversial matters alone for now.
+
+@anti_religious
+subtitle: We would risk substantial dissent for a future payoff.
+on-arrival: anti_religious_active = 1
+
+The sooner we act on ridding religion from society, the better. We can begin enforcing our legislation regarding religious affairs, from disbanding religious schools to expropriating church property.
+
+*A new card is now available in Internal Affairs.*
+
+@do_nothing
+subtitle: We cannot risk destablising the nation once more.
+on-arrival: bordigist_dissent += 3; ordinovist_dissent += 3; religious_resistance = 5;
+
+To pursue yet another campaign of oppression in such turbulent times would be a death-blow to our nation's stability. Though some on the <span style="color: #740000ff">**Left**</span> nay grumble, this will help ensure the nation remains focused on recovery first. 

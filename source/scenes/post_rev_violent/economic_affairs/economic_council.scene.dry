@@ -246,7 +246,7 @@ Rather than the two proposals, the new proposed system of 'Regional Dualism' is 
 There is significant work to be done, staffers informed, plans drafted and people to be hired. It is imperative the success of the plan is shown swiftly, yet implemented fully to quell dissenting voices.
 
 @goals_choose
-on-arrival: deadline_active = 1; trade_union_time = time + 2 {!
+on-arrival: deadline_active = 1; issue_union_time = time + 7; issue_wealth_time = time + 9; issue_religious_time = time + 4; {!
 if (Q.left_eco_adopted || Q.right_eco_adopted) {
     Q.deadline_month = Q.month;
     Q.deadline_year = Q.year + 1;

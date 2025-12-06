@@ -1,0 +1,36 @@
+title: Mandate on Architectural Wealth Displays
+subtitle: Another issue enters the <span style="color: #BF0000">**Congress**</span>...
+new-page: true
+view-if: deadline_active = 1 and time >= issue_wealth_time
+tags: event
+max-visits: 1
+
+= Mandate on Architectural Wealth Displays
+
+A member of the <span style="color: #BF0000">**Congress**</span> has brought up an intriguing topic of discussion: Wealth Displays. The end of the Kingdom has left significant signs of aristocratic and dynastic wealth behind, from Palaces to Villas to Palazzis. As such, three primary plans have appeared on what exactly to do to these structures.
+
+One proposal would have us keep these structures, converting them into cultural buildings to showcase as museums or centres to educate workers on the decadence and selfishness of the bourgeois, teaching them on the lavish wealth experienced while workers toiled for them in factories.
+
+Another would be to simply demolish these buildings, replacing them with structures that would benefit workers and improve their lives, such as housing or shops. A compromise solution has also been proposed; to merely repurpose these buildings, turning them into buildings for workers without needing to demolish them.
+
+- @turn_museums: Convert them into Cultural Buildings.
+- @turn_remove: Demolish these Buildings.
+- @turn_repurpose: Repurpose these buildings into Homes, Hospitals or Schools.
+
+@turn_museums
+subtitle: -2 Budget - This will help improve public perception of us.
+on-arrival: budget -= 2; public_opinion += 10; stability += 2; bureaucratic_loyalty += 10;
+
+Though a relic of the Kingdom, these structures contain our culture and history, and to deprive our descendants, workers to be unable to walk through these places, to reflect and learn about the decadence of the bourgeois and aristocratic nobility would be a shame. Via some renovations, we can begin converting these places into museums and centres open to the public to view and experience for the first time. 
+
+@turn_remove
+subtitle: +2 Budget - This will help free up space for economic needs.
+on-arrival: budget += 2; central_industry_health += 3; northwest_industry_health += 2; northeast_industry_health += 2; southern_agricultural_health += 2; central_agricultural_health += 3;
+
+It would do us best to simply treat these buildings like any other, demolishing and replacing the lavish show of extravagance with housing, schools or hospitals that will aid workers. Additionally, the sale of whatever valuable parts in these displays have left us with enough budget to continue funding our social programs and economic growth.
+
+@turn_repurpose
+subtitle: -1 Budget - This will help reduce social inequality.
+on-arrival: budget -= 1; northeast_poverty -= 1.3; northwest_poverty -= 1.2; southern_homelessness -= 0.5; central_illiteracy -= 2.4;
+
+Rather than wastefully spending resources to tear them down or freeze them in time like monuments to corruption and decadence, these estates can be repurposed directly for the workers with lower cost, becoming schools, homes or hospitals.

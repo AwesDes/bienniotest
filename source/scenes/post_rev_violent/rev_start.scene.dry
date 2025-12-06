@@ -73,6 +73,8 @@ Q.psi_leader_faction = "N/A";
 Q.premier = "Empty";
 Q.premier_party = "N/A";
 
+Q.majority_support = 100;
+
 Q.bordigist_dissent = 0;
 Q.labour_dissent = 0;
 Q.socpat_dissent = 0;
@@ -93,6 +95,9 @@ Q.opinion_check_timer = 6;
 Q.eco_plan_timer = 0;
 Q.cheka_timer = 0;
 
+Q.cgdl_relations = 80;
+Q.federterra_relations = 80;
+
 Q.economic_central_timer = 0;
 Q.economic_northeast_timer = 0;
 Q.economic_northwest_timer = 0;
@@ -108,8 +113,8 @@ Q.social_southern_timer = 0;
 
 Q.entente_trade_deficit = 0;
 Q.comintern_trade_deficit = 0;
-
-Q.timers.push('eco_plan', 'hungary_influence', 'germany_influence', 'uncommitted_influence', 'rev_carabinieri', 'rev_ideology', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
+ 
+Q.timers.push('union', anti_religious', 'eco_plan', 'hungary_influence', 'germany_influence', 'uncommitted_influence', 'rev_mili_reorg', 'rev_mili_prod', 'rev_carabinieri', 'rev_ideology', 'rev_fundraising', 'rev_interior_policy', 'rev_media', 'rev_party_disunity', 'rev_party_organisations', 'rev_rally', 'economic_central', 'economic_northeast', 'economic_northwest', 'economic_southern', 'reforms_health', 'reforms_labour', 'reforms_education', 'social_central', 'social_northeast', 'social_northwest', 'social_southern', 'debt_measures');
 
 Q.pinnedCardsDescription = "Foreign Policy - Our contacts with the international world."
 

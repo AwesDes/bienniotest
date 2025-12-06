@@ -1,0 +1,15 @@
+title: <span style="color: #800000">**Report on Confidence within the Congress**</span>
+subtitle: Stopgaps have proven ineffective.
+new-page: true
+view-if: majority_support < 50 and majority_check_timer < 0 and not rev_economic_recovery and not in_emergency
+on-arrival: in_emergency = 1
+tags: event
+max-visits: 1
+
+= <span style="color: #800000">**Report on Confidence within the Congress**</span>
+
+Our policy failures have turned a majority of the <span style="color: #BF0000">**Congress**</span> against us, who are calling for our ousting and the election of a new Council.
+
+An Emergency Session of the <span style="color: #BF0000">**Congress of Soviets**</span> has been called.
+
+- @emergency_start: The Sword of Damocles finally falls.
