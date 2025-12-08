@@ -1,11 +1,24 @@
 title: situation
 new-page: true
 is-special: true
+go-to: menu
 
 = The State of Italy
 
 {!<img src='img/backgroundSituation.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey">!}
 {!<p style="text-align: center; color: #900; font-weight: bold">Lavoratori di tutto il mondo, unitevi!</p>!}
+
+The <span style="color: #BF0000">**Republic**</span> remains a new face in the world, and must weather the storm, both internally and externally to survive.
+
+@menu
+
+- @union: The State of the Union.
+- @orgs: The Organisations.
+- @global: The Global Stage.
+- @backSpecialScene: Exit.
+
+@union
+go-to: menu
 
 {!<hr>!}
 
@@ -31,6 +44,9 @@ Corruption within the state is **[+ state_corruption : corruption +]**.
 
 [? if para_seen = 1 and mafia_active : The <span style="color: #465053ff">**Mafia**</span> are currently <span style="color: #d42f2f;">**meddling in government**</span>. ?]
 
+@orgs
+go-to: menu
+
 {!<hr>!}
 
 = State of the Organisations
@@ -51,6 +67,8 @@ Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]*
 
 [? if federterra_collapse : The relations with the National Federation of Agricultural Workers is <span style="color: #a31c1cff;">**irrelevant**</span>. ?]
 
+@global
+go-to: menu
 
 {!<hr>!}
 
@@ -85,5 +103,3 @@ Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]*
 [? if soviet_germany : {!<img src='img/FlagGermany.png' style="display: flex; justify-content: center; margin: auto; border: 5px solid grey; height: 100px; width: 200px; margin-top: 20px">!} ?]
 [? if soviet_germany : {!<p style="text-align: center; margin-top: 10px; padding-left: 50px; padding-right: 50px">!}Our relations with the <span style="color: #000000">**Ge**</span><span style="color: #DD0000">**rm**</span><span style="color: #FFCC00">**an**</span> <span style="color: #BF0000">**Soviet Republic**</span> are **[+ germany_relation : low_high_small +]**.{!</p>!} ?]
 [? if soviet_germany : {!</div>!} ?]
-
-- @backSpecialScene: Exit.
