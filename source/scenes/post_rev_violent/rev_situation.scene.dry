@@ -13,6 +13,7 @@ The <span style="color: #BF0000">**Republic**</span> remains a new face in the w
 @menu
 
 - @union: The State of the Union.
+- @congress: The <span style="color: #BF0000">**Congress of Soviets**</span>.
 - @orgs: The Organisations.
 - @global: The Global Stage.
 - @backSpecialScene: Exit.
@@ -43,6 +44,123 @@ Corruption within the state is **[+ state_corruption : corruption +]**.
 [? if para_seen = 1 and nda_active : The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> is currently <span style="color: #d42f2f;">**active**</span>. ?]
 
 [? if para_seen = 1 and mafia_active : The <span style="color: #465053ff">**Mafia**</span> are currently <span style="color: #d42f2f;">**meddling in government**</span>. ?]
+
+@congress
+go-to: menu
+on-display: {!
+data = []
+
+data.push({
+    "id": "bordigist",
+    "legend": "Bordigist",
+    "name": "Bordigist",
+    "seats": Math.round(Q.bordigist_seating),
+});
+
+data.push({
+    "id": "ordinovist",
+    "legend": "Ordinovist",
+    "name": "Ordinovist",
+    "seats": Math.round(Q.ordinovist_seating),
+});
+
+data.push({
+    "id": "maximalist",
+    "legend": "Maximalist",
+    "name": "Maximalist",
+    "seats": Math.round(Q.maximalist_seating),
+});
+
+data.push({
+    "id": "socpat",
+    "legend": "SocPat",
+    "name": "SocPat",
+    "seats": Math.round(Q.socpat_seating),
+});
+
+if (Q.syndicalist_active) {
+    data.push({
+        "id": "syndicalist",
+        "legend": "Syndicalist",
+        "name": "Syndicalist",
+        "seats": Math.round(Q.syndicalist_seating),
+    });
+}
+
+data.push({
+    "id": "labour",
+    "legend": "Labour",
+    "name": "Labour",
+    "seats": Math.round(Q.labour_seating),
+});
+
+data.push({
+    "id": "turatian",
+    "legend": "Turatian",
+    "name": "Turatian",
+    "seats": Math.round(Q.turatian_seating),
+});
+
+data.push({
+    "id": "gradualist",
+    "legend": "Gradualist",
+    "name": "Gradualist",
+    "seats": Math.round(Q.gradualist_seating),
+});
+
+data.push({
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_seating),
+});
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("chamber").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#chamber").datum(data).call(parliament);
+}
+!}
+
+= <span style="color: #BF0000">**Congress of Soviets**</span>
+
+{!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!}
+{!<tr><td>!} **[+ psi_full_name +]** {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#8B0000; outline: 2px; outline-style: solid;'> </div>!} **Bordigists**: {!</td><td>!} [+ bordigist_r_disp +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#A40000; outline: 2px; outline-style: solid;'> </div>!} **Ordinovists**: {!</td><td>!} [+ ordinovist_r_disp +]%  {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#B80000; outline: 2px; outline-style: solid;'> </div>!} **Maximalists**: {!</td><td>!} [+ maximalist_r_disp +]%  {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#CC0000; outline: 2px; outline-style: solid;'> </div>!} **Social Patriots**: {!</td><td>!} [+ socpat_r_disp +]% {!</td></tr>!}
+
+[? if syndicalist_active : {!<tr><td><div class="box" style='background-color:#2F2F2F; outline: 2px; outline-style: solid;'> </div>!} **Syndicalists**: {!</td><td>!} [+ syndicalist_r_disp +]% {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#F53333; outline: 2px; outline-style: solid;'> </div>!} **Labour Reformists**: {!</td><td>!} [+ labour_r_disp +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FF6666; outline: 2px; outline-style: solid;'> </div>!} **Turatians**: {!</td><td>!} [+ turatian_r_disp +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FF9999; outline: 2px; outline-style: solid;'> </div>!} **Gradualists**: {!</td><td>!} [+ gradualist_r_disp +]% {!</td></tr>!}
+
+{!<br>!}
+
+{!<tr><td><div class="box" style='background-color:#a0a0a0; outline: 2px; outline-style: solid;'> </div>!} **Independents**: {!</td><td>!} **[+ other_r_disp +]%** {!</td></tr>!}
+
+{!</table>!}
 
 @orgs
 go-to: menu

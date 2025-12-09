@@ -347,7 +347,6 @@ Dissent: [+ reformist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-view-if: not violent_revolution
 on-display: {!
 data = []
 
@@ -485,8 +484,6 @@ data.push({
         parliament.exit.toCenter(false).bigToSmall(true);
         d3.select("#chamber").datum(data).call(parliament);
 
-        console.log("Parliament data:", data);
-
         var lines = d3.linegraph(false, false,
                 Q.parties,
                 {'psri': '#FFC0CB', 'psi': '#ED2855', 'ldr': '#FFD700', 'ds': '#1E99C5', 'ul': '#0047AB', 'ppi': '#87CEFA', 'pnf': '#000000', 'other': '#a0a0a0', 'pcdi': '#C72F35', 'psu': '#E35A5A', 'pri': '#3CB371', 'bn': '#002d6d'},
@@ -553,184 +550,6 @@ data.push({
 [? if pnf_banned != 1 : {!<tr><td><div class="box" style='background-color:#000000'> </div></td><td>!} [+ pnf_name +]: {!</td><td>!} [+ pnf_seating_disp +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_seating_disp +] % {!</td></tr>!}
-{!</table>!}
-
-= Election history
-
-[? if year = 1919 and month < 11 : No new elections yet. ?]
-
-{!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!}
-
-= Party support history
-
-[? if historical_mode: Not available in historical mode. ?]
-
-{!<svg id="party_support_history" style="width: 500px; height: 400px;"> </svg>!}
-
-= Economic history
-
-{!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
-# TODO: maybe add textual histories too? some accessibility stuff as well...
-
-@figures_rev
-title: Figures and Charts
-go-to: menu
-view-if: violent_revolution
-on-display: {!
-data = []
-
-if ((Q.opposition || Q.benevolence) && Q.pcdi_formed) {
-    data.push({
-        "id": "pcdi",
-        "legend": "PCDI",
-        "name": "PCDI",
-        "seats": Math.round(Q.pcdi_seating),
-    }); 
-}
-
-data.push({
-    "id": "communist",
-    "legend": "Communist",
-    "name": "Communist",
-    "seats": Math.round(Q.communist_seating),
-});
-
-data.push({
-    "id": "maximalist",
-    "legend": "Maximalist",
-    "name": "Maximalist",
-    "seats": Math.round(Q.maximalist_seating),
-});
-
-data.push({
-    "id": "labour",
-    "legend": "Labour",
-    "name": "Labour",
-    "seats": Math.round(Q.labour_seating),
-});
-
-if (Q.syndicalist_active) {
-    data.push({
-        "id": "syndicalist",
-        "legend": "Syndicalist",
-        "name": "Syndicalist",
-        "seats": Math.round(Q.syndicalist_seating),
-    });
-}
-
-data.push({
-    "id": "reformist",
-    "legend": "Reformist",
-    "name": "Reformist",
-    "seats": Math.round(Q.reformist_seating),
-});
-
-if ((Q.opposition || Q.benevolence) && Q.psu_formed) {
-    data.push({
-        "id": "psu",
-        "legend": "PSU",
-        "name": "PSU",
-        "seats": Math.round(Q.psu_seating),
-    }); 
-}
-
-if (Q.opposition || Q.benevolence) {
-    data.push({
-        "id": "psri",
-        "legend": "PSRI",
-        "name": "PSRI",
-        "seats": Math.round(Q.psri_seating),
-    }); 
-}
-
-if (Q.benevolence) {
-    data.push({
-        "id": "pri",
-        "legend": "PRI",
-        "name": "PRI",
-        "seats": Math.round(Q.pri_seating),
-    });   
-}
-
-    if (d3 && window) {
-        // get screen width
-        var width = 500;
-        var height = 500;
-        var screenWidth = document.getElementById('content').offsetWidth;
-        if (screenWidth < width - 50) {
-            width = screenWidth - 50;
-            height = width;
-            document.getElementById("chamber").style.height = screenWidth/2 + "px";
-        }
-        var parliament = d3.parliament();
-        parliament.width(width).height(height).innerRadiusCoef(0.4);
-        parliament.enter.fromCenter(true).smallToBig(true);
-        parliament.exit.toCenter(false).bigToSmall(true);
-        d3.select("#chamber").datum(data).call(parliament);
-
-        var lines = d3.linegraph(false, false,
-                Q.parties,
-                {'psri': '#FFC0CB', 'psi': '#ED2855', 'ldr': '#FFD700', 'ds': '#1E99C5', 'ul': '#0047AB', 'ppi': '#87CEFA', 'pnf': '#000000', 'other': '#a0a0a0', 'pcdi': '#C72F35', 'psu': '#E35A5A', 'pri': '#3CB371', 'bn': '#002d6d'},
-                {'psri': 'PSRI', 'psi': 'PSI', 'ldr': Q.ldr_name, 'ds': 'DS', 'ul': Q.ul_name, 'ppi': 'PPI', 'pnf': Q.pnf_name, 'other': 'Others', 'pcdi': 'PCdI', 'psu': 'PSU', 'pri': 'PRI', 'bn': 'BN'});
-        lines.width(width).height(400);
-        //var svg = lines(Q.election_records);
-        if (Q.election_records.length > 0) {
-            d3.select("#election_history").datum(Q.election_records).call(lines);
-        }
-        //document.getElementById('election_history').innerHTML = svg.outerHTML;
-
-        // party support records should not have so many ticks
-        if (!Q.historical_mode || Q.game_over) {
-            var lines_2 = d3.linegraph(true, true,
-                Q.parties,
-                {'psri': '#FFC0CB', 'psi': '#ED2855', 'ldr': '#FFD700', 'ds': '#1E99C5', 'ul': '#0047AB', 'ppi': '#87CEFA', 'pnf': '#000000', 'other': '#a0a0a0', 'pcdi': '#C72F35', 'psu': '#E35A5A', 'pri': '#3CB371', 'bn': '#002d6d'},
-                {'psri': 'PSRI', 'psi': 'PSI', 'ldr': Q.ldr_name, 'ds': 'DS', 'ul': Q.ul_name, 'ppi': 'PPI', 'pnf': Q.pnf_name, 'other': 'Others', 'pcdi': 'PCdI', 'psu': 'PSU', 'pri': 'PRI', 'bn': 'BN'});
-            lines_2.width(width).height(400);
-            d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
-        }
-
-        // economic stats
-        var maxInflation = d3.max(Q.economic_records, d => d.inflation);
-        var maxUnemployment = d3.max(Q.economic_records, d => d.unemployment);
-        var minEconomicGrowth = d3.min(Q.economic_records, d => d.economicgrowth);
-        var upperBound = Math.max(maxUnemployment, maxInflation) + 5;
-        var lines_3 = d3.linegraph(true, true, ['inflation', 'unemployment', 'economicgrowth'],
-                {'inflation': '#0000FF', 'unemployment': '#1E99C5', 'economicgrowth': '#FFD700'},
-                {'inflation': 'Inflation', 'unemployment': 'Unemployment', 'economicgrowth': 'Economic Growth'},
-                upperBound,
-                minEconomicGrowth - 5, 21);
-        lines_3.width(width).height(300);
-        d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
-    }
-!}
-
-= Supreme Soviet composition
-
-{!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
-
-{!<table>!}
-{!<tr><td>!} **[+ psi_full_name +]** {!</td><td>!} **[+ psi_r +]%** {!</td></tr>!} 
-
-{!<tr><td><div class="box" style='background-color:#8B0000; outline: 2px; outline-style: solid;'> </div>!} Communists: {!</td><td>!} [+ communist_r +]% {!</td></tr>!} 
-
-{!<tr><td><div class="box" style='background-color:#DC143C; outline: 2px; outline-style: solid;'> </div>!} Maximalists: {!</td><td>!} [+ maximalist_r +]% {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#B22222; outline: 2px; outline-style: solid;'> </div>!} Labour: {!</td><td>!} [+ labour_r +]% {!</td></tr>!} 
-
-[? if syndicalist_active : {!<tr><td><div class="box" style='background-color:#2F2F2F; outline: 2px; outline-style: solid;'> </div>!} Syndicalists: {!</td></tr>!} ?]
-
-{!<tr><td><div class="box" style='background-color:#FF6961; outline: 2px; outline-style: solid;'> </div>!} Reformists: {!</td><td>!} [+ reformist_r +]% {!</td></tr>!} 
-
-[? if (opposition or benevolence) : {!<tr><td>!} **Constitutional Opposition** {!</td><td>!} **[+ opposition_r +]%** {!</td></tr>!} ?]
-
-[? if (opposition or benevolence) and pcdi_formed : {!<tr><td><div class="box" style='background-color:#C72F35; outline: 2px; outline-style: solid;'> </div>!} PCd'I: {!</td><td>!} [+ pcdi_r +]% {!</td></tr>!} ?]
-
-[? if (opposition or benevolence) and psu_formed : {!<tr><td><div class="box" style='background-color:#E35A5A; outline: 2px; outline-style: solid;'> </div>!} PSU: {!</td><td>!} [+ psu_r +]% {!</td></tr>!} ?]
-
-[? if opposition or benevolence :  {!<tr><td><div class="box" style='background-color:#FFC0CB; outline: 2px; outline-style: solid;'> </div>!} PSRI: {!</td><td>!} [+ psri_r +]% {!</td></tr>!} ?]
-
-[? if benevolence : {!<tr><td><div class="box" style='background-color:#3CB371; outline: 2px; outline-style: solid;'> </div>!} PRI: {!</td><td>!} [+ pri_r +]% {!</td></tr>!} ?]
-
 {!</table>!}
 
 = Election history
