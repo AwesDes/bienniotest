@@ -374,6 +374,22 @@ Q.other_seating_disp = 7.2;
 Q.pll_seating_disp = 0.0;
 Q.pcs_seating_disp = 0.0;
 
+// ensures library graph works pre-first election
+
+Q.pcdi_seating = 0;
+Q.psi_seating = 52;
+Q.psu_seating = 0;
+Q.ppi_seating = 29;
+Q.pri_seating = 0;
+Q.ldr_seating = 62;
+Q.ds_seating = 40;
+Q.ul_seating = 270;
+Q.pnf_seating = 0;
+Q.psri_seating = 19;
+Q.other_seating = 37;
+Q.pll_seating = 0;
+Q.pcs_seating = 0;
+
 Q.pcdi_r = 0;
 Q.psi_r = 17.6;
 Q.psu_r = 0;
