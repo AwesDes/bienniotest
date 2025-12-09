@@ -60,8 +60,6 @@ Q.national_congress_seen = 1;
 Q.stability = 0;
 Q.party_unity = 0;
 
-Q.syndicalist_active = 1;
-
 Q.economic_plan = 0;
 Q.british_relation = Q.entente_relation;
 Q.french_relation = Q.entente_relation;
