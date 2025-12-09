@@ -25,7 +25,7 @@ Yet, to call these nations weak, to call them sympathetic to us would be a grave
 - @improve_relation_uk: Improve our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span>.
 - @improve_relation_france: Improve our relations with <span style="color: #39AAAA">**France**</span>.
 - @seek_investments: Seek & Encourage investments from the <span style="color: #046276">**Western Powers**</span>.
-- @open_trade_entente: Can we open trade with the <span style="color: #046276">**Western Powers**</span>.
+- @open_trade_entente: Can we open trade with the <span style="color: #046276">**Western Powers**</span>?
 - @buy_staple_crops: Purchase Staple Crops from the <span style="color: #046276">**Western Powers**</span>.
 - @reduce_staple_crops: Reduce the amount of Staple Crops we are importing.
 - @sell_cash_crops: Sell Cash Crops to the <span style="color: #046276">**Western Powers**</span>.
@@ -55,7 +55,7 @@ Capital Flight has left the nation in...desperate need for funds. With the *New 
 choose-if: british_relation >= 5 and french_relation >= 5
 unavailable-subtitle: [? if british_relation < 5 : Our relations with the <span style="color: #00247D">**United**</span> <span style="color: #CF142B">**Kingdom**</span> are too poor. ?] [? if french_relation < 5 : Our relations with <span style="color: #39AAAA">**France**</span> are too poor. ?]
 view-if: not opened_trade
-on-arrival: open_trade = 1; 
+on-arrival: opened_trade = 1; 
 
 Foreign Market Access has been limited following the Civil War, with only members of the <span style="color: #800000">**International**</span> opening their arms to trade. Through negotiations, however, we have achieved a trade deal to open markets with the <span style="color: #046276">**Western Powers**</span>! 
 

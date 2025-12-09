@@ -17,7 +17,9 @@ Though the unions currently enjoy popular support from the workers, through a se
 - @cgdl_arrest: Arrest and convict some of the CGdL leaders.
 - @federterra_propaganda: Use our media to reduce Federterra support.
 - @federterra_investigate: Open corruption investigations into Federterra.
-- @federterra_arrest:Arrest and convict some of the Federterra's leaders.
+- @federterra_arrest: Arrest and convict some of the Federterra's leaders.
+- @root: Don't touch the unions for now.
+- @easy_discard
 
 @cgdl_propaganda
 subtitle: -0.5 Budget - We can use radio to inform the workers of the corruption of the unions.
@@ -57,7 +59,7 @@ on-departure: cgdl_evidence -= 1 if cgdl_evidence >= 1
 
 [? if cgdl_evidence < 1 : Though extremely unpopular, we are able to arrest some of the leadership of the CGdL, much to the opposition of our workers. Though this has weakened the CGdL significantly, it has come at a cost of public support and backlash from our industrial workers, resisting further. ?]
 
-[? if cgdl_evidence < 1 : With our evidence gathered, we are able to arrest some of the leadership of the CGdL, limiting their strength. We have been able to weaken the CGdL on corruption charges, with minimal opposition from both the public and our workers, considering the evidence. ?]
+[? if cgdl_evidence >= 1 : With our evidence gathered, we are able to arrest some of the leadership of the CGdL, limiting their strength. We have been able to weaken the CGdL on corruption charges, with minimal opposition from both the public and our workers, considering the evidence. ?]
 
 @federterra_propaganda
 subtitle: -0.5 Budget - We can use radio to inform the workers of the corruption of the unions.
@@ -97,7 +99,7 @@ on-departure: federterra_evidence -= 1 if federterra_evidence >= 1
 
 [? if federterra_evidence < 1 : Though extremely unpopular, we are able to arrest some of the leadership of the Federterra, much to the opposition of our workers. Though this has weakened the Federterra significantly, it has come at a cost of public support and backlash from our industrial workers, resisting further. ?]
 
-[? if federterra_evidence < 1 : With our evidence gathered, we are able to arrest some of the leadership of the Federterra, limiting their strength. We have been able to weaken the Federterra on corruption charges, with minimal opposition from both the public and our workers, considering the evidence. ?]
+[? if federterra_evidence >= 1 : With our evidence gathered, we are able to arrest some of the leadership of the Federterra, limiting their strength. We have been able to weaken the Federterra on corruption charges, with minimal opposition from both the public and our workers, considering the evidence. ?]
 
 @union_cooperate
 

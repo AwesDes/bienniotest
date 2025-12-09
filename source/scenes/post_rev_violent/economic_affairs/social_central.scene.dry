@@ -27,11 +27,12 @@ Every action will be impacted by the loyalties and efficiency of our bureaucracy
 - @easy_discard
 
 @nep_poverty
-subtitle: We can tax the limited private traders and businessmen still in the country for their fair share.
+subtitle: +0.5 Budget - We can tax the limited private traders and businessmen still in the country for their fair share.
 view-if: right_eco_adopted or both_eco_adopted
 on-arrival: {!
 Q.central_poverty -= 0.9 * Q.bureaucratic_modifier * Q.poverty_modifier;
 Q.public_opinion -= 4;
+Q.budget += 0.5;
 !}
 
 The New Economic Policy has mainly allowed the remnants of private industry to remain untouched, who have not been paying their fair share. New levies have been implemented on these people. taxing them higher and redistributing their wealth via social programs in the Central Region.
