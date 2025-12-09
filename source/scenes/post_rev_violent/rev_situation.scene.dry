@@ -156,7 +156,7 @@ if (window && d3) {
 
 {!<tr><td><div class="box" style='background-color:#FF9999; outline: 2px; outline-style: solid;'> </div>!} **Gradualists**: {!</td><td>!} [+ gradualist_r_disp +]% {!</td></tr>!}
 
-{!<br>!}
+{!<tr><td>!} **Non-Partisan** {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0; outline: 2px; outline-style: solid;'> </div>!} **Independents**: {!</td><td>!} **[+ other_r_disp +]%** {!</td></tr>!}
 
