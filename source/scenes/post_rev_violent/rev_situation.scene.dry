@@ -137,6 +137,8 @@ if (window && d3) {
 
 {!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
 
+{!<p style="text-align: center;">!} We currently **[+ majority_support +]%** of the <span style="color: #BF0000">**Congress of Soviets**</span> supporting us. {!</p>!}
+
 {!<table>!}
 {!<tr><td>!} **[+ psi_full_name +]** {!</td></tr>!}
 
