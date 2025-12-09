@@ -485,6 +485,8 @@ data.push({
         parliament.exit.toCenter(false).bigToSmall(true);
         d3.select("#chamber").datum(data).call(parliament);
 
+        console.log("Parliament data:", data);
+
         var lines = d3.linegraph(false, false,
                 Q.parties,
                 {'psri': '#FFC0CB', 'psi': '#ED2855', 'ldr': '#FFD700', 'ds': '#1E99C5', 'ul': '#0047AB', 'ppi': '#87CEFA', 'pnf': '#000000', 'other': '#a0a0a0', 'pcdi': '#C72F35', 'psu': '#E35A5A', 'pri': '#3CB371', 'bn': '#002d6d'},
