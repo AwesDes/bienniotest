@@ -48,7 +48,7 @@ With the collapse of D'Annunzio's rule and the establishment of Grandi's reign a
 
 @grandi_uk_success
 view-if: debt_stat > 0
-on-arrival: uk_debts_over = 1; budget += 2; workers_pnf += 8; industrialists_pnf += 5; middle_class_pnf += 5; rural_pnf += 5; capital_strike_progress -= 2 if capital_strike_progress > 2; economic_growth += 0.6; economic_growth += 0.1 if economic_growth < 0 {!
+on-arrival: uk_debts_over = 1; uk_debts = 0; budget += 2; workers_pnf += 8; industrialists_pnf += 5; middle_class_pnf += 5; rural_pnf += 5; capital_strike_progress -= 2 if capital_strike_progress > 2; economic_growth += 0.6; economic_growth += 0.1 if economic_growth < 0 {!
 Q.grandi_good += 2;
 !}
 go-to: us_italy_menu if not us_debts_over
@@ -105,10 +105,9 @@ Foreign Minister Dino Grandi has approached the United States for a diplomatic m
 
 @grandi_us_success
 view-if: debt_stat > 0
-on-arrival: us_debts_over = 1; budget += 3; coalition_dissent -= 1 if coalition_dissent > 1; coalition_dissent -= 1 if coalition_dissent > 0; workers_pnf += 12; industrialists_pnf += 9; middle_class_pnf += 7; rural_pnf += 8; capital_strike_progress -= 3 if capital_strike_progress > 3; economic_growth += 0.8; economic_growth += 0.2 if economic_growth < 0 {!
+on-arrival: us_debts_over = 1; american_debts = 0; budget += 3; coalition_dissent -= 1 if coalition_dissent > 1; coalition_dissent -= 1 if coalition_dissent > 0; workers_pnf += 12; industrialists_pnf += 9; middle_class_pnf += 7; rural_pnf += 8; capital_strike_progress -= 3 if capital_strike_progress > 3; economic_growth += 0.8; economic_growth += 0.2 if economic_growth < 0 {!
 Q.grandi_good += 1;
 !}
-go-to: us_italy_menu if not us_debts_over
 
 Through negotiations with the United States, combined with previous fostered goodwill and a supportive American ambassador, the United States and Italy are able to sign an agreement, with an initial repayment of debts, followed by an Amortisation plan to repay the remnants of the debt, of which is able to be sustained by reparations given to Italy due to its victory in the First World War.
 
@@ -119,6 +118,5 @@ view-if: debt_stat <= 0
 on-arrival: american_relation -= 1 if american_relation > 0 {!
 Q.grandi_bad += 1;
 !}
-go-to: us_italy_menu if not us_debts_over
 
 Whether through diplomatic missteps or the current economic situations, negotiations between the American Ambassador [+ us_ambassador +] and Grandi, though with close personal ties, have stalled, resulting in the failure of any agreements to be signed, as well as marking the failure of Grandi's diplomatic visit as Foreign Minister.

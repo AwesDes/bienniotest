@@ -4,7 +4,7 @@ view-if: pnf_in_power and pnf_leader = "Grandi" and dannunzio_king_seen and time
 max-visits: 1
 tags: event
 new-page: true
-on-arrival: grandi_dead = 1; pnf_leader = "Unorganised"
+on-arrival: grandi_dead = 1; pnf_leader = "Unorganised"; prime_minister = "Vacant"; prime_minister_party = "N/A"
 achievement: piu_fanno_rumore_quando_cadono
 
 In a regular scheduled speech at the *Palazzo Venezia* to a crowd of people, Dino Grandi, Prime Minister of Italy, was shot thrice in the chest by an assassin within the crowd, being able to flee successfully amongst the chaos. Though no suspects have been found, the Squadrismo have immediately issued blame on the left, promising a renewed crackdown on the Red Guards and socialism forces.

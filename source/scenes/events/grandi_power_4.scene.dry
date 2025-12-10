@@ -199,7 +199,7 @@ Q.ds_in_government = 1;
 max-visits: 1
 go-to: coalition_menu
 
-The [+ ds_full_name +] enter the National Coalition. influenced by [+ ds_leader +] who is seemingly ideologically aligned or opportunistically aligned with the PNF in an effort to side with the winning party.
+The [+ ds_full_name +] enter the National Coalition, influenced by [+ ds_leader +] who is seemingly ideologically aligned or opportunistically aligned with the PNF in an effort to side with the winning party.
 
 @grandi_no
 choose-if: (ul_sway < 0 or ul_seen) and (ppi_sway < 0 or ppi_seen) and (ldr_sway < 0 or ldr_seen) and (pcs_sway < 0 or pcs_seen or not pcs_formed) and (ds_sway < 0 or ds_seen)

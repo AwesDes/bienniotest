@@ -7,6 +7,8 @@ tags: event
 
 = [+ interior_minister +] cracks down on the Guardie Rosse
 
-In a speech supported by Prime Minister [+ prime_minister +], Interior Minister [+ interior_minister +] has continued its repression against us, declaring us 'violent and chaotic rebels' and proclaiming that the Interior Ministry restore order to Italy and eliminate us. Already we have seen our forces under attack, factories re-taken and headquarters raided, and it is unlikely these will end any time soon.
+[? if prime_minister != interior_minister : In a speech supported by Prime Minister [+ prime_minister +], Interior Minister [+ interior_minister +] has continued its repression against us, ?] [? if prime_minister == interior_minister : In a speech by Prime Minister [+ prime_minister +], who also holds the position of Interior Minister, [+ prime_minister +] has continued its repression against us, ?] declaring us 'violent and chaotic rebels' and proclaiming that the Interior Ministry restore order to Italy and eliminate us. Already we have seen our forces under attack, factories re-taken and headquarters raided, and it is unlikely these will end any time soon.
+
+
 
 - @root: There is nothing we can do.

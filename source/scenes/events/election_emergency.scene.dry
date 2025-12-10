@@ -885,7 +885,7 @@ Italy is lost.
 @new_grand_coalition
 title: Form a 'New Grand Coalition', led by the Socialists.
 subtitle: PSI + PSRI [? if psu_formed : + PSU ?] [? if pll_formed : + PLL ?] [? if pri_prominent: + PRI ?] [? if not national_coalition_ppi : + PPI ?] [? if not national_coalition_ldr : + [+ ldr_name +] ?] [? if not national_coalition_ds : + [+ ds_name +] ?]: [+ new_grand_coalition_r +]%
-choose-if: national_coalition_r >= 50
+choose-if: new_grand_coalition_r >= 50
 unavailable-subtitle: PSI + PSRI [? if psu_formed : + PSU ?] [? if pri_prominent: + PRI ?] [? if not national_coalition_ppi : + PPI ?] [? if not national_coalition_ldr : + [+ ldr_name +] ?] [? if not national_coalition_ds : + [+ ds_name +] ?]: [+ new_grand_coalition_r +]%
 on-arrival: {!
 Q.leverage = Q.leverage;
