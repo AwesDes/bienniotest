@@ -2,7 +2,7 @@ title: [+ southern_railways : southern_regions +] Railways Bombed
 subtitle: The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> make their move!
 new-page: true
 view-if: as_attack_timer <= 0 and as_decision = 1
-on-arrival: as_decision = 0; as_attack_timer = 6; as_attacked += 1;
+on-arrival: as_decision = 0; as_attack_timer = 8; as_attacked += 1;
 tags: event
 go-to: attack_success; attack_failure if increased_south >= 1
 

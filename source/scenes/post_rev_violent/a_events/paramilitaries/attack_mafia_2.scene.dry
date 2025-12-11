@@ -2,7 +2,7 @@ title: [+ southern_regions : southern_regions +]'s Local Bureaucracy Purged
 subtitle: The <span style="color: #465053ff">**Mafia**</span> make their move!
 new-page: true
 view-if: mafia_attack_timer <= 0 and mafia_decision = 2
-on-arrival: mafia_decision = 0; mafia_attack_timer = 10; state_corruption += 5; bureaucratic_loyalty -= 5; stability -= 0.2;
+on-arrival: mafia_decision = 0; mafia_attack_timer = 14; state_corruption += 5; bureaucratic_loyalty -= 5; stability -= 0.2;
 tags: event
 
 = Report on <span style="color: #465053ff">**Mafia**</span> Influence on [+ southern_regions : southern_regions +]

@@ -1,7 +1,7 @@
 title: Reemergence of the <span style="color: #465053ff">**Mafia**</span> in the Mezzogiorno
 new-page: true
 view-if: mafia_trigger_prog >= 100
-on-arrival: mafia_active = 1; mafia_decision = 0; mafia_attack_timer = 6 {!
+on-arrival: mafia_active = 1; mafia_decision = 0; mafia_attack_timer = 14 {!
 Q.timers.push('mafia_attack');
 !}
 max-visits: 1

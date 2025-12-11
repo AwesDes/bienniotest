@@ -1,7 +1,7 @@
 title: Emergence of the <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span>
 new-page: true
 view-if: nda_trigger_prog >= 100
-on-arrival: nda_active = 1; nda_decision = 0; nda_attack_timer = 6 {!
+on-arrival: nda_active = 1; nda_decision = 0; nda_attack_timer = 10 {!
 Q.timers.push('nda_attack');
 !}
 max-visits: 1

@@ -1,7 +1,7 @@
 title: Emergence of the <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span>
 new-page: true
 view-if: as_trigger_prog >= 100
-on-arrival: as_active = 1; as_decision = 0; as_attack_timer = 6 {!
+on-arrival: as_active = 1; as_decision = 0; as_attack_timer = 8 {!
 Q.timers.push('as_attack');
 !}
 max-visits: 1

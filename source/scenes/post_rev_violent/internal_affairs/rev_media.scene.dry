@@ -12,6 +12,7 @@ card-image: img/Media.jpg
 
 - @propaganda
 - @ideological
+- @anti_corruption
 - @radio_activate
 - @return: We should not do anything with media at the moment.
 - @easy_discard
@@ -31,6 +32,15 @@ subtitle: There will be space for all factions to air their views.
 on-arrival: gradualist_dissent -= 4; turatian_dissent -= 4; socpat_dissent -= 4; labour_dissent -= 4; syndicalist_dissent -= 4 if syndicalist_active; maximalist_dissent -= 4; ordinovist_dissent -= 4; bordigist_dissent -= 4;
 
 This has been our media course historically, and it has successfully paved over the many tensions in our party.
+
+@anti_corruption
+title: Utilise our media to launch a campaign against corruption.
+subtitle: -0.5 Budget
+on-arrival: budget -= 0.5; state_corruption -= 12; state_corruption -= 3 if radio >= 3
+
+We continue our efforts towards rooting out the great evil of corruption, launching campaigns and propagandising high-profile cases to deter tempted individuals.
+
+[? if radio >= 3 : Our efforts are boosted by our investments into radio. ?]
 
 @radio_activate
 title: Invest into a radio network for further purposes.

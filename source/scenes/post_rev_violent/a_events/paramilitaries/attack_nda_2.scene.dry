@@ -2,7 +2,7 @@ title: Northern Ports Disrupted
 subtitle: The <span style="color: #1E99C5">**National**</span> <span style="color: #FFD700">**Democratic**</span> <span style="color: #87CEFA">**Alliance**</span> make their move!
 new-page: true
 view-if: nda_attack_timer <= 0 and nda_decision = 2
-on-arrival: nda_decision = 0; nda_attack_timer = 8; nda_attacked += 1;
+on-arrival: nda_decision = 0; nda_attack_timer = 10; nda_attacked += 1;
 tags: event
 go-to: attack_success; attack_failure if increased_north >= 1
 
