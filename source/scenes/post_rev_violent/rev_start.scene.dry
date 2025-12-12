@@ -33,6 +33,7 @@ on-arrival: rev_year = year
 on-departure: {!
 
 const title = document.getElementById("game-title");
+title.innerHTML = "";
 title.innerHTML = 
   '<span style="color:red;">Vittoria Sovietica</span>: ' +
   '<span style="color:green;">An</span> ' +

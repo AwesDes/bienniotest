@@ -702,7 +702,7 @@ table {
     background-color: lightcoral;
 }
 
-.post-rev-tooltip-text {
+.postrev-tooltip-text {
     width: 240px;
     text-shadow: none;
     background-color: lightcoral;
@@ -723,4 +723,9 @@ table {
     line-height: 1.5em !important;
     font-weight: normal !important;
     font-style: normal !important;
+}
+
+.postrev-tooltip:hover .postrev-tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
