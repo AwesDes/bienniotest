@@ -33,12 +33,12 @@ on-arrival: rev_year = year
 on-departure: {!
 
 const title = document.getElementById("game-title");
-title.innerHTML = "";
-title.innerHTML = 
-  '<span style="color:red;">Vittoria Sovietica</span>: ' +
-  '<span style="color:green;">An</span> ' +
-  '<span style="color:rgb(170,170,170);">Alternate</span> ' +
-  '<span style="color:red;">History</span>';
+title.innerHTML = `
+  <span style="color:red;">Vittoria Sovietica</span>:
+  <span style="color:green;">An</span>
+  <span style="color:rgb(170,170,170);">Alternate</span>
+  <span style="color:red;">History</span>
+`;
 
 document.title = "Vittoria Sovietica: An Alternate History - Autumn Chen & AwesDes";
 
