@@ -31,6 +31,16 @@ go-to: rev_info
 @rev_info
 on-arrival: rev_year = year
 on-departure: {!
+
+const title = document.getElementById("game-title");
+title.innerHTML = 
+  '<span style="color:red;">Vittoria Sovietica</span>: ' +
+  '<span style="color:green;">An</span> ' +
+  '<span style="color:rgb(170,170,170);">Alternate</span> ' +
+  '<span style="color:red;">History</span>';
+
+document.title = "Vittoria Sovietica: An Alternate History - Autumn Chen & AwesDes";
+
 document.getElementById('situation-link').style.display = "";
 document.getElementById('rev_main_tab').style.display = "";
 document.getElementById('rev_politics_tab').style.display = "";
@@ -478,7 +488,7 @@ Q.illiteracy = (Q.northeast_illiteracy * 0.25) + (Q.northwest_illiteracy * 0.25)
 
 !}
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *mod*, and that past this point, significant elements of the mod will necessarily have to involve some element of make-believe, as well as simplification for balance. (Yes, I know about the Po Valley.) Nevertheless, please let the author know if there are any glaring mistakes.
+This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *mod*, and that past this point, significant elements of the mod will necessarily have to involve some element of make-believe, as well as <span class="postrev-tooltip">simplification for balance<span class="postrev-tooltip-text">Yes, I know about the Po Valley.</span></span>. Nevertheless, please let the author know if there are any glaring mistakes.
 
 There is no current information about the Italian Soviet Republic, but you will be able to access an overview of the nation through the 'Situations' tab on the top.
 

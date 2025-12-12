@@ -137,7 +137,7 @@ if (window && d3) {
 
 {!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
 
-{!<p style="text-align: center;">!} We currently **[+ majority_support +]%** of the <span style="color: #BF0000">**Congress of Soviets**</span> supporting us. {!</p>!}
+{!<p style="text-align: center;">!} We currently [? if majority_support < 50 : <span style="color: #BF0000">**[+ majority_support +]%**</span> ?][? if majority_support >= 50 : <span style="color: #66BB6A">**[+ majority_support +]%**</span> ?] of the <span style="color: #BF0000">**Congress of Soviets**</span> supporting us. {!</p>!}
 
 {!<table>!}
 {!<tr><td>!} **[+ psi_full_name +]** {!</td></tr>!}

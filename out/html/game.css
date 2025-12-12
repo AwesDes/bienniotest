@@ -694,3 +694,33 @@ table {
     text-decoration: underline;
     text-decoration-style: dotted;
 }
+
+.postrev-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: lightcoral;
+}
+
+.post-rev-tooltip-text {
+    width: 240px;
+    text-shadow: none;
+    background-color: lightcoral;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 99;
+    bottom: 20%;
+    left: 20%;
+    margin-left: -90px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border: 1px solid black;
+    pointer-events: none;
+    font-size: 13px !important;
+    line-height: 1.5em !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
