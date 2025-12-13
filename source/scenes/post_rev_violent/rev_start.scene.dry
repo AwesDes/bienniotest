@@ -496,28 +496,6 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 There is no current information about the Italian Soviet Republic, but you will be able to access an overview of the nation through the 'Situations' tab on the top.
 
-The vast majority of the variables from this point will employ more vague text instead of numbers, but you can toggle on tooltips if you want to make it easier. This will only be for the variables, you will still see tooltips for faction leaders, events, etc.
-
-Current Party Unity is **[+ party_unity : unity +]**. (No Tooltip) vs Current Party Unity is <span class="postrev-tooltip">**[+ party_unity : unity +]**<span class="postrev-tooltip-text">[+ party_unity +]/100, Lower the Worser.</span></span>.
-
-- @tooltips_keep: Keep the tooltips.
-- @tooltips_disable: Disable the tooltips.
-
-@tooltips_keep
-go-to: tooltip_done
-
-@tooltips_disable
-on-arrival: {!
-document.querySelectorAll(".var-postrev-tooltip-text").forEach(tip => {
-    tip.remove();
-});
-!}
-go-to: tooltip_done
-
-@tooltip_done
-
-Very well.
-
 - @new_changes: The mantle of <span style="color: #009246">**Italy**</span> is assumed by the <span style="color: #BF0000">**Soviet Republic**</span>.
 
 @new_changes

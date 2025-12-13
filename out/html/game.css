@@ -724,30 +724,7 @@ table {
     font-style: normal !important;
 }
 
-.var-postrev-tooltip-text {
-    width: 180px;
-    text-shadow: none;
-    background-color: lightcoral;
-    color: black;
-    text-align: center;
-    border-radius: 6px;
-    padding: 10px;
-    position: absolute;
-    z-index: 99;
-    bottom: 80%;
-    left: 20%;
-    margin-left: -90px;
-    opacity: 0;
-    transition: opacity 0.5s;
-    border: 1px solid black;
-    pointer-events: none;
-    font-size: 13px !important;
-    line-height: 1.5em !important;
-    font-weight: normal !important;
-    font-style: normal !important;
-}
-
-.postrev-tooltip:hover .postrev-tooltip-text, .postrev-tooltip:hover .var-postrev-tooltip-text {
+.postrev-tooltip:hover .postrev-tooltip-text {
   visibility: visible;
   opacity: 1;
 }
