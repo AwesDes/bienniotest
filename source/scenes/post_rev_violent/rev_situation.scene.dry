@@ -25,12 +25,11 @@ go-to: menu
 
 = State of the Union
 
-The Stability of the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> is currently **[+ stability : stability +]**.
+The Stability of the <span style="color: #009246">**Italian**</span> <span style="color: #BF0000">**Soviet Republic**</span> is currently <span class="postrev-tooltip">**[+ stability : stability +]**<span class="var-postrev-tooltip-text">[+ stability +], Lower the Worser.</span></span>.
 
-Public Opinion is currently **[+ public_opinion : opinion +]**.
+Public Opinion is currently <span class="postrev-tooltip">**[+ public_opinion : opinion +]**<span class="var-postrev-tooltip-text">[+ public_opinion +]/100, Lower the Worser.</span></span>.
 
-Corruption within the state is **[+ state_corruption : corruption +]**.
-
+Corruption within the state is <span class="postrev-tooltip">**[+ state_corruption : corruption +]**<span class="var-postrev-tooltip-text">[+ state_corruption +]/100, Higher the Worser.</span></span>.
 = Paramilitaries
 
 [? if para_seen = 1 and not as_active : The <span style="color: #00247D">**Action**</span> <span style="color: #000000">**Squads**</span> are currently <span style="color: #00CC00;">**inactive**</span>. ?]
@@ -171,21 +170,21 @@ go-to: menu
 
 = State of the Organisations
 
-Loyalty within the Bureaucracy is **[+ bureaucratic_loyalty : opinion +]**.
+Loyalty within the Bureaucracy is <span class="postrev-tooltip">**[+ bureaucratic_loyalty : opinion +]**<span class="var-postrev-tooltip-text">[+ bureaucratic_loyalty +]/100, Lower the Worser.</span></span>.
 
-Efficiency within the Bureaucracy is **[+ bureaucratic_efficiency : low_high +]**.
+Efficiency within the Bureaucracy is <span class="postrev-tooltip">**[+ bureaucratic_efficiency : low_high +]**<span class="var-postrev-tooltip-text">[+ bureaucratic_efficiency +]/100, Lower the Worser.</span></span>.
 
-[? if not cheka_formed : Factionalism within the Ministry of the Interior is **[+ interior_factionalism : factional_dissent +]**. ?]
+[? if not cheka_formed : Factionalism within the Ministry of the Interior is <span class="postrev-tooltip">**[+ interior_factionalism : factional_dissent +]**<span class="var-postrev-tooltip-text">[+ interior_factionalism +]/100, Higher the Worser.</span></span>. ?]
 
-[? if cheka_formed : Factionalism within the Internal Affairs Committee is **[+ interior_factionalism : factional_dissent +]**. ?]
+[? if cheka_formed : Factionalism within the Internal Affairs Committee is <span class="postrev-tooltip">**[+ interior_factionalism : factional_dissent +]**<span class="var-postrev-tooltip-text">[+ interior_factionalism +]/100, Higher the Worser.</span></span>. ?]
 
-[? if not cgdl_collapse : Our relations with the General Confederation of Labour are **[+ cgdl_relations : low_high +]** [? if unions_option = 1 : and their strength is **[+ cgdl_strength : union_strength +]** ?] ?]
+[? if not cgdl_collapse : Our relations with the General Confederation of Labour are <span class="postrev-tooltip">**[+ cgdl_relations : low_high +]**<span class="var-postrev-tooltip-text">[+ cgdl_relations +]/100, Lower the Worser.</span></span> [? if unions_option = 1 : and their strength is **[+ cgdl_strength : union_strength +]** ?] ?]
 
-[? if not federterra_collapse : Our relations with the National Federation of Agricultural Workers are **[+ federterra_relations : low_high +]** [? if unions_option = 1 : and their strength is **[+ federterra_strength : union_strength +]** ?] ?]
+[? if not federterra_collapse : Our relations with the National Federation of Agricultural Workers are <span class="postrev-tooltip">**[+ federterra_relations : low_high +]**<span class="var-postrev-tooltip-text">[+ federterra_relations +]/100, Lower the Worser.</span></span>. [? if unions_option = 1 : and their strength is **[+ federterra_strength : union_strength +]** ?] ?]
 
 [? if cgdl_collapse : The General Confederation of Labour is <span style="color: #a31c1cff;">**irrelevant**</span>. ?]
 
-[? if federterra_collapse : The relations with the National Federation of Agricultural Workers is <span style="color: #a31c1cff;">**irrelevant**</span>. ?]
+[? if federterra_collapse : The National Federation of Agricultural Workers is <span style="color: #a31c1cff;">**irrelevant**</span>. ?]
 
 @global
 go-to: menu

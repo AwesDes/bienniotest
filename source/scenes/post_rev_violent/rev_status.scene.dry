@@ -71,49 +71,51 @@ Next Election: [+ next_election_month : month +] [+ next_election_year +]
 
 [? if army_formed : <span style="color:#d42f2f">**Armata Rossa Italiana**</span>: [+ army_strength +],000 Strength ?]
 
-[? if army_formed : Morale within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_morale : low_high +]**. ?]
+[? if army_formed : Military Influence is currently <span class="postrev-tooltip">**[+ military_influence : military_inf +]**<span class="var-postrev-tooltip-text">[+ military_influence +]/100, Higher the Worser.</span></span>. ?]
 
-[? if army_formed : Experience within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_experience : low_high +]**. ?]
+[? if army_formed : Morale within the <span style="color:#d42f2f">**Italian Red Army**</span> is <span class="postrev-tooltip">**[+ army_morale : low_high +]**<span class="var-postrev-tooltip-text">[+ army_morale +]/100, Lower the Worser.</span></span>. ?]
 
-[? if army_formed : Conduct within the <span style="color:#d42f2f">**Italian Red Army**</span> is **[+ army_conduct : conduct +]**. ?]
+[? if army_formed : Experience within the <span style="color:#d42f2f">**Italian Red Army**</span> is <span class="postrev-tooltip">**[+ army_experience : low_high +]**<span class="var-postrev-tooltip-text">[+ army_experience +]/100, Lower the Worser.</span></span>. ?]
+
+[? if army_formed : Conduct within the <span style="color:#d42f2f">**Italian Red Army**</span> is <span class="postrev-tooltip">**[+ army_conduct : conduct +]**<span class="var-postrev-tooltip-text">[+ army_conduct +]/100, Lower the Worser.</span></span>. ?]
 
 @economy
 
 = Overview
 
-Total Agricultural Output is **[+ agricultural_health : health +]**.
+Total Agricultural Output is <span class="postrev-tooltip">**[+ agricultural_health : health +]**<span class="var-postrev-tooltip-text">[+ agricultural_health +]/100</span></span>.
 
-Total Industrial Output is **[+ industry_health : health +]**.
+Total Industrial Output is <span class="postrev-tooltip">**[+ industry_health : health +]**<span class="var-postrev-tooltip-text">[+ industry_health +]/100</span></span>.
 
-Total Infrastructural Transportation is **[+ supply_health : health +]**.
+Total Infrastructural Transportation is <span class="postrev-tooltip">**[+ supply_health : health +]**<span class="var-postrev-tooltip-text">[+ supply_health +]/100</span></span>.
 
 Budget: [+ budget +]
 
 = The Northeast
  
-Northeastern Industrial Output is **[+ northeast_industry_health : health +]**.
+Northeastern Industrial Output is <span class="postrev-tooltip">**[+ northeast_industry_health : health +]**<span class="var-postrev-tooltip-text">[+ northeast_industry_health +]/100</span></span>.
 
-Northeastern Infrastructural Transportation is **[+ northeast_supply_health : health +]**.
+Northeastern Infrastructural Transportation is <span class="postrev-tooltip">**[+ northeast_supply_health : health +]**<span class="var-postrev-tooltip-text">[+ northeast_supply_health +]/100</span></span>.
 
 = The Northwest
 
-Northwestern Industrial Output is **[+ northwest_industry_health : health +]**.
+Northwestern Industrial Output is <span class="postrev-tooltip">**[+ northwest_industry_health : health +]**<span class="var-postrev-tooltip-text">[+ northwest_industry_health +]/100</span></span>.
 
-Northwestern Infrastructural Transportation is **[+ northwest_supply_health : health +]**.
+Northwestern Infrastructural Transportation is <span class="postrev-tooltip">**[+ northwest_supply_health : health +]**<span class="var-postrev-tooltip-text">[+ northwest_supply_health +]/100</span></span>.
 
 = The Centre
 
-Central Agricultural Output is **[+ central_agricultural_health : health +]**.
+Central Agricultural Output is <span class="postrev-tooltip">**[+ central_agricultural_health : health +]**<span class="var-postrev-tooltip-text">[+ central_agricultural_health +]/100</span></span>.
 
-Central Industrial Output is **[+ central_industry_health : health +]**.
+Central Industrial Output is <span class="postrev-tooltip">**[+ central_industry_health : health +]**<span class="var-postrev-tooltip-text">[+ central_industry_health +]/100</span></span>.
 
-Central Infrastructural Transportation is **[+ central_supply_health : health +]**.
+Central Infrastructural Transportation is <span class="postrev-tooltip">**[+ central_supply_health : health +]**<span class="var-postrev-tooltip-text">[+ central_supply_health +]/100</span></span>.
 
 = The South
 
-Southern Agricultural Output is **[+ southern_agricultural_health : health +]**.
+Southern Agricultural Output is <span class="postrev-tooltip">**[+ southern_agricultural_health : health +]**<span class="var-postrev-tooltip-text">[+ southern_agricultural_health +]/100</span></span>.
 
-Southern Infrastructural Transportation is **[+ southern_supply_health : health +]**.
+Southern Infrastructural Transportation is <span class="postrev-tooltip">**[+ southern_supply_health : health +]**<span class="var-postrev-tooltip-text">[+ southern_supply_health +]/100</span></span>.
 
 @social
 
