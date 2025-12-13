@@ -697,7 +697,6 @@ table {
 
 .postrev-tooltip {
     position: relative;
-    display: inline-block;
     cursor: pointer;
     background-color: lightcoral;
 }
@@ -712,7 +711,7 @@ table {
     padding: 10px;
     position: absolute;
     z-index: 99;
-    bottom: 20%;
+    bottom: 80%;
     left: 20%;
     margin-left: -90px;
     opacity: 0;
