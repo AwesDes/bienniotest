@@ -1,0 +1,63 @@
+title: Military Reorganisation
+new-page: true
+is-card: true
+tags: military_affairs
+card-image: img/MilitaryInfluence.jpg
+view-if: rev_mili_reorg_timer <= 0
+on-arrival: rev_mili_reorg_timer = 6; week_actions += 1;
+go-to: military_modifiers if deadline_active; military_org if not deadline_active
+
+= Military Reorganisation
+
+@military_modifiers
+
+# ts should be boosting some modifier atp, non-eco or social wise (stab, corruption, efficiency, etc.)
+
+The <span style="color: #d42f2f">Red Army</span> remains constrained by funding and equipment shortages, leaving it severely weakened as we continue our economic recovery. Nevertheless, the army remains our biggest strength, and we can certainly use it to restore order while we bring stability to the nation.
+
+However, to grant the army too much influence within our politics will certainly backfire, and we must be wary to mitigate this.
+
+Our current focus is *[+ mil_focus_current +]*, and our Military Influence is [+ military_influence : military_inf +].
+
+- @focus_corruption: Direct the Army to focus on Anti-Corruption.
+- @focus_bureaucracy: Direct the Army to focus on the Bureaucracy.
+- @focus_unions: Direct the Army to focus on the Unions.
+- @focus_none: Keep the Army doing nothing, for now.
+- @rev_pinned_return: Keep our current orders in place.
+- @easy_discard
+
+@focus_corruption
+view-if: mil_focus_current != "Anti-Corruption"
+on-arrival: mil_focus_current = "Anti-Corruption"; 
+
+Corruption remains an unfortunate stain on the state, exacerbated by the current economic situation. Via the army, however, we can begin rooting out this evil, granting them anti-corruption measures to crack down hard and deter new potential corruption as well.
+
+However, we should be wary of keeping them in this position for long, lest their position corrupts them as well.
+
+@focus_bureaucracy
+view-if: mil_focus_current != "Bureaucracy"
+on-arrival: mil_focus_current = "Bureaucracy"; 
+
+Our bureaucracy remains inefficient and disloyal from our recent revolution. By tasking the military with some bureaucratic oversight, we can begin improving discipline and establish clear chains of command to bolster both efficiency and loyalty to the state.
+
+Nevertheless, we should be wary of keeping them in this position for long, lest their interference grows too strong and our efforts backfire.
+
+@focus_unions
+view-if: unions_option = 1 and mil_focus_current != "Unions"
+on-arrival: mil_focus_current = "Unions"; 
+
+With the CGdL and Federterra in revolt, we can pass on responsibility of weakening them to the army, who will employ more...unconventional means to weaken the unions.
+
+To leave them to this too long, though, may lead to much of the population viewing such actions as too heavy-handed, bolstering the unions instead.
+
+@focus_none
+view-if: mil_focus_current != "None"
+on-arrival: mil_focus_current = "None"; 
+
+The <span style="color: #d42f2f">Red Army</span> is stretched thin as is, to give them yet another task would risk our security to our external enemies.
+
+@military_org
+
+# accessible only post-eco plan, do later
+
+Placeholder

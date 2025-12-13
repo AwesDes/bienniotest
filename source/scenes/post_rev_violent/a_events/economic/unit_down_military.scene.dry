@@ -1,0 +1,30 @@
+title: Report on Reduced Military Units
+new-page: true
+view-if: used_military_unit > military_goods_unit
+tags: event
+
+We have lost a military goods unit.
+
+@decrease_military_menu
+
+- @reduce_morale: Reduce Military Units dedicated to boosting Morale.
+- @reduce_experience: Reduce Military Units dedicated to boosting Experience.
+- @reduce_conduct: Reduce Military Units dedicated to boosting Conduct.
+
+@reduce_morale
+choose-if: morale_military_unit > 0
+unavailable-subtitle: No Military Units are allocated to improving morale.
+on-arrival: morale_military_unit -= 1; used_military_unit -= 1;
+go-to: decrease_military_menu if used_military_unit > military_goods_unit
+
+@reduce_experience
+choose-if: experience_military_unit > 0
+unavailable-subtitle: No Military Units are allocated to improving experience.
+on-arrival: experience_military_unit -= 1; used_military_unit -= 1;
+go-to: decrease_military_menu if used_military_unit > military_goods_unit
+
+@reduce_conduct
+choose-if: conduct_military_unit > 0
+unavailable-subtitle: No Military Units are allocated to improving conduct.
+on-arrival: conduct_military_unit -= 1; used_military_unit -= 1;
+go-to: decrease_military_menu if used_military_unit > military_goods_unit

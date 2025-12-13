@@ -1,0 +1,61 @@
+title: Military Production
+new-page: true
+is-card: true
+tags: military_affairs
+card-image: 
+view-if: rev_mili_prod_timer <= 0 and military_goods_unit > 0
+on-arrival: rev_mili_prod_timer = 3; week_actions += 1;
+go-to: @military_delegate
+
+= Military Production
+
+Economic recovery has progressed to a point where we have restarted military production to begin equipping the <span style="color: #d42f2f">Red Army</span> once more. As such, we can direct military industry to help aid specific aspects of the <span style="color: #d42f2f">Red Army</span> and bolster its strength.
+
+@military_delegate
+
+We currently have [+ military_goods_unit +] units delegated to the Military and [+ used_military_unit +] in use.
+
+- @reduce_morale: Reduce Military Units dedicated to boosting Morale.
+- @reduce_experience: Reduce Military Units dedicated to boosting Experience.
+- @reduce_conduct: Reduce Military Units dedicated to boosting Conduct.
+- @increase_morale: Increase Production dedicated to boosting Morale.
+- @increase_experience: Increase Production dedicated to boosting Experience.
+- @increase_conduct: Increase Production dedicated to boosting Conduct.
+- @rev_pinned_return: Do nothing for now.
+- @easy_discard
+
+@reduce_morale
+choose-if: morale_military_unit > 0
+unavailable-subtitle: No Military Units are allocated to improving morale.
+on-arrival: morale_military_unit -= 1; used_military_unit -= 1;
+go-to: military_delegate
+
+@reduce_experience
+choose-if: experience_military_unit > 0
+unavailable-subtitle: No Military Units are allocated to improving experience.
+on-arrival: experience_military_unit -= 1; used_military_unit -= 1;
+go-to: military_delegate
+
+@reduce_conduct
+choose-if: conduct_military_unit > 0
+unavailable-subtitle: No Military Units are allocated to improving conduct.
+on-arrival: conduct_military_unit -= 1; used_military_unit -= 1;
+go-to: military_delegate
+
+@increase_morale
+choose-if: military_goods_unit > used_military_unit
+unavailable-subtitle: We do not have enough free units.
+on-arrival: morale_military_unit += 1; used_military_unit += 1;
+go-to: military_delegate
+
+@increase_experience
+choose-if: military_goods_unit > used_military_unit
+unavailable-subtitle: We do not have enough free units.
+on-arrival: experience_military_unit += 1; used_military_unit += 1;
+go-to: military_delegate
+
+@increase_conduct
+choose-if: military_goods_unit > used_military_unit
+unavailable-subtitle: We do not have enough free units.
+on-arrival: conduct_military_unit += 1; used_military_unit += 1;
+go-to: military_delegate

@@ -153,6 +153,10 @@ Q.zeroCheck1 = ['agricultural', 'industry', 'supply'];
 Q.zeroCheck2 = ['northeast', 'northwest', 'central', 'southern'];
 Q.zeroCheck3 = ['poverty', 'homelessness', 'illiteracy'];
 
+Q.morale_military_unit = 0;
+Q.experience_military_unit = 0;
+Q.conduct_military_unit = 0;
+
 Q.agricultural_goods_unit = 0;
 Q.consumer_goods_unit = 0;
 Q.military_goods_unit = 0;

@@ -47,6 +47,8 @@ max-cards: 6
 
 [? if majority_support < 50 and majority_check_timer < 6 : Murmurs of our loss of a majority within the <span style="color: #BF0000">**Congress**</span> is spreading further. We must regain the confidence of the factions, or risk being ousted from power. ?]
 
+[? if military_influence >= 70 : The <span style="color:#d42f2f">Red Army</span> currently has too much influence over our politics, and we should counteract this immediately. ?]
+
 - @internal
 - @economic
 - @military

@@ -1737,6 +1737,16 @@ if (Q.week_actions >= 1) {
             Q.southern_illiteracy -= 0.2/4 * Q.debt_multiplier;
         }
 
+        // bureaucratic checkers
+
+        if (Q.bureaucratic_loyalty <= 0) {
+            Q.bureaucratic_loyalty = 1;
+        }
+
+        if (Q.bureaucratic_efficiency <= 0) {
+            Q.bureaucratic_loyalty = 1;
+        }
+
         // corruption modifiers
 
         if (Q.state_corruption >= 40) {
@@ -1863,8 +1873,6 @@ if (Q.week_actions >= 1) {
             Q.central_agri_free_unit += 1;
         }
 
-
-
         if (Q.southern_agricultural_health >= 9 && ((Q.southern_staple_crops_unit + Q.southern_cash_crops_unit + Q.southern_agri_free_unit) < 1)) {
             Q.southern_agri_free_unit += 1;
         }
@@ -1942,11 +1950,20 @@ if (Q.week_actions >= 1) {
 
         // military arms impact
 
-        if (Q.military_goods_unit > 0) {
-            Q.army_morale += 5/4 * Q.military_goods_unit;
-            Q.army_experience += 3/4 * Q.military_goods_unit;
-            Q.army_conduct += 2/4 * Q.military_goods_unit;
+        Q.used_military_unit = Q.morale_military_unit + Q.conduct_military_unit + Q.experience_military_unit;
+
+        if (Q.morale_military_unit > 0) {
+            Q.army_morale += (Q.morale_military_unit * 2)/4;
         }
+
+        if (Q.conduct_military_unit > 0) {
+            Q.army_conduct += (Q.morale_military_unit * 2)/4;
+        }
+
+        if (Q.experience_military_unit > 0) {
+            Q.army_experience += (Q.morale_military_unit * 2)/4;
+        }
+        
 
         Q.agricultural_goods_unit_disp = Q.agricultural_goods_unit * 10;
 
@@ -1993,6 +2010,60 @@ if (Q.week_actions >= 1) {
             Q.majority_check_timer -= 1;
         } else {
             Q.majority_check_timer = 6;
+        }
+
+        // mil modifiers
+
+        if (Q.mil_focus_current == "None") {
+            Q.military_influence -= 5;
+        }
+
+        if (Q.mil_focus_current == "Anti-Corruption") {
+            Q.military_influence += 4;
+            if (Q.military_influence < 35) {
+                Q.state_corruption -= 2;
+            }
+            if (Q.military_influence >= 35 && Q.military_influence < 70) {
+                Q.state_corruption -= 1;
+            }
+            if (Q.military_influence >= 70) {
+                Q.state_corruption += 2;
+            }
+        }
+
+        if (Q.mil_focus_current == "Bureaucracy") {
+            Q.military_influence += 4;
+            if (Q.military_influence < 35) {
+                Q.bureaucratic_efficiency += 1;
+                Q.bureaucratic_loyalty += 2;
+            }
+            if (Q.military_influence >= 35 && Q.military_influence < 70) {
+                Q.bureaucratic_loyalty += 1;
+            }
+            if (Q.military_influence >= 70) {
+                Q.bureaucratic_loyalty -= 1;
+                Q.bureaucratic_efficiency -= 1;
+            }
+        }
+
+        if (Q.mil_focus_current == "Unions") {
+            Q.military_influence += 4;
+            if (Q.military_influence < 35) {
+                Q.cgdl_strength -= 0.2;
+                Q.federterra_strength -= 0.2;
+            }
+            if (Q.military_influence >= 35 && Q.military_influence < 70) {
+                Q.cgdl_strength -= 0.1;
+                Q.federterra_strength -= 0.1;
+            }
+            if (Q.military_influence >= 70) {
+                Q.cgdl_strength += 0.1;
+                Q.federterra_strength += 0.1;
+            }
+        }
+
+        if (Q.military_influence <= 0) {
+            Q.military_influence = 0;
         }
     }
 }
