@@ -747,7 +747,7 @@ table {
     font-style: normal !important;
 }
 
-.postrev-tooltip:hover .postrev-tooltip-text, .var-postrev-tooltip-text {
+.postrev-tooltip:hover .postrev-tooltip-text, .postrev-tooltip:hover .var-postrev-tooltip-text {
   visibility: visible;
   opacity: 1;
 }
