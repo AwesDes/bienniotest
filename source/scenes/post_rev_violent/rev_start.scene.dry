@@ -508,8 +508,9 @@ go-to: tooltip_done
 
 @tooltips_disable
 on-arrival: {!
-document.querySelectorAll(".var-postrev-tooltip-text").forEach(el => el.remove());
-
+document.querySelectorAll(".var-postrev-tooltip-text").forEach(tip => {
+    tip.remove();
+});
 !}
 go-to: tooltip_done
 
