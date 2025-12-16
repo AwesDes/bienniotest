@@ -6,8 +6,10 @@ is-special: true
 
 {!<svg
    id="svg2"
-   height="1621.41"
-   width="1268.75"
+   style="border: 5px solid grey"
+   width="500"
+   height="auto"
+   viewBox="0 0 1200 1500"
    version="1.1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    sodipodi:docname="real.svg"
