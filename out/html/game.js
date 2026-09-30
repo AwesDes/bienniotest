@@ -124,6 +124,18 @@
       document.body.classList.add('dark-mode');
       window.dendryUI.saveSettings();
   }
+    window.enableColorText = function() {
+        window.dendryUI.colored_text = true;
+        document.body.classList.remove('color-off-mode');
+        window.dendryUI.saveSettings();
+  };
+  window.disableColorText = function() {
+      window.dendryUI.colored_text = false;
+      document.body.classList.add('color-off-mode');
+      window.dendryUI.saveSettings();
+  }
+
+  
 
   // populates the checkboxes in the options view
   window.populateOptions = function() {
