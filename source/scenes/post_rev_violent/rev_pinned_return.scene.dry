@@ -1,3 +1,0 @@
-title: Back to main
-go-to: root
-on-arrival: week_actions -= 1

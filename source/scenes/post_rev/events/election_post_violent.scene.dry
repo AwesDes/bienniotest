@@ -1,0 +1,598 @@
+title: Supreme Soviet Elections
+new-page: true
+tags: event
+priority: -1
+view-if: ((year = next_election_year and month >= next_election_month) or (year > next_election_year)) and national_congress_seen and violent_revolution
+on-arrival: {!
+// resetting coalition stuff
+Q.ldr_promise_failed = 0;
+Q.ppi_promise_failed = 0;
+
+Q.ppi_total_broken = 0;
+Q.ldr_total_broken = 0;
+Q.ul_total_broken = 0;
+
+Q.liberal_aid_accepted = 0;
+Q.liberal_budget_accepted = 0;
+Q.liberal_crackdown_accepted = 0;
+Q.liberal_foreign_accepted = 0;
+Q.liberal_nationalisation_accepted = 0;
+Q.liberal_reform_accepted = 0;
+
+Q.catholic_charity_accepted = 0;
+Q.catholic_education_accepted = 0;
+Q.catholic_nationalisation_accepted = 0;
+Q.catholic_papacy_accepted = 0;
+Q.catholic_women_accepted = 0;
+
+Q.coalition_dissent = 0;
+
+Q.crackdown_far_left = 0;
+Q.crackdown_far_right = 0;
+
+// prevents insta dismissal
+Q.king_dismissed_timer = 12;
+
+Q.party_demands_timer = 6;
+
+Q.ds_enemies = 0;
+Q.ds_allies = 0;
+Q.ldr_enemies = 0;
+Q.ul_allies = 0;
+Q.in_coalition = 0;
+Q.southern_development = 0;
+
+Q.left_wing_coalition_failed = 0;
+Q.centre_left_coalition_failed = 0;
+Q.socialist_catholic_coalition_failed = 0;
+
+Q.in_coalition = 0;
+Q.in_unstable_coalition = 0;
+!}
+on-departure: week_actions += 1; in_election = 0; next_election_year = next_election_year + 2; n_elections += 1; next_election_time = time + 24;
+set-jump: post_election_1919
+
+= Elections, [+ month : month +] [+ year +]
+
+The elections of the Supreme Soviet are to be held now.
+
+- @post_election_1919: We will do our best.
+
+@post_election_1919
+on-arrival: {!
+
+Q.ds_seating_disp = 0; 
+Q.ppi_seating_disp = 0;
+Q.ldr_seating_disp = 0;
+Q.ul_seating_disp = 0;
+Q.pcs_seating_disp = 0;
+Q.pnf_seating_disp = 0;
+Q.other_seating_disp = 0;
+
+if (Q.benevolence != 1) {
+    Q.pri_seating_disp = 0;
+}
+
+if (Q.opposition != 1) {
+    Q.pcdi_seating_disp = 0;
+    Q.psu_seating_disp = 0;
+    Q.psri_seating_disp = 0;
+}
+// set old results
+// election threshold constitutional reform
+// banning parties
+Q.party_banned = 0;
+
+for (var faction of Q.factions) {
+    Q['old_' + faction + '_r'] = Q[faction + '_r'];
+}
+
+for (var party of Q.parties) {
+    Q['old_' + party + '_r'] = Q[party + '_r'];
+    Q[party + '_r'] = Q[party + '_votes'];
+}
+
+var total_available_seats = 0;
+
+if (Q.year <= 1920) {
+    total_available_seats = 508;
+}
+if (Q.year >= 1921) {
+    total_available_seats = 535;
+}
+
+if (Q.opposition || Q.benevolence) {
+    Q.total_r = parseFloat(Q.psi_r) + parseFloat(Q.psri_r);
+
+    if (Q.pcdi_formed) {
+        Q.total_r += parseFloat(Q.pcdi_r);
+    }
+
+    if (Q.psu_formed) {
+        Q.total_r += parseFloat(Q.psu_r);
+    }
+
+    if (Q.benevolence) {
+        Q.total_r += parseFloat(Q.pri_r);
+    }
+
+    Q.psi_r = ((parseFloat(Q.psi_r) / Q.total_r) * 100);
+    Q.psi_seating = Math.round(Q.psi_r / 100 * total_available_seats);
+    Q.psi_seating_disp = ((Q.psi_seating / total_available_seats) * 100).toFixed(1);
+    Q.psi_r = Q.psi_r.toFixed(1);
+
+    Q.psri_r = ((parseFloat(Q.psri_r) / Q.total_r) * 100);
+    Q.psri_seating = Math.round(Q.psri_r / 100 * total_available_seats);
+    Q.psri_seating_disp = ((Q.psri_seating / total_available_seats) * 100).toFixed(1);
+    Q.psri_r = Q.psri_r.toFixed(1);
+
+    if (Q.pcdi_formed) {
+        Q.pcdi_r = ((parseFloat(Q.pcdi_r) / Q.total_r) * 100);
+        Q.pcdi_seating = Math.round(Q.pcdi_r / 100 * total_available_seats);
+        Q.pcdi_seating_disp = ((Q.pcdi_seating / total_available_seats) * 100).toFixed(1);
+        Q.pcdi_r = Q.pcdi_r.toFixed(1);
+    }
+
+    if (Q.psu_formed) {
+        Q.psu_r = ((parseFloat(Q.psu_r) / Q.total_r) * 100);
+        Q.psu_seating = Math.round(Q.psu_r / 100 * total_available_seats);
+        Q.psu_seating_disp = ((Q.psu_seating / total_available_seats) * 100).toFixed(1);
+        Q.psu_r = Q.psu_r.toFixed(1);
+    }
+
+    if (Q.benevolence) {
+        Q.pri_r = ((parseFloat(Q.pri_r) / Q.total_r) * 100);
+        Q.pri_seating = Math.round(Q.pri_r / 100 * total_available_seats);
+        Q.pri_seating_disp = ((Q.pri_seating / total_available_seats) * 100).toFixed(1);
+        Q.pri_r = Q.pri_r.toFixed(1);
+    }
+
+    Q.opposition_r = parseFloat(Q.psri_r);
+    Q.opposition_seating = parseFloat(Q.psri_seating);
+    Q.opposition_seating_disp = parseFloat(Q.psri_seating_disp);
+
+    if (Q.pcdi_formed) {
+        Q.opposition_r += parseFloat(Q.pcdi_r);
+        Q.opposition_seating += parseFloat(Q.pcdi_seating);
+        Q.opposition_seating_disp += parseFloat(Q.pcdi_seating_disp);
+    }
+
+    if (Q.psu_formed) {
+        Q.opposition_r += parseFloat(Q.psu_r);
+        Q.opposition_seating += parseFloat(Q.psu_seating);
+        Q.opposition_seating_disp += parseFloat(Q.psu_seating_disp);
+    }
+
+    if (Q.benevolence) {
+        Q.opposition_r += parseFloat(Q.pri_r);
+        Q.opposition_seating += parseFloat(Q.pri_seating);
+        Q.opposition_seating_disp += parseFloat(Q.pri_seating_disp);
+    }
+
+
+} else {
+    Q.psi_r = 100.0;
+    Q.psi_seating_disp = 100.0;
+    Q.psi_seating = total_available_seats;
+}
+
+Q.strength_elections = Q.reformist_strength + Q.maximalist_strength + Q.labour_strength + Q.communist_strength;
+
+if (Q.syndicalist_active) {
+    Q.strength_elections += Q.syndicalist_strength;
+
+    Q.syndicalist_r = ((Q.syndicalist_strength / Q.strength_elections) * Q.psi_r);
+    Q.syndicalist_seating = Math.round((Q.syndicalist_strength / Q.strength_elections) * Q.psi_seating);
+    Q.syndicalist_seating_disp = ((Q.syndicalist_seating / total_available_seats) * 100).toFixed(1);
+    Q.syndicalist_r = Q.syndicalist_r.toFixed(1);
+}
+
+Q.reformist_r = ((Q.reformist_strength / Q.strength_elections) * Q.psi_r);
+Q.reformist_seating = Math.round((Q.reformist_strength / Q.strength_elections) * Q.psi_seating);
+Q.reformist_seating_disp = ((Q.reformist_seating / total_available_seats) * 100).toFixed(1);
+Q.reformist_r = Q.reformist_r.toFixed(1);
+
+Q.maximalist_r = ((Q.maximalist_strength / Q.strength_elections) * Q.psi_r);
+Q.maximalist_seating = Math.round((Q.maximalist_strength / Q.strength_elections) * Q.psi_seating);
+Q.maximalist_seating_disp = ((Q.maximalist_seating / total_available_seats) * 100).toFixed(1);
+Q.maximalist_r = Q.maximalist_r.toFixed(1);
+
+Q.labour_r = ((Q.labour_strength / Q.strength_elections) * Q.psi_r);
+Q.labour_seating = Math.round((Q.labour_strength / Q.strength_elections) * Q.psi_seating);
+Q.labour_seating_disp = ((Q.labour_seating / total_available_seats) * 100).toFixed(1);
+Q.labour_r = Q.labour_r.toFixed(1);
+
+Q.communist_r = ((Q.communist_strength / Q.strength_elections) * Q.psi_r);
+Q.communist_seating = Math.round((Q.communist_strength / Q.strength_elections) * Q.psi_seating);
+Q.communist_seating_disp = ((Q.communist_seating / total_available_seats) * 100).toFixed(1);
+Q.communist_r = Q.communist_r.toFixed(1);
+
+// Other Calculation
+for (var party of Q.parties) {
+    if (Q.use_decimals) {
+        Q[party + '_r_disp'] = parseFloat(Q[party + '_r']).toFixed(1);
+    } else {
+        Q[party + '_r_disp'] = Q[party + '_r'];
+    }
+    Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
+    var sign = Q['change_' + party + '_r'] > 0 
+                ? '<img style ="height: 11px; width: 11px;" src="img/Increase2.png"> ' 
+                : Q['change_' + party + '_r'] < 0 
+                    ? '<img style ="height: 11px; width: 11px;" src="img/Decrease2.png"> ' 
+                    : '<img style ="height: 11px; width: 11px;" src="img/Steady2.png"> ';
+    Q['change_' + party + '_r'] = Math.abs(Q['change_' + party + '_r']);
+    Q['str_change_' + party] = sign + parseFloat(Q['change_' + party + '_r']).toFixed(1);
+}
+
+// calculate new party sum if parties are banned
+
+for (var faction of Q.factions) {
+    // if we use decimals, then we might want to truncate the numbers
+    Q['change_' + faction + '_r'] = Q[faction + '_r'] - Q['old_' + faction + '_r'];
+    var sign = Q['change_' + faction + '_r'] > 0 
+                ? '<img style ="height: 11px; width: 11px;" src="img/Increase2.png"> ' 
+                : Q['change_' + faction + '_r'] < 0 
+                    ? '<img style ="height: 11px; width: 11px;" src="img/Decrease2.png"> ' 
+                    : '<img style ="height: 11px; width: 11px;" src="img/Steady2.png"> ';
+    Q['change_' + faction + '_r'] = Math.abs(Q['change_' + faction + '_r']);
+    Q['str_change_' + faction] = sign + parseFloat(Q['change_' + faction + '_r']).toFixed(1);
+}
+
+// The largest party can only be the PNF or the PSI.
+Q.largest_party = Q.psi_name;
+if (Q.pnf_seating_disp >= Q.psi_seating_disp && Q.pnf_seating_disp >= Q.psri_seating_disp && Q.pnf_seating_disp >= Q.pcdi_seating_disp) {
+    Q.largest_party = 'PNF';
+}
+
+// reset coalitions
+Q.centre_left_coalition = 0;
+Q.left_wing_coalition = 0;
+Q.socialist_catholic_coalition = 0;
+Q.grand_coalition = 0;
+Q.centre_right_coalition = 0;
+Q.anti_socialist_coalition = 0;
+
+Q.pcdi_in_government = 0;
+Q.psu_in_government = 0;
+Q.ppi_in_government = 0;
+Q.ldr_in_government = 0;
+Q.ds_in_government = 0;
+Q.ul_in_government = 0;
+Q.psri_in_government = 0;
+Q.pnf_in_government = 0; 
+
+// based on starting coalition
+Q.foreign_minister_party = Q.psi_name; 
+Q.foreign_minister = "Matteotti";
+Q.interior_minister_party = Q.psi_name;
+Q.interior_minister = "Turati"; 
+Q.justice_minister_party = Q.psi_name;
+Q.justice_minister = "Treves";
+Q.labour_minister_party = Q.psi_name; 
+Q.labour_minister = "Rigola";
+Q.finance_minister_party = Q.psi_name;
+Q.finance_minister = "Lazzari";
+Q.treasury_minister_party = Q.psi_name;
+Q.treasury_minister = "Modigliani";
+Q.agriculture_minister_party = Q.psi_name;
+Q.agriculture_minister = "Graziadei"; 
+Q.public_education_minister_party = Q.psi_name; 
+Q.public_education_minister = "Togliatti";
+Q.public_works_minister_party = Q.psi_name;
+Q.public_works_minister = "Vella";
+
+var election_result = {'date': new Date(Q.year, Q.month - 1)};
+for (var party of Q.parties) {
+    election_result[party] = Q[party + '_seating_disp'];
+}
+Q.election_records.push(election_result);
+!}
+on-departure: fasci_urgency += 1 if (fasci_urgency <= 2 and pnf_seating_disp >= 15)
+on-display: {!
+data = []
+
+if ((Q.opposition || Q.benevolence) && Q.pcdi_formed) {
+    data.push({
+        "id": "pcdi",
+        "legend": "PCDI",
+        "name": "PCDI",
+        "seats": Math.round(Q.pcdi_seating),
+    }); 
+}
+
+data.push({
+    "id": "communist",
+    "legend": "Communist",
+    "name": "Communist",
+    "seats": Math.round(Q.communist_seating),
+});
+
+data.push({
+    "id": "maximalist",
+    "legend": "Maximalist",
+    "name": "Maximalist",
+    "seats": Math.round(Q.maximalist_seating),
+});
+
+data.push({
+    "id": "labour",
+    "legend": "Labour",
+    "name": "Labour",
+    "seats": Math.round(Q.labour_seating),
+});
+
+if (Q.syndicalist_active) {
+    data.push({
+        "id": "syndicalist",
+        "legend": "Syndicalist",
+        "name": "Syndicalist",
+        "seats": Math.round(Q.syndicalist_seating),
+    });
+}
+
+data.push({
+    "id": "reformist",
+    "legend": "Reformist",
+    "name": "Reformist",
+    "seats": Math.round(Q.reformist_seating),
+});
+
+if ((Q.opposition || Q.benevolence) && Q.psu_formed) {
+    data.push({
+        "id": "psu",
+        "legend": "PSU",
+        "name": "PSU",
+        "seats": Math.round(Q.psu_seating),
+    }); 
+}
+
+if (Q.opposition || Q.benevolence) {
+    data.push({
+        "id": "psri",
+        "legend": "PSRI",
+        "name": "PSRI",
+        "seats": Math.round(Q.psri_seating),
+    }); 
+}
+
+if (Q.benevolence) {
+    data.push({
+        "id": "pri",
+        "legend": "PRI",
+        "name": "PRI",
+        "seats": Math.round(Q.pri_seating),
+    });   
+}
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("chamber").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#chamber").datum(data).call(parliament);
+}
+!}
+go-to: coalition_menu
+
+= Election results
+
+{!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!}
+{!<tr><td>!} **[+ psi_full_name +]** {!</td><td>!} **[+ psi_r +]%** {!</td><td>!} **[+ str_change_psi +]%** {!</td><td>!} **[+ psi_seating +]** {!</td><td>!} **[+ psi_seating_disp +]%** {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#8B0000; outline: 2px; outline-style: solid;'> </div>!} Communists: {!</td><td>!} [+ communist_r +]% {!</td><td>!} [+ str_change_communist +]% {!</td><td>!} [+ communist_seating +] {!</td><td>!} [+ communist_seating_disp +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#DC143C; outline: 2px; outline-style: solid;'> </div>!} Maximalists: {!</td><td>!} [+ maximalist_r +]% {!</td><td>!} [+ str_change_maximalist +]% {!</td><td>!} [+ maximalist_seating +] {!</td><td>!} [+ maximalist_seating_disp +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#B22222; outline: 2px; outline-style: solid;'> </div>!} Labour: {!</td><td>!} [+ labour_r +]% {!</td><td>!} [+ str_change_labour +]% {!</td><td>!} [+ labour_seating +] {!</td><td>!} [+ labour_seating_disp +]% {!</td></tr>!}
+
+[? if syndicalist_active : {!<tr><td><div class="box" style='background-color:#2F2F2F; outline: 2px; outline-style: solid;'> </div>!} Syndicalists: {!</td><td>!} [+ syndicalist_r +]% {!</td><td>!} [+ str_change_syndicalist +]% {!</td><td>!} [+ syndicalist_seating +] {!</td><td>!} [+ syndicalist_seating_disp +]% {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#FF6961; outline: 2px; outline-style: solid;'> </div>!} Reformists: {!</td><td>!} [+ reformist_r +]% {!</td><td>!} [+ str_change_reformist +]% {!</td><td>!} [+ reformist_seating +] {!</td><td>!} [+ reformist_seating_disp +]% {!</td></tr>!}
+
+[? if (opposition or benevolence) : {!<tr><td>!} **Constitutional Opposition** {!</td><td>!} **[+ opposition_r +]%** {!</td><td>!} N/A {!</td><td>!} **[+ opposition_seating +]** {!</td><td>!} **[+ opposition_seating_disp +]%** {!</td></tr>!} ?]
+
+[? if (opposition or benevolence) and pcdi_formed : {!<tr><td><div class="box" style='background-color:#C72F35; outline: 2px; outline-style: solid;'> </div>!} PCd'I: {!</td><td>!} [+ pcdi_r +]% {!</td><td>!} [+ str_change_pcdi +]% {!</td><td>!} [+ pcdi_seating +] {!</td><td>!} [+ pcdi_seating_disp +]% {!</td></tr>!} ?]
+
+[? if (opposition or benevolence) and psu_formed : {!<tr><td><div class="box" style='background-color:#E35A5A; outline: 2px; outline-style: solid;'> </div>!} PSU: {!</td><td>!} [+ psu_r +]% {!</td><td>!} [+ str_change_psu +]% {!</td><td>!} [+ psu_seating +] {!</td><td>!} [+ psu_seating_disp +]% {!</td></tr>!} ?]
+
+[? if opposition or benevolence :  {!<tr><td><div class="box" style='background-color:#FFC0CB; outline: 2px; outline-style: solid;'> </div>!} PSRI: {!</td><td>!} [+ psri_r +]% {!</td><td>!} [+ str_change_psri +]% {!</td><td>!} [+ psri_seating +] {!</td><td>!} [+ psri_seating_disp +]% {!</td></tr>!} ?]
+
+[? if benevolence : {!<tr><td><div class="box" style='background-color:#3CB371; outline: 2px; outline-style: solid;'> </div>!} PRI: {!</td><td>!} [+ pri_r +]% {!</td><td>!} [+ str_change_pri +]% {!</td><td>!} [+ pri_seating +] {!</td><td>!} [+ pri_seating_disp +]% {!</td></tr>!} ?]
+
+
+{!</table>!}
+
+[? if psi_seating_disp >= 50 : There is, naturally, one formable government. ?]
+
+[? if psi_seating_disp < 50 : There is, naturally, on- Oh? Interesting. ?]
+
+@coalition_menu
+on-arrival: {!
+Q.psi_majority = 0;
+Q.in_coalition = 0;
+Q.in_unstable_coalition = 0;
+Q.centre_left_coalition = 0;
+Q.left_wing_coalition = 0;
+Q.socialist_catholic_coalition = 0;
+Q.grand_coalition = 0;
+Q.centre_right_coalition = 0;
+Q.anti_socialist_coalition = 0;
+
+!}
+
+- @psi_majority
+- @left_wing_coalition
+
+@psi_majority
+title: [+ psi_name +] Majority
+subtitle: [+ psi_name +] Majority: [+ psi_seating_disp +]%
+on-arrival: {!
+
+Q.prime_minister_party = Q.psi_name;
+
+Q.psi_in_government = 1; 
+Q.psi_majority = 1; 
+
+Q.foreign_minister_party = Q.psi_name; 
+Q.foreign_minister = "Matteotti";
+Q.interior_minister_party = Q.psi_name;
+Q.interior_minister = "Turati"; 
+Q.justice_minister_party = Q.psi_name;
+Q.justice_minister = "Treves";
+Q.labour_minister_party = Q.psi_name; 
+Q.labour_minister = "Rigola";
+Q.finance_minister_party = Q.psi_name;
+Q.finance_minister = "Lazzari";
+Q.treasury_minister_party = Q.psi_name;
+Q.treasury_minister = "Modigliani";
+Q.agriculture_minister_party = Q.psi_name;
+Q.agriculture_minister = "Graziadei"; 
+Q.public_education_minister_party = Q.psi_name; 
+Q.public_education_minister = "Togliatti";
+Q.public_works_minister_party = Q.psi_name;
+Q.public_works_minister = "Vella";
+
+Q.bordiga_support = parseFloat(Q.communist_seating_disp) + parseFloat(Q.maximalist_seating_disp) + parseFloat(Q.pcdi_seating_disp);
+Q.serrati_support = parseFloat(Q.communist_seating_disp) + parseFloat(Q.maximalist_seating_disp) + parseFloat(Q.labour_seating_disp);
+Q.turati_support = parseFloat(Q.reformist_seating_disp) + parseFloat(Q.labour_seating_disp) + parseFloat(Q.psu_seating_disp) + parseFloat(Q.pri_seating_disp);
+Q.daragona_support = parseFloat(Q.labour_seating_disp) + parseFloat(Q.reformist_seating_disp) + parseFloat(Q.psu_seating_disp) + parseFloat(Q.pri_seating_disp);
+Q.deambris_support = parseFloat(Q.labour_seating_disp) + parseFloat(Q.syndicalist_seating_disp);
+
+!}
+achievement: governo_monocolore
+
+The [+ psi_name +] will continue its rule over Italy.
+
+- @gramsci: Antonio Gramsci is elected Secretary-General and Prime Minister.
+- @bordiga: Amadeo Bordiga is elected Secretary-General and Prime Minister.
+- @serrati: Giacinto Menotti Serrati is elected Secretary-General and Prime Minister.
+- @daragona: Ludovico D'Aragona is elected Secretary-General and Prime Minister.
+- @deambris: Alceste De Ambris is elected Secretary-General and Prime Minister.
+- @turati: Filippo Turati is elected Secretary-General and Prime Minister.
+- @bacci: No leader is able to secure a majority!
+
+@gramsci
+choose-if: bordiga_support >= 50
+view-if: pcdi_gramsci > pcdi_bordiga
+subtitle: Gramsci leads the Communist faction and is able to sway the Maximalists.
+unavailable-subtitle: The Communists and Maximalists do not have enough votes.
+on-arrival: prime_minister = "Gramsci"
+
+Antonio Gramsci is elected as Secretary-General of the [+ psi_name +], and Prime Minister of Italy.
+
+@bordiga
+choose-if: bordiga_support >= 50
+view-if: pcdi_gramsci <= pcdi_bordiga
+subtitle: Bordiga leads the Communist faction and is able to sway the Maximalists.
+unavailable-subtitle: The Communists and Maximalists do not have enough votes.
+on-arrival: prime_minister = "Bordiga"
+
+Amadeo Bordiga is elected as Secretary-General of the [+ psi_name +], and Prime Minister of Italy.
+
+@serrati
+choose-if: serrati_support >= 50
+subtitle: Serrati leads the Maximalists and is able to sway the Communists and Labour.
+unavailable-subtitle: The Maximalists, Communists and Labour do not have enough votes.
+on-arrival: prime_minister = "Serrati"
+
+Giacinto Menotti Serrati is elected as Secretary-General of the [+ psi_name +], and Prime Minister of Italy.
+
+@daragona
+choose-if: daragona_support >= 50
+subtitle: D'Aragona leads the Labour faction, and is able to sway the Reformists.
+unavailable-subtitle: Labour and Reformists doesn't have have enough votes.
+on-arrival: prime_minister = "D'Aragona"
+
+Ludovico D'Aragona is elected as Secretary-General of the [+ psi_name +], and Prime Minister of Italy.
+
+@deambris
+choose-if: deambris_support >= 50
+subtitle: De Ambris leads the Syndicalists, and is able to sway Labour.
+unavailable-subtitle: The Syndicalists and Labour don't have enough votes.
+on-arrival: prime_minister = "De Ambris"
+
+Alceste De Ambris is elected as Secretary-General of the [+ psi_name +], and Prime Minister of Italy. Some are skeptical of his prior affiliation and ties with fascism, however.
+
+@turati
+choose-if: turati_support >= 50
+subtitle: Turati leads the Reformists, and is able to sway Labour.
+unavailable-subtitle: The Reformists and Labour do not have have enough votes.
+on-arrival: prime_minister = "Turati"
+
+Filippo Turati is elected as Secretary-General of the [+ psi_name +], and Prime Minister of Italy.
+
+@bacci
+view-if: bordiga_support < 50 and serrati_support < 50 and daragona_support < 50 and turati_support < 50
+subtitle: Giovanni Bacci will lead as a compromise Secretary-General and Prime Minister.
+on-arrival: prime_minister = "Bacci"
+
+Giovanni Bacci is elected as Secretary-General of the [+ psi_name +], and Prime Minister of Italy.
+
+@left_wing_coalition
+title: Left-wing Coalition
+subtitle: A coalition of all parties; from communist to reformist: 100%
+view-if: psi_seating_disp < 50
+on-arrival: {!
+
+Q.prime_minister_party = Q.psi_name;
+
+Q.psi_in_government = 1; 
+Q.psi_majority = 1; 
+
+Q.foreign_minister_party = Q.psi_name; 
+Q.foreign_minister = "Matteotti";
+Q.interior_minister_party = Q.psi_name;
+Q.interior_minister = "Turati"; 
+Q.justice_minister_party = Q.psi_name;
+Q.justice_minister = "Treves";
+Q.labour_minister_party = Q.psi_name; 
+Q.labour_minister = "Rigola";
+Q.finance_minister_party = Q.psi_name;
+Q.finance_minister = "Lazzari";
+Q.treasury_minister_party = Q.psi_name;
+Q.treasury_minister = "Modigliani";
+Q.agriculture_minister_party = Q.psi_name;
+Q.agriculture_minister = "Graziadei"; 
+Q.public_education_minister_party = Q.psi_name; 
+Q.public_education_minister = "Togliatti";
+Q.public_works_minister_party = Q.psi_name;
+Q.public_works_minister = "Vella";
+
+Q.bordiga_support = parseFloat(Q.communist_seating_disp) + parseFloat(Q.maximalist_seating_disp) + parseFloat(Q.pcdi_seating_disp);
+Q.serrati_support = parseFloat(Q.communist_seating_disp) + parseFloat(Q.maximalist_seating_disp) + parseFloat(Q.labour_seating_disp);
+Q.turati_support = parseFloat(Q.reformist_seating_disp) + parseFloat(Q.labour_seating_disp) + parseFloat(Q.psu_seating_disp) + parseFloat(Q.pri_seating_disp);
+Q.daragona_support = parseFloat(Q.labour_seating_disp) + parseFloat(Q.reformist_seating_disp) + parseFloat(Q.psu_seating_disp) + parseFloat(Q.pri_seating_disp);
+Q.chisea_support = parseFloat(Q.pri_seating_disp) + parseFloat(Q.reformist_seating_disp) + parseFloat(Q.psu_seating_disp) + parseFloat(Q.psri_seating_disp);
+
+!}
+
+The Left-wing coalition will continue its rule over Italy. The Ministries are shared collaboratively within the coalition.
+
+- @gramsci: Antonio Gramsci is elected Secretary-General and Prime Minister.
+- @bordiga: Amadeo Bordiga is elected Secretary-General and Prime Minister.
+- @serrati: Giacinto Menotti Serrati is elected Secretary-General and Prime Minister.
+- @daragona: Ludovico D'Aragona is elected Secretary-General and Prime Minister.
+- @deambris: Alceste De Ambris is elected Secretary-General and Prime Minister.
+- @turati: Filippo Turati is elected Secretary-General and Prime Minister.
+- @chisea: Eugenio Chisea of the Italian Republican Party is elected Prime Minister!
+- @bacci: No leader is able to secure a majority!
+
+@chisea
+view-if: benevolence
+choose-if: chisea_support >= 50
+unavailable-subtitle: The Republicans and Reformists do not have have enough votes.
+on-arrival: prime_minister = "Chisea"; prime_minister_party = "PRI"
+achievement: il_sogno_mazziniano
+
+Surprisingly, the Constitutional Opposition, who have pushed forward the PRI’s candidate of Eugenio Chisea, has successfully taken the post of Prime Minister! With a resurgent Reformist faction after the initial socialist revolution tilting the scales towards the PRI, he is expected to represent cooperation between the ruling PSI and the more moderate Republicans. 

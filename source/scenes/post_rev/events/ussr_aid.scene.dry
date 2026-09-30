@@ -1,0 +1,49 @@
+title: USSR offers aid
+subtitle: The Soviets are willing to help us.
+tags: event
+view-if: violent_revolution = 1 and soviet_aid_timer <= time and soviet_influence < 5
+on-arrival: soviet_aid_timer = time + 16
+go-to: foreign_aid if soviet_influence <= 3; military_base if soviet_influence >= 4
+
+@foreign_aid
+
+= Soviet Ambassador offers Financial Aid
+
+Nikolai Iordansky, the Soviet Ambassador and Representative of the Union of Soviet Socialist Republics have informed us of a financial aid package our ideological comrades are willing to send and help us economically. Though most of the left-wing of the party are supportive of this aid, seeing it as a means to draw closer to the USSR and strengthen our relations, our members on the right warn of encroaching Soviet influence that might turn Italy into an de facto client state.
+
+What should we do?
+
+- @accept_aid: We welcome aid from our comrades.
+- @refuse_aid: Politely refuse aid temporarily.
+
+@accept_aid
+subtitle: +2 Budget
+on-arrival: soviet_influence += 1; economic_growth += 1.8; budget += 2;
+
+We accept the offer of aid, as a substantial financial package is sent our way that we are able to utilise to resolve the gaps the withdrawal of foreign funding left.
+
+@refuse_aid
+on-arrival: soviet_relation -= 1; 
+
+We reject the offer, and though on the surface the Soviets seem amicable to the decision, we witness a slight deterioration in attitudes towards our own ambassadors.
+
+@military_base
+
+= Soviet Ambassador offers Military Agreement
+
+Nikolai Iordansky, the Soviet Ambassador and Representative of the Union of Soviet Socialist Republics have informed us of a military agreement the USSR is willing to sign with us to establish a permanent military base within the nation. Though most of the left-wing of the party are supportive of this aid, seeing it as a means to draw closer to the USSR and curb any attempts against the state, our members on the right warn of encroaching Soviet influence that might turn Italy into an de facto client state.
+
+What should we do?
+
+- @accept_aid_base: We welcome aid from our comrades.
+- @refuse_aid_base: Politely refuse aid temporarily.
+
+@accept_aid_base
+on-arrival: soviet_base = 1; soviet_relation += 1; 
+
+We accept the offer of aid, as Soviet forces begin establishing a permanent military base, strengthening relations.
+
+@refuse_aid_base
+on-arrival: soviet_relation -= 1; 
+
+We reject the offer, and though on the surface the Soviets seem amicable to the decision, we witness a slight deterioration in attitudes towards our own ambassadors.

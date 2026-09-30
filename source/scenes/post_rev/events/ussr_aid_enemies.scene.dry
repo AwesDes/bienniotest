@@ -1,0 +1,11 @@
+title: Red Guard activity speeds up
+subtitle: It seems their backers are aiding them.
+tags: event
+view-if: communist_terror = 1 and soviet_relation <= 5 and ussr_enemy_timer <= time
+on-arrival: ussr_enemy_timer = time + 16; communist_bomb_timer -= 6;
+
+= Red Guard Activity Increases
+
+The Interior Ministry has noted an increase in activity with the new *Red Guards*, with the organisation seemingly having received funds from an opposing socialist nation against us. Whatever the case, it seems whatever plans the Red Guards have in store have accelerated, and we should act fast.
+
+- @root: Concerning.

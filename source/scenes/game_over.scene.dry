@@ -314,7 +314,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_spartaco_marcia_ancora: **Spartaco Marcia Ancora** - Cause German October to succeed. ?]
 
-[? if game_achievement_rivoluzione_permanente_tranne_qui: **Rivoluzione Permanente, Tranne Qui** - Alter the course of socialism in Poland, Germany, Hungary, the United Kingdom and the United States, but fail to bring socialism to Italy. ?]
+[? if game_achievement_rivoluzione_permanente_tranne_qui: **Rivoluzione Permanente, Tranne Qui** - Alter the course of socialism in Poland, Hungary, the United Kingdom and the United States, but fail to bring socialism to Italy. ?]
 
 [? if game_achievement_piu_fanno_rumore_quando_cadono: **Più Fanno Rumore Quando Cadono** - Have Dino Grandi die. ?]
 

@@ -1,0 +1,15 @@
+title: Foreign Intervention!
+subtitle: Our former allies have turned on us...
+tags: event
+view-if: foreign_invasion_time <= time and violent_revolution and entente_relation <= 4 and army_strength < 400
+max-visits: 1
+
+= Entente Invasion
+
+One report streams into the War Minister's Office. Then another, and another. By lunch, a hundred reports have reached the eyes of the Prime Minister; the Cabinet. The French, alongside the British and the opportunists of Yugoslavia have begun moving forces into Italian lands.
+
+Our forces; albeit of course expecting a potential intervention, are unable to hold the invaders back. The colonies go first, then Sardinia, then Sicily, Naples, Rome. In our place, the King and his den of snakes return back into his throne of greed, built upon the corpses of Italian men as he thanks the powers that brought him back to the throne.
+
+The same power that massacre the citizens he so desperately pretends to represent.
+
+- @game_over: Game over.

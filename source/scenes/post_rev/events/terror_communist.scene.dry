@@ -1,0 +1,12 @@
+title: Emergence of *Red Guards*
+subtitle: An ironic twist of fate.
+tags: event
+view-if: communists_adapt <= time and peaceful_revolution and pcdi_banned 
+on-arrival: communist_terror = 1; communist_bomb_timer = time + 12; rg_strength *= 0.3; rg_militancy *= 0.4; ussr_enemy_timer = time + 8; terror_active = 1
+max-visits: 1
+
+= Emergence of the new *Red Guards*
+
+In perhaps an ironic twist of fate, the Red Guards have disaffiliated with the party, taking up arms against us. The organisation has denounced our party as traitors, abandoning the left in favour of collaborating with the bourgeois parties.
+
+Fortunately for us, the Red Guards are weakened by the defections of moderates and reformists, seeing the extreme pivot of the organisation towards the far-left. Regardless, the organisation will be a thorn in our side for the foreseeable future.

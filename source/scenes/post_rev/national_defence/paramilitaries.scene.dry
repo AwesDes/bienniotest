@@ -1,0 +1,81 @@
+title: Paramilitary Policy
+new-page: true
+is-card: true
+view-if: psi_in_government and paramilitary_policy_timer <= 0 and national_congress_seen and (fascist_terror or republican_terror or communist_terror)
+frequency: 500
+on-arrival: week_actions += 1; paramilitary_policy_timer = 3
+card-image: img/RedGuards.jpg
+tags: national_def
+
+= Paramilitary Policy
+
+The beginning of our rule has not certainly been stable. Paramilitaries, such as the far-right *Fasci* [? if republican_terror : and the republican *Anti-Communist Brigade* ?] [? if communist_terror : and the communist *Red Guards* ?] have begun plaguing the nation, vowing to overthrow us. 
+
+Naturally, however, we are not alone in the fight. The Carabinieri, alongside the Interior Ministry have been tasked with eliminating the paramilitary violence plaguing the streets and stabilisng the nation.
+
+Current Budget allocated is [+ yearly_interior_gain +]. Current Budget remaining is [+ interior_budget +], which is replenished at the start of the year.
+
+- @increase_budget: Increase budget allocated to dealing with paramilitaries.
+- @decrease_budget: Decrease budget allocated to dealing with paramilitaries.
+- @investigate_fascists: Investigate the far-right *Fasci*.
+- @eliminate_fascists: Round up fascist leaders and put an end to *Fasci* terror!
+- @investigate_republican: Investigate the republican *Anti-Communist Brigades*
+- @eliminate_republican: Round up republican leaders and put an end to *Anti-Communist Brigade* terror!
+- @investigate_communist: Investigate the new communist *Red Guards*
+- @eliminate_communist: Round up communist leaders and put an end to *Red Guard* terror!
+- @root: Do nothing for now. 
+
+@increase_budget
+subtitle: -1 Budget
+on-arrival: yearly_interior_gain += 1;
+
+We increase the budget allocated dealing with the paramilitaries. This will be reflected in the next annual budget.
+
+@decrease_budget
+subtitle: +1 Budget
+on-arrival: yearly_interior_gain -= 1;
+view-if: yearly_interior_gain > 0
+
+We decrease the budget allocated dealing with the paramilitaries. This will be reflected in the next annual budget.
+
+@investigate_fascists
+view-if: fascist_terror
+on-arrival: interior_budget -= 1; fascist_bomb_timer += 12; fascists_investigated += 1;
+choose-if: interior_budget >= 1
+unavailable-subtitle: Not enough Interior Budget.
+
+We begin investigating the fascist paramilitaries, raiding their bases, arresting their forces and are able to substantially delay their plans.
+
+@investigate_republican
+view-if: republican_terror
+on-arrival: interior_budget -= 1; republican_bomb_timer += 12; republican_investigated += 1;
+choose-if: interior_budget >= 1
+unavailable-subtitle: Not enough Interior Budget.
+
+We begin investigating the republican paramilitaries, raiding their bases, arresting their forces and are able to substantially delay their plans.
+
+@investigate_communist
+view-if: communist_terror
+on-arrival: interior_budget -= 1; communist_bomb_timer += 12; communist_investigated += 1;
+choose-if: interior_budget >= 1
+unavailable-subtitle: Not enough Interior Budget.
+
+We begin investigating the communist paramilitaries, raiding their bases, arresting their forces and are able to substantially delay their plans.
+
+@eliminate_fascists
+view-if: fascists_investigated >= 5 and fascist_terror
+on-arrival: fascist_terror = 0; fascist_bomb_timer += 1000
+
+We launch a final raid on the fascist paramilitaries, rounding up their leaders and finally getting rid of them once and for all.
+
+@eliminate_republican
+view-if: republican_investigated >= 5 and republican_terror
+on-arrival: republican_terror = 0; republican_bomb_timer += 1000
+
+We launch a final raid on the *Anti-Communist Brigade*, rounding up their leaders and finally getting rid of them once and for all.
+
+@eliminate_communist
+view-if: communist_investigated >= 5 and communist_terror
+on-arrival: communist_terror = 0; communist_bomb_timer += 1000
+
+We launch a final raid on the new *Red Guards*, rounding up their leaders and finally getting rid of them once and for all.

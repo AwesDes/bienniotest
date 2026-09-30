@@ -1,0 +1,164 @@
+title: [+ year +] National Congress
+new-page: true
+set-bg: img/DemBg.jpg
+audio: clear shuffle music/post_rev/GuardaGiuDallaPianura.mp3 music/post_rev/Innodeilavoratoridelmare.mp3 music/post_rev/InnodeiPezzenti.mp3 music/post_rev/InnodelleBarricate.mp3 music/post_rev/LaBrigataGaribaldi.mp3 music/post_rev/Sonlamondina.mp3
+on-arrival: {!
+Q.national_congress_seen = 1;
+Q.peaceful_revolution = 1;
+Q.pnf_in_power = 0;
+
+Q.ldr_promise_failed = 0;
+Q.ppi_promise_failed = 0;
+
+Q.ppi_total_broken = 0;
+Q.ldr_total_broken = 0;
+Q.ul_total_broken = 0;
+
+Q.liberal_aid_accepted = 0;
+Q.liberal_budget_accepted = 0;
+Q.liberal_crackdown_accepted = 0;
+Q.liberal_foreign_accepted = 0;
+Q.liberal_nationalisation_accepted = 0;
+Q.liberal_reform_accepted = 0;
+
+Q.catholic_charity_accepted = 0;
+Q.catholic_education_accepted = 0;
+Q.catholic_nationalisation_accepted = 0;
+Q.catholic_papacy_accepted = 0;
+Q.catholic_women_accepted = 0;
+
+Q.coalition_dissent = 0;
+
+Q.crackdown_far_left = 0;
+Q.crackdown_far_right = 0;
+
+// prevents insta dismissal
+Q.king_dismissed_timer = 12;
+
+Q.ds_enemies = 0;
+Q.ds_allies = 0;
+Q.ldr_enemies = 0;
+Q.ul_allies = 0;
+Q.in_coalition = 0;
+Q.in_unstable_coalition = 0;
+Q.southern_development = 0;
+
+// reset coalitions
+Q.psi_majority = 0;
+Q.centre_left_coalition = 0;
+Q.left_wing_coalition = 0;
+Q.socialist_catholic_coalition = 0;
+Q.grand_coalition = 0;
+Q.centre_right_coalition = 0;
+Q.anti_socialist_coalition = 0;
+
+Q.pcdi_in_government = 0;
+Q.psi_in_government = 0;
+Q.psu_in_government = 0;
+Q.ppi_in_government = 0;
+Q.ldr_in_government = 0;
+Q.ds_in_government = 0;
+Q.ul_in_government = 0;
+Q.psri_in_government = 0;
+Q.pnf_in_government = 0; 
+
+Q.party_demands_timer = 6;
+
+Q.fascists_adapt = Q.time + 4;
+Q.yearly_interior_gain = 1;
+Q.interior_budget = 4;
+
+Q.resources += Q.para_resources;
+Q.para_resources = 0;
+
+Q.rev_year = Q.year;
+Q.abortion_attempted = 0;
+Q.suffrage_attempted = 0;
+Q.labour_attempted = 0;
+!}
+max-visits: 1
+go-to: peaceful_menu
+
+= [+ year +] National Congress
+
+The Statuto Albertino is no more. Removed as the nation's constitution following the latest Constitutional Reforms, it is now up to us to draft the newest constitution. As such, a National Congress has been called in order to determine the future of this nation, as well as a drafting of a new constitution to replace the Statuto Albertino.
+
+@peaceful_menu
+
+- @peaceful_monarchy: The King of Italy.
+- @peaceful_party: The Political Parties.
+- @peaceful_elections: The Elections.
+- @peaceful_done: We have done all that we can.
+
+@peaceful_monarchy
+on-arrival: peaceful_monarchy_seen = 1
+max-visits: 1
+
+The main, and perhaps most important of the matters is the issue of the Italian throne, the House of Savoy, and Vittorio Emanuele III. The King, during this period of crisis, has shown not only inaction, but incompetence, as violence erupts in the streets, unemployment skyrocketed and poverty and crime run rampant.
+
+There are two main factions of the National Congress regarding the King. The first, simply, is to abolish the Monarchy and transfer the majority of its powers to the Office of the Prime Minister. This would finally bring hundreds of years of autocratic rule to an end, freeing Italy. This is, naturally, supported by the [+ psi_name +], [? if psu_formed : the PSU, ?] [? if pcdi_formed : the PCd'I, ?] [? if pri_prominent : the PRI, ?] the PSRI, alongside some left-wing liberals and catholics.
+
+The other faction has instead offered a compromise; to keep the Monarchy as a figurehead of stability, forcing Vittorio Emanuele III to abdicate in favour of his son and stripping the powers of the throne. This is a less radical option, supported by the right-wing of the political sphere as a compromise to the question of the Monarchy.
+
+- @king_abolish: Abolish the Italian Throne.
+- @king_figurehead: Keep the Throne as a figurehead and force Vittorio Emanuele III's abdication.
+
+@king_abolish
+on-arrival: king_abolished = 1;
+go-to: peaceful_menu
+
+Very well. We abolish the throne, turning Italy, for the first time since its founding, into a republic. The right criticise our unwillingness to accept their compromise, using as proof of how radical we are.
+
+@king_figurehead
+on-arrival: king = "Umberto II"; king_powerless = 1;
+go-to: peaceful_menu
+
+Very well. We keep the throne as a figurehead, placing Umberto II, Vittorio Emanuele III's son on it as a mere figurehead. Our own party, alongside our allies, are outraged by this betrayal, calling us traitors to the cause.
+
+@peaceful_party
+on-arrival: peaceful_party_seen = 1
+max-visits: 1
+
+The other issue is are the radical political parties of the right. This, of course, meaning the PNF, who have shown themselves time and time again as radical totalitarians and clearly against democracy. As such, many of the left are calling for us to ban the PNF once and for all.
+
+- @pnf_ban: Ban the National Fascist Party.
+- @peaceful_menu: We have done enough.
+
+@pnf_ban
+view-if: pnf_banned = 0
+on-arrival: pnf_banned = 1 if not pcdi_formed
+go-to: pcdi_demand if pcdi_formed; peaceful_party if not pcdi_formed
+
+[? if not pcdi_formed : We ban the fascists, with limited outcry from right-wing liberals who criticise our so-called 'suppression' of parties. ?]
+
+@pcdi_demand
+
+Our decision to ban the National Fascist Party is unsurprisingly decried by right-wing liberals, but also joined in by moderate liberals, who demand the PCd'I should be banned as well due to being anti-democratic as well.
+
+- @pcdi_ban: Very well. Ban the Communist Party of Italy as well.
+- @peaceful_party: Forget it, then.
+
+@pcdi_ban
+subtitle: The left-wing of the party won't be happy about this.
+on-arrival: pcdi_banned = 1; pnf_banned = 1 if pcdi_formed; maximalist_dissent += 10; communist_dissent += 20; rg_strength *= 0.8; communists_adapt = time + 4;
+go-to: peaceful_party
+
+The left-wing of the party is understandably outraged by our willingness to betray our ideological allies, comparing us to *Gustav Noske*. Many leave the party and call on other members to leave as well. Notably, we see a drop in Red Guard membership. 
+
+@peaceful_elections
+on-arrival: peaceful_elections_seen = 1; next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+go-to: peaceful_menu
+max-visits: 1
+
+In an agreed upon measure, elections have been scheduled following the end of the National Congress in order to elect a new set of deputies, and if needed, replace deputies from parties that have now been outlawed.
+
+The Chamber of Deputies has been dissolved, and we have resigned our positions in government.
+
+New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+
+@peaceful_done
+view-if: peaceful_monarchy_seen and peaceful_party_seen and peaceful_elections_seen
+
+We have strengthened democracy in Italy. Though the left wing will grumble, and we are still under threat by radicals who seek to bring this country back into the dark ages, the future, for once, looks bright.
+
+- @root: Only time can tell what the future holds.

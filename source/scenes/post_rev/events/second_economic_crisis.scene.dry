@@ -1,0 +1,12 @@
+title: Foreign Investors Withdraw!
+subtitle: A new economic crisis seems to be looming.
+on-arrival: inflation += 2.3; economic_growth -= 4.9; unemployment += 8.4; industrialists *= 0.5
+tags: event
+view-if: violent_revolution = 1
+max-visits: 1
+
+= Industrialists & Investors Withdraw
+
+It seems the new change in government has prompted a capital flight from local industrialists and landowners, as well as foreign investors with investments in the country. Already, waves of unemployment has hit Italy, barely after the First World War and its economic recession.
+
+Economic Growth is expected to decline sharply, alongside an increase in inflation as the government will attempt its best at keeping the worst of the crisis at bay.

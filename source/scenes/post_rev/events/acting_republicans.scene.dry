@@ -1,0 +1,75 @@
+title: Republicans Attack!
+subtitle: The Republicans are clashing against our institutions! 
+tags: event
+view-if: republican_bomb_timer <= time and republican_terror
+on-arrival: {!
+Q.republican_coup_progress += 1; 
+Q.republican_bomb_timer = Q.time + 12;
+
+if (Q.in_unstable_coalition == 0) {
+Q.workers_psi -= 3*(1-Q.dissent);
+Q.middle_class_psi -= 3*(1-Q.dissent);
+Q.industrialists_psi -= 3*(1-Q.dissent);
+Q.rural_psi -= 3*(1-Q.dissent);
+Q.veterans_psi -= 3*(1-Q.dissent);
+Q.catholic_psi -= 3*(1-Q.dissent);
+Q.women_psi -= 3*(1-Q.dissent);
+}
+
+if (Q.centre_left_coalition == 1) {
+Q.workers_clc -= 3*(1-Q.dissent);
+Q.middle_class_clc -= 3*(1-Q.dissent);
+Q.industrialists_clc -= 3*(1-Q.dissent);
+Q.rural_clc -= 3*(1-Q.dissent);
+Q.veterans_clc -= 3*(1-Q.dissent);
+Q.catholic_clc -= 3*(1-Q.dissent);
+Q.women_clc -= 3*(1-Q.dissent);
+Q.coalition_dissent += 1;
+}
+
+if (Q.socialist_catholic_coalition == 1) {
+Q.workers_scc -= 3*(1-Q.dissent);
+Q.middle_class_scc -= 3*(1-Q.dissent);
+Q.industrialists_scc -= 3*(1-Q.dissent);
+Q.rural_scc -= 3*(1-Q.dissent);
+Q.veterans_scc -= 3*(1-Q.dissent);
+Q.catholic_scc -= 3*(1-Q.dissent);
+Q.women_scc -= 3*(1-Q.dissent);
+Q.coalition_dissent -= 1;
+}
+
+if (Q.grand_coalition) {
+Q.workers_ldr -= 3*(1-Q.dissent);
+Q.middle_class_ldr -= 3*(1-Q.dissent);
+Q.industrialists_ldr -= 3*(1-Q.dissent);
+Q.rural_ldr -= 3*(1-Q.dissent);
+Q.veterans_ldr -= 3*(1-Q.dissent);
+Q.catholic_ldr -= 3*(1-Q.dissent);
+Q.women_ldr -= 3*(1-Q.dissent);
+
+Q.workers_ppi -= 3*(1-Q.dissent);
+Q.middle_class_ppi -= 3*(1-Q.dissent);
+Q.industrialists_ppi -= 3*(1-Q.dissent);
+Q.rural_ppi -= 3*(1-Q.dissent);
+Q.veterans_ppi -= 3*(1-Q.dissent);
+Q.catholic_ppi -= 3*(1-Q.dissent);
+Q.women_ppi -= 3*(1-Q.dissent);
+
+Q.workers_ul -= 3*(1-Q.dissent);
+Q.middle_class_ul -= 3*(1-Q.dissent);
+Q.industrialists_ul -= 3*(1-Q.dissent);
+Q.rural_ul -= 3*(1-Q.dissent);
+Q.veterans_ul -= 3*(1-Q.dissent);
+Q.catholic_ul -= 3*(1-Q.dissent);
+Q.women_ul -= 3*(1-Q.dissent);
+}
+
+!}
+
+= Republican Attack
+
+The Republican Paramilitaries, mainly composed of supports of the liberals and even our former Republican allies have begun a wave of attacks across Italy, coming into conflict with our own forces in the Carabinieri and Interior Ministry.
+
+Naturally, our party has come under flak for allowing this to occur, as opposition factions, namely the reformists, criticise our inability to stabilise the nation and our unwillingness to allow the parties to participate in the Supreme Soviet that led to this situation in the first place.
+
+- @root: Concerning.

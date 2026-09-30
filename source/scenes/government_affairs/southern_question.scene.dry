@@ -30,7 +30,7 @@ Where should we begin?
 subtitle: -2 Budget - This will **irreversibly** damage our relations with the Liberals.
 choose-if: not centre_left_coalition and (king_relation >= 60 or national_congress_seen) and (not national_economic_recovery or budget >= 2)
 view-if: southern_land_reformed == 0 and moderate_plan_adopted
-unavailable-subtitle: [? if centre_left_coalition : The Liberals are threatening a pre-emptive Vote-of-No-Confidence if this bill hits the Chamber floor. ?][? if king_relation < 60 : This King has informed us he will veto this bill upon arrival regardless. ?][? if national_economic_recovery and budget < 2: Not enough budget. (Need 2) ?]
+unavailable-subtitle: [? if centre_left_coalition : The Liberals are threatening a pre-emptive Vote-of-No-Confidence if this bill hits the Chamber floor. ?][? if king_relation < 60 and not (violent_revolution or peaceful_revolution) : The King has informed us he will veto this bill upon arrival regardless. ?][? if national_economic_recovery and budget < 2: Not enough budget. (Need 2) ?]
 on-arrival: southern_land_reformed = 1; budget -= 2; ldr_relation -= 30; rural_psi += 17*(1-dissent); industrialists_ldr -= 7*(1-dissent); industrialists_pnf += 12*(1-dissent); middle_class_pnf += 4*(1-dissent); unemployment -= 0.9; inflation += 0.4; inflation += 0.1 if budget < 0; economic_growth += 0.6; fasci_coup_progress += 1; capital_strike_progress += 1; ldr_right += 3; rural += 4
 go-to: liberal_vote_of_no_confidence.let_it_happen if ldr_seating_disp + ul_seating_disp + pnf_seating_disp >= 50 and not violent_revolution
 

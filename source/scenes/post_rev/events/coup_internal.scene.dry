@@ -1,0 +1,43 @@
+title: Internal Coup!
+subtitle: The Bolsheviks are trying to oust us!
+tags: event
+view-if: (soviet_influence >= 5 or (soviet_influence >= 3 and soviet_relation <= 3) or (soviet_influence >= 4 and soviet_relation <= 2)) and (prime_minister != "Gramsci" or (opposition = 1 or benevolence = 1)) and soviet_leader = "Stalin"
+on-arrival: soviet_aid_timer = time + 12
+max-visits: 1
+
+= Soviet-backed Coup!
+
+The Union of Soviet Socialist Republics have begun a coup against the nation, utilising its allies within the [+ psi_name +] gathered through influence with the goal of establishing a one-party dictatorship. Already, across the country, forces have begun taking up arms to secure the nation for their own.
+
+Though many, naturally, wish for us to fight back and beat back our enemies, a rising defeatist movement has also emerged, willing to acquiesce in order for favourable terms. After all, would Italy really survive two economic crises and two civil wars?
+
+What should we do?
+
+- @fight: The Soviets be damned, mobilise our loyalists!
+- @give_up: Italy embraces the revolution.
+
+@fight
+subtitle: There will be no winners in this war.
+
+The initial phase of the action ends, and somehow, both sides remain standing.
+
+The war settles into fixed battle lines. This will not be a quick coup, but a long civil war. The nation will destroy itself, as it has once before. 
+
+Tens, if not hundreds of thousands of lives will be lost, men pitted against each other, brother against brother in order to fulfill political ambitions of mere men who'll never see the battlefield, who'll never truly appreciate, nor regret the lives it took to get them to the place they stand. None will bat an eye, emptiness consuming their hearts as these same men take the stand and whisper sweet platitudes to the masses, decrying the death and suffering they themselves have brought to the land.
+
+- @worth_it: Was it truly worth it?
+
+@give_up
+subtitle: Would the Soviets grant mercy?
+
+The coup occurs swiftly. Our leaders and commanders are arrested, our forces disarmed. By the end of the day, the Soviet-backed coup has consolidated, whether under the leadership of whatever prominent leader willing to sell their country to the devil; or some puppet on strings they've decided to put up with a hundred corruption cases behind him the Soviets promise to keep secret. Kangaroo courts are set up across Italy, packed with 'loyalists' willing to send men they viewed as friends mere days earlier in front of a barrel of a rifle. Orators – men and women once loyal to you – weave tales, spin lies that decry your rampant authoritarianism, disastrous policies that brought Italy to the brink of ruin; of course, before their *liberation*.
+
+At the very least, you've avoided war; war that would have claimed tens, if not hundreds of thousands of lives. In exchange, your legacy will be tarnished, your reputation besmirched as they convince the masses of how they were saved; to men and women desperate to be saved.
+
+- @worth_it: Was it truly worth it?
+
+@worth_it
+
+To hell with it. Yes, it was.
+
+- @game_over: Game over.

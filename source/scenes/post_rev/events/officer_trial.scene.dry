@@ -1,0 +1,34 @@
+title: Trial of the Officers
+subtitle: The military needs a reshuffle.
+tags: event
+view-if: time < officer_trial
+max-visits: 1
+
+= Trial of the Officers
+
+Following our victory against the reactionaries, the military continues to be plagued by reactionary, or at the very least conservative officers. Now that have settled more pressing matters, these officers have been placed on trial for their crimes of treason. 
+
+The left-wing and centrist-wings of the party argue for the execution of all officers, having caused untold number of casualties in the process of revolution and to send a message to remaining counter-revolutionaries within the nation. The reformists, on the other hand, argue for executing solely the higher-ranked officers, exiling the remainder of the officers instead.
+
+Some of the newer faces in the army have gone so far as to request pardons be granted to some of the less-guilty officers and rehabilitating them into the army, allowing their expertise to be used for the good of the revolution and against the pending foreign threats soon to come.
+
+Whatever the case, the officers are tried, and the judges grant them...
+
+- @execution: ...death.
+- @exile: ...exile.
+- @mercy: ...mercy.
+
+@execution
+on-arrival: foreign_invasion_time -= 3; reformist_dissent += 6; army_loyalty += 0.1
+
+Perhaps for the best, the officers are executed, declared traitors against the cause having sided with the reactionaries and monarchy. Unfortunately, the death of these officers means the military will have to spend more time replacing them with competent, experienced people.
+
+@exile
+on-arrival: army_loyalty -= 0.05; communist_dissent += 6; maximalist_dissent += 6;
+
+Perhaps for the best, the higher officers are executed, while minor and less-guilty officers are exiled. The military continues its recovery, albeit at a slower pace.
+
+@mercy
+on-arrival: foreign_invasion_time += 3; communist_dissent += 6; maximalist_dissent += 6; reformist_dissent += 6;
+
+Perhaps for the best, minor officers are rehabilitated back into the army. The party is naturally outraged, of course, but the expertise of the military remains fairly intact.

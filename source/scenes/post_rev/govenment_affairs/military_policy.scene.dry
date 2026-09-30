@@ -1,0 +1,31 @@
+title: Military Policy
+new-page: true
+is-card: true
+view-if: psi_in_government and military_influence_timer <= 0 and violent_revolution
+frequency: 500
+on-arrival: week_actions += 1; military_influence_timer = 4
+card-image: img/MilitaryInfluence.jpg
+tags: govt_affairs, national_def
+
+= Military Policy
+
+The former Regio Esercito, now merely called the Esercito Italiano, is a deeply reactionary institution that has been generally hostile to any notion of socialism or democracy. However, following our recent rise to power, the army has been purged and replaced with officers more loyal to us. This does, of course, mean that the current state of the army is decrepit, underfunded and inexperienced.
+
+- @increase_size: Increase funding of the Esercito Italiano.
+- @decrease_size: Decrease funding of the Esercito Italiano.
+- @root: Keep the Esercito Italiano as is.
+
+@increase_size
+on-arrival: foreign_invasion_time += 12; budget -= 1; army_strength += 60; army_loyalty += 0.02; unemployment -= 0.2;
+choose-if: budget >= 1 or not national_economic_recovery
+subtitle: -1 Budget - This will help deter any foreign threats.
+
+We bolster the funding of the Army further, developing our forces to adequately ensure we are able to defend ourselves. This also, naturally, deters any foreign invasions.
+
+@decrease_size
+on-arrival: foreign_invasion_time -= 6; budget += 1; army_strength -= 60; army_loyalty -= 0.02; unemployment += 0.2;
+choose-if: army_strength >= 75
+unavailable-subtitle: There is not much army left to defund.
+subtitle: +1 Budget - This will free up funds needed elsewhere.
+
+We cut funding of the Army, downsizing and demobilising where we can to save funds more appropriately used elsewhere. This also, naturally, makes foreign invasions likelier.

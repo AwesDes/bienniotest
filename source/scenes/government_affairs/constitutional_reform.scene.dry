@@ -62,4 +62,4 @@ on-arrival: king = "N/A"; monarchy_gone = 1; socialist_sentiment += 9
 
 The reform passes with the slightest of margins, removing the Statuto Albertino as the constitution of the Kingdom of Italy. A new constitutional congress is to be held in the coming weeks as the King officially abdicates the throne.
 
-- @game_over: Game over.
+- @post_war_peaceful: It is time to decide our new agenda.

@@ -1,0 +1,42 @@
+title: Colonial Policy
+new-page: true
+is-card: true
+view-if: psi_in_government and colonial_policy_timer <= 0 and violent_revolution
+on-arrival: week_actions += 1; colonial_policy_timer = 6
+card-image: img/ColonialPolicy.jpg
+tags: govt_affairs
+max-visits: 1
+
+= Colonial Policy
+
+The colonies of Italian Libya, Eritrea in Africa, as well as the italian concession of Tianjin is up for contention. The party is fairly split on the issue; some on the left argue for independence and an end to the brutal imperialism under the Monarchy, while others on the right argue that colonialism would aid the spread of socialism abroad and allow us to continue our ideals abroad. Naturally as well, some in the middle don't mind either policy, viewing its debate as insignificant.
+
+What should we do?
+
+- @independence: Begin preparations to grant the colonies independence.
+- @autonomy: Grant the colonies nominal independence.
+- @status_quo: Keep the colonies as is while removing its excess mistreatment.
+
+@independence
+subtitle: -1 Budget - This will strengthen communist elements within the party.
+on-arrival: communist_strength += 10; budget -= 1; foreign_invasion_time += 12; economic_growth -= 0.3
+
+We begin granting the colonies full independence, transferring control of governance and power over to local leadership. This takes some time and budget, of course, but our military forces now have a thinner frontline to maintain in the event of any invasion.
+
+This does, unfortunately, come with an economic cost.
+
+@autonomy
+subtitle: This will strengthen moderate elements within the party.
+on-arrival: maximalist_strength += 10;
+
+We grant the colonies nominal independence; Tianjin is return to the Chinese, while our colonies in Africa are allowed to rule themselves, granting them freedom for the first time in three decades.
+
+The economic, political and military reliance on us are merely temporary, of course.
+
+@status_quo
+subtitle: +1 Budget = This will strengthen reformist elements within the party.
+on-arrival: reformist_strength += 10; economic_growth += 0.4; budget += 1;
+
+We preserve the status quo, keeping the status of the colonies as they are. Naturally, we reform the colonial system to root out the brutality and mistreatment caused, but that is the extent of the reforms go.
+
+The economic benefits of maintaining the colonies naturally are secondary, of course.

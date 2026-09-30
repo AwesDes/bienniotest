@@ -1,0 +1,12 @@
+title: Arditi del Popolo dissolves!
+subtitle: The fascists have become less of a threat.
+tags: event
+view-if: (violent_revolution or pnf_collapse_seen)
+on-arrival: arditi_cooperation = 0; adp_strength = 0; adp_militancy = 0
+max-visits: 1
+
+= Dissolution of the Arditi del Popolo
+
+[? if pnf_collapse_seen : Following the collapse of the National Fascist Party, ?][? if violent_revolution : Following our rise to power against the fascists and bourgeois parties, ?] the main threat of the Arditi del Popolo, the *Blackshirts* have been mostly eliminated and defunct. Though attempting to remain whole, the lack of a common enemy has led to the split of the various republicans, anarchists, communists and socialists within the organisation, leading to its dissolution.
+
+Unfortunately, this has decreased our ability to combat the remnants of fascism, no matter how small.

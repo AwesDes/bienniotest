@@ -1,0 +1,420 @@
+title: [+ year +] National Congress
+new-page: true
+audio: clear shuffle music/post_rev/GuardaGiuDallaPianura.mp3 music/post_rev/Innodeilavoratoridelmare.mp3 music/post_rev/InnodeiPezzenti.mp3 music/post_rev/InnodelleBarricate.mp3 music/post_rev/LaBrigataGaribaldi.mp3 music/post_rev/Sonlamondina.mp3
+set-bg: img/RevBg.jpg
+on-arrival: {!
+Q.national_congress_seen = 1;
+Q.violent_revolution = 1;
+Q.pnf_in_power = 0;
+
+Q.ldr_promise_failed = 0;
+Q.ppi_promise_failed = 0;
+
+Q.ppi_total_broken = 0;
+Q.ldr_total_broken = 0;
+Q.ul_total_broken = 0;
+
+Q.liberal_aid_accepted = 0;
+Q.liberal_budget_accepted = 0;
+Q.liberal_crackdown_accepted = 0;
+Q.liberal_foreign_accepted = 0;
+Q.liberal_nationalisation_accepted = 0;
+Q.liberal_reform_accepted = 0;
+
+Q.catholic_charity_accepted = 0;
+Q.catholic_education_accepted = 0;
+Q.catholic_nationalisation_accepted = 0;
+Q.catholic_papacy_accepted = 0;
+Q.catholic_women_accepted = 0;
+
+Q.coalition_dissent = 0;
+
+Q.crackdown_far_left = 0;
+Q.crackdown_far_right = 0;
+
+// prevents insta dismissal
+Q.king_dismissed_timer = 12;
+
+Q.ds_enemies = 0;
+Q.ds_allies = 0;
+Q.ldr_enemies = 0;
+Q.ul_allies = 0;
+Q.in_coalition = 0;
+Q.in_unstable_coalition = 0;
+Q.southern_development = 0;
+
+// reset coalitions
+Q.psi_majority = 0;
+Q.centre_left_coalition = 0;
+Q.left_wing_coalition = 0;
+Q.socialist_catholic_coalition = 0;
+Q.grand_coalition = 0;
+Q.centre_right_coalition = 0;
+Q.anti_socialist_coalition = 0;
+
+Q.pcdi_in_government = 0;
+Q.psi_in_government = 0;
+Q.psu_in_government = 0;
+Q.ppi_in_government = 0;
+Q.ldr_in_government = 0;
+Q.ds_in_government = 0;
+Q.ul_in_government = 0;
+Q.psri_in_government = 0;
+Q.pnf_in_government = 0; 
+
+Q.party_demands_timer = 6;
+
+if (Q.reformists_defect == 0 && Q.reformist_strength > Q.communist_strength && Q.reformist_strength > Q.maximalist_strength || Q.communist_split == 1 && Q.maximalists_resign == 1) {
+    Q.prime_minister = "Turati"; 
+    Q.prime_minister_party = Q.psi_name;
+}
+
+if (Q.communist_split == 0 && Q.communist_strength > Q.reformist_strength && Q.communist_strength > Q.maximalist_strength || Q.reformists_defect == 1 && Q.maximalists_resign == 1) {
+    Q.prime_minister = "Bordiga"; 
+    Q.prime_minister_party = Q.psi_name;
+}
+
+if (Q.maximalists_resign == 0 && Q.maximalist_strength > Q.communist_strength && Q.maximalist_strength > Q.reformist_strength || Q.communist_split == 1 && Q.reformists_defect == 1) {
+    Q.prime_minister = "Serrati"; 
+    Q.prime_minister_party = Q.psi_name;
+}
+
+if (Q.reformists_defect == 1 && Q.communist_split == 1 && Q.maximalists_resign == 1) {
+    Q.prime_minister = "Bacci";
+    Q.prime_minister_party = Q.psi_name;
+    Q.workers_psi -= 4*(1-Q.dissent);
+    Q.middle_class_psi -= 5*(1-Q.dissent);
+}
+
+Q.psi_in_government = 1; 
+Q.psi_majority = 1; 
+
+Q.foreign_minister_party = Q.psi_name; 
+Q.foreign_minister = "Matteotti";
+Q.interior_minister_party = Q.psi_name;
+Q.interior_minister = "Turati"; 
+Q.justice_minister_party = Q.psi_name;
+Q.justice_minister = "Treves";
+Q.labour_minister_party = Q.psi_name; 
+Q.labour_minister = "Rigola";
+Q.finance_minister_party = Q.psi_name;
+Q.finance_minister = "Lazzari";
+Q.treasury_minister_party = Q.psi_name;
+Q.treasury_minister = "Modigliani";
+Q.agriculture_minister_party = Q.psi_name;
+Q.agriculture_minister = "Graziadei"; 
+Q.public_education_minister_party = Q.psi_name; 
+Q.public_education_minister = "Togliatti";
+Q.public_works_minister_party = Q.psi_name;
+Q.public_works_minister = "Vella";
+
+Q.violent_seen = 0;
+
+Q.reformist_r = 0;
+Q.reformist_seating = 0;
+Q.reformist_seating_disp = 0;
+
+Q.maximalist_r = 0;
+Q.maximalist_seating = 0;
+Q.maximalist_seating_disp = 0;
+
+Q.labour_r = 0;
+Q.labour_seating = 0;
+Q.labour_seating_disp = 0;
+
+Q.communist_r = 0;
+Q.communist_seating = 0;
+Q.communist_seating_disp = 0;
+
+Q.syndicalist_r = 0;
+Q.syndicalist_seating = 0;
+Q.syndicalist_seating_disp = 0;
+
+Q.fascists_adapt = parseFloat(Q.time + 4);
+Q.soviet_aid_timer = parseFloat(Q.time + 8);
+Q.foreign_invasion_time = parseFloat(Q.time + 36);
+
+if (Q.pri_prominent != 1) {
+    Q.workers_pri += Q.workers_other * 0.6;
+    Q.middle_class_pri += Q.middle_class_other * 0.6; 
+    Q.industrialists_pri = Q.industrialists_other * 0.6;
+    Q.rural_pri = Q.rural_other * 0.7;
+    Q.veterans_pri = Q.veterans_other * 0.6;
+    Q.catholic_pri = Q.catholic_other * 0.6;
+    Q.women_pri = Q.women_other * 0.6;
+
+    Q.workers_other -= Q.workers_other * 0.6;
+    Q.middle_class_other -= Q.middle_class_other * 0.6;
+    Q.industrialists_other -= Q.industrialists_other * 0.6;
+    Q.rural_other -= Q.rural_other * 0.7;
+    Q.veterans_other -= Q.veterans_other * 0.6;
+    Q.catholic_other -= Q.catholic_other * 0.6;
+    Q.women_other -= Q.women_other * 0.6;
+
+    Q.old_pri_r += Q.old_other_r * 0.6;
+    Q.pri_r += Q.other_r * 0.6;
+    Q.pri_seating += Q.other_seating * 0.6;
+    Q.pri_seating_disp += Q.other_seating_disp * 0.6;
+
+    Q.old_other_r -= Q.old_other_r * 0.6;
+    Q.other_r -= Q.other_r * 0.6;
+    Q.other_seating -= Q.other_seating * 0.6;
+    Q.other_seating_disp -= Q.other_seating_disp * 0.6;
+
+    if (Q.not_participating == 1) {
+        Q.pri_relation -= 15;
+    }
+
+    Q.pri_prominent = 1;
+    Q.republican_sentiment += 4;
+}
+
+Q.soviet_relation += 3;
+Q.entente_relation -= 3;
+
+Q.army_loyalty = 0.8;
+Q.interior_budget = 4;
+Q.yearly_interior_gain = 1;
+
+Q.resources += Q.para_resources;
+Q.para_resources = 0;
+
+Q.officer_trial = Q.time + 2;
+Q.rev_year = Q.year;
+
+Q.abortion_attempted = 0;
+Q.suffrage_attempted = 0;
+Q.labour_attempted = 0;
+!}
+max-visits: 1
+go-to: violent_menu
+
+= [+ year +] National Congress
+
+We have done it. Like our Russian allies to the east, we too have overthrown our bourgeois oppressors and established a revolutionary state, the first of its kind in the Mediterranean and the second of its kind on earth. Now, the party will begin its first National Congress to decide the future of the nation.
+
+@violent_menu
+
+- @violent_monarchy: The King of Italy.
+- @violent_party: The Political Parties.
+- @violent_chamber: The Chamber of Deputies.
+- @violent_elections: The Elections.
+- @violent_judiciary: The Judiciary.
+- @violent_bank: The Banks.
+- @violent_legislation: Legislation.
+- @violent_done: We have done all that we can.
+
+@violent_monarchy
+on-arrival: violent_seen += 1; king_abolished = 1
+max-visits: 1
+
+The first and foremost issue is regarding the King, Vittorio Emanuele III, the throne of Italy and the House of Savoy. All factions of the party agree on one thing; the Monarchy must be abolished. What to do with the King and the House of Savoy, however, is a contentious topic. The reformists on the right suggest merely stripping the King and the House of Savoy of its titles. The communists on the left, on the other hand, demand the King be put on trial and executed for his crimes against the Italian workers, while the maximalists are suggest merely exiling the King, making them never set foot on Italian soil ever again. What should we do?
+
+- @king_stripped: Naturally, the King should be forced to abdicate and be stripped of his titles.
+- @king_exile: Naturally, the King will be forced to abdicate and exiled.
+- @king_shot: Naturally, the King will be forced to abdicate and executed.
+
+@king_stripped
+on-arrival: reformist_strength += 10;
+subtitle: The Reformists will benefit from this.
+go-to: violent_menu
+
+Taking such a lax approach to the abolishment of the Italian Monarchy draws the suspicion of our more hardline members, who would have preferred execution of Vittorio Emanuele III or even be willing to exile him. Leniency might be seen as a betrayal of the revolution’s more radical aims, and our more radical groups within the party and population have become agitated. However, the remnants of Italy’s parliamentary underground begin to look more closely at our decisions, and the Reformists’ fortitude in their position has discredited the Communists to some.
+
+@king_exile
+on-arrival: maximalist_strength += 10;
+subtitle: The Maximalists will benefit from this.
+go-to: violent_menu
+
+Our Maximalist comrades have brought a compromise, and as such have experienced a degree of growth. Communists and Reformists along with most of our working population, though not entirely satisfied, are willing to accept this proposal. Discontent still lingers within the more radicalized labourers, however. Possibilities of cooperation with the left-wings of the Republican Opposition have contracted somewhat, though opportunities still exist.
+
+@king_shot
+on-arrival: communist_strength += 10;
+subtitle: The Communists will benefit from this.
+go-to: violent_menu
+
+Reformists have become disgruntled with that they see as an unnecessary act against the King, one that will supposedly only make the revolution appear less appealing to the masses. Nonetheless, the Communists’ fervour for their arguments for Emanuele’s execution has radicalized some members of the other factions, who join their ranks. Our acts have been met with jubilant praise from the proletarians, unemployed, and farmers, now free from the head of the Kingdom that had oppressed them for so long. As expected, the Republican Opposition despises our act of brutality against the symbol of the old Italy, and has organized several protests and demonstrations against the regime, all of them crushed, yet leaving a bitter taste in the national consciousness.
+
+@violent_party
+on-arrival: violent_seen += 1;
+max-visits: 1
+
+Next up on the list is political parties of Italy, ranging from us all the way to the far-right PNF. Naturally and agreed upon by all factions, Italy and the [+ psi_name +] will need a strong mandate to govern and stabilise the nation. Some on the left are in favour of a one-party state, while others on the right are more in favour of keeping an constitutional opposition to allow at least some freedom of choice.
+
+- @all_banned: All parties with the exception of the [+ psi_name +] are to be outlawed.
+- @right_banned: The Chamber of Deputies will allow a permanent percentage of seats dedicated to the opposition, including only the PSRI and other leftists.
+- @none_banned: The Chamber of Deputies will allow a permanent percentage of seats dedicated to the opposition, including the PSRI, leftists and the PRI.
+
+@all_banned
+choose-if: communist_strength > (maximalist_strength + reformist_strength)
+unavailable-subtitle: The Communists do not have enough influence.
+subtitle: This might result in our opposition taking more extreme measures.
+on-arrival: republicans_adapt = time + 3; dictatorship = 1; pcdi_banned = 1; psu_banned = 1; psri_banned = 1; pll_banned = 1; pri_banned = 1; ds_banned = 1; ppi_banned = 1; ldr_banned = 1; ul_banned = 1; pcs_banned = 1; pnf_banned = 1; other_banned = 1
+go-to: violent_menu
+
+With the ever-increasing influence of the Communists, they have pushed forward the political suppression of all non-[+ psi_name +] parties, bringing forth a dictatorship of the proletariat and farmer. Our party’s own Reformists are horrified with the complete takeover that the PSI has undertaken, though do not actively resist. The Carabinieri has noted a marked increase in Republican agitation, and further spying into their operations has seen a concerning rise in cooperation between the Republican-Reformists and Republican-Liberals. We expect that their tactics, having been deprived of parliamentary action, will instead turn into paramilitary violence.
+
+@right_banned
+subtitle: This might weaken our ability to effectively govern, though grants some concessions to the republicans.
+on-arrival: republicans_adapt = time + 12; opposition = 1; pcdi_banned = 1; psu_banned = 1; psri_banned = 1; pll_banned = 1; pri_banned = 1; ds_banned = 1; ppi_banned = 1; ldr_banned = 1; ul_banned = 1; pcs_banned = 1; pnf_banned = 1; other_banned = 1
+go-to: violent_menu
+
+Opening the door to some members of the Opposition secures us a sense of legitimacy internationally, while not necessarily surrendering any power away from the state. While the Republican Opposition’s radicalization has been somewhat abated, the PRI’s exclusion from being part of the Constitutional Opposition, as the leading party of the Republican-Reformists, has garnered their distrust. The banned members of the Republican Opposition will still work to ensure that our revolutionary state does not run uncontested through legal and illegal means, though with some more sympathetic members to the regime delaying the process.
+
+@none_banned
+subtitle: This will significantly weaken our ability to effectively govern, but will ensure republican dissent is minimal.
+on-arrival: violent_seen += 1; benevolence = 1; pcdi_banned = 1; psu_banned = 1; psri_banned = 1; pll_banned = 1; pri_banned = 1; ds_banned = 1; ppi_banned = 1; ldr_banned = 1; ul_banned = 1; pcs_banned = 1; pnf_banned = 1; other_banned = 1
+go-to: violent_menu
+
+Utter surprise has rippled throughout the Republican Opposition, with all of its Reformist members being included in the Constitutional Opposition. The Liberals have maintained their anti-government stance, as the Republican-Reformists, while still suspicious of the PSI’s regime, have taken a conciliatory approach. Given the divisions within the Republican Opposition, we can expect any strong anti-regime reactions to be heavily delayed, as the Republican-Reformists have cut down their involvement.
+
+@violent_chamber
+on-arrival: violent_seen += 1;
+max-visits: 1
+
+Another thing on the list is the Chamber of Deputies. The party suggests that it be replaced by a Supreme Soviet, emulating the governing bodies of the Russian Soviet Federative Socialist Republic.
+
+- @abolish_chamber: The Chamber of Deputies will be abolished and a Supreme Soviet will take its place.
+
+@abolish_chamber
+go-to: violent_menu
+
+Though the factions of the PSI may bicker over various issues, the party’s radicalization following the Revolution has made the dismantling and replacement of the Chamber of Deputies into a foregone conclusion. While there may be dissenting voices towards this proposal, they are minuscule enough to not provide any meaningful resistance. Made in the likeness of the RSFSR’s approach, the Supreme Soviet now lies as the sole governing body within the new Italian Union, serving as the vanguard of the people through the Party’s will.
+
+@violent_bank
+on-arrival: violent_seen += 1
+max-visits: 1
+
+With the socialist revolution, one subject that is brought up is regarding the assets of the rich. Many on the left advocate for a mass seizure of assets belonging to the rich, alongside the banks and distributing it to strengthen the transition between a capitalist and socialist economy.
+
+- @bank_seize: Seize the assets of the Banca d'Italia and the rich.
+- @violent_menu: Allow the bank and rich to retain their assets.
+
+@bank_seize
+subtitle: +6 Budget
+on-arrival: upper_tax_rates += 3; workers_psi += 6*(1-dissent); veterans_psi += 6*(1-dissent); ppi_relation -= 10; ul_relation -= 16; ldr_relation -= 12; socialist_sentiment -= 8; budget += 6; capital_strike_progress = 10; industrialists_psi *= 0.25; middle_class_psi *= 0.6; republicans_adapt -= 1;
+go-to: violent_menu
+
+Our undisputed power over the nation has finally given us an opportunity to break the power of the landowners and other members of the bourgeoisie, as we nationalize their assets for the good of the nation and bring the Banca d’Italia under state control. A sense of victory has swept over most of our party, as the working classes and farmers celebrate their win over the landowning elite. However, only a marginal portion of the middle class is supportive, with most business owners utterly reviled by our takeover of finance and property. While a fraction of the Reformists decry their fellow party members for accepting such a radical approach to the rich, most simply see it as an unfortunately necessary evil. 
+
+With the sudden surpluses gained from the acquisition of previously private property, a shockwave has also rippled across the business world. Capitalists flee en masse to more business-friendly nations in our West, and the nations of the Entente look upon our war on finance with fear and suspicion. Soviet envoys to our nation begin to look more favourably at our approach, and could entrench their support of us. The Liberals of the Republican Opposition are utterly disgusted by our supposed crackdown of liberty, beginning to pressure the Republican-Reformists to purge any sympathizers within their ranks, and to take further measures to rebel against us.
+
+@violent_elections
+on-arrival: violent_seen += 1; violent_elections_seen = 1; next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+max-visits: 1
+
+Snap elections will be called in order to bring new, sweeping members of the Soviet to power who will be able to govern the country and will be held on [+ next_election_month : month +] [+ year +].
+
+- @violent_menu: Excellent.
+
+@violent_judiciary
+on-arrival: violent_seen += 1
+max-visits: 1
+
+With our successful revolution against the Kingdom, the reactionaries have begun to entrench themselves in the judiciary, posing a threat to any socialist reform that the PSI might desire to implement. All but a few people within the Party have supported a complete overhaul of the judicial apparatus, sacking any judges with potential sympathies to the reactionaries and radically reforming the courts into a more equitable system. This usurpation of the reactionary’s presence in government will certainly come with a price, but one that will make our rule ever more secure.
+
+- @judiciary_reform: Remove reactionary judges and conduct extensive reforms.
+- @violent_menu: Keep the Judiciary as is.
+
+@judiciary_reform
+subtitle: -1 Budget
+on-arrival: budget -= 1; democratisation += 2; workers_psi += 5*(1-dissent) if democratisation >= 3; judicial_reform += 2; republican_sentiment += 5*(1-dissent);
+
+We investigate jurists who have shown themselves to have biased or corrupt behavior, and try to remove them, replacing them with more democratic and socialist-align judges.
+
+- @violent_menu: Excellent.
+
+@violent_legislation
+view-if: (womens_suffrage = 0 or abortion_rights = 0 or child_labour_laws = 0) and violent_legislation_seen = 0
+on-arrival: violent_legislation_seen = 1; violent_seen += 1
+
+We also have the opportunity to mold social legislation to our whims. Various deputies have suggested some laws to be passed to ensure a more equal and fair Italy to continue onwards.
+
+- @violent_abortion: Liberalise abortion laws.
+- @violent_suffrage: Pass women's suffrage.
+- @violent_labour: Raise the minimum working age to 16, outlawing child labour.
+- @violent_menu: We have done all that is necessary.
+
+@violent_abortion
+view-if: not abortion_rights 
+on-arrival: abortion_rights += 1; womens_rights += 1; ppi_relation -= 5*ppi_right; catholic_psi -= 10; ul_relation -= 5; workers_psi += 3*(1-dissent); middle_class_psi += 3*(1-dissent); workers_ppi += 3; industrialists_ppi += 3; industrialists_ul += 3; industrialists_ul += 3; rural_ul += 3; workers_pnf -= 3; industrialists_pnf -= 3; middle_class_pnf -= 2; rural_pnf -= 2; veterans_pnf -= 2; veterans_ppi += 3; veterans_psi += 3*(1-dissent); socialist_sentiment += 5; republican_sentiment += 3; ppi_left -= 2; ds_right += 1.2;
+go-to: violent_legislation
+
+Religious principles have constrained the liberties of the opposite sex for too long, and though we cannot truly repay for the transgressions of our forebears, we will do as much as we can to burn away the stigmas of the past. No longer will women be trapped by the hands of the abuser or of the violator, as all deserve the protections to their own lives against those who would seek to harm them. Without resistance, the bill passes through the Supreme Soviet. Some of our more conservative minded citizens may bring criticisms such as the abuse of a less restricted abortion policy, but we cannot let fear deprive our women from the tools to protect them from unwanted pregnancies.
+
+@violent_suffrage
+view-if: not womens_suffrage
+on-arrival: womens_suffrage = 1; women += 27; womens_rights += 1; ldr_relation -= 5*ldr_right; middle_class_psi -= 7; ul_relation -= 8; workers_psi += 3*(1-dissent); middle_class_psi += 3*(1-dissent); workers_ppi += 3; industrialists_ds += 3; industrialists_ldr += 3; industrialists_ul += 3; rural_ul += 3; workers_pnf -= 3; industrialists_pnf -= 3; middle_class_pnf -= 2; rural_pnf -= 2; middle_class_pnf -= 2; women_ppi += 3; middle_class_ul += 3*(1-dissent); ppi_left += 2; ldr_right += 0.6; ds_right += 0.2; socialist_sentiment += 3;
+go-to: violent_legislation
+
+Every citizen that lives within this new Italy must be granted true equality, not the twisted ideals that the Liberals and Popularists have built! They have toiled and yearned for freedom in the same manner as their male counterparts, and they too must be rewarded for their efforts. Finally, the right to vote has been grasped by the ladies of the revolution, as women’s suffrage passes unanimously under the Supreme Soviet’s control. Though our society might not be entirely ready, as misogyny still lives in the shadows, we must push towards the socialist dream of a truly free and fair society.
+
+@violent_labour
+view-if: not child_labour_laws
+on-arrival: {!
+Q.child_labour_laws = 1;
+if (Q.centre_left_coalition == 1) {
+    Q.coalition_dissent += 1;
+}
+
+if (Q.in_unstable_coalition == 0) {
+    Q.workers_psi += 9*(1-Q.dissent);
+    Q.rural_psi += 3*(1-Q.dissent);
+    Q.industrialists_psi -= 5*(1-Q.dissent);
+
+    if (Q.child_welfare < 3) {
+        Q.workers_psi -= 10*(1-Q.dissent);
+    }
+}
+
+if (Q.centre_left_coalition == 1) {
+    Q.workers_clc += 9*(1-Q.dissent);
+    Q.rural_clc += 3*(1-Q.dissent);
+    Q.industrialists_clc -= 5*(1-Q.dissent);
+
+    if (Q.child_welfare < 3) {
+        Q.workers_clc -= 10*(1-Q.dissent);
+    }
+}
+
+if (Q.socialist_catholic_coalition == 1) {
+    Q.workers_scc += 9*(1-Q.dissent);
+    Q.rural_scc += 3*(1-Q.dissent);
+    Q.industrialists_scc -= 5*(1-Q.dissent);
+
+    if (Q.child_welfare < 3) {
+        Q.workers_scc -= 10*(1-Q.dissent);
+    }
+}
+
+Q.industrialists_ds += 3;
+Q.industrialists_ldr += 3; 
+Q.industrialists_ul += 3; 
+Q.rural_ul += 5;
+Q.middle_class_ul += 3*(1-Q.dissent); 
+
+Q.workers_pnf -= 3; 
+Q.industrialists_pnf -= 2; 
+Q.middle_class_pnf -= 2; 
+Q.rural_pnf -= 2; 
+Q.middle_class_pnf -= 2; 
+
+Q.socialist_sentiment += 4; 
+
+Q.ldr_right += 0.6; 
+Q.ds_right += 0.2; 
+
+Q.unemployment -= 0.6;
+Q.economic_growth -= 1.2;
+Q.inflation -= 0.1;
+!}
+go-to: violent_legislation
+
+Why should a child be subjected to a life without education, toiling away for the sake of another human so they don’t have to work? This injustice must be remedied, and with our revolutionary state at the helm, it shall. Children will now be allowed to learn freely, unchained of the cycle that child labour perpetuates. No one votes against the eradication of this unsightly blemish on our society, and though the more business-minded individuals that remain may balk at us, we will let the lack of their humanity be shown to the common man.
+
+@violent_done
+view-if: violent_seen >= 6
+
+We have done all we can to bring revolution to Italy, and we have succeeded. What lies ahead is uncertain, but at the very least, we are certain we will succeed.
+
+- @root: There's much to be done.

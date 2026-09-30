@@ -29,7 +29,7 @@ subtitle: [? if army_strength > 3000 : -7 Budget ?][? if army_strength > 2000 an
 view-if: psi_in_government
 choose-if: army_loyalty > 0.71
 unavailable-subtitle: Our influence within the army is too low.
-on-arrival: stopped_mobilisation = 1; budget -= 7 if army_strength > 3000; budget -= 5 if army_strength > 2000 and army_strength < 300; budget -= 3 if army_strength < 2000 and army_strength > 1000; dissent += 0.1;
+on-arrival: stopped_mobilisation = 1; budget -= 7 if army_strength > 3000; budget -= 5 if army_strength > 2000 and army_strength < 3000; budget -= 3 if army_strength < 2000 and army_strength > 1000; dissent += 0.1;
 
 We are able to convince the army to end its demobilisation, the budget will be balanced some other way. Many in the party decry our seemingly pro-war stance, however.
 

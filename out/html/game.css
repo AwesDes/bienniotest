@@ -230,7 +230,6 @@ blockquote + blockquote.attribution {
     margin-left: -0.6em;
     margin-right: -0.6em;
 }
-
 .tab_button {
     font-family: "Minion Pro", Georgia, serif;
     background-color: var(--tab-color);
@@ -240,17 +239,11 @@ blockquote + blockquote.attribution {
     outline: none;
     padding: 10px;
 }
-
-#foreign_tab, #interior_tab, #rev_economic_tab, #rev_social_tab {
+#foreign_tab {
   width: 49%;
 }
-
-#rev_main_tab, #rev_paramilitary_tab, #rev_politics_tab {
-  width: 32%;
-}
-
-#radio_tab {
-  width: 100%;
+#interior_tab {
+  width: 49%;
 }
 
 .tab_button.active {
@@ -536,36 +529,6 @@ img {
   }
 }
 
-/* Radio UI */
-
-#RadioText {
-  text-align: center;
-  text-decoration: underline;
-  font-size: 20px;
-  text-indent: 0px !important;
-  margin-top: 20px;
-}
-
-.radio-image {
-  border: 4px solid black;
-}
-
-.radio-title {
-  text-align: center;
-  font-size: 16px;
-  text-decoration: underline;
-}
-
-audio {
-  width: 230px;
-}
-
-.AudioButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
 
 /* New stuff just for this game */
 
@@ -641,90 +604,27 @@ table {
   stroke-width: 1.5px;
 }
 
-.seat.bordigist {
+.seat.communist {
   fill: #8B0000;
 }
 
-.seat.ordinovist {
-  fill: #A40000;
-}
-
 .seat.maximalist {
-  fill: #B80000;
+  fill: #DC143C;
 }
 
-.seat.socpat {
-  fill: #CC0000;
+.seat.labour {
+  fill: #B22222;
 }
 
 .seat.syndicalist {
   fill: #2F2F2F;
 }
 
-.seat.labour {
-  fill: #F53333;
+.seat.reformist {
+  fill: #FF6961;
 }
-
-.seat.turatian {
-  fill: #FF6666;
-}
-
-.seat.gradualist {
-  fill: #FF9999;
-}
-
-.seat.aye {
-  fill: green;
-}
-
-.seat.nay {
-  fill: red;
-}
-
-#South, #Central, #Northwest, #Northeast {
-    transition: fill 0.6s ease;
-    cursor: pointer;
-  }
-
-#South:hover, #Central:hover, #Northwest:hover, #Northeast:hover {
-    fill: white !important;
-  }
 
 .tooltip-text {
     text-decoration: underline;
     text-decoration-style: dotted;
-}
-
-.postrev-tooltip {
-    position: relative;
-    cursor: pointer;
-    background-color: lightcoral;
-}
-
-.postrev-tooltip-text {
-    width: 180px;
-    text-shadow: none;
-    background-color: lightcoral;
-    color: black;
-    text-align: center;
-    border-radius: 6px;
-    padding: 10px;
-    position: absolute;
-    z-index: 99;
-    bottom: 80%;
-    left: 20%;
-    margin-left: -90px;
-    opacity: 0;
-    transition: opacity 0.5s;
-    border: 1px solid black;
-    pointer-events: none;
-    font-size: 13px !important;
-    line-height: 1.5em !important;
-    font-weight: normal !important;
-    font-style: normal !important;
-}
-
-.postrev-tooltip:hover .postrev-tooltip-text {
-  visibility: visible;
-  opacity: 1;
 }

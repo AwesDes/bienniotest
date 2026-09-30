@@ -1,0 +1,12 @@
+title: Fascist Paramilitaries Adapt
+subtitle: Our enemies have taken a more...*radical* approach.
+tags: event
+view-if: fascists_adapt <= time and violent_revolution
+on-arrival: fascist_terror = 1; fascist_bomb_timer = time + 12; terror_active = 1
+max-visits: 1
+
+= Fascist Paramilitaries Adapt
+
+In response to the changing political landscape, the fascist paramilitaries have adapted their strategies once more, abandoning their parliamentary route of the [+ pnf_name +], instead seeking to bring about fascism by subverting the state and democracy. 
+
+Already, we have seen their methods become more ruthless, killings, assassinations and threats of bombings across Italy have tied up our Interior Ministry, and it is unlikely these will halt very soon.

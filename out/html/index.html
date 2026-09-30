@@ -297,14 +297,12 @@
     <div id='page'>
         <div id="mid_panel">
             <header>
-                <h1 id="game-title"><span style="color:Red;">Biennio</span> <span style="color:rgb(170, 170, 170);">Rosso</span>: <span style="color:green;">An</span> <span style="color:rgb(170, 170, 170);">Alternate</span> <span style="color:red;">History</span></h1>
+                <h1 id="game-title"><h1 style="color:Red;">Biennio</h1> <h1 style="color:rgb(170, 170, 170);">Rosso</h1>: <h1 style="color:green;">An</h1> <h1 style="color:rgb(170, 170, 170);">Alternate</h1> <h1 style="color:red;">History</h1></h1>
                 <br>
                 <h2 id="game-author">AwesDes</h2>
 
                 <div id="header-links">
                     <a id="stats-link" onclick="window.showStats();" href="#">Library</a>
-                    <a id="situation-link" onclick="window.showSituation();" href="#" style="display: none">Situation</a>
-                    <a id="economy-link" onclick="window.showEconomy();" href="#" style="display: none">Economy</a>
                     <a onclick="dendryUI.showSaveSlots();" href="#">Save/Load</a>
                     <a onclick="window.showOptions();" href="#">Options</a>
                 </div>
@@ -316,32 +314,10 @@
                         <button class="tab_button" id="politics_tab" onclick="window.changeTab('status.politics', 'politics_tab');">Politics</button>
                         <button class="tab_button" id="paramilitary_tab" onclick="window.changeTab('status.paramilitaries', 'paramilitary_tab');">Defense</button>
                         <button class="tab_button" id="poll_tab" onclick="window.changeTab('status.polls', 'poll_tab');">Polls</button>
-                        <button class="tab_button" id="rev_main_tab" onclick="window.changeTab('rev_status', 'rev_main_tab');" style="display: none;">Main</button>
-                        <button class="tab_button" id="rev_politics_tab" onclick="window.changeTab('rev_status.politics', 'rev_politics_tab');" style="display: none;">Factions</button>
-                        <button class="tab_button" id="rev_paramilitary_tab" onclick="window.changeTab('rev_status.paramilitaries', 'rev_paramilitary_tab');" style="display: none;">Military</button>
-                        <button class="tab_button" id="rev_economic_tab" onclick="window.changeTab('rev_status.economy', 'rev_economic_tab');" style="display: none;">Economy</button>
-                        <button class="tab_button" id="rev_social_tab" onclick="window.changeTab('rev_status.social', 'rev_social_tab');" style="display: none;">Social</button>
                         <button class="tab_button" id="foreign_tab" onclick="window.changeTab('status.foreign', 'foreign_tab');">Foreign Policy</button>
                         <button class="tab_button" id="interior_tab" onclick="window.changeTab('status.interior', 'interior_tab');">Interior Policies</button>
                     </div>
                     <div id="qualities">
-                    </div>
-                </div>
-
-                <div id="radio_sidebar" class="tools right" style="display: none">
-                    <div class="tab_container">
-                        <button class="tab_button" id="radio_tab">Radio Rome</button> <!-- This shouldn't do anything -->
-                    </div>
-                    <div class="radio-container">
-                    <p id="RadioText">Now Playing:</p>
-                    <img id="radioImage" class="radio-image" src="" alt="Station Image">
-                    <div id="radioTitle" class="radio-title"></div>
-                    <audio id="radioPlayer" controls loop></audio>
-                    <br>
-                    <div class="AudioButton">
-                        <button onclick="prevTrack()">Previous</button>
-                        <button onclick="nextTrack()">Next</button>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -364,6 +340,5 @@
             </footer>
         </div>
     </div>
-    <script src="radio.js"></script>
   </body>
 </html>

@@ -1,0 +1,25 @@
+title: [? if fascist_coup_progress >= 7 : Fasci Coup! ?] [? if republican_coup_progress >= 5 : Anti-Communist Brigade Coup! ?] [? if communist_coup_progress >= 7 : New Red Guard Coup! ?]
+subtitle: The paramilitaries have spiralled out of control.
+tags: event
+view-if: fascist_coup_progress >= 7 or republican_coup_progress >= 5 or communist_coup_progress >= 7
+max-visits: 1
+go-to: coup_success if soviet_base != 1; coup_failure if soviet_base = 1
+
+@coup_success
+
+= [? if fascist_coup_progress >= 7 : Fasci Coup! ?] [? if republican_coup_progress >= 5 : Anti-Communist Brigade Coup! ?] [? if communist_coup_progress >= 7 : New Red Guard Coup! ?]
+
+Protests have been growing louder and louder across Italy. In cities, farms, factories, people are calling for your resignation. For the fall of the state it once desperately looked up to in hope, the same state that failed them. The state unable to prevent tragedy after tragedy from occurring. 
+
+So they turned. Desperate once more, the masses turned to ideologies far flung, promising them stability, prosperity that the current government — your government – could not give. And thus it came to a climax. The paramilitaries; whether communist, republican or fascist, now with public support behind them, have overthrown your government. Your forces are disarmed, your leadership arrested and shot. Italy plunges into darkness once more; a greater darkness than the one before you.
+
+You had your chance. Now it's someone else's turn.
+
+- @game_over: Game over.
+
+@coup_failure
+on-arrival: fascist_coup_progress = 0; republican_coup_progress = 0; communist_coup_progress = 0
+
+= Soviets thwart Paramilitary Coup
+
+It seems that our alliance with the Soviets have paid off. Their military base has aided us in ending an attempted coup by the paramilitaries to overthrow the state, and it will take some time for them to recover once again.

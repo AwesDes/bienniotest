@@ -1,0 +1,12 @@
+title: Emergence of Republican Paramilitaries
+subtitle: We have seen broad anti-communist organisations appear.
+tags: event
+view-if: republicans_adapt <= time and violent_revolution and not benevolence
+on-arrival: republican_terror = 1; republican_bomb_timer = time + 12; terror_active = 1
+max-visits: 1
+
+= Emergence of Republican Paramilitaries
+
+In response to the outlawing of parties, as well as the consolidation of the left-wing within Italy, numerous Republican paramilitary groups have risen up across Italy, determined to rid the nation of its newly socialist government. 
+
+Though certainly not as violent as the fascists, the Republican groups have become a thorn in our side, especially considering the already thinly-stretched Internal Ministry.

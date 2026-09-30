@@ -1,0 +1,13 @@
+title: Fall of Paramilitary Resistance
+subtitle: We have brought resistance down.
+tags: event
+view-if: terror_active = 1 and fascist_terror != 1 and communist_terror != 1 and republican_terror != 1
+on-arrival: budget += interior_budget; yearly_interior_gain = 0
+max-visits: 1
+achievement: andate_in_pace
+
+= Fall of Paramilitary Resistance
+
+Thankfully, it seems we have been able to quell the paramilitary issue within the party utilising the Interior Ministry. As such, thankfully, Italy is much safer and will be less prone to any attacks for the foreseeable future.
+
+The surplus budget from the Interior Ministry has been returned to us, and funding has been reduced to regular levels once again.
