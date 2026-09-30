@@ -134,9 +134,7 @@
       document.body.classList.add('color-off-mode');
       window.dendryUI.saveSettings();
   }
-
   
-
   // populates the checkboxes in the options view
   window.populateOptions = function() {
     var disable_bg = window.dendryUI.disable_bg;
@@ -167,6 +165,11 @@
         $('#dark_mode')[0].checked = true;
     } else {
         $('#light_mode')[0].checked = true;
+    }
+    if (window.dendryUI.colored_text) {
+        $('#colored_text')[0].checked = true;
+    } else {
+        $('#no_colored_text')[0].checked = true;
     }
   };
 
