@@ -141,6 +141,7 @@
     var animate = window.dendryUI.animate;
     var disable_audio = window.dendryUI.disable_audio;
     var show_portraits = window.dendryUI.show_portraits;
+    window.dendryUI.colored_text = true;
     if (disable_bg) {
         $('#backgrounds_no')[0].checked = true;
     } else {
