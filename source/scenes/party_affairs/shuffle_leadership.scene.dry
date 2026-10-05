@@ -90,15 +90,6 @@ go-to: rm_main
 
 Turati has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_salvemini
-title: Remove Salvemini
-view-if: salvemini_advisor = 1
-tags: remove_advisor
-on-arrival: salvemini_advisor = 0; reformist_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Salvemini has been removed as an advisor. The Reformist faction disapproves.
-
 @remove_altobelli
 title: Remove Altobelli
 view-if: altobelli_advisor = 1
@@ -126,25 +117,25 @@ go-to: rm_main
 
 Matteotti has been removed as an advisor. The Reformist faction disapproves.
 
-# labour
+@remove_rigola
+title: Remove Rigola
+view-if: rigola_advisor = 1
+tags: remove_advisor
+on-arrival: rigola_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Rigola has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_treves
 title: Remove Treves
 view-if: treves_advisor = 1
 tags: remove_advisor
-on-arrival: treves_advisor = 0; labour_dissent += 5; n_advisors -= 1
+on-arrival: treves_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Treves has been removed as an advisor. The Labour faction disapproves.
+Treves has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_rigola
-title: Remove Rigola
-view-if: rigola_advisor = 1
-tags: remove_advisor
-on-arrival: rigola_advisor = 0; labour_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Rigola has been removed as an advisor. The Labour faction disapproves.
+# labour
 
 @remove_daragona
 title: Remove D'Aragona
@@ -360,18 +351,6 @@ go-to: advisor_menu
 
 Filippo Turati is now an advisor.
 
-@add_salvemini
-title: Gaetano Salvemini
-subtitle: Gaetano Salvemini is a reformist member who advocates for Southern Italy. {!<br><br>!}[? if difficulty < 0 : Actions - Southern Question, Public Education, Comintern Relations ?]
-is-card: true
-card-image: img/portraits/GaetanoSalvemini.jpg
-tags: reformist_advisor
-view-if: salvemini_advisor = 0 and n_advisors < 3 and reformists_defect = 0
-on-arrival: salvemini_advisor = 1; n_advisors += 1; reformist_strength += 5
-go-to: advisor_menu
-
-Gaetano Salvemini is now an advisor.
-
 @add_altobelli
 title: Argentina Altobelli
 subtitle: Argentina Altobelli is a trade unionist, leader of the *National Federation of Agricultural Workers*, and member of the Reformist faction. {!<br><br>!}[? if difficulty < 0 : Actions - Women's Rights, Party Disunity, Agricultural Policy ?]
@@ -407,6 +386,30 @@ on-arrival: matteotti_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
 Giacomo Matteotti is now an advisor.
+
+@add_rigola
+title: Rinaldo Rigola
+subtitle: Rinaldo Rigola is the former Secretary of the Italian CGdL, *General Confederation of Labour*. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Implementing the Minimum Plan, Veterans Welfare ?]
+is-card: true
+card-image: img/portraits/RinaldoRigola.png
+tags: labour_advisor
+view-if: rigola_advisor = 0 and n_advisors < 3 and reformists_defect = 0
+on-arrival: rigola_advisor = 1; n_advisors += 1; reformist_strength += 5
+go-to: advisor_menu
+
+Rinaldo Rigola is now an advisor.
+
+@add_treves
+title: Claudio Treves
+subtitle: Claudio Treves is a socialist journalist, affiliated with the Trade Unions. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Reform, Media, Labour Rights ?]
+is-card: true
+card-image: img/portraits/ClaudioTreves.jpg
+tags: labour_advisor
+view-if: treves_advisor = 0 and n_advisors < 3 and reformists_defect = 0
+on-arrival: treves_advisor = 1; n_advisors += 1; reformist_strength += 5
+go-to: advisor_menu
+
+Claudio Treves is now an advisor.
 
 # left
 
@@ -470,32 +473,7 @@ tags: communist_advisor
 
 Amadeo Bordiga is now an advisor.
 
-
 # labour
-
-@add_treves
-title: Claudio Treves
-subtitle: Claudio Treves is a socialist journalist, affiliated with the Trade Unions. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Reform, Media, Labour Rights ?]
-is-card: true
-card-image: img/portraits/ClaudioTreves.jpg
-tags: labour_advisor
-view-if: treves_advisor = 0 and n_advisors < 3 and unions_break = 0
-on-arrival: treves_advisor = 1; n_advisors += 1; labour_strength += 5
-go-to: advisor_menu
-
-Claudio Treves is now an advisor.
-
-@add_rigola
-title: Rinaldo Rigola
-subtitle: Rinaldo Rigola was the former Secretary of the Italian CGdL, *General Confederation of Labour*. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Implementing the Minimum Plan, Veterans Welfare ?]
-is-card: true
-card-image: img/portraits/RinaldoRigola.png
-tags: labour_advisor
-view-if: rigola_advisor = 0 and n_advisors < 3 and unions_break = 0
-on-arrival: rigola_advisor = 1; n_advisors += 1; labour_strength += 5
-go-to: advisor_menu
-
-Rinaldo Rigola is now an advisor.
 
 @add_daragona
 title: Ludovico D'Aragona
