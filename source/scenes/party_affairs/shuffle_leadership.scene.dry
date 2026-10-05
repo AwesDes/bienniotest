@@ -392,7 +392,7 @@ title: Rinaldo Rigola
 subtitle: Rinaldo Rigola is the former Secretary of the Italian CGdL, *General Confederation of Labour*. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Implementing the Minimum Plan, Veterans Welfare ?]
 is-card: true
 card-image: img/portraits/RinaldoRigola.png
-tags: labour_advisor
+tags: reformist_advisor
 view-if: rigola_advisor = 0 and n_advisors < 3 and reformists_defect = 0
 on-arrival: rigola_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
@@ -404,7 +404,7 @@ title: Claudio Treves
 subtitle: Claudio Treves is a socialist journalist, affiliated with the Trade Unions. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Reform, Media, Labour Rights ?]
 is-card: true
 card-image: img/portraits/ClaudioTreves.jpg
-tags: labour_advisor
+tags: reformist_advisor
 view-if: treves_advisor = 0 and n_advisors < 3 and reformists_defect = 0
 on-arrival: treves_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
