@@ -7,7 +7,7 @@ new-page: true
 
 = Alceste De Ambris
 
-De Ambris is a prominent <span style="font-weight: bold; color:#8B0000">revolutionary</span> <span style="font-weight: bold; color:#2F2F2F">syndicalist</span> and a defector from [+ pnf_leader +]'s <span style="font-weight: bold;">Fasces of Combat</span>. He is a member of the party's newly prominent <span style="font-weight: bold; color:#2F2F2F">syndicalist</span> faction.
+De Ambris is a prominent <span style="color:#8B0000">revolutionary</span> <span style="color:#2F2F2F">syndicalist</span> and a defector from [+ pnf_leader +]'s <span style="font-weight: bold;">Fasces of Combat</span>. He is a member of the party's newly prominent <span style="color:#2F2F2F">syndicalist</span> faction.
 
 - @fasci_urgency_deambris
 - @rg_ordering_deambris
@@ -24,8 +24,8 @@ on-arrival: advisor_action_timer = 6; last_advisor_action = 1;
 go-to: urgency
 
 @rg_ordering_deambris
-title: <span style="font-weight: bold; color:#c2352b">Red Guards</span> Ordering
-subtitle: We can order the <span style="font-weight: bold; color:#c2352b">Red Guards</span> to act.
+title: <span style="color:#c2352b">Red Guards</span> Ordering
+subtitle: We can order the <span style="color:#c2352b">Red Guards</span> to act.
 choose-if: advisor_action_timer = 0
 view-if: not national_congress_seen
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
@@ -33,8 +33,8 @@ on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: rg_orders
 
 @arditi_deambris
-title: <span style="font-weight: bold; color:#ED2855">Arditi d</span><span style="font-weight: bold; color:#3CB371">el Popolo</span>
-subtitle: We can utilise the <span style="font-weight: bold; color:#ED2855">Arditi d</span><span style="font-weight: bold; color:#3CB371">el Popolo</span>.
+title: <span style="color:#2F2F2F">Arditi</span> <span style="color:#3CB371">del</span> <span style="color:#ED2855">Popolo</span>
+subtitle: We can utilise the <span style="color:#2F2F2F">Arditi</span> <span style="color:#3CB371">del</span> <span style="color:#ED2855">Popolo</span>.
 choose-if: advisor_action_timer = 0
 view-if: arditi_cooperation and arditi_formed
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]

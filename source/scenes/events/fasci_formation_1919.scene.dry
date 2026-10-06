@@ -1,11 +1,23 @@
-title: Forming of the Fasci
-subtitle: A new organisation has formed...
+title: The Formation of the *<span style="font-weight: bold;">Fasci Italiani di Combattimento</span>*
+subtitle: Sansepolcrismo is born.
 view-if: year = 1919 and month = 3 and week = 3
 max-visits: 1
 tags: event
 new-page: true
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
 
-= Forming of the *Fasci Italiani di Combattimento*
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/fasci1919.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Forming of the *<span style="font-weight: bold;">Fasci Italiani di Combattimento</span>*
 
 In the hall of Piazza San Sepolcro, a man speaks. He speaks of equal suffrage, of direct referendums, of nationalism, of how the Italian people were robbed, given this "mutilated victory" in its wake, as thunderous applause shakes the hall. The Fasci Italiani di Combattimento has been formed, and has already picked up momentum within the population.
 

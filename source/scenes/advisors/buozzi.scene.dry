@@ -7,7 +7,7 @@ new-page: true
 
 = Bruno Buozzi
 
-Buozzi is an outspoken member of the <span style="font-weight: bold; color:#FF6961">reformist</span> current of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>, as well as both the leader of the *Italian Federation of Metallurgical Workers* and a member of the leadership of the *General Confederation of Labour*. 
+Buozzi is an outspoken member of the <span style="color:#FF6961">reformist</span> current of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>, as well as both the leader of the *Italian Federation of Metallurgical Workers* and a member of the leadership of the *General Confederation of Labour*. 
 
 - @child_labour_buozzi
 - @economic_democracy_buozzi

@@ -7,7 +7,7 @@ new-page: true
 
 = Filippo Turati
 
-Turati is the leader of the <span style="font-weight: bold; color:#FF6961">Reformist</span> faction and co-founder of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>. He seeks to achieve revolution through parliamentary means.
+Turati is the leader of the <span style=" color:#FF6961">Reformist</span> faction and co-founder of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>. He seeks to achieve revolution through parliamentary means.
 
 - @turati_coalition
 - @turati_king

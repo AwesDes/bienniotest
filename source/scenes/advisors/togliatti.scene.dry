@@ -7,7 +7,7 @@ new-page: true
 
 = Palmiro Togliatti
 
-Togliatti is a member of the <span style="font-weight: bold; color:#8B0000">Communist</span> faction of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>, one of the few pro-interventionists, as well as aligning and closely collaborating with Antonio Gramsci.
+Togliatti is a member of the <span style=" color:#8B0000">Communist</span> faction of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>, one of the few pro-interventionists, as well as aligning and closely collaborating with Antonio Gramsci.
 
 - @togliatti_coalition
 - @public_education

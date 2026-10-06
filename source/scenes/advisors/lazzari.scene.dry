@@ -7,7 +7,7 @@ new-page: true
 
 = Constantino Lazzari
 
-Lazzari is a long-time member of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>, co-founding the party back in 1892. Aligned with the <span style="font-weight: bold; color:#DC143C">Maximalists</span>, he leads the current alongside Serrati.
+Lazzari is a long-time member of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>, co-founding the party back in 1892. Aligned with the <span style=" color:#DC143C">Maximalists</span>, he leads the current alongside Serrati.
 
 - @party_discipline_lazzari
 - @party_rally

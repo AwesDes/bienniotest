@@ -7,7 +7,7 @@ new-page: true
 
 = Anna Kuliscioff
 
-Kuliscioff is a Russian-born member and co-leader of the <span style="font-weight: bold; color:#FF6961">Reformist</span> faction of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span> alongside Turati and a long-time advocate for women's rights, having co-founded the <span style="font-weight: bold; color:#ED2855">[+ psi_full_name +]</span> in 1892.
+Kuliscioff is a Russian-born member and co-leader of the <span style=" color:#FF6961">Reformist</span> faction of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span> alongside Turati and a long-time advocate for women's rights, having co-founded the <span style="font-weight: bold; color:#ED2855">[+ psi_full_name +]</span> in 1892.
 
 - @womens_rights_kuliscioff
 - @dealing_with_welfare

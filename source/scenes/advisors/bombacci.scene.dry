@@ -7,7 +7,7 @@ new-page: true
 
 = Nicola Bombacci
 
-Bombacci is a militant socialist, as well as one of the most prominent figures of the <span style="font-weight: bold; color:#DC143C">Maximalists</span>.
+Bombacci is a militant socialist, as well as one of the most prominent figures of the <span style="color:#DC143C">Maximalists</span>.
 
 - @bombacci_orders
 - @question_of_ideology
@@ -16,8 +16,8 @@ Bombacci is a militant socialist, as well as one of the most prominent figures o
 - @root: Return to main
 
 @bombacci_orders
-title: Ordering the <span style="font-weight: bold; color:#c2352b">Red Guards</span>
-subtitle: We can use the <span style="font-weight: bold; color:#c2352b">Red Guards</span> to act.
+title: Ordering the <span style="color:#c2352b">Red Guards</span>
+subtitle: We can use the <span style="color:#c2352b">Red Guards</span> to act.
 choose-if: advisor_action_timer = 0 
 view-if: not national_congress_seen
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]

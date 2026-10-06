@@ -7,7 +7,7 @@ new-page: true
 
 = Umberto Terracini
 
-Terracini is a Turin-based member of the <span style="font-weight: bold; color:#8B0000">Communist</span> faction of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>, the youngest of the grouping and a staunch pacifist.
+Terracini is a Turin-based member of the <span style=" color:#8B0000">Communist</span> faction of the <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>, the youngest of the grouping and a staunch pacifist.
 
 - @comintern_relations
 - @constitutional_reform_terracini
@@ -15,7 +15,7 @@ Terracini is a Turin-based member of the <span style="font-weight: bold; color:#
 - @root: Return to main
 
 @comintern_relations
-title: <span style="font-weight: bold; color:#CE0000">Comintern</span> Relations
+title: <span style=" color:#CE0000">Comintern</span> Relations
 subtitle: Improve our standing with the our international allies.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
@@ -32,8 +32,8 @@ on-arrival: advisor_action_timer = 6; constitutional_reform_timer -= 9; last_adv
 go-to: constitutional_reform
 
 @fasci_urgency
-title: Confronting the <span style="font-weight: bold;">Fasci</span>
-subtitle: <span style="font-weight: bold; color:#ED2855">Socialist</span> & <span style="font-weight: bold;">Fasci</span> violence has only intensified in recent months; we have to act.
+title: Confronting the <span style="">Fasci</span>
+subtitle: <span style=" color:#ED2855">Socialist</span> & <span style="">Fasci</span> violence has only intensified in recent months; we have to act.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
 choose-if: advisor_action_timer = 0
 view-if: not national_congress_seen
