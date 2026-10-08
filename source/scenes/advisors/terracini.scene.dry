@@ -32,8 +32,8 @@ on-arrival: advisor_action_timer = 6; constitutional_reform_timer -= 9; last_adv
 go-to: constitutional_reform
 
 @fasci_urgency
-title: Confronting the <span style="">Fasci</span>
-subtitle: <span style=" color:#ED2855">Socialist</span> & <span style="">Fasci</span> violence has only intensified in recent months; we have to act.
+title: Confronting the <span style="color:#3D3D3D;">Fasci</span>
+subtitle: <span style="color:#ED2855">Socialist</span> & <span style="color:#3D3D3D;">Fasci</span> violence has only intensified in recent months; we have to act.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
 choose-if: advisor_action_timer = 0
 view-if: not national_congress_seen

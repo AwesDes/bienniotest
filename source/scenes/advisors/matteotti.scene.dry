@@ -32,7 +32,7 @@ on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 5; last_advisor_ac
 go-to: foreign_policy
 
 @fasci_urgency_matteotti
-title: Fasci Urgency
+title: <span style="font-weight: bold; color:#3D3D3D;">Fasci</span> Urgency
 subtitle: We should warn the party about the growing <span style="font-weight: bold;">[+ pnf_name +]</span>.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
