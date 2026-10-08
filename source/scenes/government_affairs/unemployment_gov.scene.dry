@@ -36,7 +36,7 @@ subtitle: -1 Budget - Offer financial aid to small businesses and the like to al
 choose-if: finance_minister_party = psi_name and (not national_economic_recovery or budget >= 1)
 unavailable-subtitle: [? if finance_minister_party != psi_name : The <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span> does not control the Financial Ministry. ?][? if national_economic_recovery and budget < 1 : Not enough budget. (Need 1) ?]
 on-arrival: budget -= 1; ldr_promise_failed = 1 if (budget < 0 and liberal_budget_accepted); ldr_relation += 5; ul_relation += 5; labour_dissent += 10; syndicalist_dissent += 10 if syndicalist_active; communist_dissent += 10; maximalist_dissent += 10; middle_class_psi += 3*(1-dissent) if not in_unstable_coalition; middle_class_clc += 3*(1-dissent) if centre_left_coalition; middle_class_scc += 3*(1-dissent) if socialist_catholic_coalition; middle_class_pnf -= 3(1*dissent); workers_psi -= 4 if not in_unstable_coalition; workers_clc -= 4 if centre_left_coalition; workers_scc -= 4 if not socialist_catholic_coalition; capital_strike_progress -= 1; psri_relation -= 3*(1-dissent); ldr_moderates += 0.2; inflation += 0.2; inflation += 0.1 if budget < 0; economic_growth += 0.2; economic_growth += 0.1 if economic_growth < 0
-go-to: ldr_promise_vonc if ldr_promise_failed = 1; 
+go-to: ldr_promise_vonc if ldr_promise_failed = 1
 
 This is an unpopular move within the party, and is seen handouts to the petite-<span style="color:#0047AB;">bou</span><span style="color:#FFD700;">rge</span><span style="color:#1E99C5;">ois</span>. The loans however, are able to keep businesses afloat temporarily[? if centre_left_coalition : and our coalition partners seem satisfied. ?] [? if not centre_left_coalition:. ?]
 
