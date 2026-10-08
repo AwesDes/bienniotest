@@ -1,4 +1,4 @@
-title: <span style="color:#2F2F2F">Arditi</span> <span style="color:#3CB371">del</span> <span style="color:#ED2855">Popolo</span>
+title: Arditi del Popolo
 new-page: true
 is-card: true
 on-arrival: arditi_timer = 2; week_actions += 1; 

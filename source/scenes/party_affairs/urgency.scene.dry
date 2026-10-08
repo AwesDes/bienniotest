@@ -1,4 +1,4 @@
-title: <span style="color:#3D3D3D;">Fascist</span> Urgency
+title: Fascist Urgency
 new-page: true
 view-if: urgency_timer = 0 and (fasci_urgency > 0 or pnf_seating_disp > 10) and not national_congress_seen and not pnf_collapse_seen and not pnf_in_government
 on-arrival: urgency_timer = 5; week_actions += 1

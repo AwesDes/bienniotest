@@ -115,9 +115,9 @@ Economic Growth: [+ economic_growth_2 +]%
 
 Unemployment: [+ unemployment_2 +]%
 
-<span style="color:#C8102E">British</span> Debts: [? if uk_debts > 0 and not in_default : Significant ?] [? if uk_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
+<span style="font-weight: bold; color:#C8102E">British</span> Debts: [? if uk_debts > 0 and not in_default : Significant ?] [? if uk_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
 
-<span style="color:#002868">Amer</span><span style="color:#B31942">ican</span> Debts: [? if american_debts > 0 and not in_default : Significant ?] [? if us_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
+<span style="font-weight: bold; color:#002868">Amer</span><span style="font-weight: bold; color:#B31942">ican</span> Debts: [? if american_debts > 0 and not in_default : Significant ?] [? if us_debts_over and not in_default : Amortisation Plan ?] [? if in_default : Defaulted ?]
 
 @politics
 
