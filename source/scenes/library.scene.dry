@@ -69,7 +69,7 @@ go-to: cabinet if psi_in_government; menu if not psi_in_government
 
 [? if not king_abolished : King: [+ king +] ?]
 
-Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
+Prime Minister: [+ prime_minister +] ([? if prime_minister_party == ul_name : <span style="font-weight: bold; color:#0047AB">[+ prime_minister_party +]</span>?][? if prime_minister_party == "PSRI" : <span style="font-weight: bold; color:#FFC0CB">[+ prime_minister_party +]</span>?][? if prime_minister_party == "PPI" : <span style="font-weight: bold; color:#87CEFA">[+ prime_minister_party +]</span>?][? if prime_minister_party == ds_name : <span style="font-weight: bold; color:#1E99C5">[+ prime_minister_party +]</span>?][? if prime_minister_party == psi_name : <span style="font-weight: bold; color:#ED2855">[+ prime_minister_party +]</span>?][? if prime_minister_party == pnf_name : <span style="font-weight: bold; color:#3D3D3D">[+ prime_minister_party +]</span>?][? if prime_minister_party == "PSU" : <span style="font-weight: bold; color:#E35A5A">[+ prime_minister_party +]</span>?][? if prime_minister_party == ldr_name : <span style="font-weight: bold; color:#FFD700">[+ prime_minister_party +]</span>?])
 
 Chamber of Deputies composition:
 
