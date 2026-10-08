@@ -7,24 +7,24 @@ face-image: img/YugoslavCommittee.jpg
 
 = Adriatic Negotiations
 
-Our allegiance with the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> was secured via the *Treaty of London*, signed in secret by the <span style="color:#0047AB;">libe</span><span style="color:#FFD700;">ral</span> government. The Treaty promised a series of terms, the most important of which however, were the lands of *South Tyrol*, *Austrian Littoral*, *Dalmatia* and *Snežnik Plateau*.
+Our allegiance with the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> was secured via the *Treaty of London*, signed in secret by the <span style="color:#0047AB;">libe</span><span style="color:#FFD700;">ral</span> government. The Treaty promised a series of terms, the most important of which however, were the lands of *South Tyrol*, *Austrian Littoral*, *Dalmatia* and *Snežnik Plateau*.
 
-Following the end of the war, however, the *Paris Peace Conference* saw the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> refusing to support <span style="font-weight: bold; color:#008C45">It</span><span style="font-weight: bold; color:#CFCFCF">al</span><span style="font-weight: bold; color:#CD212A">ian</span> claims as given, leaving us to rely on our own. 
+Following the end of the war, however, the *Paris Peace Conference* saw the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> refusing to support <span style="font-weight: bold; color:#008C45">It</span><span style="font-weight: bold; color:#CFCFCF">al</span><span style="font-weight: bold; color:#CD212A">ian</span> claims as given, leaving us to rely on our own. 
 
 [? if foreign_minister_party == psi_name : Now that we are in control, however, it is up to us to resolve this conflict. Our first issue will be regarding all disputed lands **except Fiume**. ?]
 
-- @adriatic_italy: Demand <span style="color:#6A0080">Yugoslavia</span> respect the full Treaty of London, including Fiume!
+- @adriatic_italy: Demand <span style="font-weight: bold; color:#6A0080">Yugoslavia</span> respect the full Treaty of London, including Fiume!
 - @adriatic_equal: Negotiate co-operative management of disputed territories.
 - @adriatic_historical: Concede the Snežnik Plateau and Dalmatia, but keep Zara.
-- @adriatic_yugoslavia: Concede Dalmatia, the Snežnik Plateau and Zara to the <span style="color:#6A0080">Yugoslavs</span>.
+- @adriatic_yugoslavia: Concede Dalmatia, the Snežnik Plateau and Zara to the <span style="font-weight: bold; color:#6A0080">Yugoslavs</span>.
 - @adriatic_delay: Could we delay the negotiations later?
 - @adriatic_not_gov: We'll see how the Foreign Minister resolves this issue...
 
 @adriatic_italy
-subtitle: The <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> won't be happy about this, even if our relations are good.
+subtitle: The <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> won't be happy about this, even if our relations are good.
 view-if: psi_in_government and foreign_minister_party == psi_name
 choose-if: entente_relation >= 7
-unavailable-subtitle: The <span style="color:#C8102E">British</span> and <span style="color:#1E99C5">French</span> are already placing immense pressure on us to settle.
+unavailable-subtitle: The <span style="font-weight: bold; color:#C8102E">British</span> and <span style="font-weight: bold; color:#1E99C5">French</span> are already placing immense pressure on us to settle.
 on-arrival: {!
 Q.unemployment += 4.3;
 Q.economic_growth -= 2.9;
@@ -47,7 +47,7 @@ Q.resolved_adriatic = 1;
 Q.fiume_italian = 1;
 !}
 
-We force <span style="color:#6A0080">Yugoslavia</span> to respect the Treaty of London, and without <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> backing, they acquiesce. The <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> responds by pulling credit from us, forcing us to print even more funds and exacerbating the economic crisis.
+We force <span style="color:#6A0080">Yugoslavia</span> to respect the Treaty of London, and without <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> backing, they acquiesce. The <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> responds by pulling credit from us, forcing us to print even more funds and exacerbating the economic crisis.
 
 At home however, our veterans are ecstatic, and we have effectively pulled the rug out from under the <span style="font-weight: bold; color:#3D3D3D;">Fasci</span>, swaying their supporters to our side and weakening the argument of *Vittoria Mutilata*. Our party is less so, though.
 
@@ -71,7 +71,7 @@ go-to: fiume_question
 We are able to negotiate a fair deal for both sides, establishing zones of co-occupation where both sides control, appeasing many. Though some of the more radical members want more, this seems like the best we will get.
 
 @adriatic_historical
-subtitle: This will leave us with Trieste, Istria and Zadar, leaving the outer borders to <span style="color:#6A0080">Yugoslavia</span>.
+subtitle: This will leave us with Trieste, Istria and Zadar, leaving the outer borders to <span style="font-weight: bold; color:#6A0080">Yugoslavia</span>.
 view-if: psi_in_government and foreign_minister_party == psi_name
 on-arrival: workers += 3; middle_class += 2; rural += 1;
 go-to: fiume_question
@@ -112,7 +112,7 @@ Q.entente_relation += 2;
 !}
 go-to: fiume_question
 
-The <span style="color:#6A0080">Yugoslav</span> Delegation is surprised at our willingness to accede to them, and happily accept, as are our <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> allies, wanting to maintain the balance of power.
+The <span style="color:#6A0080">Yugoslav</span> Delegation is surprised at our willingness to accede to them, and happily accept, as are our <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> allies, wanting to maintain the balance of power.
 
 Our allies at home, however, bring down hell upon us. The <span style="color:#0047AB;">Libe</span><span style="color:#FFD700;">rals</span> and <span style="font-weight: bold; color:#87CEFA;">Catholics</span> berate us in the Chamber of Deputies, the <span style="font-weight: bold; color:#3D3D3D;">Fasci</span> utilise our weakness to run a national campaign, and we are painted as 'traitors', as nationalist sentiment is riled up even further.
 
@@ -144,7 +144,7 @@ Next up on the list is Fiume. Occupied recently by Gabriele D'Annunzio, it is of
 subtitle: Thankfully, they seem willing to accommodate.
 view-if: psi_in_government and foreign_minister_party == psi_name
 choose-if: (entente_relation >= 7 and balkan_relation >= 7) or ceded_territories == 1
-unavailable-subtitle: The <span style="color:#C8102E">British</span> and <span style="color:#1E99C5">French</span> are already placing immense pressure on us to settle.
+unavailable-subtitle: The <span style="font-weight: bold; color:#C8102E">British</span> and <span style="font-weight: bold; color:#1E99C5">French</span> are already placing immense pressure on us to settle.
 on-arrival: {!
 Q.veterans_psi += 4;
 Q.veterans_pnf -= 6;
@@ -175,7 +175,7 @@ if (Q.ceded_territories == 1) {
 }
 !}
 
-Yugoslavia agrees to hand over Fiume to us, as D'Annunzio and his forces celebrate as our troops enter the city. [? if ceded_territories == 1: The popularity at home isn't as happy to hear this, considering what they lost to earn Fiume. ?]
+<span style="font-weight: bold; color:#6A0080">Yugoslavia</span> agrees to hand over Fiume to us, as D'Annunzio and his forces celebrate as our troops enter the city. [? if ceded_territories == 1: The popularity at home isn't as happy to hear this, considering what they lost to earn Fiume. ?]
 
 @fiume_free
 subtitle: Thankfully, they seem willing to compromise.

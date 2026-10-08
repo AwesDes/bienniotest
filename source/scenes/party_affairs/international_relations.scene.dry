@@ -12,7 +12,7 @@ max-visits: 12
 
 At the <span style="font-weight: bold; color:#CE0000">Communist International</span>, we can forge contacts with our fraternal <span style="color:#ED2855">socialist</span> parties in Europe and across the world.
 
-- @fr_uk: Build relationships with the <span style="color:#1E99C5">French</span> SFIO and <span style="color:#C8102E">British</span> Labour Party to keep their governments aligned with <span style="font-weight: bold; color:#008C45">It</span><span style="font-weight: bold; color:#CFCFCF">a</span><span style="font-weight: bold; color:#CD212A">ly</span>.
+- @fr_uk: Build relationships with the <span style="font-weight: bold; color:#1E99C5">French</span> SFIO and <span style="font-weight: bold; color:#C8102E">British</span> Labour Party to keep their governments aligned with <span style="font-weight: bold; color:#008C45">It</span><span style="font-weight: bold; color:#CFCFCF">a</span><span style="font-weight: bold; color:#CD212A">ly</span>.
 - @germany: Learn organisation and street fighting from the <span style="font-weight: bold; color:#3D3D3D">Ge</span><span style="font-weight: bold; color:#D00000">rm</span><span style="font-weight: bold; color:#FFCE00">an</span> <span style="font-weight: bold; color:#8B0000">communists</span>.
 - @comintern: Expand our contacts and influence with the <span style="font-weight: bold; color:#CC0000">Soviets</span> through the <span style="font-weight: bold; color:#CE0000">Comintern</span>.
 - @papacy: Expand our contacts with the <span style="font-weight: bold; color:#A88D37;">Papacy</span> utilising our influence within the <span style="font-weight: bold; color:#87CEFA;">PPI</span>.
@@ -28,7 +28,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources. (Need 1)
 on-arrival: resources -= 1; entente_relation += 1; reformist_strength += 5; foreign_invasion_time += 6 if violent_revolution; supported_entente += 1;
 
-The <span style="color:#ED2855">socialists</span> of <span style="color:#1E99C5">France</span> and <span style="color:#C8102E">Britain</span> can influence their governments to be friendlier towards <span style="font-weight: bold; color:#008C45">It</span><span style="font-weight: bold; color:#CFCFCF">a</span><span style="font-weight: bold; color:#CD212A">ly</span>.
+The <span style="color:#ED2855">socialists</span> of <span style="font-weight: bold; color:#1E99C5">France</span> and <span style="font-weight: bold; color:#C8102E">British</span> can influence their governments to be friendlier towards <span style="font-weight: bold; color:#008C45">It</span><span style="font-weight: bold; color:#CFCFCF">a</span><span style="font-weight: bold; color:#CD212A">ly</span>.
 
 [? if violent_revolution : We are able to delay any plans that have towards us, as well. ?]
 

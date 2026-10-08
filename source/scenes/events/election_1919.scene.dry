@@ -1518,7 +1518,7 @@ go-to: l_demands_menu
 This is a minor point of conjecture for the <span style="color:#0047AB;">Libe</span><span style="color:#FFD700;">rals</span>, and secures us some progress in negotiations.
 
 @liberal_foreign
-title: Maintain our current alignment with the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span>.
+title: Maintain our current alignment with the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span>.
 subtitle: This will hamper our actions if we are to control the Foreign Ministry.
 tags: libdem_minor
 view-if: liberal_foreign_accepted = 0
@@ -1566,7 +1566,7 @@ on-arrival: liberal_budget_accepted = 0; liberal_negotiations -= 10;
 go-to: liberal_demands
 
 @drop_liberal_foreign
-title: Drop our promise to keep alignment with the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span>.
+title: Drop our promise to keep alignment with the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span>.
 tags: drop_libdem_minor
 view-if: liberal_foreign_accepted = 1
 on-arrival: liberal_foreign_accepted = 0; liberal_negotiations -= 10;

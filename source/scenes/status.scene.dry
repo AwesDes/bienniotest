@@ -44,7 +44,7 @@ Revolutionary Fervour: [+ revolutionary_fervour +]%
 
 [? if not king_abolished and not king_figurehead : King Approval: [+ king_relation : relationships +] ?]
 
-Prime Minister: [+ prime_minister +] ([? if prime_minister_party == ul_name : <span style="font-weight: bold; color:#0047AB">[+ prime_minister_party +]</span> ?][? if prime_minister_party == "PSRI" : <span style="font-weight: bold; color:#FFC0CB">[+ prime_minister_party +]</span> ?][? if prime_minister_party == "PPI" : <span style="font-weight: bold; color:#87CEFA">[+ prime_minister_party +]</span> ?][? if prime_minister_party == ds_name : <span style="font-weight: bold; color:#1E99C5">[+ prime_minister_party +]</span> ?][? if prime_minister_party == psi_name : <span style="font-weight: bold; color:#ED2855">[+ prime_minister_party +]</span> ?][? if prime_minister_party == pnf_name : <span style="font-weight: bold; color:#3D3D3D">[+ prime_minister_party +]</span> ?][? if prime_minister_party == "PSU" : <span style="font-weight: bold; color:#E35A5A">[+ prime_minister_party +]</span> ?][? if prime_minister_party == ldr_name : <span style="font-weight: bold; color:#FFD700">[+ prime_minister_party +]</span> ?])
+Prime Minister: [+ prime_minister +] ([? if prime_minister_party == ul_name : <span style="font-weight: bold; color:#0047AB">[+ prime_minister_party +]</span>?][? if prime_minister_party == "PSRI" : <span style="font-weight: bold; color:#FFC0CB">[+ prime_minister_party +]</span>?][? if prime_minister_party == "PPI" : <span style="font-weight: bold; color:#87CEFA">[+ prime_minister_party +]</span>?][? if prime_minister_party == ds_name : <span style="font-weight: bold; color:#1E99C5">[+ prime_minister_party +]</span>?][? if prime_minister_party == psi_name : <span style="font-weight: bold; color:#ED2855">[+ prime_minister_party +]</span>?][? if prime_minister_party == pnf_name : <span style="font-weight: bold; color:#3D3D3D">[+ prime_minister_party +]</span>?][? if prime_minister_party == "PSU" : <span style="font-weight: bold; color:#E35A5A">[+ prime_minister_party +]</span>?][? if prime_minister_party == ldr_name : <span style="font-weight: bold; color:#FFD700">[+ prime_minister_party +]</span>?])
 
 Senate: [? if veto_removed == 0: Empowered ?][? if veto_removed == 1: Weakened ?]
 
@@ -91,7 +91,7 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 [? if liberal_budget_accepted : Deficit spending disallowed ?]
 
-[? if liberal_foreign_accepted : Continue <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> alignment ?]
+[? if liberal_foreign_accepted : Continue <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> alignment ?]
 
 [? if liberal_aid_accepted : <span style="font-weight: bold; color:#CC0000">Soviet</span> Aid disallowed ?]
 
@@ -320,13 +320,13 @@ Catholics: <span style="font-weight: bold; color:#ED2855">[+ psi_name +]</span>:
 
 <span style="font-weight: bold; color:#A88D37;">Holy See</span>: [+ papal_relation : radicalisation +]
 
-<span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span>: [+ entente_relation : radicalisation +]
+<span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span>: [+ entente_relation : radicalisation +]
 
-<span style="color:#002868">United</span> <span style="color:#B31942">States</span>: [+ american_relation : radicalisation +]
+<span style="font-weight: bold; color:#002868">United</span> <span style="font-weight: bold; color:#B31942">States</span>: [+ american_relation : radicalisation +]
 
 <span style="font-weight: bold; color:#CC0000">Russian SFSR</span>: [+ soviet_relation : radicalisation +]
 
-<span style="color:#6A0080">Yugoslavia</span>: [+ balkan_relation : radicalisation +]
+<span style="font-weight: bold; color:#6A0080">Yugoslavia</span>: [+ balkan_relation : radicalisation +]
 
 = International Situations
 

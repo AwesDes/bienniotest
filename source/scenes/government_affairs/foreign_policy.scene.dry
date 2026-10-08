@@ -14,8 +14,8 @@ Being in control of Foreign Policy, we can direct it to advance our policies, wh
 # foreign ministry stuff
 
 - @improve_balkan_ties: Establish diplomatic ties with our <span style="color:#6A0080">Yugoslav</span> neighbour.
-- @improve_allied_relations: Improve ties with our european <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> allies.
-- @aid_entente: Send aid to the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> allies.
+- @improve_allied_relations: Improve ties with our european <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> allies.
+- @aid_entente: Send aid to the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> allies.
 - @improve_american_relations: Improve ties with the <span style="color:#002868">United</span> <span style="color:#B31942">States</span>.
 - @improve_soviet_relations: Establish diplomatic ties with the <span style="font-weight: bold; color:#CC0000">Russian SFSR</span>.
 - @aid_soviet_union: Send aid to the <span style="color:#CC0000">Red Army</span>.
@@ -30,7 +30,7 @@ Being in control of Foreign Policy, we can direct it to advance our policies, wh
 - @cancel_advisor_action
 
 @aid_soviet_union
-subtitle: -1 Budget - We will provide support to the <span style="font-weight: bold; color:#CC0000">Soviets</span>. [? if liberal_aid_accepted : Providing aid to the <span style="font-weight: bold; color:#CC0000">Russian SFSR</span> would violate coalition agreements! ?][? if liberal_budget_accepted and budget < 1 : This will put us into a deficit! ?][? if liberal_foreign_accepted and soviet_relation <= entente_relation : This will disrupt our alignment with the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span>! ?]
+subtitle: -1 Budget - We will provide support to the <span style="font-weight: bold; color:#CC0000">Soviets</span>. [? if liberal_aid_accepted : Providing aid to the <span style="font-weight: bold; color:#CC0000">Russian SFSR</span> would violate coalition agreements! ?][? if liberal_budget_accepted and budget < 1 : This will put us into a deficit! ?][? if liberal_foreign_accepted and soviet_relation <= entente_relation : This will disrupt our alignment with the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span>! ?]
 view-if: not rcw_over or soviet_recovery_timer > 0 or (violent_revolution and soviet_influence > 0)
 choose-if: not national_economic_recovery or budget > 0
 unavailable-subtitle: Not enough budget. (Need 1)
@@ -44,7 +44,7 @@ We are able to send aid to the <span style="color:#CC0000">Red Army</span> via o
 @improve_balkan_ties
 on-arrival: balkan_relation += 1; foreign_invasion_time += 3 if violent_revolution
 
-We begin improving our relations with the newly established state of <span style="color:#6A0080">Yugoslavia</span>, whom are naturally wary of us. [? if adriatic_timer > 0 : The Adriatic Question hangs over our relations, as well. ?]
+We begin improving our relations with the newly established state of <span style="font-weight: bold; color:#6A0080">Yugoslavia</span>, whom are naturally wary of us. [? if adriatic_timer > 0 : The Adriatic Question hangs over our relations, as well. ?]
 
 @improve_allied_relations 
 on-arrival: entente_relation += 1; ldr_relation += 4*(1-dissent); ul_relation += 4*(1-dissent); ldr_right -= 0.1; ul_giolitti += 0.1; foreign_invasion_time += 3 if violent_revolution
@@ -52,14 +52,14 @@ on-arrival: entente_relation += 1; ldr_relation += 4*(1-dissent); ul_relation +=
 We continue improving our relations with our former allies in the Entente. [? if centre_left_coalition : Our coalition partners are pleased at our continued alignment. ?]
 
 @aid_entente
-subtitle: -1 Budget - We will provide support to the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span>. [? if liberal_aid_accepted : Providing aid to the Russian SFSR would violate coalition agreements! ?][? if liberal_budget_accepted and budget < 1 : This will put us into a deficit! ?][? if liberal_foreign_accepted and soviet_relation <= entente_relation : This will disrupt our alignment with the Entente! ?]
+subtitle: -1 Budget - We will provide support to the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span>. [? if liberal_aid_accepted : Providing aid to the Russian SFSR would violate coalition agreements! ?][? if liberal_budget_accepted and budget < 1 : This will put us into a deficit! ?][? if liberal_foreign_accepted and soviet_relation <= entente_relation : This will disrupt our alignment with the Entente! ?]
 view-if: violent_revolution
 choose-if: not national_economic_recovery or budget > 0
 unavailable-subtitle: Not enough budget. (Need 1)
 on-arrival: coalition_dissent += 1 if in_unstable_coalition; budget -= 1; entente_relation += 2; ldr_promise_failed = 1 if ((budget < 0 and liberal_budget_accepted) or liberal_aid_accepted or (liberal_foreign_accepted and soviet_relation > entente_relation)); foreign_invasion_time += 12 
 go-to: ldr_promise_vonc if ldr_promise_failed = 1
 
-We are able to send aid to the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> via our diplomatic channels, and they thank us for the aid, hopefully delaying any plans regarding us as well. [? if in_unstable_coalition : Our coalition partners, however, are less than happy, calling our aid a 'waste of funds'. ?]
+We are able to send aid to the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> via our diplomatic channels, and they thank us for the aid, hopefully delaying any plans regarding us as well. [? if in_unstable_coalition : Our coalition partners, however, are less than happy, calling our aid a 'waste of funds'. ?]
 
 [? if ldr_promise_failed : Unfortunately, our decision to send aid has violated our agreement with the <span style="color:#0047AB;">libe</span><span style="color:#FFD700;">rals</span>, who have already requested a meeting with us. ?]
 
@@ -81,7 +81,7 @@ We continue negotiating the terms of the debts we have accumulated to the <span 
 subtitle: Debt negotiation will be a long affair.
 choose-if: (entente_relation >= 2 and not violent_revolution) or (entente_relation >= 3)
 view-if: in_default = 0 and global_economic_recovery and uk_debts > 0
-unavailable-subtitle: Our relations with the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> are too poor to attempt negotiations.
+unavailable-subtitle: Our relations with the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> are too poor to attempt negotiations.
 on-arrival: entente_relation -= 2; uk_debts -= 1; entente_relation += 1 if labour_government;
 
 We continue negotiating the terms of the debts we have accumulated to the <span style="color:#C8102E">United Kingdom</span>, attempting to pause or at the very least lengthen our debt payment intervals.
@@ -105,7 +105,7 @@ Finally, after perilous negotiations with the <span style="color:#C8102E">United
 The new plan has boosted confidence of our economy, giving us more budget to work with.
 
 @improve_soviet_relations
-subtitle: [? if liberal_foreign_accepted and soviet_relation + 1 >= entente_relation : This will disrupt our alignment with the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span>! ?]
+subtitle: [? if liberal_foreign_accepted and soviet_relation + 1 >= entente_relation : This will disrupt our alignment with the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span>! ?]
 on-arrival: {! 
 Q.soviet_relation += 1; 
 Q.ldr_relation -= 4*(1-Q.dissent); 
@@ -121,7 +121,7 @@ go-to: ldr_promise_vonc if ldr_promise_failed = 1
 
 Our overtures to the <span style="font-weight: bold; color:#CC0000">Russian SFSR</span> are noticed, and welcomed with open arms by our allies. [? if not rcw_over : However, they are still plagued by a fierce civil war with anti-socialist forces. ?]
 
-[? if ldr_promise_failed : Unfortunately, our recent attempts to turn <span style="font-weight: bold; color:#008C45">It</span><span style="font-weight: bold; color:#CFCFCF">a</span><span style="font-weight: bold; color:#CD212A">ly</span> away from the <span style="color:#C8102E">Ent</span><span style="color:#000091">ente</span> have angered our coalition partners, who have called a meeting with us. ?]
+[? if ldr_promise_failed : Unfortunately, our recent attempts to turn <span style="font-weight: bold; color:#008C45">It</span><span style="font-weight: bold; color:#CFCFCF">a</span><span style="font-weight: bold; color:#CD212A">ly</span> away from the <span style="font-weight: bold; color:#C8102E">Ent</span><span style="font-weight: bold; color:#000091">ente</span> have angered our coalition partners, who have called a meeting with us. ?]
 
 @improve_papal_relations
 on-arrival: papal_relation += 1; ppi_relation += 4*(1-dissent); ppi_left += 0.1;
