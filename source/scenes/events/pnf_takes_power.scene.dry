@@ -70,7 +70,7 @@ Q.agriculture_minister_party = "PLI";
 Q.agriculture_minister = "Acerbo";
 Q.public_education_minister_party = "I";
 Q.public_education_minister = "Gentile";
-Q.public_works_minister_party = "DS";
+Q.public_works_minister_party = Q.ds_name;
 Q.public_works_minister = "Carnazza";
 
 Q.next_election_year = 1924; 
