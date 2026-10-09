@@ -345,6 +345,7 @@ max-cards: 4
 - @natdef
 - #advisor
 - @shuffle_leadership_pinned
+- @testing
 
 @party
 title: Party Affairs
