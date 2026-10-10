@@ -1,5 +1,4 @@
 title: Mod Info
-on-arrival: testing_color = "FF0000"
 go-to: mod_info_menu
 
 This is an overhaul mod for the game Social Democracy: An Alternate History. The mod takes place in 1919, where you play as the Partito Socialista Italiano in the Kingdom of Italy.
@@ -18,12 +17,9 @@ and notmitsukiyolol for writing some of the events in the mod.
 
 @mod_info_menu
 
-<span style="color:#[+ testing_color +];">fancy color</span>
-
 - @ideas_and_feedback: Ideas & Feedback
 - @update_log: Update Log
 - @future_plans: Future Plans
-- @change_color: Testing Color change
 - @root: Back
 
 @ideas_and_feedback
@@ -47,8 +43,5 @@ If you have any ideas, feedback or bug reports (even the tiniest spelling error)
 @future_plans
 
 :3
-
-@change_color
-on-arrival: testing_color = "0000FF"
 
 - @mod_info_menu: Back

@@ -747,9 +747,9 @@ Q.next_election_time = 11;
 
 
 // Initial advisors are the respective leaders of their faction.
-Q.serrati_advisor = 1; // Giacinto Menotti Serrati; Maximalist Leader
-Q.bordiga_advisor = 1; // Amadeo Bordiga; Communist Leader
-Q.turati_advisor = 1; // Filippo Turati; Reformist Leader
+Q.serrati_advisor = 0; // Giacinto Menotti Serrati; Maximalist Leader
+Q.bordiga_advisor = 0; // Amadeo Bordiga; Communist Leader
+Q.turati_advisor = 0; // Filippo Turati; Reformist Leader
 
 // Communist advisors
 Q.tasca_advisor = 0; // Angelo Tasca
