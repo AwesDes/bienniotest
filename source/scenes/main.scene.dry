@@ -171,6 +171,7 @@ max-cards: 3
 - @natdef
 - #advisor
 - @shuffle_leadership_pinned
+- @testing
 
 @main_easy
 is-hand: true
