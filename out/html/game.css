@@ -331,6 +331,11 @@ ul.decks, ul.hand, ul.pinned-cards {
 
 }
 
+.pinned-card {
+  margin-top: -253px;
+  margin-left: 317px;
+}
+
 a.card {
   display: inline-block;
   width: 120px;
