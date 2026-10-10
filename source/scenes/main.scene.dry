@@ -345,7 +345,6 @@ max-cards: 4
 - @govt
 - @natdef
 - #advisor
-- @shuffle_leadership_pinned
 - @testing
 
 @party
